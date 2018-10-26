@@ -1,0 +1,973 @@
+
+```{r include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(fig.path = 'figures/',
+                      echo = FALSE, warning = FALSE, message = FALSE,
+                      fig.align="center",out.width="95%",
+                      cache=FALSE)
+
+```
+
+# Marco Académico e Institucional \label{capitulo1}
+
+## Introducción. La Educación Superior
+
+`r newthought('Nunca antes de este momento')` los individuos en las sociedades occidentales habían tenido un acceso mayor a todo tipo de información. Las Tecnologías de la Información y la Comunicación (TICs) han transformado la forma en que entendemos el mundo y la educación no ha sido una excepción en este fenómeno. Las TICs han "democratizado" el acceso a múltiples recursos educativos y han surgido nuevos modelos como los *MOOCS*^[Massive Open Online Courses] [@Nowroozzadeh2013] o los *Bootcamps*^[*Campos de entrenamiento* de corta duración, populares sobre todo en campos de IT.] [@Cohen2013] .
+
+En este contexto, cabe preguntarse cuál es el papel general de las instituciones de educación superior y, más específicamente, cuál debe ser el papel de las instituciones de educación universitaria presencial en particular. 
+
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faAngleDoubleRight{}} The modern university is a producer and transformer of knowledge as science and knowledge as culture.
+- Delanty, 2001 - 
+  
+```
+
+Según @Delanty2001, en la universidad integrada en la sociedad del conocimiento, la docencia universitaria no puede limitarse a ser simple transmisor de conocimiento sino que debe tener un rol tanto de producción como de transformación de este conocimiento y esta docencia debe estar conectada tanto a la ciencia como a la cultura^[Es este rol el que define, por tanto, a la actividad universitaria y la distingue de otro tipo de ofertas formativas, ya sean regladas o no.]. 
+
+Además, en este nuevo contexto, según @Vaira2004 la actividad universitaria debe abordarse desde una doble visión: por un lado, las universidades deben ser divergentes y emprendedoras, distinguiéndose de otras universidades y por otro lado, deben tener una perspectiva global. Esto exige a las universidades un conocimiento profundo de su entorno y sus necesidades para personalizar su oferta, adecuándola a su realidad socio-económica particular y, por otro lado, la permanente atención y adaptación a las nuevas tendencias que este contexto global exige. @RodriguezEspinar2018 señala cómo en el futuro se afrontarán cambios fundamentales y es probable encontrar nuevos modelos de universidad como *universidades de élite*, de *masas*, *especializadas*, centradas en el *entorno local*, focalizadas en la *formación permanente*, o universidades *insignia*.
+
+En España, la tarea de la Universidad se define en el artículo 1 de la LOU^[Ley Orgánica 4/2007, de 12 de abril, de Universidades]:
+
+\noindent\rule{2cm}{0.4pt}
+
+> 1. La Universidad realiza el servicio público de la educación superior mediante la investigación, la docencia y el estudio.
+
+> 2. Son funciones de la Universidad al servicio de la sociedad:
+
+> a) La creación, desarrollo, transmisión y crítica de la ciencia, de la técnica y de la cultura.
+
+> b) La preparación para el ejercicio de actividades profesionales que exijan la aplicación de conocimientos y métodos científicos y para la creación artística.
+
+> c) La difusión, la valorización y la transferencia del conocimiento al servicio de la cultura, de la calidad de la vida, y del desarrollo económico.
+
+> d) La difusión del conocimiento y la cultura a través de la extensión universitaria y la formación a lo largo de toda la vida.
+
+
+
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faAngleDoubleRight{}} *En el propio preámbulo de la LOU se establece que el propósito de la universidad es *"... la modernización de las universidades europeas con el fin de convertirlas en agentes activos para la transformación de Europa en una economía plenamente integrada en la sociedad del conocimiento."
+```
+
+Así pues, de nuevo, la actividad universitaria se enmarca no solo en la transmisión de conocimiento, sino en la transformación, creación y desarrollo de este conocimiento y la preparación para el ejercicio de actividades profesionales.
+
+Para cumplir con estos objetivos, es necesario planificar cuidadosamente tanto la docencia como la investigación y esta planificación debe tener muy en cuenta el **contexto de desarrollo**. En este primer capítulo del proyecto docente se van a estudiar los factores de contexto que afectan al área de conocimiento del marketing. Para definir los factores de contexto, utilizamos en primer lugar el marco de referencia que presenta @zabalza2002 y que resume el contexto complejo en el que se desarrolla la docencia universitaria y los múltiples factores que inciden en ella en la Figura \ref{zabalza}.
+
+```{r zabalza,  fig.margin = FALSE, fig.cap="\\label{zabalza} Contextualización de la docencia universitaria. Adaptado de Zabalza (2002)"}
+
+knitr::include_graphics("images/zabalza2002.eps")
+
+```
+
+En el marco de @zabalza2002, se indentifican algunos factores de contexto que podríamos denominar de *entorno general*, globales para todas las instituciones de Educación Superior y otros de *entorno específico*, que afectan a la docencia de un área de conocimiento en una determinada institución. Los aspectos generales según @zabalza2002 son cuatro:
+
+- La política educativa y el marco legal
+- Los avances en la ciencia, cultura e investigación 
+- Los sistemas de colegios profesionales y sistemas de acreditación
+- Los aspectos relacionados con la inserción profesional de los estudiantes
+
+En cuanto a los aspectos que afectan a la docencia en un área de conocimiento y en una institución en particular, son:
+
+- La propia institución donde se desarrolla una determinada docencia 
+- Los aspectos curriculares ya definidos en las memorias de los títulos
+- El profesorado al que se adscribe esta docencia
+- El alumnado que va a recibir dicha docencia 
+
+
+Existe otro factor general que cada vez es más crítico para la docencia y la investigación en la Universidad: los aspectos referidos a la Responsabilidad Social y la ética en el desempeño profesional [@Quezada2011]. Este aspecto no ha sido considerado en el marco del modelo de @zabalza2002. Así, teniendo en cuenta además la menor importancia de los colegios profesionales en la docencia de Comercialización e Investigación de Mercados, se ha adaptado el marco de referencia de @zabalza2002 para utilizarlo como resumen del contexto en el que se desarrolla este Proyecto Docente. Esta adaptación se presenta en la Figura \ref{marcopropio}.
+
+```{r marcopropio, fig.margin = FALSE, fig.cap="\\label{marcopropio} Contexto del Proyecto Docente. Elaboración propia a partir de Zabalza (2002)"}
+
+knitr::include_graphics("images/marcopropio.pdf")
+
+```
+
+En los siguientes apartados de este capítulo se van a presentar estos elementos. En primer lugar, con respecto al entorno general, describiremos como afecta a este proyecto docente el marco legal y la política educativa, los sistemas de acreditación, el mundo del empleo y los aspectos relacionados con la Responsabilidad Social Universitaria y la ética profesional ^[El punto dos en el contexto general se refiere a los avances en la ciencia, cultura e investigación en marketing. Debido a su especial relevancia para el proyecto, estos aspectos se van a detallar en mayor medida en el capítulo 2, en el apartado \ref{marcoconocimiento} Marco de Conocimiento, en lugar de incluirse como un subapartado en este capítulo]. A continuación, describiremos también los factores de contexto específico de la docencia en marketing en la Universidad Pública de Navarra: la institución, las titulaciones, el profesorado en el área y los estudiantes.
+
+\clearpage
+## El entorno general de la docencia y la investigación en marketing
+
+### Marco legal y la Política Educativa
+
+Como primer elemento en el entorno general, resumimos brevemente los elementos del marco legal de referencia. 
+
+\vspace{5mm} 
+
+**El marco del Espacio Europeo de Educación Superior (EEES)**
+
+\vspace{2mm} 
+
+Uno de los objetivos primordiales de la Unión Europea es la coordinación de las políticas y normas legislativas de los Estados miembros, tanto en cuestiones relacionadas con el desarrollo económico como con el progreso y bienestar social de los ciudadanos. Este objetivo se ha extendido al ámbito de la educación y, muy especialmente, al ámbito de la enseñanza superior. Así, la educación superior se ha convertido en pieza clave para el progreso mediante la generación, transmisión y aplicación del conocimiento.
+
+En este proceso han tenido un papel muy importante las redes de colaboración existentes entre las instituciones universitarias europeas, el desarrollo de programas de movilidad interuniversitaria Erasmus (1989-1994) y Sócrates-Erasmus (1995-) entre otros y el impulso provocado por las declaraciones tanto de los responsables académicos de estas instituciones como por los ministros de educación de los países que integran la Unión Europea.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *La reunión que da origen al proceso de construcción del Espacio Europeo de Educación Superior se produjo el 19 de junio de 1999 en la ciudad de Bolonia. En la declaración conjunta resultante de esta reunión, los estados miembros se comprometieron a coordinar sus políticas para alcanzar la convergencia en un breve plazo de tiempo, y en cualquier caso, dentro de la primera década del tercer milenio.*
+
+```
+
+El proceso para promover la convergencia de los sistemas nacionales de educación superior en Europa se inició a partir de 1988 con la Declaración de la Sorbona y especialmente cuando, los Ministerios de cada país miembro confirmaron, con la firma de la Declaración de Bolonia la importancia de un desarrollo armónico de un Espacio Europeo de Educación Superior antes del 2010 [@bolonia1998]. La finalidad del proceso era elaborar programas académicos convergentes que aseguren una calidad docente, adoptando un sistema de transferencia de créditos que permita el reconocimiento inmediato de títulos, una movilidad entre países y un aprendizaje a lo largo de toda la vida
+
+Los objetivos de este proceso de convergencia incluyen:
+
+- Adopción de un sistema de titulaciones fácilmente comprensible y comparable, basado esencialmente en dos ciclos fundamentales: Grado y Posgrado. Para facilitar esta comparación entre titulaciones, se establece, entre otros instrumentos, el Suplemento Europeo al Título.
+- Establecimiento de un sistema de créditos como medio adecuado para facilitar la movilidad estudiantil. Los créditos se podrán conseguir también fuera de las instituciones de educación superior, incluyendo la experiencia adquirida durante la vida, siempre que esté reconocida por las universidades receptoras involucradas. 
+- Promoción de la movilidad, eliminando los obstáculos para el ejercicio efectivo de libre intercambio.
+- Promoción de la cooperación europea en aseguramiento de la calidad, con el objeto de desarrollar criterios y metodologías comparables.
+- Promoción de las dimensiones europeas necesarias en educación superior, particularmente dirigidas hacia el desarrollo curricular, cooperación entre instituciones, esquemas de movilidad y programas de estudio, integración de la formación e investigación. 
+
+Con posterioridad, se introducen líneas adicionales. El Comunicado de Praga (2001) añade:
+
+- El aprendizaje a lo largo de toda la vida como elemento esencial para alcanzar una mayor competitividad europea, mejorar la cohesión social, la igualdad de oportunidades y la calidad de vida.
+- El rol activo de las universidades, de las instituciones de educación superior y de los estudiantes en el proceso de convergencia.
+- La promoción de la calidad en el Espacio Europeo de Educación Superior mediante el desarrollo de sistemas de garantía de la calidad y de mecanismos de certificación y acreditación.
+
+Finalmente, en el comunicado de la Conferencia de Ministros mantenida en Berlín en 2003, los ministros se comprometieron a comenzar con la implantación del sistema de dos ciclos en 2005 y se planteó iniciar la elaboración de un marco de calificaciones comparables y compatibles para los respectivos sistemas de educación superior. En este marco, las calificaciones se describen en términos de trabajo realizado, nivel, aprendizaje, competencias y perfil.
+
+Según la Declaración de Bolonia, el diseño de los planes de estudio debe ofrecer una formación adecuada para el desarrollo de los perfiles profesionales que previamente han sido definidos para la titulación. Con esta formación, los estudiantes pueden adquirir una serie de conocimientos y habilidades que se denominan *competencias*^[\textcolor{Red}{\faAngleDoubleRight{}} Competencia: Pericia, aptitud o idoneidad para hacer algo o intervenir en un asunto determinado *(RAE)*] y se clasifican en las llamadas competencias *específicas*, *genéricas* y *transferibles*. 
+ 
+ 
+Las competencias *específicas* están relacionadas con el área o las áreas de conocimiento y práctica profesional de la titulación y requieren la inclusión en el plan de estudios de una materia o asignatura. Las competencias *genéricas*, también llamadas *transversales*, hacen referencia a los atributos que se pretende que alcance un grupo social particular y se relacionan principalmente con la capacidad de relación del individuo con su entorno y su capacidad organizativa. Estas competencias pueden requerir o no la inclusión de una determinada materia en el plan de estudios para su aprendizaje ^[Un ejemplo de este tipo de competencias genéricas o transversales son los idiomas, que pueden adquirirse tanto con materias específicas como impartiendo determinadas asignaturas en el idioma en el que se pretende hacer competentes a los estudiantes.]. 
+Por último, las competencias *transferibles* son aquellas necesarias para hacer más próximos los contenidos teóricos y prácticos, o para estrechar la brecha existente entre los conocimientos teóricos adquiridos durante la titulación y el mercado laboral. 
+
+Para la adquisición de estas competencias, se establece el *crédito europeo o ECTS*^[European Credit Transfer System] como unidad de referencia sobre la que se estructuran y organizan los planes de estudios. El *ECTS* es: 
+
+\noindent\rule{2cm}{0.4pt}
+
+> Unidad de medida del haber académico que representa la cantidad de trabajo del estudiante para cumplir los objetivos del programa de estudios y que se obtiene por la superación de cada una de las materias que integran los planes de estudios universitarios de carácter oficial y de validez en todo el territorio nacional.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *En esta unidad de medida ECTS se integran las enseñanzas teóricas y prácticas, así como otras actividades académicas dirigidas con inclusión de las horas de estudio y trabajo que el estudiante debe realizar para alcanzar los objetivos formativos propios de cada una de las materias. *
+
+```
+
+El crédito europeo  surge a partir de los programas Erasmus y Sócrates/Erasmus para la movilidad de estudiantes con el fin de facilitar el reconocimiento de sus estudios. Lo que se pretende es expandir la utilización de dicho crédito a todos los estudiantes de la Unión Europea de forma que el trabajo realizado por un estudiante sea fácilmente reconocible en todos los Estados.
+
+La diferencia existente entre el crédito europeo y el que estaba vigente hasta ese momento en el sistema universitario español es que el crédito europeo no es una medida de la duración temporal de las clases impartidas por el profesor, sino una unidad de valoración del volumen de trabajo total del alumno expresado en horas, que incluye tanto las clases teóricas y prácticas, como el esfuerzo dedicado al estudio y a la preparación y realización de exámenes.^[En definitiva, se trata de dar un mayor peso al trabajo y esfuerzo de los alumnos en el aprendizaje.]
+
+El volumen de trabajo total de un estudiante a tiempo completo durante un curso académico por el sistema ECTS se sitúa en 60 créditos^[artículo 4.1 del RD 1125/2003]. De esta forma, un semestre equivale a 30 créditos y un trimestre a 20 créditos. A título orientativo y considerando una actividad académica aproximada de 40 semanas/año y una carga de trabajo en torno a 40 horas/semana, se establece para el crédito europeo una carga de trabajo total entre 25 y 30 horas^[Para valorar el número de horas que se deben asignar a los trabajos dirigidos en laboratorio o a trabajos de investigación hay que tener en consideración que una hora dedicada a trabajos de este tipo no genera el mismo volumen de trabajo global que una hora de curso magistral adicional.].
+
+Según el R.D. 55/2005 el número total de créditos de las enseñanzas y actividades académicas conducente a la obtención de los títulos oficiales de Grado estará entre 180 y 240 ECTS mientras qye el RD 56/2005 que regula los estudios de posgrado fija en un mínimo de 60 y un máximo de 120 ECTS los conducentes a la obtención del título oficial de Máster.
+
+\vspace{5mm} 
+
+**La Ley Orgánica 4/2007, de 12 de abril, de Universidades**
+
+\vspace{2mm} 
+
+Ya hemos hecho referencia a la Ley Orgánica 4/2007, de 12 de abril, de Universidades que es la norma de máximo rango que regula la educación superior en este momento en España. Esta Ley Orgánica ha tenido su modificación más reciente por el RD14/2012^[Real Decreto-ley 14/2012, de 20 de abril, de medidas urgentes de racionalización del gasto público en el ámbito educativo: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2012-5337]. En este Real Decreto, entre otros aspectos: 
+
+- se modifica la *determinación de la actividad docente* a desarrollar por el personal docente e investigador de las Universidades
+- se pretende racionalizar el *mapa de titulaciones*, reduciendo las titulaciones en función de las necesidades
+- se aplica el principio de *estabilidad presupuestaria*
+- se determinan aspectos de cooperación interuniversitaria para la impartición conjunta de titulaciones, se fijan umbrales de precios públicos y también algunos aspectos de la oferta de empleo público
+
+Así pues, en el texto refundido tras esta última modificación, la Ley Orgánica de Universidades, se divide en los siguientes títulos:
+```{r LOU, fig.margin = TRUE,out.width='75%'}
+
+knitr::include_graphics("images/lou.jpg")
+
+```
+- En el **Título Preliminar** se determinan las funciones de la universidad (ya mencionadas en la introducción) y se establece el principio de autonomía universitaria.
+- En el **Título I** se determina el régimen jurídico de las Universidades y sus requisitos de creación. Según se establece en este título, existen dos tipos de universidades, las universidades públicas y las privadas, con diferentes requisitos de creación y régimen jurídico.
+- En el **Título II** se describe la estructura de las universidades, que distingue como centros a Escuelas, Facultades, Departamentos, Institutos Universitarios de Investigación y Escuelas de Doctorado.
+- En el **Título III** se relacionan los mecanismos de gobernanza en las Universidades, definiendo los órganos de gobierno y representación de las universidades públicas y privadas.
+- El **Título IV** establece mecanismos de coordinación, cooperación y colaboración universitaria como la Conferencia General de Política Universitaria, el Consejo de Universidades y otros mecanismos de cooperación entre Universidades. 
+- El **Título V** está dedicado a aspectos de evaluación y acreditación, aspectos que se describen en más detalle en la sección \ref{Acreditacion}., Sistemas de Acreditación.
+- En el **Título VI** se relaciona la normativa referente a las enseñanzas y los títulos y define las estructura de las enseñanzas oficiales, distinguiendo entre estudios de Grado, Máster y Doctorado. En la sección \ref{Curricular}. Contexto curricular se incide en los aspectos relativos a las enseñanzas y títulos en el área de Comercialización e Investigación de Mercados.
+- El **Título VII** está dedicado a la investigación y la transferencia de conocimiento y define a la investigación científica como: 
+
+\noindent\rule{2cm}{0.4pt}
+> ... fundamento esencial de la docencia y una herramienta primordial para el desarrollo social a través de la transferencia de sus resultados a la sociedad
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *En el título VII se establece por tanto que la investigación científica es **tanto un derecho como un deber** del profesorado universitario.*
+
+```
+
+
+- El **Título VIII** está dedicado a los estudiantes y regula tanto el acceso a la Universidad como aspectos referidos a la oferta de plazas en las Universidades, becas y ayudas al estudio y los derechos y deberes de los estudiantes.
+- El **Título IX** tiene que ver con el profesorado. En este título, se distingue en primer lugar entre cuerpos docentes universitarios y personal contratado y se regulan además, las diferentes figuras de contratación laboral y de los cuerpos docentes universitarios. A continuación, en este título se establece el régimen de dedicación, medido en ECTS. Por último, se establecen la forma de determinación de las retribuciones, la relación de puestos de trabajo y la adscripción a áreas de conocimiento.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Los artículos 62 a 66, a los que se ha hecho alusión en el **Prólogo** del presente Proyecto, regulan los Concursos para el acceso a plazas de cuerpos docentes universitarios.*
+
+```
+Los títulos siguientes, aún siendo importantes en la función de las Universidades, tienen un impacto menor en el presente Proyecto Docente:
+
+- El **Título X** regula las funciones, retribuciones y procesos de selección del personal de Administración y Servicios en las Universidades públicas. 
+- El **Título XI** detalla aspectos del régimen económico y financiero de las Universidades públicas.
+- El **Título XII** se dedica a centros en el extranjero o que impartan enseñanzas con arreglo a sistemas educativos extranjeros.
+- El **Título XIII** se dedica al Espacio Europeo de Enseñanza Superior y recoge aspectos relacionados con el *suplemento europeo al título* y la movilidad de estudiantes, profesorado y personal de administración y servicios.
+- Por último, el **Título XIV** está relacionado con el deporte y la extensión universitaria. 
+
+Para terminar esta somera revisión del marco legal, con respecto a la política educativa, @de2011politica realiza una revisión de la evolución de la política educativa en España, considerando la política como proyectos que luego pueden materializarse o no, a través del derecho y la administración. En España, la necesidad de un pacto educativo es una reclamación constante desde muy diversos ámbitos [e.g. @Villar; @fernandez2008pacto]. Sin embargo, pese a estas llamadas al consenso, no existe de momento un acuerdo entre los grandes partidos en torno a los grandes ejes de la política de educación superior. Considerando el periodo tras la aprobación de la Constitución, cada cambio de partido en el gobierno ha conllevado un cambio en la ley que regula la enseñanza universitaria. El listado de estas leyes se muestra en la Tabla \ref{tabla01}.
+
+```{r tabla01, results='asis'}
+library(knitr)   
+library(kableExtra)
+library(formattable)
+
+year <- c("1983","2001", "2007", "2012") 
+nombre <- c("Ley Orgánica 11/1983 de Reforma Universitaria (LRU)", "Ley Orgánica 6/2001 de Universidades (LOU)","Ley Orgánica 4/2007,de 12 de abril, por la que se modifica la Ley Orgánica 6/2001 de Universidades","Real Decreto-ley 14/2012, de 20 de abril que afecta a la Ley Orgánica 4/2007,de 12 de abril" )
+partido<-c("PSOE", "PP", "PSOE", "PP")
+etapa <- c("1982-1996", "1996-2004", "2004-2011", "2011-")
+tabla <- data.frame("Año"=year,"Nombre"=nombre, "Partido"=partido, "Periodo"=etapa)
+knitr::kable(tabla, row.names = FALSE, format = "latex", booktabs = T, 
+      caption = "\\label{tabla01}Normas Legales sobre Universidad posteriores a 1978") %>% 
+      kable_styling(latex_options = c("scale_down")) %>%
+      column_spec(2, width = "11em")
+
+```
+
+En un futuro cercano no es probable que se produzcan cambios relevantes en esta tendencia. De hecho, la pérdida de poder de los partidos mayoritarios en un sistema básicamente bipartidista que se produce a partir de las elecciones al Parlamento Europeo en 2014 ha hecho que nuevos partidos políticos alcancen cuotas relevantes de representación, pero no ha aumentado el nivel de acuerdo con respecto a unos mínimos aspectos de consenso en relación con las políticas educativas.
+
+El Código de Universidades^[http://www.boe.es/legislacion/codigos/]  recoge otra normativa a tener en cuenta incluyendo 66 leyes, reales decretos y órdenes que afectan en cierta medida a la actividad de la universidad [@BOE2018]. Entre ellas se pueden destacar, además de las ya citadas:
+
+- Real Decreto 1067/2015, de 27 de noviembre, por el que se crea la Agencia Estatal de Investigación y se aprueba su Estatuto 
+- Real Decreto 412/2014, de 6 de junio, por el que se establece la normativa básica de los procedimientos de admisión a las enseñanzas universitarias oficiales de Grado .
+- Real Decreto 1044/2003, de 1 de agosto, por el que se establece el procedimiento para la expedición por las universidades del Suplemento Europeo al Título.
+- Resolución de 11 de mayo de 2017, de la Secretaría General de Universidades, por la que se publica el Acuerdo del Consejo de Universidades de 10 de mayo de 2017, por el que se ordenan las enseñanzas universitarias oficiales de Grado 
+- Real Decreto Legislativo 5/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto Básico del Empleado Público
+- Real Decreto 898/1985, de 30 de abril, sobre régimen del profesorado universitario
+- Real Decreto 420/2015, de 29 de mayo, de creación, reconocimiento, autorización y acreditación de universidades y centros universitarios
+- Ley 14/2011, de 1 de junio, de la Ciencia, la Tecnología y la Innovación ...
+
+### La investigación en marketing y la Educación Superior
+(aspecto desarrollado en el capítulo 2)
+
+### Entorno Profesional
+
+
+\vspace{5mm} 
+
+**La demanda de profesionales de marketing**
+
+\vspace{2mm}
+
+```{r figura03, fig.margin = TRUE, fig.cap="\\label{figura03} Resumen Informe AMES. Elaboración propia a partir de los datos Infoadex (2017)",fig.align='center'}
+
+knitr::include_graphics("images/infoadex.pdf")
+
+```
+
+Según datos de Zenith, a nivel mundial la inversión en el sector publicitario está creciendo y se situó en 2017 en más de 500.000 millones de dólares [@zenith2017]. Sin embargo, la inversión publicitaria es solo una pequeña parte de la inversión total en actividades de marketing. 
+
+No disponemos de cifras globales de inversión en el sector de marketing, pero en  España, como se muestra en la Figura \ref{figura03}, según los datos del Informe Infoadex-AMES 2016, la inversión total en marketing superó los 30.000 millones de euros, con más de 100.000 personas empleadas en el sector y un valor total del 2,7% del PIB [@AsociaciondeMarketingdeEspana] . 
+
+Con estos datos, la demanda en el mercado laboral para la formación en marketing es alta [@applbaum2004marketing], especialmente en el ámbito digital [@marketingweek2014]. Por ejemplo, en el Informe de INESDI, el marketing digital copa el 41% de las ofertas en el sector digital [@Inesdi2017]. Además, según datos de @McKinsey2018, el 66% de las grandes empresas privadas a nivel mundial consideran el cubrir vacíos en las habilidades relacionadas con la automatización y la capitalización de sus empleados como una prioridad en el *"top ten"*. Estos datos se muestran en la Figura \ref{mckinsey}
+
+```{r mckinsey, fig.cap="\\label{mckinsey} Importancia del GAP Digital en las grandes empresas. Fuente: McKinsey (2018)",fig.align='center'}
+knitr::include_graphics("images/mckinsey.pdf")
+
+```
+
+ Según el *Informe sobre el Mercado Laboral en España* [@ESADE-Infojobs], el área Comercial y de Ventas es el número 1 en oferta de empleo en España. De la misma forma, el *Informe del Mercado de Trabajo Estatal* [@De2016], que se ocupa de detectar tendencias futuras en el empleo, señala a los directores de departamento comercial y de ventas y a los directores de marketing como aquellos profesionales con mejores perspectivas transversales en múltiples sectores, como puede verse en el ejemplo de la Figura \ref{figura04} para el caso del sector agrícola.
+
+```{r figura04, fig.margin = FALSE, fig.cap="\\label{figura04} Profesionales con mejores perspectivas. Ejemplo para el sector agrícola. Fuente: Informe del Mercado de Trabajo Estatal, Ministerio de Empleo y Seguridad Social (2016)",fig.align='center'}
+knitr::include_graphics("images/cnae.pdf")
+
+```
+
+
+Así, en un contexto en el que, como señala @Torres2012, el principal motivo para cursar estudios universitarios es que una vez titulados esperan tener mayores oportunidades de empleo, las materias relacionadas con el área de Comercialización e Investigación de Mercados tienen cada vez más importancia. 
+
+\vspace{5mm} 
+
+**La demanda de profesionales con formación en marketing**
+
+\vspace{2mm}
+
+Como manifiestan @moorman1999, en los últimos años ha perdido peso la visión del marketing como un área funcional en la empresa frente a la concepción del marketing como un conjunto de valores y procesos al que todas las funciones contribuyen a implementar. La responsabilidad y las tareas de marketing se convierten en el trabajo de todos y de cada uno de los integrantes de la organización, y de esta forma, a la vez que el papel de la función de marketing se vuelve más difuso, se incrementa su influencia.
+
+Para los propósitos de esta contextualización, es necesario poner de manifiesto que, de la misma forma que las funciones de marketing se vuelven más transversales, la formación en marketing también se desarrolla muchas veces en el ámbito de la formación más amplia en áreas de administración y de negocios. Según el Informe *Inserción laboral de los egresados universitarios. La perspectiva de la afiliación a la Seguridad Social*, la inserción laboral en el área de negocios es buena [@De2015]. 
+
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faAngleDoubleRight{}} *Según el informe Inserción laboral de los egresados universitarios, la perspectiva de la afiliación a la Seguridad Social, las titulaciones con mayor tasa de afiliación el primer año son:*
+
+- informática
+- formación de personal docente
+- servicios sociales
+- ingeniería
+- administración y negocios
+- salud y servicios personales
+```
+
+También en el *Informe Infoempleo-Adecco* [@Adecco2016] el Grado en ADE lidera un ranking sobre las titulaciones que más se demandaron en las ofertas de trabajo de este periodo con un 10,40% de las ofertas dirigidas a los titulados universitarios. Por último, el Libro Blanco elaborado para las titulaciones de economía y empresa presentaba unos buenos datos de inserción laboral en el último quinquenio, pero dado el tiempo transcurrido y los grandes cambios en la situación económica estos datos deben considerarse como obsoletos [@libroblanco2005]
+
+### Sistemas de Acreditación \label{Acreditacion}
+
+Los modelos de gestión de calidad y sistemas de gestión se han convertido en indispensables en el mundo empresarial desde mediados del siglo XX [@feigenbaum1983total] , siendo el más conocido el Modelo Europeo de Gestión de Calidad, EFQM^[http://www.efqm.org/] [@sanchez2005calidad] de 1992. El sistema universitario no ha sido ajeno a esta tendencia y la gestión de la calidad que, como hemos visto, se impulsa desde el EEES se despliega tanto desde el *marco normativo* como a *iniciativa de las propias universidades*. 
+
+```{r EFQM, fig.margin = TRUE, out.width='50%'}
+
+knitr::include_graphics("images/efqm.png")
+
+```
+
+
+Desde el marco normativo, es necesario destacar el papel de la Agencia Nacional de Evaluación de la Calidad y Acreditación (ANECA)^[http://www.aneca.es/]. ANECA surge ya en el marco del Espacio Europeo de Educación Superior, a consecuencia de la aprobación de la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades. Esta ley preveía la constitución de una agencia con funciones de evaluación y conducentes a la certificación y acreditación, entre otras, de las actividades docentes, investigadoras y de gestión del profesorado universitario. Además, la misma Ley Orgánica ya exigía una evaluación previa positiva para la contratación de profesorado por las universidades públicas. Así, en 2002, se crea la Agencia Nacional de Evaluación de la Calidad y Acreditación. La Figura \ref{ANECA} resume la historia del organismo. 
+
+```{r ANECA, fig.cap="\\label{ANECA} Hitos en la historia de ANECA. Elaboración propia con datos de ANECA",fig.align='center', out.width='100%'}
+
+knitr::include_graphics("images/historiaaneca.pdf")
+
+```
+
+En 2007, tras la aprobación de la LOU, se aprueba el Real Decreto por el que se establece la acreditación nacional para el acceso a los cuerpos docentes universitarios^[ Real Decreto 1312/2007, de 5 de octubre: https://www.boe.es/buscar/act.php?id=BOE-A-2007-17492] y el Real Decreto por el que se establece la ordenación de las enseñanzas universitarias oficiales^[Real Decreto 1393/2007, de 29 de octubre: https://www.boe.es/buscar/act.php?id=BOE-A-2007-18770]. Ambos reales decretos son muy relevantes para ANECA ya que la tarea de evaluación de ambos aspectos son competencia de la Fundación. Por último, la Ley 15/2014, de 16 de septiembre^[https://www.boe.es/diario_boe/txt.php?id=BOE-A-2014-9467], de racionalización del Sector Público y otras medidas de reforma administrativa, crea el Organismo Autónomo Agencia Nacional de Evaluación de la Calidad y Acreditación que absorbe las funciones de la anterior Fundación ANECA.
+
+Son funciones de ANECA la orientación, evaluación, certificación y acreditación de:
+
+- Las *enseñanzas* conducentes a la obtención de títulos universitarios de carácter oficial.
+- Los *méritos* de los aspirantes a los cuerpos docentes y profesorado contratado en las universidades.
+- Las actividades *investigadoras* y de *transferencia de conocimiento* del PDI de las universidades.
+- Las *instituciones y centros universitarios*
+
+Además, son funciones adicionales de ANECA:
+
+- Procedimiento de *homologación de títulos* universitarios extranjeros.
+- La *correspondencia a los niveles MECES*^[Marco Español de Cualificaciones para la Educación Superior: https://www.mecd.gob.es/educacion/mc/mecu/presentacion.html] de los títulos universitarios anteriores al RD 1393/2007.
+
+Además de ANECA, la ley ha previsto que puedan existir otras agencias de evaluación en la Comunidades Autónomas. En este momento, existen Agencias de Evaluación en nueve Comunidades Autónomas: Andalucía^[http://deva.aac.es/], Aragón^[http://www.aragon.es/DepartamentosOrganismosPublicos/Organismos/ACPUA], Canarias^[http://www.gobiernodecanarias.org/accuee/], Castilla y León^[http://aplicaciones.acsucyl.com/acsucyl/opencms], Cataluña^[http://www.aqu.cat/], Madrid^[http://www.madrimasd.org/], Comunidad Valenciana^[https://avap.es], Galicia^[http://www.acsug.es/], Islas Baleares^[http://www.acsug.es/] y País Vasco^[https://www.unibasq.org/es]. La Comunidad Foral de Navarra no tiene una Agencia Autonómica. 
+
+Además de estas instituciones, existen *otras instituciones de evaluación externa* que pueden actuar en este ámbito, como pueden ser a nivel internacional European Association for Quality Assurance in Higher Education (ENQA)^[http://www.enqa.eu/], The European Organization for Quality^[http://www.eoq.org/home.html] o American Society of Quality, ASQ^[https://asq.org/] y a nivel regional Euskalit^[http://www.euskalit.net/es/] y la Fundación Navarra para la Excelencia^[http://www.qnavarra.com/]. Por último, es necesario mencionar los propios *sistemas internos en cada institución* que en muchos casos pueden ser los que jueguen un papel más importante [@Martin2017].
+
+Podemos clasificar los ámbitos de actividad de las Agencias de Evaluación y otras instituciones relacionadas con modelos de gestión en tres grandes áreas:
+
+- Gestión de la calidad y procesos en la institución
+- Implantación, evaluación y gestión de las titulaciones
+- Evaluación y acreditación de profesorado
+
+\vspace{5mm} 
+
+**Gestión de la calidad y procesos en la Universidades Públicas**
+
+\vspace{2mm}
+
+Como establece la propia ANECA:
+
+\noindent\rule{2cm}{0.4pt}
+
+> «El marco del EEES y los cambios introducidos en la normativa española, establecen que las universidades deben contar con políticas y Sistemas de Garantía Interna de Calidad (SGIC) formalmente establecidos y públicamente disponibles. De acuerdo a lo anterior, ANECA desarrolló en el 2007 el Programa AUDIT.» 
+
+Así, cada Universidad Pública desde 2007 ha establecido, en el marco del Programa AUDIT u otros similares, su propio Sistema de Garantía Interna de Calidad que regula principalmente los procedimientos para favorecer la mejora continua de los títulos y los instrumentos para asegurar la calidad de los procesos de enseñanza y aprendizaje. Se establecen Comisiones de Calidad a nivel de Centros y también generales que aseguren el seguimiento de los procesos de mejora continua y de coordinación tanto vertical, como horizontal. Sin embargo, dentro de estos SGIC no se han incorporado, al menos de manera generalizada, procedimientos que aseguren mejora continua en las actividades de investigación y en la propia gestión universitaria^[Algunas universidades están avanzando en estas áreas, por ejemplo la Universidad de Sevilla: http://www.r2h2.us.es/uploads/calidad/PCASUS.pdf, la Universidad Pública de Navarra: https://www.unavarra.es/serviciocalidadyorganizacion/gestion-servicios/mejora-gestion o la Universidad de Oviedo: http://www.r2h2.us.es/uploads/calidad/PCASUS.pdf].
+
+Desde el mes de abril de 2018 se introduce además el **sistema de evaluación institucional** por el que se acreditan los centros universitarios en lugar de acreditar individualmente los títulos. Así, un centro que tenga:
+
+- Certificado el sistema AUDIT
+- Acreditados el 50% o más de sus títulos de grado y el 50% o más de sus títulos de máster
+
+puede optar a esta acreditación institucional que implica la acreditación automática de todos sus títulos.
+
+
+\vspace{5mm} 
+
+**Implantación, evaluación y gestión de las titulaciones**
+
+\vspace{2mm}
+
+Las titulaciones impartidas en universidades españolas públicas y privadas están sometidas a aprobación previa y a seguimiento posterior por parte de ANECA. En la Tabla \ref{programasAneca} se detallan los programas de ANECA relevantes para los títulos.
+
+```{r programasAneca, , results='asis'}
+
+programasAneca <- readr::read_csv(file="../data/programasAneca.csv")
+
+names(programasAneca) <- c("Programa","Función")
+
+knitr::kable(programasAneca, row.names = FALSE, format = "latex", booktabs = T, caption = "\\label{programasAneca} Programas ANECA relacionados con las titulaciones")  %>% 
+      kable_styling(full_width = F, font_size = 7.5)%>%
+       row_spec(0, bold = T)%>%
+      column_spec(1 ) %>%
+      column_spec(2, width = "24em")
+```
+
+Los programas Verifica, Monitor y Acredita son de seguimiento obligado para la impartición de títulos universitarios oficiales en España. El programa **Verifica** aprueba la Memoria de la Titulación, requisito previo para poder inscribir la titulación en el RUCT^[Registro de Universidades, Centros y Títulos: https://www.educacion.gob.es/ruct/home] y empezar a impartirla. El programa **Monitor** es un programa de seguimiento, en el que ANECA revisa las condiciones en las que se está impartiendo un determinado título y emite recomendaciones. El programa **Acredita** evalúa periódicamente los títulos a distancia y de forma presencial y emite informes preceptivos para poder seguir impartiendo una determinada titulación.
+
+El programa **Audit**, como se ha mencionado, no se limita a aspectos relacionados con los títulos, aunque los propios Sistemas de Garantía Interna de la Calidad son imprescindibles para que las titulaciones que imparte un determinado Centro en una Institución puedan superar con éxito el programa Acredita.
+
+Por último, el programa **SIC** es el último en incorporarse a los programas Aneca en octubre de 2017. Este Programa de Sellos Internacionales de Calidad de ANECA, en el que se integra el anterior Programa ACREDITA PLUS: EURACE® para los títulos de Ingeniería y Euro-Inf para los títulos de Informática, proporciona un reconocimiento internacional a los títulos además del reconocimiento nacional.
+\vspace{5mm} 
+
+**Evaluación y acreditación de profesorado**
+
+\vspace{2mm}
+
+El profesorado en las universidades españolas está sometido a diferentes procesos de evaluación tanto interna como externa en función de su categoría profesional. En primer lugar, existen diferentes procedimientos de acreditación para el acceso a puestos docentes en Universidades Públicas. Estas modalidades se presentan en la Tabla \ref{acredita}.
+
+Sin embargo, estas acreditaciones de acceso no son las únicas evaluaciones del profesorado universitario, sino que existen diversos sistemas de evaluación de su desempeño.
+
+```{r acredita, results='asis'}
+
+acredita <- readr::read_csv(file="../data/acredita.csv")
+
+names(acredita) <- c("Figura", "Tipo", "Acr", "Agencia", "Programa")
+
+acredita_footnote <- acredita
+names(acredita_footnote)[3] <- paste0(names(acredita_footnote)[3],
+                              footnote_marker_symbol(1, "latex"))
+
+knitr::kable(acredita_footnote, row.names = FALSE,format= "latex",  
+             escape = F,
+             booktabs = T, 
+             caption = "\\label{acredita} Acreditación de Profesorado Universitario")  %>% 
+      kable_styling(latex_options = c("scale_down")) %>%
+      column_spec(1, width = "9em")%>%
+      column_spec(2, width = "4em")%>%
+      column_spec(4, width = "6em")%>%
+      row_spec(0, bold = T)%>%
+      footnote(symbol = "Acreditación necesaria para acceder a la figura",
+                  footnote_as_chunk = T)
+
+```
+
+\clearpage
+
+ No es el propósito de este documento entrar en el detalle de estos sistemas pero sí que citaremos dos de especial relevancia:
+
+- Evaluación de la actividad investigadora: Programa **CNEAI ANECA**
+
+La Comisión Nacional Evaluadora de la Actividad Investigadora (CNEAI) realiza la evaluación de la actividad investigadora de los profesores universitarios y del personal de las escalas científicas del CSIC, con el objeto de que les sea reconocido un complemento de productividad (sexenio)^[El profesorado contratado puede someterse a esta evaluación en los casos en los que exista un convenio específico con la institución.].
+
+- Evaluación de la actividad docente: **DOCENTIA**
+
+El Programa de Apoyo a la Evaluación de la Actividad Docente del Profesorado Universitario (DOCENTIA) de Aneca apoya el diseño de mecanismos propios en cada universidad para gestionar la calidad de la actividad docente del profesorado universitario y favorecer su desarrollo y reconocimiento^[Se desarrolla individualmente para cada institución por lo que puede resultar en un proceso diferente en cada universidad]. 
+
+\clearpage
+
+### La ética profesional docente y la Responsabilidad Social Universitaria
+```{r etica, fig.margin = TRUE, fig.cap="\\label{etica} Ámbitos a tener en cuenta en la ética profesional docente. Elaboración propia a partir de Navarro (2010)",fig.align='center'}
+
+knitr::include_graphics("images/eticab.pdf")
+
+```
+Como último elemento dentro del contexto general de la docencia en marketing, repasamos algunos aspectos relacionados con la ética profesional docente y la RSU. @lopez2006profesorado señala que tras la incorporación al Espacio Europeo de Educación Superior (EEES) se presentan nuevos retos relacionados con la ética profesional docente. Indica @lopez2006profesorado que toma como referencia a @GrosRomana2004, que el profesorado universitario ha sido más valorado tradicionalmente por su labor de investigación, pero tras la incorporación al EEES surgen nuevas tareas y necesidades formativas a las que el profesorado debe hacer frente. La forma de hacer frente a estos nuevos retos está muy relacionada con la **ética profesional docente**. Los ámbitos a tener en cuenta en esta ética aplicada, según @navarro2010etica se resumen en la figura \ref{etica}.
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *La ética profesional de los docentes ha estado tradicionalmente incorporada en las teorías generales de la educación. Más recientemente se ha desarrollado un marco específico de ética aplicada a la profesión docente.*
+
+```
+
+- Aspectos relacionados con el desempeño del profesor como especialista en su área de conocimiento
+- Aspectos relacionados con el desempeño del profesor como miembro de un centro educativo
+- Aspectos relacionados con la relación del profesor con los compañeros y con la comunidad local
+
+A continuación, se describen de forma breve los elementos de cada uno de estos ámbitos en los que es precisa una reflexión ética en el desempeño docente^[\textcolor{Red}{\faAngleDoubleRight{}} Todos estos aspectos individuales de ética profesional del docente tienen su impacto y su reflejo a nivel institucional en las distintas dimensiones de la denominada **Responsabilidad Social Universitaria (RSU)** [@pachon2009responsabilidad]. La RSU implica tanto los logros en eficiencia en el cumplimiento de las funciones que tiene encomendada, dimensión muy relacionada con la gestión de la calidad universitaria; y en segundo lugar, tiene que ver con la medida en que esas funciones se desarrollan teniendo en cuenta los requerimientos y de la dinámica de la sociedad, es decir, la pertinencia de su actividad [@Quezada2011].]. 
+
+\vspace{5mm} 
+
+**Aspectos relacionados con el papel del docente como especialista en su área de conocimiento**
+
+\vspace{2mm}
+
+Algunas cuestiones críticas en este ámbito son:
+
+- La *selección de contenidos curriculares*: ¿qué conviene que aprendan los estudiantes y por tanto, que debo enseñarles?
+      Esta reflexión debe ir más allá de la mera selección de un manual básico para la materia e implica un diagnóstico tanto de la formación previa de los estudiantes como del entorno profesional en el que se van a desenvolver en el futuro. 
+
+- La *adopción de métodos didácticos*:
+      Como se señala en la introducción de este apartado, la introducción de nuevas metodologías ha supuesto un esfuerzo de adaptación que está muy relacionado con el compromiso con la profesión. La adopción de las metodologías docentes más adecuadas para el aprendizaje de los contenidos de una determinada materia es otro compromiso ético importante en la labor docente^[En el Capítulo 3 se profundizará en estos aspectos metodológicos.].
+
+- La *conexión con otras áreas de conocimiento*:
+      El docente univesitario es un especialista por definición [@maura2001] pero esto no implica que su docencia pueda desarrollarse de manera aislada de otras materias. Es obligación del docente relacionar los contenidos con los de otras materias incluídas en los títulos, de manera que los estudiantes puedan adquirir una visión global. Para esto, es necesario incluir dentro de la labor docente la revisión y actualización de los conocimientos con respecto a otras áreas de conocimiento afines.
+
+
+- La *autonomía profesional y libertad de cátedra*:
+      La libertad de cátedra es un valor central en la educación superior y afecta a todos los aspectos del trabajo académico^[\textcolor{Red}{\faAngleDoubleRight{}} Esta **libertad de cátedra** se ha relacionado también con la existencia de figuras académicas permanentes en la educación superior (e.g. Fossey, 2004).] [@altbach2001; @fossey2004 ]. Aún reconociendose este papel fundamental en la educación universitaria, siguen existiendo divergencias sobre el ámbito de aplicación de esta libertad de cátedra. ¿Debe estar limitado a la protección de la docencia e investigación en un área de conocimiento de una universidad o debe tener un rango de aplicación más amplio?. En España, la libertad  de  cátedra está reconocida en el artículo 20.1 apartado c de la propia Constitución Española y se concreta en la ya citada LOU, en cuyo artículo 2.3 se recoge: 
+
+\noindent\rule{2cm}{0.4pt}
+
+> *“La actividad de la Universidad, así como su autonomía, se fundamenta en el principio de libertad  académica, que se manifiesta en las libertades de cátedra, de investigación y de estudio”.* 
+
+Sin embargo, algunos autores [@gonzalezelsa2010] han manifestado el posible conflicto entre esta definición libertad de cátedra con la normativa asociada a los sistemas de calidad de las titulaciones y las metodologías en el marco del EEES. 
+
+- La *evaluación y calificación* de los estudiantes:
+      Los mecanismos de evaluación han sido siempre uno de los elementos más críticos en el proceso enseñanza-aprendizaje y la educación superior no es una excepción en este fenómeno [@palomba1999]. Existe importante evidencia sobre los sesgos^[\textcolor{Red}{\faAngleDoubleRight{}} Existen tres tipos de situaciones especialmente sensibles en las que pueden generarse sesgos en los mecanismos de evaluación y a los que se debe, por tanto, prestar especial atención en el diseño de estos mecanismos: los *sesgos de género* [@centra2000], los sesgos en función de*origen étnico* [@Gipps1994] y la atención a la evaluación en *situación de discapacidad* [@lloyd1999introduction]] que pueden presentar los distintos mecanismos de evaluación en función de los rasgos de los estudiantes [@richardson2012; @pressley1995]. Es responsabilidad del docente la selección de los mecanismos de evaluación más adecuados para una determinada materia.
+
+
+\vspace{5mm} 
+
+**Aspectos relacionados con el papel del docente como miembro de una institución de educación superior**
+
+\vspace{2mm}
+
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faAngleDoubleRight{}} *The dogma of college as amiable, anarchic, self-correctives of scholars with a smaoll contingent of dignifies caretakers at the unavoidable business edge is crumbling*. 
+- Keller, 1983 
+  
+```
+
+- Responsabilidad en cuanto a la *estructura general del centro*:
+      En las universidades modernas, los propios académicos participan y son responsables de la gestión y el futuro del centro educativo [@keller1983academic]. Así, la labor del docente implica de una u otra forma un conocimiento sobre los objetivos del propio centro, su estrategia para alcanzarlos y cuál es el papel que juega cada individuo dentro de esos objetivos generales.
+
+- Responsabilidad en la *formación* inicial y permanente:
+      El *Lifelong learning* o aprendizaje para toda la vida es cada vez más relevante en todas las áreas [@edwards2013learning] y es especialmente importante en el trabajo académico [@Candy1996]^[Sin embargo, las actitudes hacia esta necesidad de aprendizaje son diversas. [@Kane2002]]. El docente universitario debe estar inmerso en un proceso de aprendizaje permanente, no solo en el ámbito de su área de conocimiento sino necesariamente en otros ámbitos como el ámbito pedagógico o el ámbito de tecnologías de información. 
+
+\vspace{5mm} 
+
+**Aspectos relacionados con la relación del docente con la comunidad universitaria y con el entorno**
+
+\vspace{2mm}
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faAngleDoubleRight{}} *Las capacidades del docente para el trabajo en equipo son todavía más importante en el marco del EEES y con el desarrollo de las *competencias transversales*, donde esta capacidad para el trabajo en equipo es una competencia que se trabaja en prácticamente todos los estudios oficiales.*. 
+
+  
+```
+
+Por último, es necesario señalar otros aspectos relacionados con la implicación con otras personas: el resto de miembros de la comunidad universitaria y el entorno social. Con respecto a los miembros de la comunidad universitaria, según indica @lopez2006profesorado la capacidad para el *trabajo en equipo* es un requisito fundamental en el desempeño profesional del docente. La actitud favorable al desarrollo de este trabajo en equipo es por tanto un compromiso exigible al docente universitario.
+
+Además, con respecto a la relación con la comunidad local, la propia LOU y todas las anteriores incluyen el retorno a la sociedad como una de las funciones básicas de la universidad. Así, el artículo 1 de la LOU indica:
+
+\noindent\rule{2cm}{0.4pt}
+
+> *Son funciones de la Universidad al servicio de la sociedad:*
+
+> ....
+
+> *c) La difusión, la valorización y la transferencia del conocimiento al servicio de la cultura, de la calidad de la vida, y del desarrollo económico.*
+
+> *d) La difusión del conocimiento y la cultura a través de la extensión universitaria y la formación a lo largo de toda la vida. *
+
+Esta función general de la universidad debe completarse no únicamente a nivel institucional, sino a través de la labor de cada uno de sus docentes.
+
+\clearpage   
+
+## El entorno específico de la docencia en marketing
+
+```{r marcopropio2, fig.margin = TRUE}
+
+knitr::include_graphics("images/marcopropio.eps")
+
+```
+
+A continuación siguiendo el esquema planteado en la Figura \ref{marcopropio}, se va a realizar una breve reflexión sobre los aspectos de contexto que afectan a la docencia en el área de Comercialización e Investigación de Mercados en la Universidad Pública de Navarra.
+
+### La Institución: la Universidad Pública de Navarra
+
+La Universidad Pública de Navarra se fundó hace ahora algo más de 30 años, mediante la Ley Foral 8/1987, de 21 de abril. Es así, una institución relativamente joven, pero que ya ha alcanzado su madurez. Tal como se recoge en su Plan Estratégico [@upna2016], la misión de la UPNA es:
+
+\noindent\rule{2cm}{0.4pt}
+
+> ...contribuir al progreso de la sociedad mediante la creación y transmisión de conocimiento y la promoción de la cultura, consiguiendo la formación integral de las personas.
+
+```{r upna, out.width='60%', fig.margin = TRUE}
+
+knitr::include_graphics("images/logo.png")
+
+```
+
+```{r valores, fig.margin = TRUE, fig.cap="\\label{valores} Valores de la UPNA. Plan Estratégico UPNA (2016)",fig.align='center'}
+knitr::include_graphics("images/valores.eps")
+```
+
+Con respecto a la Visión:
+
+\noindent\rule{2cm}{0.4pt}
+
+> La Universidad Pública de Navarra contribuirá a la formación integral de sus estudiantes, mediante métodos basados en el aprendizaje, con procesos personalizados y tutorizados, adaptados al Espacio Europeo de Educación Superior. 
+> Asimismo, en estrecha colaboración con su entorno socio-económico, impulsará la investigación y, mediante la transferencia de conocimiento, será un agente de referencia en el sistema de innovación de Navarra.
+> Buscará la especialización como seña de identidad que le permita ser un exponente en el ámbito universitario, nacional e internacional.
+> Junto con una comunidad universitaria comprometida con la sociedad, aplicará a toda su actividad criterios de Responsabilidad Social.
+> Generará un entorno de trabajo que posibilite el mejor desarrollo de la vida profesional de su equipo.
+
+En la Figura \ref{valores} se muestran los valores definidos en su Plan Estratégico.
+
+\clearpage
+```{r campus, fig.margin = TRUE,out.width='100%', fig.cap="\\label{valores} Campus de Arrosadía. Recursos y Espacios"}
+
+knitr::include_graphics("images/arrosadia.jpg")
+
+```
+La UPNA tiene dos campus, situados en Pamplona y Tudela y, en el campus de Pamplona, se tienen dos sedes, la de Arrosadía y la sede de Ciencias de la Salud. En el campus de Arrosadía está el edificio de Aulario, los edificios departamentales, la biblioteca, servicios centrales y el rectorado. La docencia del área de Comercialización e Investigación de Mercados se imparte en esta sede de Arrosadía, salvo una asignatura opativa que se imparte en el campus de Tudela. En la Universidad Pública de Navarra existen 6 Centros y 11 Departamentos. La Tabla \ref{estructura} resume esta estructura.
+
+```{r}
+
+library(readr)
+estructura <- read_csv("../data/estructura.csv")
+
+knitr::kable(estructura, row.names = FALSE, format = "latex", booktabs = T, caption = "\\label{estructura} Estructura en la Universidad Pública de Navarra. Centros y Departamentos")  %>% 
+      kable_styling(latex_options = c("scale_down")) %>%
+      column_spec(2, width = "24em")
+
+```
+
+La estructura de departamentos se ha modificado en 2018, partiendo de un número inicial de 22 departamentos que han quedado reducidos a 11. La estructura de centros no se ha modificado.
+
+\clearpage
+
+En la figura \ref{graphplazas} se muestran las titulaciones de grado impartidas en el curso 2017/2018 en cada uno de los centros junto con el número de plazas ofertadas y matriculadas. En la Universidad Pública de Navarra destacan por número las titulaciones en el ámbito de las ingenierías y, por número de plazas ofertadas, el grado en Administración y Dirección de Empresas y el conjunto de las titulaciones de Magisterio. La Facultad de Ciencias Económicas y Empresariales es el tercer centro en tamaño por número de plazas.
+
+```{r graphplazas, fig.cap="\\label{graphplazas} Plazas ofertadas y matriculadas en las titulaciones de grado. Curso 2017/2018.-Elaboración Propia con Datos del Portal de Transparencia-", fig.align='center', out.width='100%', fig.fullwidth=TRUE}
+
+knitr::include_graphics("figures/gradoplazasgraph.jpg")
+
+```
+
+\clearpage
+
+Podemos comprobar que las tasas de ocupación de plazas ofertadas son en general muy altas^[Solo dos títulos tienen tasas bajas: uno de los títulos de grado en la Escuela Técnica Superior de Ingenieros Agrónomos con una tasa de ocupación del 55% y uno de los títulos impartidos en la Escuela Técnica Superior de Ingenieros Industriales que se imparte en el Campus de Tudela.]. En la Facultad de Ciencias Económicas y Empresariales se ofertan un total de 285 plazas con una ocupación del 100%.
+
+En el curso 2018/2019 se ponen en marcha cuatro nuevas titulaciones de grado^[Estos nuevos títulos se ofertan desde la Escuela Técnica Superior de Ingenieros Agrónomos.]:
+
+- Grado en Biotecnología
+- Grado en Ciencias
+- Grado en Ciencia de Datos
+- Grado en Ingeniería Biomédica 
+
+\clearpage 
+
+En la tabla \ref{masterplazas} se muestran los másteres universitarios impartidos en el curso 2017/2018 junto con el número de estudiantes en el curso 2015/2016 y datos provisionales para el curso 2016/2017^[En el caso de los másteres no existe información pública disponible sobre las plazas ofertadas, por lo que no conocemos las tasas de ocupación.]. Están señalados con un asterisco los másteres interuniversitarios. La Universidad Pública de Navarra oferta un total de 29 títulos de máster oficial, con un total de 720 estudiantes según los datos provisionales para el curso 2016/2017.
+
+```{r masterplazas}
+library(readr)
+masterplazas <- read_csv("../data/masterplazas.csv", 
+    col_types = cols(`Centro Titula` = col_character(), 
+        Est1516 = col_integer(), Est1617A = col_integer()))
+
+
+names(masterplazas)<- c("Centro y Titulación", "Estudiantes 2015-2016", "Estudiantes 2016-2017(A)")
+knitr::kable(masterplazas, row.names = FALSE, format = "latex", booktabs = T, caption = "\\label{masterplazas} Oferta Máster Universitario Curso 2016/2017")  %>% 
+      kable_styling(font_size = 7.5) %>%
+      column_spec(1, width = "20em") %>%
+      column_spec(2, width = "5em")%>%
+      column_spec(3, width = "5em")%>%
+      add_indent(c(2, 3, 4, 5, 7, 8, 9, 10, 
+                   11, 13,14, 15, 17, 18, 19, 
+                   20, 21, 23, 24,25, 26, 27,
+                   28, 29, 30, 31,32, 34, 35))%>%
+      row_spec(1, bold=T)%>%
+      row_spec(6, bold=T)%>%
+      row_spec(12, bold=T)%>%
+      row_spec(16, bold=T)%>%
+      row_spec(22, bold=T)%>%
+      row_spec(33, bold=T)%>%
+      row_spec(36, bold = T)%>%
+      footnote(general = "unavarra.es. Portal de transparencia",
+               symbol = "Máster Interuniversitario",
+                  general_title = "Fuente: ")
+```
+
+En la tabla podemos comprobar como, al igual que sucede con los títulos de grado, son las dos Escuelas Técnicas Superiores las que ofertan un mayor número de títulos de máster. En la Facultad de Ciencias Económicas y Empresariales se ofrecen dos másteres: el Máster Universitario en Dirección de Empresas y el Máster en Gestión por Procesos con Sistemas Integrados de Información, además de un título en extinción, el Máster Universitario en Análisis Económico y Financiero. Las cifras de estudiantes matriculados en los másteres son en general bajas, salvo en el caso de los másteres profesionalizantes (M.U. en Formación del Profesorado de Educación Secundaria, M.U. en Ingeniería Industrial y M.U. en Acceso a la Abogacía).
+
+\clearpage 
+
+### Contexto curricular \label{Curricular}
+
+El área de Comercialización en Investigación de Mercados de la Universidad Pública de Navarra forma parte del Departamento de Gestión de Empresas. La docencia del área en estudios oficiales de grado se muestra en la Tabla \ref{Gradomk}. En la tabla se presentan con un asterisco aquellas asignaturas impartidas al menos en parte por profesorado del área pero que no están asignadas al área de conocimiento.
+
+```{r gradomk}
+library(readr)
+gradomk <- read_csv("../data/gradomk.csv", 
+    col_types = cols(Caracter = col_character(), 
+        Codigo = col_integer(), 
+        Curso = col_integer(), Tiulo = col_character()))
+
+
+
+names(gradomk)<- c("Título - Asignatura", "Código", "Curso", "Carácter")
+
+gradomk_footnote <- gradomk
+
+gradomk_footnote[8,1] <- paste0(footnote_marker_symbol(1, "latex"), "",
+                                gradomk_footnote[8,1])  
+gradomk_footnote[9,1] <- paste0(footnote_marker_symbol(1, "latex"), "",
+                                gradomk_footnote[9,1])  
+gradomk_footnote[17,1] <- paste0(footnote_marker_symbol(1, "latex"), "",
+                                gradomk_footnote[17,1])  
+gradomk_footnote[19,1] <- paste0(footnote_marker_symbol(1, "latex"), "",
+                                gradomk_footnote[19,1]) 
+
+knitr::kable(gradomk_footnote, row.names = FALSE, escape=FALSE, format = "latex", booktabs = T, caption = "\\label{Gradomk} Docencia en Grado asignada al Área de Comercialización e Investigación de mercados")%>% 
+      kable_styling(font_size = 7.5) %>%
+      group_rows("G. en Administración y Dirección de Empresas", 1, 9) %>%
+      group_rows("Doble G. ADE+Dcho", 10, 13) %>%
+      group_rows("Doble G. Inter. ADE y Economía", 14, 16) %>%
+      group_rows("G. Ingeniería en Diseño Mecánico", 17, 18) %>%
+      group_rows("G. Ingeniería Agroalimentaria y del Medio Rural", 19,19) %>%
+      column_spec(1, width = "17em") %>%
+      column_spec(5, width = "4em") %>%
+      footnote(general = "Elaboración propia a partir de los datos en unavarra.es",
+               symbol = "Asignatura compartida con otras áreas de conocimiento",
+                  general_title = "Fuente: ")
+```
+
+Podemos observar que el área imparte docencia principalmente en tres titulaciones^[Además, existe una asignatura optativa del área de conocimiento en cuarto curso del Grado en Ingeniería en Diseño Mecánico y una docencia de menor peso en una asignatura de Empresa en el Grado en Ingeniería Agroalimentaria y del Medio Rural.]:
+
+- Grado en Administración y Dirección de Empresas^[Enlace en el RUCT: https://bit.ly/2JCvMOP]
+- Doble Grado en Administración y Dirección de Empresas y Derecho^[Enlace al título de derecho en el RUCT: https://bit.ly/2Kq3F6R]
+- Doble Grado Internacional en Administración y Dirección de Empresas y Economía^[Enlace al título de economía en el RUCT: https://bit.ly/2I46yLX]
+
+Así pues, la docencia del área se concentra en realidad en la titulación en Administración y Dirección de Empresas y en la oferta conjunta de esta titulación con las de Derecho y Economía. Los tres títulos han renovado su acreditación, en el caso de ADE y Economía en 2016 y en el caso de Derecho en 2017. 
+
+La mayor parte de las asignaturas impartidas son de carácter obligatorio (11/20). Las asignaturas optativas se concentran en el Grado en Administración y Dirección de Empresas, con un total de 6 asignaturas optativas, ya que en las dobles titulaciones la optatividad es mucho más reducida. Las asignaturas específicas del área de conocimiento aparecen en los planes de estudio a partir del segundo curso^[Memoria del Título: https://bit.ly/2I2BZXf].
+
+Con respecto al idioma de impartición, todas las asignaturas obligatorias se imparten en grupos de castellano e inglés, de la misma forma que una de las asignaturas optativas. El área de comercialización e investigación de mercados no imparte en este momento asignaturas en euskera, aunque sí que existe oferta en euskera dentro de la titulación ^[Listado de asignaturas en euskera: https://bit.ly/2raG94E]
+Con respecto a la docencia del área en estudios de Máster Universitario, la Tabla \ref{Mastermk} recoge las asignaturas y titulaciones. Al igual que en la tabla anterior, se señalan con un asterisco aquellas asignaturas que no están asignadas específicamente al área de Comercialización e Investigación de Mercados.
+
+```{r mastermk}
+library(readr)
+mastermk <- read_csv("../data/mastermk.csv", 
+    col_types = cols(Caracter = col_character(), 
+        Codigo = col_integer(), 
+        Titul = col_character()))
+
+names(mastermk)<- c("Titulación - Asignatura", "Código", "Carácter")
+
+
+
+mastermk_footnote <- mastermk
+
+mastermk_footnote[2,1] <- paste0(footnote_marker_symbol(1, "latex"), "",
+                                mastermk_footnote[2,1])  
+mastermk_footnote[4,1] <- paste0(footnote_marker_symbol(1, "latex"), "",
+                                mastermk_footnote[4,1])  
+mastermk_footnote[6,1] <- paste0(footnote_marker_symbol(1, "latex"), "",
+                                mastermk_footnote[6,1])  
+mastermk_footnote[8,1] <- paste0(footnote_marker_symbol(1, "latex"), "",
+                                mastermk_footnote[8,1]) 
+mastermk_footnote[9,1] <- paste0(footnote_marker_symbol(1, "latex"), "",
+                                mastermk_footnote[9,1]) 
+
+knitr::kable(mastermk_footnote, row.names = FALSE,  escape=FALSE, format = "latex", booktabs = T, caption = "\\label{Mastermk} Docencia en Máster asignada al Área de Comercialización e Investigación de mercados")  %>% 
+      kable_styling(latex_options = c("scale_down")) %>%
+      group_rows("MU Dirección De Empresas", 1, 2) %>%
+      group_rows("MU En Gestión, Organización y Economía de la Empresa (Inter.)", 3, 3) %>%
+      group_rows("MU Gestión Por Procesos con Sistemas Integrados de Información (ERP)", 4, 6) %>%
+      group_rows("MU Ingeniería Industrial", 7, 7) %>%
+      group_rows("MU Profesorado de Educación Secundaria", 8, 9) %>%
+      column_spec(1, width = "18em") %>%
+      footnote(general = "Elaboración propia a partir de los datos en unavarra.es",
+               symbol = "Asignatura compartida con otras áreas de conocimiento",
+                  general_title = "Fuente: ")
+```
+
+Considerando únicamente la docencia específica del área de conocimiento, se observa que la docencia en máster es reducida, con tres asignaturas generales en tres titulaciones (el máster en Dirección de Empresas, el Máster Interuniversitario en Gestión, Organización y Economía de la Empresa y el Máster Universitario en Ingeniería Industrial) y una asignatura más específica en el Máster en Gestión por Procesos con Sistemas Integrados de Información (ERP).
+
+### Profesorado \label{Profesorado}
+
+El área de Comercialización de Mercados está compuesta en este momento (junio 2018) por 15 personas, el 53% son hombres y el 47% mujeres. La distribución por figuras se muestra en la Tabla \ref{figuras}.
+
+```{r}
+tabla <- data.frame(stringsAsFactors=FALSE,
+       Figura = c("Catedráticos de Universidad",
+                  "Profesores Titulares de Universidad",
+                  "Profesores Contratado Doctor", "Profesores Contratado Doctor Interino",
+                  "Profesores Ayudante Doctor", "Profesores Asociados", "Total"),
+     Personas = c(1L, 3L, 3L, 1L, 1L, 6L, 15L),
+   Porcentaje = c("6.7%", "20.0%", "20.0%", "6.7%", "6.7%", "40.0%", "100")
+)
+
+names(tabla)<- c("Figura", "Número de Personas", "Porcentaje")
+knitr::kable(tabla, row.names = FALSE, format = "latex", booktabs = T, align = c('l', 'c', 'c'), caption = "\\label{figuras} Profesorado en el área de Comercialización e Investigación de Mercados")  %>% 
+      kable_styling(font_size = 7.5) %>%
+      row_spec(7, bold = T)%>%
+      footnote(number = c("Fuente: unavarra.es")
+           )
+
+```
+
+Como puede verse en la Tabla \ref{figuras}, el porcentaje total de profesorado contratado es del 59%. Este porcentaje es del 53% si se calcula como Profesorado Equivalente a Tiempo Completo. En ambos casos, el porcentaje es superior al 49% que marca la LOU^[Artículo 48 LO 6/2001, de 21 de diciembre, de Universidades, modificada por la LO 4/2007, de 12 de abril, por la Ley 14/2011, de 1 de junio y por el Real Decreto Ley 14/2012, de 20 de abril] como límite para el peso del profesorado contratado en el conjunto de la universidad.
+
+\clearpage
+
+### Estudiantes \label{Estudiantes}
+
+Por último, dentro del contexto específico, es necesario conocer el perfil de los estudiantes a los que se va a impartir la docencia en el área de Comercialización e Investigación de Mercados en la Universidad Pública de Navarra.
+
+Para describir a los estudiantes, utilizamos los datos publicados en el Portal de Transparencia de la Universidad Pública de Navarra. Comenzando con el perfil de los estudiantes de Grado, se utilizan los datos de las tres titulaciones que tienen un mayor peso en la docencia: el Grado en ADE, el Doble Grado ADE-Derecho y el Doble Grado Internacional ADE-Economía.
+
+\vspace{5mm}
+
+**Perfil de los estudiantes de nuevo ingreso**
+
+\vspace{2mm}
+
+```{r nuevoingreso, fig.cap="\\label{nuevoingreso} Porcentaje de estudiantes por sexo y nacionalidad: UPNA frente a otras universidades. Elaboración propia con datos SIIU",fig.align='center', out.width='100%'}
+
+knitr::include_graphics("figures/estudiantes.pdf")
+
+```
+
+La Figura \ref{nuevoingreso} muestra el perfil por sexo y nacionalidad de los estudiantes de nuevo ingreso en la Universidad Pública de Navarra en comparación con la media para todas las universidades públicas y con respecto a las universidades públicas presenciales. En el gráfico podemos observar como en la Universidad Pública de Navarra el reparto por sexos de los estudiantes de nuevo ingreso es más paritario que en el conjunto de universidades públicas y de universidades presenciales, donde el porcentaje de mujeres es mayor.
+
+Fijándonos ahora en los datos más específicos para la Facultad de Ciencias Económicas y Empresariales, en la Tabla \ref{origenFCCEE} se muestra el número de estudiantes matriculados en la facultad según su origen geográfico.
+
+```{r origenFCCEE, results='asis'}
+library(readr)
+origenFCCEE <- read_csv("../figures/origenFCCEE.csv")
+
+names(origenFCCEE)<- c("Año", "2011 - 2011", "2012 - 2013", "2013 - 2014", "2014 - 2015","2015 - 2016", "2016 - 2017")
+
+origenFCCEE_footnote <- origenFCCEE
+library(kableExtra)
+names(origenFCCEE_footnote)[7] <- paste0(names(origenFCCEE_footnote)[7],
+                              footnote_marker_alphabet(1, "latex"))
+
+knitr::kable(origenFCCEE_footnote[,c(1,3:7)], escape=FALSE, format.args = list(decimal.mark = ',', big.mark = "."), row.names = FALSE, format = "latex",
+             booktabs = T, align = c('l', 'c', 'c'), 
+             caption = "\\label{origenFCCEE} Estudiantes matriculados por origen geográfico")  %>% 
+      kable_styling(latex_options = c("scale_down")) %>%
+      row_spec(1, bold=T)%>%
+      row_spec(5,  bold=T)%>%
+      row_spec(9,  bold=T)%>%
+      add_indent(c(2, 3, 4, 6, 7, 8))%>%
+      column_spec(1, width = "10em")%>%
+      column_spec(2:6, width = "3em")%>%
+      footnote(general = "Elaboración propia con datos UPNA. Portal de Transparencia",
+               alphabet = "Avance, datos provisionales",
+                  general_title = "Fuente: ")
+
+
+```
+
+La matrícula de estudiantes ha disminuido entre 2011 y 2016 y lo ha hecho en mayor medida en las titulaciones de la FCCEE que en el resto de titulaciones. Por contra, ha aumentado el número de matriculados en el doble grado compartido con la Facultad de Ciencias Jurídicas conforme se han ido implantando los distintos cursos. 
+
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faAngleDoubleRight} *Los estudiantes en la UPNA y en la FCCEE son muy mayoritariamente de origen navarro aunque el número de estudiantes de origen extranjero está aumentando muy ligeramente.*
+```
+
+En la Figura \ref{origen2} se muestra gráficamente el porcentaje de estudiantes con origen navarro desde 2011 hasta el curso 2016/2017 desglosado también por títulos. Como puede verse, el porcentaje de estudiantes navarros en la FCCEE es ligeramente superior al general en la universidad en todos los cursos académicos, especialmente en el grado en Administración y Dirección de Empresas. Los dos dobles grados, sin embargo, tienen un porcentaje de estudiantes navarros sensiblemente inferior. Con respecto a la evolución temporal, los porcentajes se mantienen constante, salvo en el doble grado ADE-ECO en el que los porcentajes parecen ser menores en los tres últimos cursos académicos.
+
+
+```{r origen2, fig.cap="\\label{origen2} Origen de los estudiantes por titulación. Elaboración propia con datos UPNA. Portal de Transparencia",fig.align='center'}
+
+knitr::include_graphics("figures/origenestudiantes.pdf")
+
+```
+
+Con respecto a la edad, la Figura \ref{edad} muestra los porcentajes por grupos de edad. Como cabe esperar, el grupo de edad más numeroso entre los estudiantes de nuevo ingreso es el de 18 a 25 años, pero este efecto es todavía más acusado en la UPNA de lo que lo es en el resto de universidades, incluso solamente entre las presenciales.
+
+```{r edad, fig.cap="\\label{edad} Edad de los estudiantes: UPNA frente a otras universidades. Elaboración propia con datos SIIU",fig.align='center', out.width='100%'}
+
+knitr::include_graphics("figures/edades.pdf")
+
+```
+\clearpage
+
+En la Tabla \ref{ambito} se compara el número de estudiantes del ámbito de Ciencias Sociales y Jurídicas en la Universidad Pública de Navarra con la importancia del ámbito en otras universidades públicas y públicas presenciales a partir de los datos del Sistema Integrado de Información Universitario (SIIU). Los datos se refieren a número de estudiantes matriculados en estudios de Grado, Primer y Segundo Ciclo.
+\begin{fullwidth}
+
+```{r ambito, results='asis', fig.fullwidth=TRUE}
+library(readr)
+estudiantes <- read.csv("../figures/estudiantes.csv")
+
+names(estudiantes)<- c("Ámbito", "2010-2011", "2011-2012", "2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017")
+
+estudiantes_footnote <- estudiantes
+library(kableExtra)
+names(estudiantes_footnote)[8] <- paste0(names(estudiantes_footnote)[8],
+                              footnote_marker_alphabet(1, "latex"))
+
+
+knitr::kable(estudiantes_footnote[,c(1,4:7)], row.names = FALSE, 
+             format = "latex", booktabs = T, escape=FALSE,
+             format.args = list(decimal.mark = ',', big.mark = "."),
+             caption = "\\label{ambito} Estudiantes Matriculados Grado, Primer y Segundo Ciclo. Elaboración propia con Datos SIIU")  %>% 
+      kable_styling(latex_options = c("scale_down")) %>%
+        column_spec(1, width = "10em")%>%
+        column_spec(2:6, width = "3.5em")%>%
+        group_rows("Nacional", 1, 2) %>%
+        group_rows("Navarra", 3, 4) %>%
+        group_rows("UPNA", 5, 6) %>%
+        footnote(general = "Elaboración propia con datos UPNA. Portal de Transparencia",
+                 general_title = "Fuente: ")
+```
+
+\end{fullwidth}
+
+Se observa cómo el número de estudiantes matriculados en estudios de grado ha disminuido también a nivel nacional y en el conjunto de Navarra. ^[No podemos saber en qué medida esté efectos se traslada a las titulaciones de la Facultad de Ciencias Económicas y Empresariales, ya que no tenemos datos desagregados a ese nivel para el conjunto de la Comunidad Foral y el conjunto de España.]
+
+
+\clearpage
+
+Para interpretar el peso relativo del ámbito de Ciencias Sociales y Jurídicas, en la Figura \ref{sociales} se muestra elporcentaje de estudiantes matriculados en este grupo de titulaciones. El peso de estas titulaciones en la UPNA es mayor a la media nacional, pero menor al que tienen en el conjunto de la educación superior en Navarra. 
+
+```{r sociales, fig.cap="\\label{sociales} Porcentaje de matrícula en Ciencias Sociales y Jurídicas. Elaboración propia con datos SIIU",fig.align='center', out.width='100%'}
+
+knitr::include_graphics("figures/sociales.pdf")
+
+```
+
+\noindent\rule{4cm}{0.4pt}
+\smallskip
+Así, podemos concluir que los estudiantes en la Facultad de  Ciencias Económicas y Empresariales de la Universidad Pública de Navarra con respecto a otras universidades públicas presenciales son:
+
+- más jóvenes
+- con una proporción de hombres ligeramente mayor que la media
+- proceden en mayor medida de la propia región
+- con un peso relativo mayor en la universidad
+\smallskip
+\noindent\rule{4cm}{0.4pt}
+
+\clearpage
+
+\vspace{5mm} 
+
+
+**Indicadores en Grado**
+
+\vspace{2mm}
+
+Para terminar con el contexto específico del proyecto docente, en la Tabla \ref{datostitulos} se presentan algunos indicadores clave de las 3 titulaciones de grado en las que se concentra la docencia en el área de Comercialización e Investigación de Mercados. 
+
+
+```{r datostitulos, results='asis'}
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+              Indicador = c("Plazas Ofertadas",
+                             "% Plazas Matriculadas en primera opción",
+                             "Nota Mínima Admisión", "Tasa de Rendimiento",
+                             "Estudiantes Egresados", "Duración media de los estudios",
+                             "Plazas Ofertadas",
+                             "% Plazas Matriculadas en primera opción", "Nota Mínima Admisión",
+                             "Tasa de Rendimiento", "Estudiantes Egresados",
+                             "Duración media de los estudios", "Plazas Ofertadas",
+                             "% Plazas Matriculadas en primera opción", "Nota Mínima Admisión",
+                             "Tasa de Rendimiento", "Estudiantes Egresados",
+                             "Duración media de los estudios"),
+                A201314 = c(215L, "82.3%", 6.54, "78.7%", 127, 4, 25, "100%", 9.703, "96.3%",
+                             0, 0, 40, "100%", 9.80, "98.3%", 0, 0),
+                A201415 = c(215L, "79.9%", 5.62, "78.3%", 162, 4.4, 25, "100%", 10.902,
+                             "97.6%", 11, 4.9, 40, "100%", 10.792, "98.6%", 0, 0),
+                A201516 = c(195L, "84.7%", 6.172, "76.8%", 157, 4.6, 25, "100%", 10.028,
+                             "98.1%", 19, 5.1, 40, "100%", 9.907, "98.3%", 29, 6),
+            A201617 = c(195L, "72.8%", 6.31, "-", "-",  "-", 25, "100%", 10.85,  "-",  "-",
+                              "-", 40, "100%", 10.94,  "-",  "-",  "-")
+               
+         )
+
+
+
+names(tabla)<- c("Indicador",  "2013 - 2014", "2014 - 2015","2015 - 2016", "2016 - 2017")
+tabla_footnote<- tabla
+names(tabla_footnote)[3] <- paste0(names(tabla_footnote)[5], " ",
+                              footnote_marker_symbol(1, "latex"))
+
+knitr::kable(tabla, row.names = FALSE, align = c('l',   'c', 'c', 'c'),
+             format = "latex",booktabs = T, caption = "\\label{datostitulos} Indicadores por titulación. Fuente: Elaboración propia con datos UPNA. Portal de Transparencia")  %>% 
+      kable_styling(latex_options = c("scale_down")) %>%
+      group_rows("ADE", 1, 6) %>%
+      group_rows("Doble Grado ADE+ECO", 7, 12) %>%
+      group_rows("Doble Grado ADE+Dcho", 13, 18) %>%
+      column_spec(1, width = "13em")%>%
+      column_spec(2:7, width = "3.5em")%>%
+      footnote(symbol = "Datos provisionales",
+                  footnote_as_chunk = T)
+```
+
+Podemos observar importantes diferencias entre las tres titulaciones de Grado. Los dos títulos dobles tienen un cupo de acceso mucho más reducido y una tasa del 100% de estudiantes que acceden al título en primera opción. El Grado en ADE tiene un acceso en primera opción alto (72% en el curso 2016/2017) pero hay un número significativo de estudiantes que hubieran preferido otra titulación. Estas diferencias se reflejan también en las notas de admisión, que son mucho más altas en los dos dobles títulos situándose por encima de los 10 pntos, frente a un 6.31 en ADE.^[De esta forma, los indicadores señalan que los dos dobles grados tienen un perfil de ingreso de estudiantes más motivados en media y con notas de acceso más altas.]
+
+Este perfil de ingreso tiene reflejo en el rendimiento y la graduación. La tasa de rendimiento (créditos aprobados frente a créditos presentados) es casi del 100% en los dos dobles títulos y del 76% en el grado en ADE. Además, la duración de los estudios se corresponde casi exactamente con lo previsto para los dos dobles grados (5 años en el doble ADE-ECO y 6 en el doble ADE-Dcho) y se retrasa en algo más de seis meses en el grado en ADE. En la Figura \ref{indicadores} podemos ver la evolución de estos indicadores.
+
+```{r indicadores, fig.cap="\\label{indicadores} Indicadores de los títulos con mayor docencia del área. Fuente: Elaboración propia con datos UPNA. Portal de Transparencia",fig.align='center', out.width='100%'}
+
+knitr::include_graphics("figures/indicadores.pdf")
+
+```
+
+Podemos ver cómo no existe un patrón definido en cuanto a la evolución del porcentaje de admisión en ADE y a las notas de corte de las tres titulaciones que se mantienen relativamente estables con pequeñas variaciones.
+

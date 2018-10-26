@@ -1,0 +1,1905 @@
+---
+documentclass: book
+classoption: a4paper
+#classoption: a4paper,oneside
+#bibliography: bib/library.bib
+bibliography: "D:/Dropbox/2_ Investigacion/4_Referencias/library.bib"
+#csl: methods-in-ecology-and-evolution.csl
+csl: spanish-journal-of-marketing-esic.csl
+link-citations: yes
+fontsize: 12pt # 10pt,11pt
+geometry: margin = 2.5cm
+output: 
+  pdf_document: 
+    keep_tex: yes
+    number_sections: yes
+#    toc: yes
+    fig_caption: yes
+---
+
+
+```{r include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(fig.path = 'figures/',
+                      echo = FALSE, warning = FALSE, message = FALSE,
+                      fig.align="center",out.width="95%",
+                      cache=FALSE)
+
+```
+
+
+
+<!-- \appendix -->
+<!-- \setcounter{chapter}{0} -->
+<!-- \setcounter{chapter}{0} escribir 0 para apéndice A  -->
+
+<!-- \pagenumbering{arabic} -->
+
+
+# Anexo.- Dirección Comercial I: Guía del Profesor  \label{anexo2}
+
+## Proyecto grupal
+
+Los aspectos relacionados con el proyecto grupal se describen en detalle en el Anexo \ref{anexo1} Guía del Estudiante. Para tutorizar este proyecto, es necesario tener en cuenta, además de las cuestiones señaladas en dicha guía:
+
+- Es necesario configurar previamente la herramienta en MiAulario *Secciones* con el número de grupos y tamaño máximo previstos. Aunque los estudiantes se autosuscriben a la herramienta, pueden cometer errores que hay que corregir manualmente.
+- Se debe abrir una cuenta en [Trello](https://trello.com/) para poder supervisar el trabajo de los grupos. Esta herramienta es la que permite posteriormente valorar la capacidad de organización del equipo durante el curso y la que permite también hacer correcciones individuales sobre la nota grupal, por lo que los estudiantes deben darse de alta con nombres que permitan su identificación.
+- Las sesiones de seguimiento se realizan en clase de seminario, de forma que cada grupo puede seguir trabajando mientras se realiza el control. Para esto puede ser útil realizar las clases en aula de informática, pero estas aulas, por su distribución, no favorecen el trabajo grupal, por lo que se puede solicitar a los estudiantes que trabajen en el aula con ordenadores portátiles.
+- La sesión de exposición se puede organizar en las clases pequeñas de seminario o en la clase en grupo grande, dependiendo del número de grupos.
+
+\clearpage
+
+
+## Lecturas
+
+En esta asignatura se plantea una lectura complementaria para cada tema que son material de estudio de la asignatura. Además, en dos de estas lecturas se exige la entrega de un informe y la realización de una evaluación por pares.
+
+**Tema 1**: Keiningham, T., Gupta, S., Aksoy, L., y Buoye, A. (2014). El alto precio de la satisfacción del cliente. Harvard Deusto Marketing y Ventas, 125, 6–17.
+
+**Tema 2**: Kotler, P., & Reibstein, D. (2014). ¿Su empresa necesita realmente un departamento de Márketing? Harvard Deusto Marketing y Ventas, 122, 6–9.
+
+**Tema 3**: Matzler, K., & Kathan, W. (2015). Adapting to the Sharing Economy. MIT Sloan Management Review, 56(2), 71–77. 
+
+**Tema 4**: Casado, J. L. (2015). La revolución analítica: el Big Data en la práctica. Harvard Deusto Marketing y Ventas, 133, 28–37.
+
+**Tema 5**: Sancho, E. L. (2018). La gestión de la experiencia del cliente como primera palanca del “branding.” Harvard Deusto Business Review, 279, 6–16.
+
+**Tema 6**: Peterson, R. S. (2017). ¿Qué tipo de negociador eres ? Harvard Deusto Business Review, 264, 62–66.
+
+**Tema 7**: Albareda Vivo, L., & González Bree, F. (2015). Innovación sostenible nuevo espacio de márketing y competitividad. Harvard Deusto Marketing y Ventas, 133, 6–14.
+
+**Tema 8**: Gónzalez Moreno, J., Gallo, Í., & Foncillas, P. (2018). Caso BMW de “poseer” a “vivir”: veinte años experiencias. Harvard Deusto Marketing y Ventas, 150, 42–49.
+
+**Tema 9**: Simester, D. (2016). Why Great New Products Fail. MIT Sloan Management Review, 57(3), 33–39. 
+
+**Tema 10**: Somalo, N. (2018). Modelos de negocio digitales. ¿Por qué valen tanto las “startups” digitales que solo pierden dinero? Harvard Deusto Business Review, 276, 20–28.
+
+\clearpage
+
+## Actividades de Aplicación
+
+### Actividad de aplicación I: Percepciones sobre el marketing
+
+\vspace{2mm}
+
+*Fuente*: Adaptada de @fripp2017
+
+\vspace{2mm}
+
+*Introducción*
+
+\vspace{2mm}
+
+El marketing es una actividad muchas veces incomprendida. Así, antes de empezar el curso, vamos a repasar las percepciones de la clase sobre esta actividad haciendo un pequeño test.
+
+Recordad que el objetivo de la actividad no es seleccionar una respuesta en particular sino explorar cuales son las percepciones sobre el marketing. Cuando termines, compara tus respuestas con las de tus compañeros.
+
+\vspace{2mm}
+
+*Actividad*
+
+```{marginfigure, echo=TRUE}
+
+*Utiliza esta escala en las respuestas* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *A. Totalmente correcto*
+
+\textcolor{Red}{\faCaretRight{}} *B. Probablemente correcto*
+
+\textcolor{Red}{\faCaretRight{}} *C. Puede ser o no correcto*
+
+\textcolor{Red}{\faCaretRight{}} *D. Probablemente falso*
+
+\textcolor{Red}{\faCaretRight{}} *E. Totalmente falso*
+
+```
+
+1. Marketing es simplemente otra forma de llamar a la publicidad.
+2. La gente buena en marketing destacan y son creativos pero no son tan buenos con los números y la estadística.
+3. Los *marketeros* no suelen terminar en la alta dirección. Los CEOs normalmente tienen un perfil de finanzas, ingeniería o derecho.
+4. La gente de marketing suele tener poca interacción con el resto de departamentos de la empresa.
+5. La principal función de la publicidad es hacer parecer el producto lo más atractivo posible, sin tener en cuenta la realidad del producto.
+6. Algunas empresas activamente tratan de desincentivar o apartar de su mercado a los consumidores con poco valor.
+7. Muchas decisiones de marketing clave son tan importantes que a menudo las toma el equipo de dirección en lugar del departamento de marketing.
+8. Las tareas de marketing son bastante simples comparadas con otras funciones como las de finanzas o ingeniería.
+
+
+\vspace{2mm}
+
+*Cuestiones para la discusión posterior*
+
+- ¿Cuales de las preguntas anteriores tiene un grado de variación más amplio entre los estudiantes?¿Por qué?
+- ¿Cuales de las preguntas anteriores tiene un grado de acuerdo mayor entre los estudiantes?¿Por qué?
+
+\clearpage
+
+### Actividad de aplicación II: Medelinked
+
+\vspace{2mm}
+
+*Fuente*: Modificada a partir de @Lamb2019
+
+\vspace{2mm}
+
+*Introducción*
+
+\vspace{2mm}
+
+Las implicaciones sociales del marketing no son siempre claras ni tienen una respuesta única. Vamos a plantear un ejemplo para resolver en grupos de tres o cuatro alumnos.
+
+```{r medelinked, out.width='100%' , fig.margin = TRUE,fig.cap = "Sitio web de Medelinked"}
+
+knitr::include_graphics("images/medelinked.png")
+
+```
+
+Dedicaremos diez minutos al trabajo en equipo y comunicaréis la decisión de consenso al resto de la clase.
+
+\vspace{2mm}
+
+*Actividad*
+
+\vspace{2mm}
+
+Visita la página de [medelinked.com](https://www.medelinked.com/)^[\textcolor{Red}{\faCaretRight{}} Se puede abrir la página directamente en la pantalla para que toda la clase puede verla a la vez.]. Esta página y otras similares, ofrecen información médica y consejos de calidad para el estado de salud a cambio de información personal que luego se vende a los anunciantes y socios de negocio. Estos anunciantes pueden desarrollar mejores productos, como medicamentos o seguros de salud, que luego venden a estos pacientes. 
+
+
+\vspace{2mm}
+
+*Cuestiones para la discusión*
+
+- ¿Qué se intercambia por cada una de las partes?, ¿Qué participantes se identifican?
+- ¿Existen distintos posibles valores en conflicto para valorar este intercambio?¿Es ético este intercambio y el modelo de intercambio de Medelink?
+- ¿Qué consecuencias potenciales tiene este modelo de negocio?
+
+\vspace{2mm}
+
+*Para el instructor*
+
+Para guiar la discusión posterior, es útil la [declaración de ética en marketing de la AMA](https://www.ama.org/AboutAMA/Pages/Statement-of-Ethics.aspx), que se puede leer a los estudiantes para ver cómo encaja en el caso.
+
+```{marginfigure, echo=TRUE}
+
+
+\textcolor{Red}{\faQuoteLeft{}} **Ethical Norms As Marketers, we must:**
+
+- Do no harm. This means consciously avoiding harmful actions or omissions by embodying high ethical standards and adhering to all applicable laws and regulations in the choices we make.
+
+- Foster trust in the marketing system. This means striving for good faith and fair dealing so as to contribute toward the efficacy of the exchange process as well as avoiding deception in product design, pricing, communication, and delivery of distribution.
+
+- Embrace ethical values. This means building relationships and enhancing consumer confidence in the integrity of marketing by affirming these core values: honesty, responsibility, fairness, respect, transparency and citizenship. 
+
+```
+
+\clearpage
+
+### Actividad de aplicación III: ¿En qué nivel de estrategia?
+
+\vspace{2mm}
+
+*Fuente*: Adaptada a partir de @fripp2017
+
+\vspace{2mm}
+
+*Introducción*
+
+```{r actividad3, out.width='100%', fig.margin = FALSE, fig.fullwidth=TRUE, fig.cap="\\label{actividad3} Organigrama simplificado de PepsiCo. Elaboración propia."}
+
+knitr::include_graphics("images/actividad3.pdf")
+
+```
+
+
+En esta actividad se plantean posibles decisiones a tomar dentro de Pepsico. Para cada decisión, el objetivo es identificar a qué nivel jerárquico (Corporativo, Unidad Estratégica de Negocio, Marketing/Funcional) probablemente se tome la decisión. Se presenta la imagen con los niveles y la actividad se realiza en Socrative, pudiendo ver en qué cuestiones hay más o menos acuerdo entre los estudiantes.
+
+\vspace{2mm}
+
+*Actividad*
+
+
+
+
+\vspace{2mm}
+
+
+```{marginfigure, echo=TRUE}
+
+*Utiliza esta escala en las respuestas* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *A. Nivel Corporativo*
+
+\textcolor{Red}{\faCaretRight{}} *B. Nivel de UEN*
+
+\textcolor{Red}{\faCaretRight{}} *C. Marketing/Funcional*
+
+
+```
+
+1. PepsiCo decide vender su cadena KFC
+2. Lays introduce las patatas sabor "tomate y queso"
+3. PizzaHut decide cerrar todos sus restaurantes y mantener solo el servicio *take-away* y domicilio.
+4. Las botellas de PepsiMax incluyen una promoción en la que los ganadores pueden jugar un partido con un famoso tenista.
+5. KFC lanza su campaña "alimentos frescos" con nuevas ensaladas y pollo a la plancha incluyendo un eslogan: "Comida rápida, Comida sana".
+6. Pepsi construye una nueva planta de embotellado de 500 millones de dólares en Sudamérica.
+7. Lays oferta una nueva promoción 2x1 en sus patatas con chile picante.
+8. Pepsi decide comprar una empresa fabricante de chocolate para entrar en el mercado de los dulces.
+9. Lays lanza una nueva línea de productos dirigida al mercado vegano.
+10. PizzaHut lanza una nueva pizza de ingredientes especiales con motivo del mundial de fútbol-
+
+
+\clearpage
+
+### Actividad de aplicación IV: Análisis de Informe Nielsen
+
+\vspace{2mm}
+
+*Introducción*
+
+En esta actividad se utiliza como material básico el informe:
+
+*The Nielsen Company. (2013). Nueva era, nuevo consumidor: cómo y por qué compramos alrededor del mundo*
+
+```{r nielsen2013, out.width='85%', fig.margin = TRUE, fig.fullwidth=TRUE}
+
+knitr::include_graphics("images/nielsen2013.png")
+
+```
+
+El objetivo es que los estudiantes se familiaricen con las principales macrotendencias en consumo e identifiquen los distintos factores de macroentorno.
+
+*Actividad*
+
+En grupos de 3 o 4 estudiantes se repasa el informe Nielsen y responder a las siguientes preguntas.
+
+1. Señala tres tendencias de cambios culturales a nivel global
+2. Identifica dos cambios culturales que afecten a Europa en mayor medida que a América
+3. Identifica dos cambios culturales que afecten a Europa en menor medida que a América
+
+\clearpage
+
+### Actividad de aplicación V: Superjoya
+
+\vspace{2mm}
+
+*Introducción*
+
+En esta actividad, se proponen una serie de afirmaciones extraídas del análisis del entorno de la empresa joyera cordobesa SuperJoya. El objetivo es que los estudiantes distingan los distintos factores, especialmente entre factores de macro y micro entorno y clasifiquen las afirmaciones correctamente.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Fuente*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Extraído de Montero Simó, M. J., Araque Padilla, R. A., & Gutiérrez Villar, B. (2006). Fundamentos de marketing: ejercicios y soluciones. McGraw Hill Interamericana.*
+
+
+
+```
+*Actividad*
+
+```{marginfigure, echo=TRUE}
+
+*Utiliza esta escala en las respuestas* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *A. Macroentorno Demográfico*
+
+\textcolor{Red}{\faCaretRight{}} *B. Macroentorno Económico*
+
+\textcolor{Red}{\faCaretRight{}} *C. Macroentorno Socio-cultural*
+
+\textcolor{Red}{\faCaretRight{}} *D. Macroentorno político-legal*
+
+\textcolor{Red}{\faCaretRight{}} *E. Macroentorno tecnológico*
+ 
+\textcolor{Red}{\faCaretRight{}} *F. Microentorno Empresa*
+
+\textcolor{Red}{\faCaretRight{}} *G. Microentorno Competencia*
+
+\textcolor{Red}{\faCaretRight{}} *H. Microentorno Proveedores*
+
+\textcolor{Red}{\faCaretRight{}} *I. Microentorno Clientes*
+
+\textcolor{Red}{\faCaretRight{}} *J. Microentorno Grupos de Interés*
+      
+\textcolor{Red}{\faCaretRight{}} *K. Ninguna de las anteriores*      
+
+```
+
+Para cada una de las siguientes afirmaciones, indica  a qué elemento de macroentorno o microentorno se está haciendo referencia.
+
+1. Se prevé un descenso del paro y un incremento del crecimiento económico. Así mismo, está  creciendo el consumo medio por habitante.
+2. La evolución de la economía española hay que situarla en el marco de la Unión Europea. 
+3. El sector de la joyería es prioritario dentro del Plan Estratégico de Córdoba.
+4. Como productos que compiten con el sector joyero, nos encontramos con la bisutería, el goldfilled y los chapados.
+5. Se ha desarrollado una nueva tecnología que podría facilitar la mejora en el diseño de los productos del sector joyero.
+6. Cabe destacar la existencia de una ley de metales preciosos que obliga a los fabricantes a contrastar su mercancía en laboratorios oficiales. 
+7. El sector joyero de Córdoba integra aproximadamente el 20% del total de las industrias de toda la provincia, con casi 1000 empresas dedicadas a la fabricación de joyas dando trabajo a 15000 personas. La gran atomización dificulta el acometimiento de inversiones importantes.
+8. Envejecimiento de la población. No son los mismos productos los que se venden a un público joven que a otro de edad más avanzada.
+9. Los proveedores de maquinaria necesitan invertir constantemente para mantener la tecnología punta
+10. El comprador habitual de nuestros productos de joyería es el hombre, aunque el usuario final suele ser la mujer. 
+11. Los compradores grandes (mayoristas) son poderosos porque realizan volúmenes importantes de compra y controlan el acceso a los clientes finales.
+12. Las empresas participantes, de forma creciente, tienen las mismas líneas de producto y sirven a los mismos segmentos de consumidores.
+13. Los poderes públicos han cedido terrenos con el fin de construir un parque joyero. Se trata de crear un gran polígono industrial dedicado específicamente a la joyería donde pueden instalarse 200 empresas.
+14. La sociedad valora cada vez menos las joyas como bienes de inversión.
+15. Algunos proveedores de maquinaria industrial podrían convertirse en productores de joyas, asumiendo así el rol de fabricantes.
+16. La proporción de ventas en la venta online está creciendo.
+17. El personal está poco cualificado y su edad media es alta.
+
+
+\clearpage
+
+### Actividad de aplicación VI: Tipos de Investigación
+
+\vspace{2mm}
+
+*Introducción*
+
+En esta actividad, se proponen una serie de situaciones para indicar qué tipo de diseño de investigación es el más adecuado. Una vez concluída la actividad se discuten las razones de cada elección en el grupo.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Fuente*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Adaptada de González Vázquez, E., López Miguens, M. J., y Otero Neira, M. C. (2014). Manual práctico de marketing. Pearson Educación.*
+
+
+
+```
+*Actividad*
+
+```{marginfigure, echo=TRUE}
+
+*Utiliza esta escala en las respuestas* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *A. Investigación Exploratoria. Información Secundaria*
+
+\textcolor{Red}{\faCaretRight{}} *B. Investigación Exploratoria. Entrevista o Focus Group*
+
+\textcolor{Red}{\faCaretRight{}} *C. Investigación Descriptiva. Encuesta*
+
+\textcolor{Red}{\faCaretRight{}} *D. Investigación Descriptiva. Observación*
+
+\textcolor{Red}{\faCaretRight{}} *E. Investigación Causal. Experimento*
+   
+
+```
+
+1. El decano de la Facultad de Económicas y Empresariales quiere saber cuáles son los problemas docentes que más preocupan a los alumnos de su centro.
+2. Un fabricante de caramelos quiere determianr cuál de varios anuncios publicitarios es más efectivo.
+3. Una empresa quiere modificar la política de servicio para mejorar la satisfacción de sus distribuidores y necesita desarrollar un método para medir dicha satisfacción.
+4. La empresa de juguetes Divertilandia quiere determinar cuál es el prototipo de juguetes que más llama la atención a los niños de uno o dos años.
+5. Seguros Senri desea predecir las ventas de los próximos años para planear la contratación y capacitación de nuevos representantes de ventas.
+6. La cadena de supermercados Gadis quiere analizar qué itinerario siguen los compradores en sus establecimientos, dónde se paran y el recorrido que realizan
+7. La cadena de supermercados Froiz quiere analizar qué variaciones pueden producirse en la composición de la cesta de la compra de una familia ante una agresiva campaña de promociones.
+
+\clearpage
+
+### Actividad de aplicación VII: Interpretar los resultados de una investigación de marketing
+
+\vspace{2mm}
+
+*Fuente*: Adaptada de @fripp2017
+
+\vspace{2mm}
+
+*Introducción*
+
+\vspace{2mm}
+
+En esta actividad se resumen los reultados de una investigación sobre el potencial de mercado de un nuevo producto: helado con sabor a queso. La empresa lleva a cabo la investigación para determinar si deberían lanzar este nuevo producto.
+
+Se pide decidir qué recomendar a la empresa tras analizar los resultados de la investigación.
+
+\vspace{2mm}
+
+*Actividad*
+
+\vspace{2mm}
+
+Se han realizado 500 test de producto a personas dentro del mercado objetivo (padres de niños pequeños). Los respondentes probaron el helado con sabor a queso y otro helado de la competencia (sin marca).
+
+La siguiente tabla presenta un resumen de los resultados más relevantes. El producto A es el producto de la empresa y el producto B el de la competencia.
+
+
+```{r}
+
+
+helados <- data.frame(stringsAsFactors=FALSE,
+     Pregunta = c("1. ¿Cuánto te ha gustado el producto A?", "2. ¿Cuánto te ha gustado el producto B?" , 
+                  "3. ¿Prefieres el producto A?", "4. ¿Prefieres el producto B?", "5. ¿Cómo puntuarías el producto A en sabor?",
+                 "6. ¿Cómo puntuarías el producto A en aspecto general y diseño?",
+                 "7. ¿Cómo puntuarías el producto A en aroma?", "8. ¿Cómo puntuarías el producto A como producto saludable?",
+                 "9. ¿En qué medida consideras el producto A adecuado para niños?",
+                 "10. ¿En qué medida consideras que el producto A es cómodo de consumir?",
+                 "11. ¿Comprarías el producto A si estuviera disponible en las tiendas?",
+                 "12. ¿Con qué frecuencia comprarías el producto A si estuviese disponible en las tiendas?"),
+     Resultados=c("3.2 ", "3.9", "40%", "60%", "5.1","2.9","4.2", "6", "6.4", "2.8", "25%", "Cada dos semanas"),
+     Notas=c("Escala = 1 a 5(max.)", "Escala = 1 a 5(max.)", " ", " ","Escala = 1 a 7(max.)",
+             "Escala = 1 a 7(max.)", "Escala = 1 a 7(max.)",
+             "Escala = 1 a 7(max.)", "Escala = 1 a 7(max.)","Escala = 1 a 7(max.)",
+             "Escala = 1 a 7(max.)", "Esta es la respuesta más frecuente en una escala entre diariamente y anualmente"))
+library(tidyverse)
+ 
+helados %>%
+mutate_all(linebreak) %>%
+knitr::kable(helados, row.names = FALSE, col.names = NA, format = "latex", longtable=T, 
+             booktabs = T, escape=T)  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "24em")%>%
+      column_spec(2, width = "4em")%>%
+       column_spec(3, width = "10em")
+
+
+```
+
+\vspace{2mm}
+
+*Cuestiones*
+
+\vspace{2mm}
+
+1. ¿Qué resultados de la investigación son positivos para la empresa?
+2. ¿Qué resultados de la investigación son negativos para la empresa?
+3. ¿Qué recomendarías a la empresa: lanzar el producto, no lanzarlo o rediseñarlo?
+
+\clearpage
+
+### Actividad de aplicación VIII: Modelo de comportamiento del consumidor
+
+\vspace{2mm}
+
+*Fuente*: Elaboración propia
+
+\vspace{2mm}
+
+*Introducción*
+
+\vspace{2mm}
+
+Lee el caso de apertura del capítulo *Harley Davidson: vendiendo libertad, independencia, poder y autenticidad*. También podemos ver en clase los primeros minutos del video [caso Harley Davidson](https://www.youtube.com/watch?v=YjjqgkhL-p8).
+
+\vspace{2mm}
+
+*Actividad*
+
+\vspace{2mm}
+
+Vamos a aplicar el modelo general de comportamiento del consumidor que se presenta en la siguiente figura:
+
+```{r modelocomportamiento, out.width='100%', fig.margin = FALSE, fig.fullwidth=FALSE}
+
+knitr::include_graphics("images/modelocomportamiento.pdf")
+
+```
+
+Pon ejemplos de cómo se concretan cada uno de los aspectos generales mencionados en el modelo al caso Harley Davidson.
+
+- ¿Qué es el producto en el caso de Harley Davidson?¿Qué incluye su precio?¿Qué herramientas de promoción se utilizan?¿Y de distribución?
+- Cita algunos de los elementos de macro y microentorno que le afectan
+- ¿Qué influencias culturales pueden afectar a sus comprandores?¿y grupos sociales?¿qué características personales tienen?¿y psicológicas?
+- ¿Cómo es su proceso de decisión?
+- ¿Qué respuestas proporciona el cliente Harley Davidson?
+
+Una vez terminado el tema en la tercera sesión, se puede repasar esta misma actividad para ver si la respuesta puede ser más completa. Por ejemplo, ya se puede categorizar el tipo de compra y por tanto explicar con mayor detalle el proceso de compra.
+
+
+\clearpage
+
+### Actividad de Aplicación IX: Grupos de referencia
+
+
+\vspace{2mm}
+
+*Fuente*: Elaboración propia
+
+\vspace{2mm}
+
+*Introducción*
+
+\vspace{2mm}
+
+*Actividad*
+
+\vspace{2mm}
+
+Imagina el proceso de decisión de un adolescente de 13 años relacionado con los pagos por aplicaciones en las plataformas móviles (Google Play, Apple Store...). En estas plataformas, puede elegir entre distintas aplicaciones libres o de pago y realizar micropagos para utilizar funcione en distintos juegos.
+
+```{r googleplay, out.width='85%', fig.margin = TRUE, fig.fullwidth=TRUE}
+
+knitr::include_graphics("images/googleplay.png")
+
+```
+
+Vamos a valorar en qué medida (más importante o menos importante) y de qué forma (qué instalar, comprar o no comprar, gastar más o menos, en qué gastar....) pueden influir cada uno de los siguientes aspectos:
+
+- Su contexto cultural
+- La pertenencia a subculturas
+- La familia
+- Los grupos de pertenencia (pon ejemplos de cuales pueden ser)
+- El rol que juega en esos grupos de pertenencia
+- Los grupos de aspiración (pon ejemplos de cuales pueden ser)
+
+Un aspecto importante en esta decisión pueden ser las valoraciones y reseñas que publican otros usuarios en estas plataformas. ¿En qué tipo de grupos incluirías a estos usuarios?
+
+\clearpage
+
+### Actividad de Aplicación X: Ejercicios de comportamiento del consumidor
+
+*Fuente*: Materiales del instructor en *Principios de Marketing* y de @maestro2018.
+
+\vspace{2mm}
+
+**Ejercicio 1**: Formación de actitudes: modelo de Fishbein y Ajzen
+
+\vspace{2mm}
+
+El señor González trabaja en una multinacional que tiene representación en varios países del continente europeo. Debido a su gran rendimiento, van a promocionarle con un aumento de salario, que implica a su vez un cambio de domicilio para toda su familia. Una vez sopesada la situación, toda la familia (el señor González, su esposa y sus tres hijos) acuerdan aceptar el ascenso pero deben empezar a elegir una nueva vivienda. Tras visitar varias inmobiliarias, se barajan cuatro posibilidades: un piso céntrico, un ático, una casa y un chalet. Además, para tomar la decisión es importante tener cuenta la cercanía al lugar de trabajo, la facilidad de pago de la vivienda, el espacio en metros cuadrados, la cercanía a lugares de ocio y las comodidades añadidas (jardín/terraza/piscina). 
+
+Tras varias discusiones, la familia se pone de acuerdo en las puntuaciones (en escala 0-10) a asignar a los factores en cada una de las viviendas seleccionadas. En lo que no consiguen ponerse de acuerdo es en la importancia de cada uno de estos atributos con respecto a los demás. Mientras que para el matrimonio es muy importante la facilidad de pago, para los hijos adolescentes es mucho más importante la cercanía a lugares de ocio.
+
+En la tabla se muestran las puntuaciones de las distintas viviendas.
+
+```{r}
+
+
+viviendas <- data.frame(stringsAsFactors=FALSE,
+     Atributos = c("Cercanía al trabajo", "Facilidad de pago", "Espacio en m2", "Cercanía a lugares de ocio", "Comodidad"),
+     Piso=c("8", "7", "5", "10", "5"),
+     Atico=c("6", "8", "7", "7", "7"), 
+     Casa=c("6", "10", "8", "4", "7"),
+     Chalet=c("3", "9", "10", "3", "10"))
+
+names(viviendas)=c("Atributos", "Piso Centro", "Ático", "Casa", "Chalet")
+library(tidyverse)
+ 
+viviendas %>%
+mutate_all(linebreak) %>%
+knitr::kable(viviendas, row.names = FALSE, col.names = NA, format = "latex", longtable=T, 
+             booktabs = T, escape=T)  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "12em")%>%
+      column_spec(2, width = "6em")%>%
+      column_spec(3:5, width = "4em")
+
+
+```
+
+Si la decisión se realiza de forma razonable, utilizando el modelo de Fishbein y Azjen, responde a las siguientes cuestiones:
+
+- Si para el matrimonio los pesos de los distintos atributos son cercanía al trabajo: 0.25, facilidad de pago: 0.35, espacio en m2: 0.15, cercanía al ocio: 0.10 y comodidad: 0.15...  
+
+  - ¿Qué nota global se asigna al ático?
+  - ¿Cuál de las opciones es la preferida por el matrimonio?
+  
+- Si para los hijos adolescentes los pesos de los distintos atributos son cercanía al trabajo: 0.15, facilidad de pago: 0.20, espacio en m2: 0.20, cercanía al ocio: 0.30 y comodidad: 0.20...  
+
+  - ¿Cual es la nota global del chalet para los hijos?
+  - ¿Cuál de las opciones prefieren los hijos?
+  - ¿En cual de las opciones existe más diferencia entre la preferencia de los hijos y la del matrimonio?
+  
+\clearpage
+
+**Ejercicio 2: Reglas de Elección**
+
+Juan quiere comprar un ordenador portátil. Su función de utilidad deriva en unas preferencias y en unos pesos sobre los atributos reflejados en la tabla inferior. Su percepción sobre las puntuaciones de cada marca en los atributos también aparece en la tabla.
+
+\vspace{2mm}
+
+```{r}
+
+
+ordenador <- data.frame(stringsAsFactors=FALSE,
+     Atributos = c("Peso", "Rendimiento", "Garantía", "Precio"),
+     Importancia=c("0.2", "0.5", "0.1", "0.2"),
+     MarcaA=c("4", "6", "5", "4"), 
+     MarcaB=c("6", "3", "5", "6"),
+     MarcaC=c("2", "7", "4", "7"))
+
+
+names(ordenador)=c("Atributos", "Importancia Relativa", "Marca A", "Marca B", "Marca C")
+library(tidyverse)
+
+ordenador %>%
+mutate_all(linebreak) %>%
+knitr::kable(ordenador, row.names = FALSE, col.names = NA, format = "latex", longtable=T, 
+             booktabs = T, escape=T)  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "8em")%>%
+      column_spec(2:5, width = "5em") %>%
+      add_header_above(c(" " = 2, "Alternativas" = 3))
+```
+
+
+1. Qué marca elegirá Juan si pretende maximizar su utilidad o valor percibido
+2. Cuál es la marca que menor probabilidad tiene de ser elegida. Qué puede hacer para aumentar esa probabilidad.
+3. Imagina que Juan lee en internet opiniones sobre la capacidad de memoria de la marca C que influyen la percepción de Juan. Dos tercios de las opiniones dicen que el rendimiento de la marca C es mucho menor, concretamente le otorgan una puntuación de 3 sobre 10; un tercio de las opiniones siguen otorgándole una puntuación de 7/10. ¿Cambiaría la elección de Juan? 
+
+
+\clearpage
+
+### Actividad de aplicación XI: Decisiones conjuntas de compra
+
+\vspace{2mm}
+
+*Fuente*: Adaptada de @fripp2017
+
+\vspace{2mm}
+
+*Introducción*
+
+
+```{r consenso, out.width='85%', fig.margin = TRUE, fig.fullwidth=TRUE}
+
+knitr::include_graphics("images/consenso.jpg")
+
+```
+
+\vspace{2mm}
+
+Una empresa de seguros está buscando actualizar su sistema informático ERP y tienen tres posibles alternativas que se describen en la tabla. En esta actividad, los estudiantes por grupos eligen un posible papel:
+
+- Director del departamento de informática: quiere un cambio que sea manejable
+- Director de finanzas: preocupado por la capacidad para proporcionar buenos informes de finanzas
+- Director de marketing: quiere un software que proporcione buenos informes individualizados sobre los clientes
+- Director de RRHH: quiere grandes capacidades para dar formación a los empleados
+- Director de operaciones: quiere los mínimos cambios posibles
+
+La tarea consiste en alcanzar una decisión de consenso. 
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *La respuesta puede organizarse como:*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *¿Cuál es la decisión final en el grupo?*
+      
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Motivos de la decisión.*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Nivel de acuerdo alcanzado.*
+
+
+```
+
+```{r}
+
+
+opcion1 <- data.frame(stringsAsFactors=FALSE,
+     Opcion = c("Precio", "Formación requerida", "Tiempo requerido", "Reportes financieros", "Reportes de marketing"),
+     caracteristicas=c("5.000.000€", "Mucha, grandes cambios", "3 años", "7/10 (buen ajuste)", "9/10 (buen ajuste)"))
+
+
+names(opcion1)=c("Opción A", " ")
+library(tidyverse)
+
+opcion1 %>%
+mutate_all(linebreak) %>%
+knitr::kable(opcion1, row.names = FALSE, col.names = NA, format = "latex", longtable=T, 
+             booktabs = T, escape=T)  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "10em")%>%
+      column_spec(2, width = "14em")
+```
+
+
+```{r}
+
+
+opcion2 <- data.frame(stringsAsFactors=FALSE,
+     Opcion = c("Precio", "Formación requerida", "Tiempo requerido", "Reportes financieros", "Reportes de marketing"),
+     caracteristicas=c("1.000.000€", "Mínima, actualización básica", "1 año", "5/10", "3/10"))
+
+
+names(opcion2)=c("Opción B", " ")
+library(tidyverse)
+
+opcion2 %>%
+mutate_all(linebreak) %>%
+knitr::kable(opcion2, row.names = FALSE, col.names = NA, format = "latex", longtable=T, 
+             booktabs = T, escape=T)  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "10em")%>%
+      column_spec(2, width = "14em")
+```
+
+```{r}
+
+
+opcion3 <- data.frame(stringsAsFactors=FALSE,
+     Opcion = c("Precio", "Formación requerida", "Tiempo requerido", "Reportes financieros", "Reportes de marketing"),
+     caracteristicas=c("2.000.000€", "Media, actualización importante", "3 años", "9/10", "3/10"))
+
+
+names(opcion3)=c("Opción C", " ")
+library(tidyverse)
+
+opcion3 %>%
+      mutate_all(linebreak) %>%
+      knitr::kable(opcion3, row.names = FALSE, col.names = NA, format = "latex", longtable=T, booktabs = T, escape=T) %>%
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "10em") 
+```
+
+
+\clearpage
+
+
+
+### Actividad de aplicación XII: Métodos de Segmentación 
+
+\vspace{2mm}
+
+*Fuente*: Adaptado de @maestro2018
+
+\vspace{2mm}
+
+*Introducción*
+
+Se plantea en este tema un ejercicio de aplicación de un método de segmentación. Dado el carácter de introducción de la asignatura, solo se ilustran los métodos de segmentación con un método a priori, el método de Belson.
+
+En el método de Belson, se trabaja con divisiones dicotómicas, dividiendo la muestra en dos partes, partiendo del porcentaje de interés por el producto considerado.
+
+
+\vspace{2mm}
+
+*Enunciado*
+
+La empresa de tecnología HaiHewu realiza un estudio de mercado para conocer la aceptación que ha tenido un nuevo teléfono móvil, con la mejor lente en el mercado y video en alta resolución. La empresa realiza un estudio de mercado para saber en base a qué variables segmentar este mercado y por tanto, en qué compradores concentrar sus esfuerzos para lanzar este producto. 
+
+Para conocer quienes han sido sus compradores y qué características tienen, realiza una encuesta preguntando si tienen dicho producto y registrando entre otras variables el sexo, la edad, el nivel de ingresos y el uso de redes sociales como Instagram.
+
+Así, los resultados de la encuesta muestran que de 4.500 personas entrevistadas, 725 han comprado o utilizado el producto analizado. La tabla muestra los resultados en cuanto a las variables mencionadas:
+
+
+```{r}
+
+
+segmentos <- data.frame(stringsAsFactors=FALSE,
+     Criterios = c("Sexo", "Edad", "Nivel de Ingresos", "RRSS", "Total"),
+     Segmentos = c("Hombres \n Mujeres", "Adolescentes \n Jóvenes \n Adultos", "Bajo \n Medio \n Alto", "No usa \n Uso BajoMedio \n Uso Intensivo", " "),
+     Muestra = c("3.000 \n 1.500", "1.800 \n 1.500 \n 1.200", "400 \n 1.950 \n 2.150", "1.125 \n 1.675 \n 1.700", "4.500"),
+     Consumidores = c("555 \n  170", "345 \n  265 \n 115", "30 \n 215 \n  480", "175 \n 325 \n 225", "725"))
+
+library(tidyverse)
+
+segmentos %>%
+mutate_all(linebreak) %>%
+knitr::kable(segmentos, row.names = FALSE, col.names = NA, format = "latex",  booktabs = T, escape=F, caption = "Datos del supuesto")  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "8em") %>%
+      row_spec(2, color = "white", background = "Gray") %>%
+      row_spec(4, color = "white", background = "Gray") %>%
+      column_spec(2, width = "8em") 
+
+
+```
+
+\vspace{2mm}
+
+*Se pide:*
+
+- ¿Cuál es el porcentaje de compradores considerando la totalidad de la muestra?  
+- ¿Cuál es el porcentaje de compradores del producto considerando únicamente a los hombres?
+- ¿Cuál es el número teórico de compradores del producto para los encuestados con un nivel de ingresos bajo o medio?
+- ¿Cuál es el valor discriminante de la variable Uso de Redes Sociales?
+- ¿Cuál de las variables es la más adecuada para realizar la segmentación de mercados?
+
+\clearpage
+
+
+### Actividad de aplicación XIII: Estrategias de Segmentación
+
+**BANCARD. El CLV como herramienta de análisis para la selección de mercados**
+
+
+```{r bancard, out.width='85%', fig.margin = TRUE, fig.fullwidth=TRUE}
+
+knitr::include_graphics("images/bancard.jpg")
+
+```
+
+\vspace{2mm}
+
+*Fuente*:  Adaptado de materiales del instructor en *Principios de Marketing* y de materiales de Dirección Comercial I en Grado en ADE (Javier Cebollada)
+
+\vspace{2mm}
+
+*Introducción*
+
+Eres es el director del producto de una empresa de servicios financieros llamada BANCARD que vende tarjetas de crédito para bancos y comerciantes. Has hecho una investigación para probar dos estrategias de marketing alternativas, una concentrada y la otra indiferenciada para orientar la comunicación online. Los resultados se muestran a continuación:
+
+\vspace{2mm}
+
+Estrategia concentrada: 
+
+- Comprar cien mil exposiciones en sitios web especializados en economía y finanzas como por ejemplo Yahoo Finance, y búsquedas con palabras clave como “tarjeta de crédito” o “descubre las ventajas de tarjeta de crédito”.
+- El precio es 80,00€ por cada mil exposiciones
+- Se ha obtenido un 4% de clicks redirigiendo a tu sitio web. El 10% de los que entraron a tu sitio web suscribieron un período de prueba gratuito de tres meses y de estos el 50% suscribieron finalmente la tarjeta de crédito.
+- La medida mensual de gasto con la tarjeta de crédito de estos clientes fue de 1.000 euros. Los comerciantes pagan una comisión a tu empresa del 2,8% de las compras realizadas.
+- Mantienen un saldo mensual no pagado medio de 300 € sobre el que pagan un interés anual del 17,9%. 
+- El coste de análisis de riesgo, fabricación y envío de la tarjeta de crédito es de 30,00€ por cliente.
+- Los consumidores pagan una cuota anual por el uso la tarjeta de 40,00€; la empresa tiene unos costes de mantenimiento y procesamiento de operaciones y comunicaciones con los clientes de 256€.
+- Se espera que los consumidores utilicen la tarjeta durante una media de doce años.
+
+Estrategia indiferenciada:
+
+- Comprar un millón de exposiciones aleatorias en sitios web de alto tráfico no especializados.
+- El precio es de 1,60€ por cada mil exposiciones.
+- Se ha obtenido un 0,20% de clicks redirigiendo al sitio web. El 5% de los que entraron a tu sitio web suscribieron un período de prueba gratuito de tres meses y de estos el 40% suscribieron finalmente la tarjeta de crédito.
+- La media mensual de gasto con la tarjeta de crédito de estos clientes fue de 700 € y los comerciantes pagan una comisión a tu empresa de 2,8% de las compras realizadas.
+- Mantienen un saldo mensual no pagado medio de 200€ sobre el que pagan un interés anual del 17,9%.
+- El coste de análisis de riesgo, fabricación y envío de la tarjeta de crédito es de 30,00€ por cliente.
+- Los consumidores pagan una cuota anual por uso de la tarjeta de 40,00€ y la empresa tiene unos costes de mantenimiento procesamiento de operaciones y comunicaciones con los clientes de 225€.
+ -Se espera que los consumidores utilicen la tarjeta durante una media de ocho años.
+
+Preguntas
+
+a. ¿Cuál es el Valor vitalicio del cliente de cada una de estas dos estrategias de comunicación?
+b. ¿Cuál es el capital cliente generado por cada una de estas dos estrategias?
+c. ¿Qué estrategia conviene más?
+
+
+
+\clearpage
+
+### Actividad de aplicación XIV: Estrategias de Posicionamiento
+
+**Construcción de mapas de posicionamiento**
+
+*Fuente*:  Adaptado de materiales del instructor en *Principios de Marketing* y de @fripp2017
+
+\vspace{2mm}
+
+*Introducción*
+
+En esta actividad se profundiza en la construcción de mapas de posicionamiento tanto desde un punto de vista conceptual como desde un punto de vista cuantitativo. En primer lugar, se hace la actividad de conceptualización del mapa y a continuación se hace un ejercicio de aplicación.
+
+*Construcción de mapa de materias*
+
+Considera ocho materias que se imparten en la titulación. Por grupos de tres o cuatro personas, pensad en qué se diferencian entre sí y cuales son sus características particulares.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Las materias son:*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Marketing*
+      
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Contabilidad*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Finanzas.*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Estrategia.*
+      
+      
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Recursos Humanos*
+      
+      
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Investigación de Mercados*     
+      
+      
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Matemáticas*      
+      
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Derecho*   
+
+```
+
+1. Agrupa estas diferencias en dos ejes fundamentales, ¿cómo llamaríais a los ejes?
+2. Coloca cada una de las asignaturas y los ejes en un mapa como el que se muestra en la figura
+3. ¿Qué comentario hacéis del mapa resultante?
+
+```{r ejes, out.width='85%', fig.margin = FALSE, fig.fullwidth=FALSE}
+
+knitr::include_graphics("images/ejes.pdf")
+
+```
+
+\clearpage
+
+
+**Ejercicio**
+
+\vspace{2mm}
+
+*Introducción*
+
+Los mapas de posicionamiento pueden elaborarse por intuición, como en el caso anterior o, normalmente, por información proporcionada por los consumidores mediante una investigación de mercados. En este caso, se recoje información sobre la valoración de los distintos atributos y su importancia.
+
+Para tratar esta información, se pueden utilizar métodos estadísticos como el Análisis de Escalas Multidimensionales. También se pueden utilizar aproximaciones más simples, utilizando ejes definidos a priori o valorando la importacia manifestada en la encuesta. El siguiente ejercicio ilustra numéricamente esta aproximación.
+
+
+\vspace{2mm}
+
+*Enunciado*
+
+En una encuesta a 500 consumidores de zumo refrigerado, se pide que sobre una escala de 0 a 10 puntúen cinco marcas diferentes (A, B, C, D, E) en base a dos criterios: grado de acidez y precio. También se les ha preguntado el nivel óptimo de estos dos atributos en la misma escala.  El sistema de puntuación se ha establecido de forma que las clasificaciones sean inversamente proporcionales al precio y directamente proporcionales a la acidez.
+
+El valor medio total para estos dos factores de los resultados obtenidos se presenta en la tabla siguiente:
+
+
+```{r}
+
+
+zumo <- data.frame(stringsAsFactors=FALSE,
+     Marca = c("A", "B", "C", "D", "E"),
+     Acidez = c("8", "4", "7", "5", "9"),
+     Precio = c("8", "7", "6", "6", "4"))
+
+library(tidyverse)
+
+zumo %>%
+mutate_all(linebreak) %>%
+knitr::kable(zumo, row.names = FALSE, col.names = NA, format = "latex",  booktabs = T, escape=F, caption = "Datos del supuesto")  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "8em") %>%
+      column_spec(2, width = "8em") 
+
+
+```
+
+\vspace{2mm}
+
+*Preguntas*
+
+Suponiendo que la marca ideal tenga una calificación media en la muestra de 7/10 en acidez y 10/10 en precio, se pide:
+
+a) Establecer el posicionamiento de cada una de las marcas respecto a la marca ideal
+b) Estimar en base al posicionamiento anterior la cuota de mercado de cada marca
+
+
+\clearpage
+
+### Actividad de aplicación XIV: Estrategias de Posicionamiento
+
+**Diagnóstico de posicionamiento**
+
+*Fuente*:  Elaboración propia
+
+\vspace{2mm}
+
+*Introducción*
+
+
+```{r mercedes, out.width='85%', fig.margin = TRUE, fig.fullwidth=TRUE}
+
+knitr::include_graphics("images/mercedes.jpg")
+
+```
+
+En primer lugar se proyecta el video "Algo está pasando en Mercedes. Premios Eficacia 2015" que presenta los objetivos y resultados de la campaña para Mercedes-Benz por Contrapunto BBDO protagonizada por el chef "Dabiz" Muñoz^[Video: https://www.youtube.com/watch?v=QaZitEHQVIE].
+
+Este video ilustra muy bien cómo el posicionamiento no es siempre el deseado y cómo se diseña y se implanta en el medio plazo una estrategia de posicionamiento distinta.
+
+\vspace{2mm}
+*Enunciado*
+
+Piensa en este sector del automóvil en el segmento de los coches urbanos. Estos coches se caracterizan por ser de pequeño tamaño (menos de 3,70 m de largo) y son principalmente adecuados para rutas en ciudad. ^[\textcolor{Red}{\faAutomobile{}} Modelos en este segmento: Toyota Aygo, el Peugeot 108,  Citröen C1, Hyundai i10, Kia Picanto, Seat Mii, Skoda Citigo, Volkswagen e-up!, Fiat Panda, Fiat 500, Renault ZOE, Renault Twingo, Smart forfour, Smart fortwo, Ford Ka+, Suzuki Celerio, Suzuki Ignis, Mitsubishi Space Star]
+
+Selecciona tres modelos distintos de marcas competidoras y busca información sobre ellos, especialmente anuncios y otras acciones de comunicación (anuncios en prensa, televisión o internet, patrocinios, etc.) que reflejen el posicionamiento. Piensa en cómo están diseñadas estas acciones, a qué público se dirigen y cual es el mensaje que comunican.  
+
+\vspace{2mm}
+
+*Se pide*
+
+Con la reflexión anterior, trata de describir:
+
+- la estrategia de selección de mercados objetivo que sigue cada una de las marcas.
+- el/los mercado/s objetivo de cada una con la mayor precisión posible
+- principales elementos de diferenciación 
+- su posicionamiento (describe su ABC de posicionamiento y dibuja un mapa de posicionamiento basado en tu percepción de las principales dimensiones sobre las que eligen los consumidores y la posición de estas marcas y quizás otras de la industria)
+- su marketing mix
+
+Prepara una presentación de no más de 5-6 transparencias por grupo y prepárate para presentarla.
+
+\clearpage
+
+
+### Actividad de aplicación XV: Elige tu posicionamiento
+
+*Fuente*:  Adaptado de @fripp2017
+
+\vspace{2mm}
+
+*Introducción*
+
+```{r smarts, out.width='85%', fig.margin = TRUE, fig.fullwidth=TRUE}
+
+knitr::include_graphics("images/smarts.png")
+
+```
+
+\vspace{2mm}
+
+La tabla de la página siguiente presenta seis segmentos distintos en el mercado de los smartphones y cinco posibles posicionamientos para cada uno de ellos basados en criterios distintos.
+
+Con esta actividad se pretende conceptualizar cómo se aplica la estrategia de posicionamiento a productos nuevos y cómo se implementa esta estrategia en la comunicación.
+
+\vspace{2mm}
+
+*Se pide*
+
+- Con la información en la tabla, en primer lugar, seleccionar un único posicionamiento que se considere más atractivo. Para ello, podéis seleccionar primero el segmento más interesante y después el criterio de posicionamiento o considerar simultáneamente ambos aspectos. Explicad las razones de la decisión. Para ello recordad cuáles son los criterios para evaluar el atractivo de los segmentos y también qué elementos hacen un posicionamiento sostenible. ¿Cómo clasificaríamos a estos segmentos en función del momento de adopción de las innovaciones?
+
+- En segundo lugar, diseñad un pequeño anuncio dirigido a una revista. Debéis decidir:
+
+  - Qué eslógan incluye el anuncio
+  - Qué imágenes deberían aparecer (personas, situaciones...)
+  - Qué información adicional se debería incluir
+  
+Si lo preferís, también podéis hacer un dibujo del anuncio.  
+
+
+\vspace{2mm}
+
+
+```{r}
+
+
+posicion <- data.frame(stringsAsFactors=FALSE,
+     Segmento = c("Centrado en la Moda", "Todas las prestaciones", "Simplemente lo mejor", "Compradores", "Alta calidad", "Para niños"),
+     Beneficios = c("Be trendy","Fácil y divertido de usar", "Que te vean con lo mejor", "Gran valor, compra inteligente", "Funciona bien todo el tiempo", "Finalmente Paz y Tranquilidad"),
+     Atributos = c("Gran diseño y apariencia", "Incluye grandes apps", "La mejor calidad y la última tecnología", "Exactamente 699€", "Sonido e imagen excelente", "Seguro y fácil de usar para los niños"),
+     Uso = c("Úsalo con tus amigos", "Puede almacenar mas de 2000 canciones", "El único teléfono con el que querrás que te vean", "Excelente si sueles romperlo o perderlo", "Siéntate, relájate y disfruta", "Cuando necesitas un respiro"),
+     Usuarios = c("Se uno de los escogidos", "Ideal para los que no sueltan su móvil", "Para los triunfadores como tú", "¿Eres un comprador inteligente?", "Cuando quieres lo mejor", "Niños ocupados y padres desestresados"),
+     Competidores = c("No es noticia de ayer", "Más fácil de usar que otros smartphones", "Simplemente el teléfono de mejor calidad en el mercado", "¿Por qué pagar 200€ más por la marca?", "El smartphone más smart", "También tiene un precio tamaño infantil")
+     )
+
+library(tidyverse)
+
+posicion %>%
+mutate_all(linebreak) %>%
+knitr::kable(posicion, row.names = FALSE, col.names = NA, format = "latex",  booktabs = T,  longtable=T, escape=F, caption = "Datos del supuesto")  %>% 
+            kable_styling(font_size = 8.5) %>%
+            landscape() %>%
+      column_spec(1:6, width = "8em")
+
+
+```
+
+\vspace{2mm}
+
+### Actividad de aplicación XVI: Tacones Convertibles. Caso en video
+
+*Fuente*:  @Kotler2018
+
+\vspace{2mm}
+
+*Introducción*
+
+```{r day2night, out.width='85%', fig.margin = TRUE, fig.fullwidth=TRUE}
+
+knitr::include_graphics("images/day2night.jpg")
+
+```
+
+A muchas mujeres les encantan los tacones altos, pero todas conocen los problemas que surgen al usarlos. Day2Night Convertible Heel son unos zapatos que se transforman en segundos en cuatro alturas de tacones distintas, desde tacón plano a tacón de aguja. Un tacón intercambiable permite modificarlos rápidamente. Además de lanzar esta linea, la empresa está pensando en vender su tecnología a otros fabricantes.
+
+Después de ver el vídeo:
+
+\vspace{2mm}
+
+*Se pide*
+
+- Teniendo en cuenta las fases del proceso de desarrollo de un producto nuevo, analizar cómo se desarrolló, Day2Night.
+- ¿Qué fase del ciclo de vida del producto se puede aplicar mejor a la línea de zapatos Day2Night? ¿Cómo deberían comercializarse?
+- ¿A qué retos debe hacer frente Day2Night?
+
+\vspace{2mm}
+
+\clearpage
+
+### Actividad de aplicación XVII: Lime: Patinetes eléctricos compartidos
+
+*Fuente*:  Elaboración Propia
+
+\vspace{2mm}
+
+*Introducción*
+
+```{r lime, out.width='85%', fig.margin = TRUE, fig.fullwidth=TRUE}
+
+knitr::include_graphics("images/lime.jpg")
+
+```
+
+Lee las siguientes noticias:
+
+- Así funciona Lime, el servicio de patinetes eléctricos compartidos y sin estaciones que ya opera en Madrid- Xataka- Agosto 2018 -
+(https://bit.ly/2RQs60Z)  
+- Lime, la empresa de patinetes financiada por Uber, llega a Madrid (https://bit.ly/2LPgoE9) - Hipertextual- Agosto 2018 -
+- La 'guerra' entre el Ayuntamiento de Valencia y Lime por los patinetes eléctricos- xataka.com- Septiembre 2018 - (https://bit.ly/2Es0goX)
+- La cuadrilla nocturna que carga patinetes por cinco euros en Madrid - el diario.es - Octubre 2018 - (https://bit.ly/2CK8PtF)
+
+
+\vspace{2mm}
+
+*Se pide*
+
+Teniendo en cuenta las noticias anteriores, analizar el modelo de negocio de Lime. Para ello, por grupos, debéis responder a las siguientes preguntas:
+
+- ¿Qué participantes podemos distinguir en el modelo de negocio de Lime?¿Qué beneficios obtienen cada uno de ellos?¿Qué costes asumen?
+- ¿Cuál es son las fuentes de ingresos actuales y potenciales de Lime?¿Qué previsiones hacéis para esas fuentes de ingresos?
+- ¿Cómo clasificaríais el modelo de negocio de Lime?
+- ¿Os resulta atractivo el servicio? Razones para utilizarlo y para no utilizarlo
+
+\vspace{2mm}
+
+\clearpage
+
+### Actividad de aplicación XVIII: Google y el valor de la privacidad
+
+*Fuente*:  Elaboración Propia
+
+\vspace{2mm}
+
+*Introducción*
+
+```{r, out.width='85%', fig.margin = TRUE, fig.fullwidth=TRUE}
+
+knitr::include_graphics("images/actprivacy.jpg")
+
+```
+
+En primer lugar, lee la lectura "Every move you take, every click you make, we'll be tracking you", p. 404-406 en @laudon2013.
+
+A continuación, busca en la web al menos un artículo de difusión o video reciente (año 2018) relacionado con la política de privacidad en Google.
+
+Una vez terminada la lectura y la búsqueda del artículo, *se pide*:
+
+- Discutid por grupos cual es el efecto de internet en la privacidad de los consumidores 
+- Cómo afecta la preocupación por privacidad de los consumidores y su protección legal a los modelos de negocio online
+- ¿Qué postura tenéis con respecto a la privacidad?¿Qué medidas tomáis al respecto?
+
+\vspace{2mm}
+
+\clearpage
+
+### Actividad de aplicación XIX: Mobile Marketing
+
+*Fuente*:  Elaboración Propia
+
+\vspace{2mm}
+
+*Introducción*
+
+```{r, out.width='85%', fig.margin = TRUE, fig.fullwidth=TRUE}
+
+knitr::include_graphics("images/iabmobile.png")
+
+```
+
+Descarga y lee la persentación resumida del informe "Mobile Marketing 2017" de IAB (https://bit.ly/2J1u4KW)
+
+Una vez terminada la lectura y la búsqueda del artículo, *se pide*:
+
+- Destaca los tres datos que consideras más relevantes en ese informe 
+- ¿Te sientes representado en los valores medios presentados?¿En qué sí?¿En qué no?
+- ¿Has realizado alguna compra desde el móvil en los últimos tres meses?
+- ¿Cuales son los puntos fuertes y débiles del acceso móvil en los procesos de compra online?
+- ¿Consideras que el móvil va a jugar un papel creciente en el "customer journey"?
+
+\vspace{2mm}
+
+\clearpage
+
+## Tests Socrative
+
+### Test Socrative 1: Repaso de Conceptos básicos en el Mercado
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Fuente*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Preguntas modificadas y adaptadas a partir de batería de Recursos del Instructor de Kotler y Armstrong (2018).*
+
+
+
+```
+
+\vspace{2mm}
+
+1. __________ son necesidades humanas transformadas por la cultura y la personalidad individual.
+  a. Apetencias
+  b. Deseos *(correcta)*
+  c. Demandas
+  d. Valores
+  e. Intercambios
+  
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Introducción*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Este test está pensado para repasar los conceptos básicos que se introducen en el apartado 2: Comprensión del mercado y las necesidades de los clientes, en el Tema 1. *
+      
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Así, se repasan los conceptos de necesidades, deseos y demandas, oferta de valor, valor para el cliente y satisfacción e Intercambios, relaciones y mercados.*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Dado que es el primer tema de la asignatura y que no se han proporcionado herramientas de aplicación, la dificultad del test es baja.*
+
+
+```
+
+2. Las necesidades incluyen todo lo siguiente EXCEPTO:
+
+  a. Comida
+  b. Conocimiento
+  c. Afecto
+  d. iPhone X *(correcta)*
+  e. Pertenencia
+
+3. Marta Rodríguez al fin tiene el dinero que cuesta el ordenador que ha deseado durante los últimos seis meses. El deseo de Marta ahora se ha convertido en:
+
+  a. Necesidad
+  b. Requisito
+  c. Demanda *(correcta)*
+  d. Intercambio
+  e. Transacción
+  
+
+  
+4. Un/a _________ es una combinación de productos, servicios, información o experiencias que se proporciona a los consumidores para satisfacer un deseo o una necesidad.
+
+  a. Oferta de mercado *(correcta)*
+  b. Propuesta de valor
+  c. Posicionamiento de marca
+  d. Segmento de mercado
+  e. Mix de mercado
+  
+5.   ¿Cuál de los siguientes términos se refiere a oferentes preocupados por sus propios productos sin tener en cuenta las necesidades subyacentes de los consumidores?
+
+  a. Ceguera del vendedor
+  b. Derroche del marketing
+  c. Propuesta ausente de valor
+  d. Miopía del marketing *(correcta)*
+  e. Consumo no notorio
+  
+6. Cuando los *marketeros*  fijan bajas expectativas para una oferta de mercado, corren el riesgo de _________ :
+
+  a. Decepcionar a los clientes leales
+  b. Gastar más en televisión que en otros medios
+  c. No atraer a suficientes clientes *(correcta)*
+  d. No identificar las necesidades de los clientes
+  e. Dirigirse a un segmento de mercado incorrecto
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Implementación en Socrative*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *En la herramienta Socrative, se prepara el test para que se presenten las preguntas en orden aleatorio y con el orden de respuesta también de forma aleatoria.* 
+      
+\vspace{2mm}      
+
+\textcolor{Red}{\faCaretRight{}} *Una vez finalizado, en la pantalla se proyectan los porcentajes de acierto agregados y se discuten después de la actividad aquellas preguntas con porcentajes de error más altos.*
+
+
+
+
+```
+
+7.  _________ es el acto de obtener algo deseado de alguien mediante la oferta de algo a cambio.
+
+  a. Valoración
+  b. Intercambio *(correcta)*
+  c. Oferta de mercado
+  d. Confiscación
+  e. Compra
+
+8. Un/a __________ es el conjunto de compradores actuales y potenciales para un producto o servicio.
+
+  a. Mercado *(correcta)*
+  b. Grupo de control
+  c. Grupo focal
+  d. Audiencia
+  e. Grupo Objetivo 
+
+9. La investigación sobre los consumidores, el desarrollo de productos, la comunicación, la distribución, los precios y los servicios son todas actividades centrales de ________
+
+  a. Posicionamiento
+  b. Marketing *(correcta)*
+  c. Desintermediación
+  d. Producción
+  e. Logística
+  
+10. ¿Cuándo son más efectivos los vendedores?
+
+  a. Cuando se centran más en sus propios productos y servicios 
+  b. Cuando se centran más en el precio de sus productos y servicios 
+  c. Cuando se centran más en los beneficios y experiencias que proporcionan sus productos y servicios *(correcta)*
+  d. Cuando se centran más en dónde pueden comprarse sus productos y servicios 
+  e. Cuando se centran más en el coste de producir sus productos y servicios 
+
+\clearpage
+
+
+
+### Test Socrative 2: Repaso de Planificación de Marketing
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Fuente*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Preguntas adaptadas a partir de batería de Solomon (2018).*
+
+
+
+```
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Implementación en Socrative*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *En la herramienta Socrative, se prepara el test para que se presenten las preguntas en orden aleatorio y con el orden de respuesta también de forma aleatoria.* 
+      
+\vspace{2mm}      
+
+\textcolor{Red}{\faCaretRight{}} *Una vez finalizado, en la pantalla se proyectan los porcentajes de acierto agregados y se discuten después de la actividad aquellas preguntas con porcentajes de error más altos.*
+
+
+
+
+```
+
+1. Como director de marketing de Holden Cosmetics, una empresa dedicada a los productos de belleza, tienes como tarea desarrollar un plan de marketing para Blythe, una crema facial que ha estado perdiendo ventas. Para comenzar a plantear el Plan de marketing, tu primera decisión es en cuál de las cuatro Ps centrarte y decides comenzar con el producto. ¿Cuál de las siguientes afirmaciones justifica mejor esta decisión?
+
+  a. No importa por cuál de las cuatro Ps empezar. El producto es tan buena opción como cualquiera de las otras.
+  b. El producto incluye el precio y la promoción. Una vez elegido el producto, el precio y la promoción ya están determinados.
+  c. Elegir primero los atributos del producto condicionará cómo se toman las decisiones sobre precio y promoción. *(correcta)*
+  d. El producto es el único factor importante en las cuatro Ps. Los otros tres factores son mucho menos importantes.
+  e. Para un producto que depende en gran medida de la imagen como las cremas de belleza, el producto en sí es muy importante aunque no lo sea tanto para productos más prácticos.
+  
+2. Un consejero sugiere centrarse primero en el precio antes que en el producto, aunque tú discrepas. ¿Cuál sería el mejor argumento para esta discrepancia?
+
+  a. Centrarse primero en el precio pone demasiado énfasis en dónde fabricar el producto.
+  b. Centrarse en el precio primero puede condicionar cuál será el mercado para el producto.
+  c. Centrarse primero en el precio puede hacer que se planifique un producto no rentable. *(correcta)*
+  d. Centrarse primero en el precio puede condicionar la futura promoción.
+  e. Centrarse primero en el precio puede condicionar el packaging del producto.
+  
+3. Al centrarse en el producto, en primer lugar analizas el *packaging* del producto incluyendo tanto la forma y características del tarro como la caja. Tu asistente no está seguro de que el envase sea un atributo del producto como tal. ¿Cómo resolverías esa duda?
+
+  a. El asistente está equivocado. El envase de la crema es una parte más importante que la propia crema.
+  b. El asistente tiene razón. El envase puede ser considerado parte del producto solo cuando se consume junto con él.
+  c. El asistente está equivocado. El envase es parte de cualquier producto. *(correcta)*
+  d. El asistente tiene razón. El producto es la crema en sí misma, el envase no es parte del producto.
+  e. El asistente está equivocado. Aunque sí lo es el tarro, la caja no es parte del producto.
+
+
+\clearpage
+
+### Test Socrative 3: Repaso de Macroentorno y Microentorno
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Fuente*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Preguntas adaptadas a partir de batería de Esteban y Mondéjar (2013) y Solomon (2018).*
+
+
+
+```
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Implementación en Socrative*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *En la herramienta Socrative, se prepara el test para que se presenten las preguntas en orden aleatorio y con el orden de respuesta también de forma aleatoria.* 
+      
+\vspace{2mm}      
+
+\textcolor{Red}{\faCaretRight{}} *Una vez finalizado, en la pantalla se proyectan los porcentajes de acierto agregados y se discuten después de la actividad aquellas preguntas con porcentajes de error más altos.*
+
+
+
+
+```
+
+1. ¿Cuál de los siguientes factores no es una fuerza del macroentorno?
+
+  a. Situación política
+  b. Empresa *(correcta)*
+  c. Condiciones económicas
+  d. Valores actuales de la sociedad
+  e. Avances tecnológicos
+  
+2. ¿Cuál de los siguientes no es un cambio de macroentorno para una empresa en el sector editorial?
+
+  a. Nuevas regulaciones sobre el papel reciclado
+  b. Se espera un aumento de la demanda de libros de texto en inglés
+  c. La deforestación ha generado una escasez de árboles para generar papel
+  d. Una empresa rival está creando materiales para estudiar a distancia *(correcta)*
+  e. Se espera una disminución en el número de estudiantes universitarios en los próximos años
+  
+
+3. Los informes demográficos indican que la población está envejeciendo y que el número de estudiantes se reducirá en el futuro. ¿Cuál es la mejor respuesta a este cambio para una editorial de libros escolares desde el punto de vista de marketing?
+
+  a. Animar a los padres a tener más hijos
+  b. Incrementar el precio de los libros para mantener los márgenes
+  c. Animar al sistema escolar para incrementar la duración de los estudios
+  d. Buscar formas de revertir la tendencia e incrementar el número de niños en edad escolar
+  e. Buscar nuevos mercados que desarrollar fuera del sistema escolar *(correcta)*
+
+\clearpage
+
+### Test Socrative 4: Repaso de Comportamiento del Consumidor
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Fuente*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Preguntas modificadas y adaptadas a partir de batería de Recursos del Instructor de Kotler y Armstrong (2018).*
+
+
+
+```
+
+1. ¿Cómo describirías mejor al propietario medio de una Harley Davidson?
+  a. Como un Ángel del Infierno
+  b. Un joven adulto de unos 25 años
+  c. Un adolescente
+  d. Un padre de familia sobre los 45 *(correcta)*
+  e. Un milenial con ingresos superiores a la media 
+
+2. El/la ________ nunca es simple, sin embargo, es esencial comprenderlo/a para la dirección de marketing
+  a. Personalidad de marca
+  b. Consumo pionero
+  c. Adopción temprana
+  d. Comportamiento del consumidor *(correcta)*
+  e. Diferencia entre datos primarios y secundarios
+
+3. El punto de partida para comprender la respuesta a los esfuerzos de marketing es el modelo _____ del comportamiento del consumidor-
+  a. creencia
+  b. subcultura
+  c. sentimiento postcompra
+  d. estímulo-respuesta *(correcta)*
+  e. respuesta y disonancia
+
+4. ¿Cuál de las siguientes afirmaciones NO se dice de los consumidores maduros?
+  a. La mejor estrategia es apelar a sus vidas activas y multidimesionales.
+  b. Son un mercado ideal para cosméticos y productos de cuidado personal
+  c. Les resultan atractivos los productos de electrónica doméstica
+  d. Debido a su edad, no son un segmento interesante para los viajes *(correcta)*
+  e. Son un segmento atractivo para el mobiliario y la ropa de diseño
+
+\clearpage
+
+5. El/la _________  es la organización de compra más importante en la sociedad
+  a. familia *(correcta)*
+  b. clase social
+  c. liderazgo de opinión
+  d. búsqueda de información
+  e. grupo de referencia
+  
+\clearpage
+
+### Test Socrative 5: Tipos de decisión
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Implementación en Socrative*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *En la herramienta Socrative, se prepara el test para que se presenten las preguntas en orden aleatorio y con el orden de respuesta también de forma aleatoria.* 
+      
+\vspace{2mm}      
+
+\textcolor{Red}{\faCaretRight{}} *Una vez finalizado, en la pantalla se proyectan los porcentajes de acierto agregados y se discuten después de la actividad aquellas preguntas con porcentajes de error más altos.*
+
+\vspace{2mm}      
+
+\textcolor{Red}{\faCaretRight{}} *La escala es la misma en todas las preguntas: A. Recompra Directa, B. Recompra modificada, C. Nueva Tarea*
+
+
+
+```
+
+Para cada una de las siguientes compras, selecciona su clasificación:
+
+1. Una máquina principal de la planta de producción
+2. El suministro actual de energía eléctrica
+3. Un coche nuevo para un nuevo gerente
+4. Un nuevo edificio de oficinas
+5. Material de oficina
+6. Una nueva fotocopiadora
+7. Un proyecto de consultoría de investigación de mercados
+8. Un software menor (200€)
+9. La renovación de todos los equipos informáticos
+
+\clearpage
+
+### Test Socrative 6: Criterios de segmentación
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Fuente*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Preguntas modificadas y adaptadas a partir de batería de Recursos del Instructor de Kotler y Armstrong (2018).*
+
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Las preguntas y las alternativas de respuesta se presentan en orden aleatorio.*
+
+```
+
+1. Delta Motores comercializa sus coches en función de la edad, género e ingresos de sus clientes. ¿Qué tipo de segmentación de mercados realiza?
+
+  a. segmentación geográfica
+  b. segmentación por beneficios
+  c. segmentación por ocasión
+  d. segmentación demográfica *(correcta)*
+  e. segmentación psicográfica
+  
+
+2. ¿Cual de las siguientes variables son más populares para segmentar grupos de consumidores?
+
+  a. éticas
+  b. psicográficas
+  c. demográficas *(correcta)*
+  d. comportamentales
+  e. geográficas
+  
+3. Los hoteles Gilron tienen un club de miembro exclusivo para clientes con salario anual mayor de 100.000$. En este club se ofrecen descuentos en temporada de invierno en hoteles en zonas de costa. Esta cadena está siguiendo una segmentación _____
+
+  a. por género
+  b. por beneficio
+  c. por ingresos *(correcta)*
+  d. por ocasión
+  e. geográfica
+
+4. Las empresas que utilizan una segmentación ________ a menudo segmentan a sus mercados por estilos de vida de sus consumidores y basan sus estrategias en el atractivo para estos estilos de vida.
+
+  a. por beneficios
+  b. por ocasión
+  c. geográfica
+  d. demográfica
+  e. psicográfica *(correcta)*
+
+ 
+5. La segmentación _________ divide a los compradores en segmentos basándose en su conocimiento, actitudes, uso o respuestas hacia un producto.
+
+  a. por estilo de vida
+  b. por comportamiento *(correcta)*
+  c. geográfica
+  d. demográfica
+  e. psicográfica 
+
+
+6. Calipso Motores ha lanzado su nuevo modelo Prometeus. Prometeus combina el atractivo de un coche de lujo con la agilidad de un modelo deportivo. Calipso Motores confía en que Prometeus será atractivo tanto para los entusiastas de los deportivos como para el segmento de lujo. ¿Qué tipo de segmentación está haciendo Calipso)?
+
+  a. por beneficios *(correcta)*
+  b. por ocasión
+  c. geográfica
+  d. demográfica
+  e. psicográfica 
+ 
+
+\clearpage
+
+### Test Socrative 7: Adopción de nuevos productos
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Fuente*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Preguntas modificadas y adaptadas a partir de batería de Recursos del Instructor de Levens (2012).*
+
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Las preguntas se presentan en orden aleatorio. En este caso, todas las preguntas se presentan como Verdadero/Falso*
+
+```
+
+1. María está considerando si comprar o no un nuevo e-reader. Ha leído revisiones en páginas web sobre tres modelos distintos y ha hablado con un par de amigos que ya tienen uno. María está en la etapa de concienciación del proceso de adopción de nuevos productos.
+
+a. Verdadero
+b. Falso *(correcta)*
+
+2. El proceso de adopción de nuevos productos se refiere al proceso mental por el que un individuo pasa desde que por primera vez es consciente de que existe una innovación hasta su adopción final.
+
+a. Verdadero *(correcta)*
+b. Falso 
+
+3. La prueba del producto no es una etapa relevante en el proceso de adopción de nuevos productos.
+
+a. Verdadero
+b. Falso *(correcta)*
+
+4. La gente difiere significativamente en su disposición a probar nuevos productos. En cada categoría de producto hay "consumidores pioneros" , a los que también se denomina "adoptadores tardíos".
+
+a. Verdadero
+b. Falso *(correcta)*
+
+5. Tomás compra productos electrónicos como smartphones o tablets cuando ya mucha gente tenía estos dispositivos. Tomás pertenece al grupo de mayoría tardía.  
+ 
+a. Verdadero
+b. Falso *(correcta)*
+
+6. Viviana quiere ser la primera en tener unos zapatos del nuevo estilo de moda de esta temporada. Viviana pertenece a la primera mayoría.
+
+
+a. Verdadero
+b. Falso *(correcta)*
+
+
+
+
+
+\clearpage
+
+### Test Socrative 8: El ciclo de vida del producto
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Fuente*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Preguntas modificadas y adaptadas a partir de batería de Recursos del Instructor de Kotler (2018).*
+
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Las preguntas y respuestas se presentan en orden aleatorio.*
+
+```
+
+
+1. ¿Cuál de los siguientes es un desafío importante generado por el ciclo de vida del producto?
+
+a. Incremento de gastos
+b. Incremento de competencia
+c. Desarrollo de nuevos productos *(correcta)*
+d. Evaluación de resultados
+e. Reconocimiento de las etapas del ciclo 
+
+2. ¿Cuál de las siguientes características refleja mejor la etapa de declive de un producto?
+
+a. Aceptación rápida en el mercado
+b. Crecimiento lento de las ventas
+c. Las ventas y los beneficios disminuyen *(correcta)*
+d. Altos costes de inversión
+e. Incremento en los beneficios
+
+3. ¿Cuál de los siguientes caracteriza la etapa de introducción en el Ciclo de Vida del Producto?
+
+a. Incremento en los gastos de marketing
+b. Beneficios inexistentes *(correcta)*
+c. La empresa tiene el nivel de gastos mínimo
+d. El producto consigue la aceptación de la mayoría de consumidores
+e. Bajos costes promocionales
+
+4. ¿Qué etapa del ciclo de vida se caracteriza por la rápida aceptación en el mercado y el incremento de beneficios?
+
+a. Introducción
+b. Crecimiento *(correcta)*
+c. Madurez
+d. Declive
+e. Desarrollo de producto 
+
+5. ______ es la etapa del ciclo de vida en la que las ventas caen y los beneficios disminuyen.
+
+a. Introducción
+b. Crecimiento
+c. Madurez
+d. Declive *(correcta)*
+e. Desarrollo de producto 
+
+6. _______ es la etapa del ciclo de vida en la que las ventas crecen despacio porque el producto ha conseguido la aceptación. Los niveles de beneficios bajan porque se incrementan los costes de marketing debido a la competencia.
+
+a. Introducción
+b. Crecimiento
+c. Madurez *(correcta)*
+d. Declive 
+e. Desarrollo de producto 
+
+7. Algunos productos que han entrado en la etapa de declive han vuelto a la etapa de crecimiento a través del:
+
+a. reposicionamiento *(correcta)*
+b. cosecha de beneficios
+c. mantenimiento
+d. expansión
+e. financiación
+
+8. ¿Qué hace que el ciclo de una determinada marca pueda cambiar rápidamente?
+
+a. los costes de las materias primas
+b. cambios en la demografía
+c. cambio en la estrategia de la compañía
+d. ataques y respuestas de la competencia *(correcta)*
+e. nueva tecnología
+
+\clearpage
+
+### Test Socrative 9: Modelos de negocio digitales
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Fuente*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Preguntas modificadas y adaptadas a partir de batería de Recursos del Instructor de Laudon (2018).*
+
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Las preguntas y respuestas se presentan en orden aleatorio.*
+
+```
+
+1. El uso de los sistemas de información para cumplir con la ley de protección de datos describe el objetivo de:
+
+a. supervivencia *(correcta)*
+b. flexibilidad mejorada
+c. excelencia operacional
+d. mejora en las prácticas empresariales
+
+2. Coloca las siguientes eras de infraestructura IT en orden, de las más antiguas a las más recientes: 1. Computación en la nube, 2. Cliente/Servidor, 3.Computación de empresa, 4. Ordenador Personal, 5. Mainframe y Minicomputadoras
+
+a. 4, 5, 2, 3, 1
+b. 5, 4, 2, 3, 1 *(correcta)*
+c. 5, 4, 2, 1, 3
+d. 5, 2, 3, 4, 1
+
+3. La característica de densidad de información en mercados digitales se refiere a:
+
+a. la suma total de cantidad y calidad de información disponible para todos los participantes en el mercado *(correcta)*
+b. la suma total de cantidad y calidad de información disponible para los consumidores por parte de los detallistas
+c. la riqueza (complejidad y contenido) de los mensajes
+d. el big data
+
+4. La teoría del long tail indica que se pueden alcanzar beneficios
+
+a. centrándose en el 80% de los productos con menor margen *(correcta)*
+b. con una cartera de productos concentrada 
+c. centrándose en el 20% de los productos con mayor margen
+d. centrándose en mercados internacionales
+
+5. ¿Cuál de los siguientes ejemplos ilustra mejor el modelo de ingresos por afiliación?
+
+a. fnac recibe una pequeña cuota por cada venta que se produce en su plataforma
+b. nuevasopiniones.es inscribe a sus usuarios, les reparte cupones y se queda con una cuota de los cupones que utilizan
+c. foroexpertos recive un pequeño pago cuando un usuario compra en amazon.es desde un link publicado por foroexpertos *(correcta)*
+d. Spotify cobra a sus usuarios premium una cuota mensual por acceder a su contenido
+
+
+
+\clearpage
+
+### Test Socrative 10: El consumidor digital y la estrategia de marketing en la economía digital
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Fuente*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Preguntas modificadas y adaptadas a partir de batería de Recursos del Instructor de Laudon (2018).*
+
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Las preguntas y respuestas se presentan en orden aleatorio.*
+
+```
+
+1. La normativa española de protección de datos
+
+a. Es una regulación para el uso de Cookies
+b. Al igual que la estadounidense, permite a las empresas que utilicen la información personal sin el previo consentimiento
+c. Permite a las empresas que si cumplen con los estandares de uso de la información, no tengan que notificar a las personas el acceso y almacenamiento de su información
+d. Exige a las empresas que informen a las personas cuando recopilan información sobre ellas y divulguen como se va a almacenar y utilizar *(correcta)*
+
+2. ¿Cuál de las siguientes tecnologías utilizarías para analizar los datos de redes sociales recogidos por un importante detallista online?
+
+a. DBMS
+b. Data Warehouse
+c. Hadoop *(correcta)*
+d. OLAP
+
+3. En los modelos de gasto publicitario, los anuncios más caros son los que siguen el modelo
+
+a. CPP
+b. CPC
+c. CPM
+d. CPA *(correcta)*
+
+4. El posicionamiento SEO
+
+a. Se basa en colocar anuncios cuando aparecen palabras clave
+b. Se logra con el contenido interno de la página
+c. Se logra con el contenido interno de la página y con contenido externo *(correcta)*
+d. Solo se logra con los enlaces
+
+5. La ley de Metcalfe afirma:
+
+a. El número de miembros de la red tiene como límite el número de nodos de conexión
+b. El valor de una red crece exponencialmente en función del número de miembros de la red *(correcta)*
+c. El valor de la red es inversamente proporcional al número de miembros
+d. El valor de una red depende de la capacidad de computación de los equipos
+
+\cleardoublepage
+

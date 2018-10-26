@@ -1,0 +1,2 @@
+\textcolor{Red}{\faAngleDoubleRight{}} *Los Estatutos de cada Universidad regularán el procedimiento que ha de regir en los concursos, que deberá valorar, en todo caso, el historial académico, docente e investigador del candidato o candidata, su proyecto docente e investigador, así como contrastar sus capacidades para la exposición y debate ante la Comisión en la correspondiente materia o especialidad en sesión pública.*  
+      

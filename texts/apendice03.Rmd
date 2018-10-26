@@ -1,0 +1,43 @@
+---
+documentclass: book
+classoption: a4paper
+#classoption: a4paper,oneside
+#bibliography: bib/library.bib
+bibliography: "D:/Dropbox/2_ Investigacion/4_Referencias/library.bib"
+#csl: methods-in-ecology-and-evolution.csl
+csl: spanish-journal-of-marketing-esic.csl
+link-citations: yes
+fontsize: 12pt # 10pt,11pt
+geometry: margin = 2.5cm
+output: 
+  pdf_document: 
+    keep_tex: yes
+    number_sections: yes
+#    toc: yes
+    fig_caption: yes
+---
+
+
+```{r include=FALSE}
+knitr::opts_chunk$set(fig.path = 'figurasR/',
+                      echo = FALSE, warning = FALSE, message = FALSE,
+                      fig.pos="H",fig.align="center",out.width="95%",
+                      cache=FALSE)
+
+```
+
+
+<!-- \appendix -->
+<!-- \setcounter{chapter}{0} -->
+<!-- \setcounter{chapter}{0} escribir 0 para apéndice A  -->
+
+<!-- \pagenumbering{arabic} -->
+
+
+# Anexo: Sitio Web de la Asignatura en MiAulario \label{anexo3}
+
+
+
+## Actividad de Aplicación 1. 
+
+

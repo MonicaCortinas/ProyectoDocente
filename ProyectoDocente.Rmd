@@ -1,0 +1,138 @@
+---
+title: "Proyecto Docente e Investigador"
+subtitle: "Dirección Comercial"
+author: "Mónica Cortiñas"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+header-includes: 
+      \usepackage[table]{xcolor} 
+output:
+  tufte::tufte_book:
+    latex_engine: xelatex
+    includes:
+      in_header: latex/latex_preambulo.tex
+  tufte::tufte_handout:
+    latex_engine: xelatex
+  tufte::tufte_html: default
+link-citations: yes
+bibliography: "D://Dropbox//2_ Investigacion//4_Referencias//library.bib"
+csl: bib/spanish-journal-of-marketing-esic.csl
+nocite: | 
+  @luzuriaga2018; @gonzalezcasali2007; @lesage2013; @Nicol2007; @Burton1991; @somalo2018; @SIMESTER2016; @albareda2015; @casado2015; @Matzler2015; @Sancho2018; @Kotlermkyventas; @Keiningham2014; @Peterson2017; @GonzalezMoreno2018; @SantesmasesMestre2012; @solomon2016; @KotlerKeller2016; @RiveraVilas2015; @estebantalayaprincipios; @EstebanTalaya2013; @estebantalayadireccion; @SellersRubio2013; @alonsorivas2013; @munuera2012; @lilienprinciples; @lilienmodels; @GrandeEsteban2017; @laudon2013; @laudon2018; @Kerin2018; @Stanton2007; @Levens2012; @Lambin2008; @Ferrell2012; @best2007; @Hawkins2010; @malhotra2016; @monterosimo2006; @martinarmario1996; @MarketignS2018; @MIET2015; @ryanjones2009; @Strauss2016
+
+---
+
+
+  
+```{r setup, include=FALSE}
+library(tufte)
+# invalidate cache when the tufte version changes
+knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tufte'))
+options(htmltools.dir.version = FALSE)
+
+options(knitr.kable.NA='')
+
+```
+
+\cleardoublepage 
+`r newthought(' ')` 
+
+\vspace{55mm} 
+
+Este Proyecto Docente e Investigador se presenta para la participación en el Concurso de Acceso a Cuerpos docentes Universitarios:
+
+- Categoría: Profesor Titular de Universidad.
+- Área de Conocimiento: Comercialización e Investigación de Mercados
+- Plaza nº 2391
+- Universidad Pública de Navarra
+- Resolución nº 12154 de 16 de Agosto de 2018^[Boletín Oficial del Estado del 4 de septiembre]
+
+\bigskip
+
+\bigskip
+
+\begin{center}
+
+\textit{Este Proyecto se presenta para su defensa y debate el 8 de noviembre de 2018 en la Universidad Pública de Navarra (Pamplona).}
+\end{center}
+
+\cleardoublepage   
+
+<!--  \clearpage -->
+
+\section{Prólogo}
+
+```{r child = 'texts/prologo.Rmd'}
+```
+
+\cleardoublepage  
+
+
+\tableofcontents
+
+
+\cleardoublepage  
+
+
+\pagenumbering{arabic}
+
+\FloatBarrier
+
+```{r child = 'texts/capitulo01.Rmd'}
+```
+
+\FloatBarrier
+
+```{r child = 'texts/capitulo02.Rmd'}
+```
+
+\FloatBarrier
+
+```{r child = 'texts/capitulo03.Rmd'}
+```
+\cleardoublepage   
+
+\FloatBarrier
+
+```{r child = 'texts/capitulo04.Rmd'}
+```
+
+\FloatBarrier
+
+```{r child = 'texts/capitulo05.Rmd'}
+```
+
+\FloatBarrier
+
+
+\appendix 
+
+
+```{r child = 'texts/apendice01.Rmd'}
+```   
+
+
+```{r child = 'texts/apendice02.Rmd'}
+```   
+
+\FloatBarrier
+
+\cleardoublepage   
+
+# Anexo- Índice de Figuras
+
+\listoffigures
+
+\addcontentsline{toc}{section}{Índice de Figuras}
+
+\cleardoublepage   
+
+# Anexo- Índice de Tablas
+
+\listoftables
+
+\addcontentsline{toc}{section}{Índice de Tablas}
+
+\cleardoublepage   
+
+
+# Bibliografía

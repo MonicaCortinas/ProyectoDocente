@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   class="main-svg"
+   width="800"
+   height="600"
+   style=""
+   version="1.1"
+   id="svg347"
+   sodipodi:docname="edades.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata351">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     id="namedview349"
+     showgrid="false"
+     inkscape:zoom="0.355"
+     inkscape:cx="400"
+     inkscape:cy="300"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg347" />
+  <rect
+     x="0"
+     y="0"
+     width="800"
+     height="600"
+     style="fill: rgb(255, 255, 255); fill-opacity: 1;"
+     id="rect2" />
+  <defs
+     id="defs-0d8988">
+    <g
+       class="gradients"
+       id="g4" />
+    <g
+       class="clips"
+       id="g18">
+      <clipPath
+         class="axesclip"
+         id="clip0d8988x">
+        <rect
+           x="40"
+           y="0"
+           width="720"
+           height="600"
+           id="rect6" />
+      </clipPath>
+      <clipPath
+         class="axesclip"
+         id="clip0d8988y">
+        <rect
+           x="0"
+           y="40"
+           width="800"
+           height="472"
+           id="rect9" />
+      </clipPath>
+      <clipPath
+         class="axesclip"
+         id="clip0d8988xy">
+        <rect
+           x="40"
+           y="40"
+           width="720"
+           height="472"
+           id="rect12" />
+      </clipPath>
+      <clipPath
+         class="plotclip"
+         id="clip0d8988xyplot">
+        <rect
+           width="720"
+           height="472"
+           id="rect15" />
+      </clipPath>
+    </g>
+  </defs>
+  <g
+     class="bglayer"
+     id="g23">
+    <rect
+       class="bg"
+       x="30"
+       y="30"
+       width="740"
+       height="492"
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; stroke-width: 0;"
+       id="rect21" />
+  </g>
+  <g
+     class="layer-below"
+     id="g29">
+    <g
+       class="imagelayer"
+       id="g25" />
+    <g
+       class="shapelayer"
+       id="g27" />
+  </g>
+  <g
+     class="cartesianlayer"
+     id="g223">
+    <g
+       class="subplot xy"
+       id="g221">
+      <g
+         class="layer-subplot"
+         id="g35">
+        <g
+           class="shapelayer"
+           id="g31" />
+        <g
+           class="imagelayer"
+           id="g33" />
+      </g>
+      <g
+         class="gridlayer"
+         transform="translate(40,40)"
+         id="g55">
+        <path
+           class="ygrid crisp"
+           d="M0,0h720"
+           transform="translate(0,422.18)"
+           style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"
+           id="path37" />
+        <path
+           class="ygrid crisp"
+           d="M0,0h720"
+           transform="translate(0,372.36)"
+           style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"
+           id="path39" />
+        <path
+           class="ygrid crisp"
+           d="M0,0h720"
+           transform="translate(0,322.53)"
+           style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"
+           id="path41" />
+        <path
+           class="ygrid crisp"
+           d="M0,0h720"
+           transform="translate(0,272.71)"
+           style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"
+           id="path43" />
+        <path
+           class="ygrid crisp"
+           d="M0,0h720"
+           transform="translate(0,222.89)"
+           style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"
+           id="path45" />
+        <path
+           class="ygrid crisp"
+           d="M0,0h720"
+           transform="translate(0,173.07)"
+           style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"
+           id="path47" />
+        <path
+           class="ygrid crisp"
+           d="M0,0h720"
+           transform="translate(0,123.24)"
+           style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"
+           id="path49" />
+        <path
+           class="ygrid crisp"
+           d="M0,0h720"
+           transform="translate(0,73.42)"
+           style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"
+           id="path51" />
+        <path
+           class="ygrid crisp"
+           d="M0,0h720"
+           transform="translate(0,23.6)"
+           style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"
+           id="path53" />
+      </g>
+      <g
+         class="overgrid"
+         id="g57" />
+      <g
+         class="zerolinelayer"
+         transform="translate(40,40)"
+         id="g61">
+        <path
+           class="yzl zl crisp"
+           d="M0,0h720"
+           transform="translate(0,472)"
+           style="stroke: rgb(68, 68, 68); stroke-opacity: 1; stroke-width: 1px;"
+           id="path59" />
+      </g>
+      <g
+         class="overzero"
+         id="g63" />
+      <path
+         class="xlines-below"
+         id="path65" />
+      <path
+         class="ylines-below"
+         id="path67" />
+      <g
+         class="overlines-below"
+         id="g69" />
+      <g
+         class="xaxislayer-below"
+         id="g71" />
+      <g
+         class="yaxislayer-below"
+         id="g73" />
+      <g
+         class="overaxes-below"
+         id="g75" />
+      <g
+         class="plot"
+         transform="translate(40, 40)"
+         clip-path="url(#clip0d8988xyplot)"
+         id="g153">
+        <g
+           class="imagelayer"
+           id="g77" />
+        <g
+           class="maplayer"
+           id="g79" />
+        <g
+           class="barlayer"
+           id="g145">
+          <g
+             class="trace bars"
+             style="opacity: 1;"
+             id="g95">
+            <g
+               class="points"
+               id="g93">
+              <g
+                 class="point"
+                 id="g83">
+                <path
+                   d="M303.9,472V123.24H326.1V472Z"
+                   style="vector-effect: non-scaling-stroke; stroke-width: 0px; fill: rgb(48, 147, 158); fill-opacity: 1;"
+                   id="path81" />
+              </g>
+              <g
+                 class="point"
+                 id="g87">
+                <path
+                   d="M63.9,472V63.46H86.1V472Z"
+                   style="vector-effect: non-scaling-stroke; stroke-width: 0px; fill: rgb(48, 147, 158); fill-opacity: 1;"
+                   id="path85" />
+              </g>
+              <g
+                 class="point"
+                 id="g91">
+                <path
+                   d="M543.9,472V23.6H566.1V472Z"
+                   style="vector-effect: non-scaling-stroke; stroke-width: 0px; fill: rgb(48, 147, 158); fill-opacity: 1;"
+                   id="path89" />
+              </g>
+            </g>
+          </g>
+          <g
+             class="trace bars"
+             style="opacity: 1;"
+             id="g111">
+            <g
+               class="points"
+               id="g109">
+              <g
+                 class="point"
+                 id="g99">
+                <path
+                   d="M333.9,472V417.2H356.1V472Z"
+                   style="vector-effect: non-scaling-stroke; stroke-width: 0px; fill: rgb(54, 85, 107); fill-opacity: 1;"
+                   id="path97" />
+              </g>
+              <g
+                 class="point"
+                 id="g103">
+                <path
+                   d="M93.9,472V422.18H116.1V472Z"
+                   style="vector-effect: non-scaling-stroke; stroke-width: 0px; fill: rgb(54, 85, 107); fill-opacity: 1;"
+                   id="path101" />
+              </g>
+              <g
+                 class="point"
+                 id="g107">
+                <path
+                   d="M573.9,472V432.14H596.1V472Z"
+                   style="vector-effect: non-scaling-stroke; stroke-width: 0px; fill: rgb(54, 85, 107); fill-opacity: 1;"
+                   id="path105" />
+              </g>
+            </g>
+          </g>
+          <g
+             class="trace bars"
+             style="opacity: 1;"
+             id="g127">
+            <g
+               class="points"
+               id="g125">
+              <g
+                 class="point"
+                 id="g115">
+                <path
+                   d="M363.9,472V442.11H386.1V472Z"
+                   style="vector-effect: non-scaling-stroke; stroke-width: 0px; fill: rgb(197, 197, 197); fill-opacity: 1;"
+                   id="path113" />
+              </g>
+              <g
+                 class="point"
+                 id="g119">
+                <path
+                   d="M123.9,472V457.05H146.1V472Z"
+                   style="vector-effect: non-scaling-stroke; stroke-width: 0px; fill: rgb(197, 197, 197); fill-opacity: 1;"
+                   id="path117" />
+              </g>
+              <g
+                 class="point"
+                 id="g123">
+                <path
+                   d="M603.9,472V462.04H626.1V472Z"
+                   style="vector-effect: non-scaling-stroke; stroke-width: 0px; fill: rgb(197, 197, 197); fill-opacity: 1;"
+                   id="path121" />
+              </g>
+            </g>
+          </g>
+          <g
+             class="trace bars"
+             style="opacity: 1;"
+             id="g143">
+            <g
+               class="points"
+               id="g141">
+              <g
+                 class="point"
+                 id="g131">
+                <path
+                   d="M393.9,472V407.23H416.1V472Z"
+                   style="vector-effect: non-scaling-stroke; stroke-width: 0px; fill: rgb(226, 82, 61); fill-opacity: 1;"
+                   id="path129" />
+              </g>
+              <g
+                 class="point"
+                 id="g135">
+                <path
+                   d="M153.9,472V447.09H176.1V472Z"
+                   style="vector-effect: non-scaling-stroke; stroke-width: 0px; fill: rgb(226, 82, 61); fill-opacity: 1;"
+                   id="path133" />
+              </g>
+              <g
+                 class="point"
+                 id="g139">
+                <path
+                   d="M633.9,472V457.05H656.1V472Z"
+                   style="vector-effect: non-scaling-stroke; stroke-width: 0px; fill: rgb(226, 82, 61); fill-opacity: 1;"
+                   id="path137" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g
+           class="carpetlayer"
+           id="g147" />
+        <g
+           class="boxlayer"
+           id="g149" />
+        <g
+           class="scatterlayer"
+           id="g151" />
+      </g>
+      <g
+         class="overplot"
+         id="g155" />
+      <path
+         class="xlines-above crisp"
+         transform="translate(40,40)"
+         d="M-11,482.5H720"
+         style="fill: none; stroke-width: 1px; stroke: rgb(0, 0, 0); stroke-opacity: 0;"
+         id="path157" />
+      <path
+         class="ylines-above crisp"
+         transform="translate(40,40)"
+         d="M-10.5,0V482"
+         style="fill: none; stroke-width: 1px; stroke: rgb(0, 0, 0); stroke-opacity: 0;"
+         id="path159" />
+      <g
+         class="overlines-above"
+         id="g161" />
+      <g
+         class="xaxislayer-above"
+         transform="translate(40,40)"
+         id="g175">
+        <g
+           class="xtick"
+           id="g165">
+          <text
+             text-anchor="middle"
+             x="0"
+             y="495"
+             transform="translate(120,0)"
+             style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text163">U. Púb. Presenciales</text>
+        </g>
+        <g
+           class="xtick"
+           id="g169">
+          <text
+             text-anchor="middle"
+             x="0"
+             y="495"
+             transform="translate(360,0)"
+             style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text167">U. Públicas</text>
+        </g>
+        <g
+           class="xtick"
+           id="g173">
+          <text
+             text-anchor="middle"
+             x="0"
+             y="495"
+             transform="translate(600,0)"
+             style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text171">UPNA</text>
+        </g>
+      </g>
+      <g
+         class="yaxislayer-above"
+         transform="translate(40,40)"
+         id="g217">
+        <g
+           class="ytick"
+           id="g179">
+          <text
+             text-anchor="end"
+             x="-11"
+             y="4.199999999999999"
+             transform="translate(0,472)"
+             style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text177">0</text>
+        </g>
+        <g
+           class="ytick"
+           id="g183">
+          <text
+             text-anchor="end"
+             x="-11"
+             y="4.199999999999999"
+             transform="translate(0,422.18)"
+             style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text181">10</text>
+        </g>
+        <g
+           class="ytick"
+           id="g187">
+          <text
+             text-anchor="end"
+             x="-11"
+             y="4.199999999999999"
+             transform="translate(0,372.36)"
+             style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text185">20</text>
+        </g>
+        <g
+           class="ytick"
+           id="g191">
+          <text
+             text-anchor="end"
+             x="-11"
+             y="4.199999999999999"
+             transform="translate(0,322.53)"
+             style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text189">30</text>
+        </g>
+        <g
+           class="ytick"
+           id="g195">
+          <text
+             text-anchor="end"
+             x="-11"
+             y="4.199999999999999"
+             transform="translate(0,272.71)"
+             style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text193">40</text>
+        </g>
+        <g
+           class="ytick"
+           id="g199">
+          <text
+             text-anchor="end"
+             x="-11"
+             y="4.199999999999999"
+             transform="translate(0,222.89)"
+             style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text197">50</text>
+        </g>
+        <g
+           class="ytick"
+           id="g203">
+          <text
+             text-anchor="end"
+             x="-11"
+             y="4.199999999999999"
+             transform="translate(0,173.07)"
+             style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text201">60</text>
+        </g>
+        <g
+           class="ytick"
+           id="g207">
+          <text
+             text-anchor="end"
+             x="-11"
+             y="4.199999999999999"
+             transform="translate(0,123.24)"
+             style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text205">70</text>
+        </g>
+        <g
+           class="ytick"
+           id="g211">
+          <text
+             text-anchor="end"
+             x="-11"
+             y="4.199999999999999"
+             transform="translate(0,73.42)"
+             style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text209">80</text>
+        </g>
+        <g
+           class="ytick"
+           id="g215">
+          <text
+             text-anchor="end"
+             x="-11"
+             y="4.199999999999999"
+             transform="translate(0,23.6)"
+             style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text213">90</text>
+        </g>
+      </g>
+      <g
+         class="overaxes-above"
+         id="g219" />
+    </g>
+  </g>
+  <g
+     class="ternarylayer"
+     id="g225" />
+  <g
+     class="geolayer"
+     id="g227" />
+  <g
+     class="layer-above"
+     id="g233">
+    <g
+       class="imagelayer"
+       id="g229" />
+    <g
+       class="shapelayer"
+       id="g231" />
+  </g>
+  <g
+     class="pielayer"
+     id="g235" />
+  <g
+     class="glimages"
+     id="g237" />
+  <defs
+     id="topdefs-0d8988">
+    <clipPath
+       id="legend0d8988">
+      <rect
+         width="524"
+         height="29"
+         x="0"
+         y="0"
+         id="rect239" />
+    </clipPath>
+  </defs>
+  <g
+     class="infolayer"
+     id="g345">
+    <g
+       class="g-gtitle"
+       id="g247">
+      <text
+         class="gtitle"
+         x="400"
+         y="20"
+         text-anchor="middle"
+         style="font-family: Roboto; font-size: 17px; fill: rgb(68, 68, 68); opacity: 1; font-weight: normal; white-space: pre;"
+         id="text245">
+        <tspan
+           style="font-weight:bold"
+           id="tspan243">Estadística Estudiantes de Nuevo Ingreso</tspan>
+      </text>
+    </g>
+    <g
+       class="legend"
+       pointer-events="all"
+       transform="translate(40, 559.2)"
+       id="g329">
+      <rect
+         class="bg"
+         shape-rendering="crispEdges"
+         width="524"
+         height="29"
+         x="0"
+         y="0"
+         style="stroke: rgb(68, 68, 68); stroke-opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke-width: 0px;"
+         id="rect249" />
+      <g
+         class="scrollbox"
+         transform="translate(0, 0)"
+         clip-path="url(#legend0d8988)"
+         id="g325">
+        <g
+           class="groups"
+           id="g323">
+          <g
+             class="traces"
+             transform="translate(0, 14.5)"
+             style="opacity: 1;"
+             id="g267">
+            <g
+               class="layers"
+               style="opacity: 1;"
+               id="g261">
+              <g
+                 class="legendfill"
+                 id="g251" />
+              <g
+                 class="legendlines"
+                 id="g253" />
+              <g
+                 class="legendsymbols"
+                 id="g259">
+                <g
+                   class="legendpoints"
+                   id="g257">
+                  <path
+                     class="legendbar"
+                     d="M6,6H-6V-6H6Z"
+                     transform="translate(20,0)"
+                     style="stroke-width: 0px; fill: rgb(48, 147, 158); fill-opacity: 1;"
+                     id="path255" />
+                </g>
+              </g>
+            </g>
+            <text
+               class="legendtext user-select-none"
+               text-anchor="start"
+               x="40"
+               y="4.680000000000001"
+               style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+               id="text263">De 18 a 21 años</text>
+            <rect
+               class="legendtoggle"
+               pointer-events="all"
+               x="0"
+               y="-9.5"
+               width="524"
+               height="19"
+               style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;"
+               id="rect265" />
+          </g>
+          <g
+             class="traces"
+             transform="translate(130.765625, 14.5)"
+             style="opacity: 1;"
+             id="g285">
+            <g
+               class="layers"
+               style="opacity: 1;"
+               id="g279">
+              <g
+                 class="legendfill"
+                 id="g269" />
+              <g
+                 class="legendlines"
+                 id="g271" />
+              <g
+                 class="legendsymbols"
+                 id="g277">
+                <g
+                   class="legendpoints"
+                   id="g275">
+                  <path
+                     class="legendbar"
+                     d="M6,6H-6V-6H6Z"
+                     transform="translate(20,0)"
+                     style="stroke-width: 0px; fill: rgb(54, 85, 107); fill-opacity: 1;"
+                     id="path273" />
+                </g>
+              </g>
+            </g>
+            <text
+               class="legendtext user-select-none"
+               text-anchor="start"
+               x="40"
+               y="4.680000000000001"
+               style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+               id="text281">De 22 a 25 años</text>
+            <rect
+               class="legendtoggle"
+               pointer-events="all"
+               x="0"
+               y="-9.5"
+               width="524"
+               height="19"
+               style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;"
+               id="rect283" />
+          </g>
+          <g
+             class="traces"
+             transform="translate(261.53125, 14.5)"
+             style="opacity: 1;"
+             id="g303">
+            <g
+               class="layers"
+               style="opacity: 1;"
+               id="g297">
+              <g
+                 class="legendfill"
+                 id="g287" />
+              <g
+                 class="legendlines"
+                 id="g289" />
+              <g
+                 class="legendsymbols"
+                 id="g295">
+                <g
+                   class="legendpoints"
+                   id="g293">
+                  <path
+                     class="legendbar"
+                     d="M6,6H-6V-6H6Z"
+                     transform="translate(20,0)"
+                     style="stroke-width: 0px; fill: rgb(197, 197, 197); fill-opacity: 1;"
+                     id="path291" />
+                </g>
+              </g>
+            </g>
+            <text
+               class="legendtext user-select-none"
+               text-anchor="start"
+               x="40"
+               y="4.680000000000001"
+               style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+               id="text299">De 26 a 30 años</text>
+            <rect
+               class="legendtoggle"
+               pointer-events="all"
+               x="0"
+               y="-9.5"
+               width="524"
+               height="19"
+               style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;"
+               id="rect301" />
+          </g>
+          <g
+             class="traces"
+             transform="translate(392.296875, 14.5)"
+             style="opacity: 1;"
+             id="g321">
+            <g
+               class="layers"
+               style="opacity: 1;"
+               id="g315">
+              <g
+                 class="legendfill"
+                 id="g305" />
+              <g
+                 class="legendlines"
+                 id="g307" />
+              <g
+                 class="legendsymbols"
+                 id="g313">
+                <g
+                   class="legendpoints"
+                   id="g311">
+                  <path
+                     class="legendbar"
+                     d="M6,6H-6V-6H6Z"
+                     transform="translate(20,0)"
+                     style="stroke-width: 0px; fill: rgb(226, 82, 61); fill-opacity: 1;"
+                     id="path309" />
+                </g>
+              </g>
+            </g>
+            <text
+               class="legendtext user-select-none"
+               text-anchor="start"
+               x="40"
+               y="4.680000000000001"
+               style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+               id="text317">Más de 30 años</text>
+            <rect
+               class="legendtoggle"
+               pointer-events="all"
+               x="0"
+               y="-9.5"
+               width="524"
+               height="19"
+               style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;"
+               id="rect319" />
+          </g>
+        </g>
+      </g>
+      <rect
+         class="scrollbar"
+         rx="20"
+         ry="2"
+         width="0"
+         height="0"
+         style="fill: rgb(128, 139, 164); fill-opacity: 1;"
+         id="rect327" />
+    </g>
+    <g
+       class="g-xtitle"
+       id="g337">
+      <text
+         class="xtitle"
+         x="400"
+         y="564"
+         text-anchor="middle"
+         style="font-family: Roboto; font-size: 14px; fill: rgb(68, 68, 68); opacity: 1; font-weight: normal; white-space: pre;"
+         id="text335">
+        <tspan
+           class="line"
+           dy="0em"
+           x="400"
+           y="564"
+           id="tspan331" />
+        <tspan
+           class="line"
+           dy="1.3em"
+           x="400"
+           y="564"
+           id="tspan333" />
+      </text>
+    </g>
+    <g
+       class="g-ytitle"
+       transform="translate(11,0)"
+       id="g343">
+      <text
+         class="ytitle"
+         transform="rotate(-90,2,276) translate(0, 0)"
+         x="2"
+         y="276"
+         text-anchor="middle"
+         style="font-family: Roboto; font-size: 14px; fill: rgb(68, 68, 68); opacity: 1; font-weight: normal; white-space: pre;"
+         id="text341">
+        <tspan
+           style="font-weight:bold"
+           id="tspan339">Porcentaje</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

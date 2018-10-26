@@ -1,0 +1,972 @@
+---
+documentclass: book
+classoption: a4paper
+#classoption: a4paper,oneside
+#bibliography: bib/library.bib
+bibliography: "D:/Dropbox/2_ Investigacion/4_Referencias/library.bib"
+#csl: methods-in-ecology-and-evolution.csl
+csl: spanish-journal-of-marketing-esic.csl
+link-citations: yes
+fontsize: 12pt # 10pt,11pt
+geometry: margin = 2.5cm
+output: 
+  pdf_document: 
+    keep_tex: yes
+    number_sections: yes
+#    toc: yes
+    fig_caption: yes
+
+---
+
+```{r include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(fig.path = 'figures/',
+                      echo = FALSE, warning = FALSE, message = FALSE,
+                      fig.align="center",out.width="95%",
+                      cache=FALSE)
+
+```
+
+
+<!-- \setcounter{chapter}{5} -->
+<!-- \setcounter{chapter}{5} escribir 2 para capítulo 3  -->
+<!-- \pagenumbering{arabic} -->
+
+# Propuesta de Investigación \label{capitulo5}
+
+`r newthought('En este capítulo')` se presenta la propuesta de investigación personal, enmarcada en las líneas de investigación de la disciplina de marketing y en mis líneas de investigación hasta el momento. 
+
+## Las líneas de investigación desarrolladas y la investigación en marketing
+
+La investigación en marketing puede clasificarse de diversas formas. Por ejemplo, en la Tabla \ref{congresos} podemos comparar la división en áreas temáticas de los principales congresos académicos de marketing en España, Europa y Estados Unidos respectivamente. Podemos comprobar que hay coincidencias en algunas áreas como Comportamiento del consumidor o Marketing Estatrégico, pero hay bastantes diferencias en otras.
+
+@Eisend2015 indica que existe una gran dispersión en la forma de clasificación y los niveles de agregación: mientras que el *Institute for Operations Research and the Management Sciences* clasifica el marketing en 18 líneas distintas, el Journal of Marketing tiene solo cinco áreas temáticas. 
+
+También @GazquezAbad2009 analizan las líneas de investigación en marketing que se desarrollan en España, utilizando la clasificación de @bello1999recuadro. Según su análisis, y basándose en las contribuciones en los congresos Aemark, las líneas de investigación con mayor número de trabajos son *Comportamiento del consumidor* (13,4%), *marketing estratégico y relacional* (12,2%), *Distribución Comercial* (9,94%), *Comunicación Comercial* (9,13%) y *Producto y Marca* (7,5%). 
+
+
+Para los objetivos de este proyecto, vamos a enmarcar las líneas de investigación personal en la clasificación de @Eisend2015 y @RodriguezCano2004, considerando que es una clasificación relativamente parsimoniosa. Según esta clasificación, la investigación en la disciplina de marketing puede dividirse en  siete grandes áreas:
+
+- Comportamiento del Consumidor
+- Estrategia de Marketing
+- Gestión de marcas y producto
+- Precios
+- Comunicación
+- Canales de Distribución
+- Métodos de investigación
+
+
+A esta clasificación añadimos una categoría más, que también ha sido utilizada por @bello1999recuadro, *Aplicaciones sectoriales*, entre las que se pueden destacar las aplicaciones en Productos Agroalimentarios, en Turismo o B2B marketing.
+
+```{r}
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+       Ama = c("Consumer Behavior", " ", "Marketing Strategy","Marketing Research", " ", "Buyer-Seller Relationships", " " , "Innovation", " ", "Services Marketing", "Understanding and Managing the Customer Experience","Selling and Sales Management", " "	, "Pricing", "Digital and Social Marketing", "Ethics and Socially Responsible Marketing", " ", " ", "Global Marketing", " ", " "),
+       Emac=c("Consumer Behaviour","Marketing Theory and New Paradigms","Marketing Strategy","Methods, Modelling and Marketing Analytics","Marketing for SMEs", "Relationship Marketing", "Business-To-Business Marketing and Supply Chain Management" ,"	Innovation and New Product and Service Developments", "Product and Brand Management", "Services Marketing", "Retailing and Omni-Channel Management", "Sales Management and Personal Selling", "Advertising, Promotion and Marketing Communications", "Pricing", "Digital Marketing", "Social Responsibility and Ethics", "Marketing in Emerging and Transition Economies", "Public Sector and Non-Profit Marketing", "Exporting and International Marketing", "Tourism Marketing" , " "),
+       Aemark=c("Comportamiento del Consumidor", " ","Marketing Estratégico","Metodología y Docencia en Marketing", " ", " ", " ", "Innovación y Decisiones de Producto y Marca", " ", " ", "Distribución Comercial, Gestión Minorista", "Comunicación y Ventas", " ", " ", "TIC, e-marketing y Mobile Marketing","Ética, Responsabilidad Social y Marketing no Lucrativo", " ", " ", " ","Marketing Turístico", "Marketing Multisectorial"))
+names(tabla)<- c("AMA Academic Conference", "EMAC", "Aemark")
+
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex", longtable=T,
+             booktabs = T, escape=F,
+             caption = "\\label{congresos} Áreas Temáticas en Congresos Académicos de Marketing")  %>% 
+            kable_styling(font_size = 7.2) %>%
+      landscape() %>%
+      column_spec(1, width = "20em")%>%
+      column_spec(2, width = "24em")%>%
+      column_spec(3, width = "24em")
+
+```
+
+Mis líneas de trabajo tienen tres perspectivas distintas con un nexo común: el encuentro de la oferta de las empresas con la demanda de los consumidores y los clientes en los mercados. En la Figura \ref{researchlines} se muestras estas líneas enmarcadas en las líneas generales de la disciplina con las que están más relacionadas.
+
+```{r, fig.cap="\\label{researchlines} Lineas de Investigación",fig.align='center', out.width='100%'}
+
+knitr::include_graphics("images/lineas5.jpg")
+
+```
+
+La primera línea toma la perspectiva de la oferta de la empresa. Así, en esta línea, el trabajo se ha centrado en el análisis de la estrategia y la gestión de los canales de distribución de los minoristas y los cambios que han supuesto y están suponiendo en esta estrategia la introducción de los canales online. 
+
+Desde la perspectiva de la demanda, en la segunda línea se pone el foco en el consumidor y el trabajo se centra en el análisis de los procesos de decisión del consumidor tanto en la elección de canal, como de formato minorista y de productos en mercados online y offline. 
+
+Por último, en la tercera línea se analiza la interacción empresa-cliente en el encuentro en servicios minoristas y los efectos de esta interacción en los resultados de marketing y la productividad.
+
+Estas tres líneas pueden enmarcarse en una perspectiva de distribución comercial, una de las áreas de investigación de la disciplina que ha recibido una mayor atención en España [@GazquezAbad2009; @molla2002], pero además, están relacionadas con el análisis del comportamiento del consumidor, especialmente en el caso de las líneas dos y tres. Se han realizado aportaciones metodológicas en todas las líneas. Además, especialmente en el caso de la segunda línea también se contemplan los efectos del producto, marca y precio, en relación con los procesos de decisión del consumidor. Así mismo, en este análisis de encuentro de la oferta de la empresa y la demanda hemos contemplado distintos sectores como la distribución minorista alimentación, moda, gasolina, farmacia..., así como para productos agroalimentarios. Por último, destacan en los últimos años los trabajos relacionados con el marketing digital o e-marketing.
+
+En el resto de este capítulo se describe brevemente el trabajo ya desarrollado en cada una de estas líneas de investigación, así como los proyectos en curso y las líneas futuras.
+
+\clearpage
+
+## Estrategia y gestión de los canales de distribución
+
+La primera línea de trabajo se centra en la perspectiva de la oferta de la empresa y la estrategia de distribución en los canales de distribución, además de los cambios que la introducción de los canales online han supuesto y están suponiendo en esta estrategia.
+
+Esta línea se ha venido desarrollando en paralelo con el crecimiento de la importancia de los canales online. Por ejemplo, en Estados Unidos el sector de comercio online ha crecido un 243% entre 2007 y 2016 y ya supone un 8% del total de las ventas [@USCensus2018]. Esta línea de trabajo ha estado centrada en analizar el impacto que tienen estos canales en el conjunto de canales que la empresa pone a disposición del cliente, Así, en esta línea analizamos como los consumidores combinan los canales físicos y online ya sea en compras distintas o incluso en una misma compra para satisfacer su demanda y qué consecuencias tiene esto para la política en distribución. 
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faFileTextO{}} *Publicaciones destacadas en esta línea:*
+      
+- *Chocarro, R., Cortinas, M., & Villanueva, M. L. (2018). Different channels for different services: information sources for services with search, experience and credence attributes.* The Service Industries Journal, *1–24*.  
+- *Betancourt, R., Chocarro, R., Cortinas, M., Elorz, M., & Mugica, J. M. (2017). Private Sales Clubs: A 21st Century Distribution Channel*. Journal of Interactive Marketing, *37, 44–56*. 
+- *Betancourt, R. R., Chocarro, R., Cortiñas, M., Elorz, M., & Mugica, J. M. (2016). Channel Choice in the 21st Century: The Hidden Role of Distribution Services.* Journal of Interactive Marketing, *33, 1–12*. 
+- *Chocarro, R., Cortiñas, M., & Villanueva, M. L. (2013). Situational variables in online versus offline channel choice.* Electronic Commerce Research and Applications, *12(5), 347–361*
+- *Cortinas, M., Chocarro, R., & Villanueva, M. L. (2010). Understanding multi-channel banking customers*. Journal of Business Research, *63(11), 1215–1221*.
+- *Chocarro, R., Cortinas, M., & Villanueva, M. L. (2009). Analysing Information Search Behavior Whithin a Service Context*. Revista Portuguesa de Marketing, *25, 19–33*.
+- *González, M. J., Cortiñas, M., & Goñi, P. (2001). Geografía comercial de España*. Distribución y Consumo, *56, 85–102*.
+```
+
+
+Desde el principio hemos realizado aportaciones conceptuales y empíricas a una literatura en el uso de canales electrónicos que inicialmente se centraba en explicar la preferencia o no por estos canales en general, en función de las percepciones sobre el canal [@Huang2006], las características de la tecnología [@Meuter2000a], y las características de la categoría y de los consumidores [@Zhou2007; @Dabholkar2002] sin contemplar la oferta de la empresa en su conjunto. 
+
+En los primeros trabajos desarrollados en esta línea, analizamos las diferencias en los canales de distribución para la provisión de comunicación en servicios. En un primer trabajo, comparamos las capacidades de los canales como soporte en los procesos de búsqueda de información para servicios. En este primer trabajo examinamos cómo contribuyen las distintas capacidades de cada canal de comunicación al uso que hacen de él los consumidores para la toma de decisiones de compra de servicios. 
+
+La búsqueda de información externa es una línea de investigación de gran interés en el área de marketing [e.g. @Beatty1987; @srinivasan1990pre; @Jepsen2007] por las importantes consecuencias que tiene en el proceso de toma de decisiones del consumidor y por sus implicaciones en la planificación de las estrategias de comunicación de las empresas. El desarrollo de los canales online, las empresas han planteado formas distintas de comunicarse con los consumidores y clientes, informando simultáneamente a través de varios canales para relacionarse mejor con los consumidores y desarrollando sinergias entre las fuentes de información para asegurar la consistencia en el mensaje enviado al cliente. 
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faQuestionCircleO{}} *Cuestiones de investigación*
+      
+- *¿Qué combinación de canales es adecuada para facilitar los procesos de búsqueda de información del consumidor?*
+- *¿Son los canales informativos complementarios o sustitutivos?*      
+- *¿Cambia la adecuación de los canales en distintas situaciones?*            
+- *¿Qué servicios de distribución se pueden proporcionar de forma más adecuada en cada canal?*      
+- *¿Afecta la naturaleza del servicio al mix de canales adecuado?*
+- *¿Qué papel juegan los servicios de distribución para un minorista puramente online?*
+- *¿El papel de los servicios de distribución en el canal online es distinto para productos sensoriales y no sensoriales?*      
+
+
+```
+
+
+
+Así, en este trabajo analizamos el papel que juegan los canales de información en servicios en las decisiones de compra de los consumidores, comprobando en qué ocasiones estos canales actúan como canales complementarios (el uso de un canal aumenta la utilidad de otro canal) o sustitutivos (se utilizan como alternativas excluyentes) [@Strebel2004], analizando las decisiones de elección de canal [@Peterson2003; @Montoya-Weiss2003]. Plateamos como determinantes de la elección de canal de información las capacidades de cada canal, la actitud hacia el canal, las variables situacionales y las sociodemográficas. Recogemos información sobre la compra de entradas de cine y, aplicando un modelo logit multinomial observamos, por un lado, que cuanto mayor sea la percepción del valor de los canales (capacidad y atractivo), mayor será la probabilidad de que los consumidores accedan a esos canales y que, por otro lado, variables situacionales como la frecuencia de compra de entradas de cine moderan la elección de cada uno de los medios de información, mientras que las variables individuales apenas influyen. Los resultados sobre los efectos de sustitución entre canales indican que los canales de información operan como sustitutivos con respecto a la capacidad y al atractivo de cada canal. Este trabajo fue publicado en 2009 en la *Revista Portuguesa de Marketing*.
+
+En un segundo trabajo en esta misma línea, abordamos otra perspectiva distinta en el mix de canales, contemplándolos no como medio informativo, sino como mecanismo para la provisión del servicio. En este caso, centramos el objetivo en el análisis de uso de los canales de un servicio de alta implicación, los servicios financieros. Este trabajo está centrado en el caso de una entidad financiera ya que este es sector en el que los distintos operadores están contínuamente desarrollando nuevas formas de interactuar con sus clientes y que fue uno de los más innovadores en proporcionar acceso electrónico a sus servicios [@Easingwood1996; @Pikkarainen2004]. En este sector, ofrecer múltiples canales a los clientes (oficinas, cajeros, Internet) proporciona un mayor mix de servicios, aumentando la propuesta conjunta de valor [@Wallace2004].
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faTable{}} *Fuentes de Información*
+      
+- *Encuestas*
+- *Diseño experimental*
+- *Base de datos de clientes*
+
+```
+
+En este trabajo, planteamos varias hipótesis sobre el grado de utilización de varios canales y las características de los productos contratados y de los clientes. En el análisis empírico utilizamos una muestra aleatoria de 435 clientes de una entidad financiera, que proceden de todo el área geográfica de la entidad y disponemos de datos sobre todas sus operaciones durante un año. Para el análisis de las hipótesis propuestas, desarrollamos una medida novedosa en la literatura para medir el comportamiento multicanal: la entropía y relacionamos esta medida con las características de los clientes y su cartera de productos.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faIndustry{}} *Sectores*
+      
+- *Sector financiero, Entretenimiento, Restauración, Seguros, Servicios Médicos, Transporte, Venta online de moda*
+```
+
+Los resultados muestran que prácticamente todos los clientes del banco (97%) presentan algún tipo de comportamiento multicanal (han utilizado varios canales en este periodo), aunque los valores de la entropía son bajos, de modo que aunque se usen varios canales, los clientes tienden a centrarse en uno de ellos. Los clientes que han contratado productos de gestión online, con tarjetas de crédito y que hacen frecuentemente transferencias presentan el mayor grado de comportamiento multicanal. Este trabajo fue publicado en la revista *Journal of Business Research* en 2010.
+
+Posteriormente, en un tercer trabajo damos un paso más allá y nos centramos en analizar cómo se combinan los canales a lo largo del tiempo en distintas compras, es decir en qué condiciones el canal online o el canal físico proporcionan un valor mayor para un mismo consumidor. Para ello, diseñamos un experimento en el que se presentaban distintas situaciones de compra en distintas categorías teniendo en cuenta factores como la distancia al establecimiento, la presión de tiempo, la compra en compañía y aspectos relacionados con el atractivo del establecimiento físico y online. Los encuestados tenían que asignar la probabilidad de comprar en una tienda física u online. La información sobre esta aspecto y otras escalas adicionales se recogió en un panel online y los resultados se analizaron mediante modelos logit multinomial. 
+
+Los resultados obtenidos proporcionan tres contribuciones a la literatura. En primer lugar, realizamos un análisis de qué factores situaciones contribuyen a formar las preferencias por el canal online, resultando que son las dimensiones físicas del establecimiento, las sociales y las relacionadas con el tiempo las más relevantes. En segundo lugar, profundizamos en las variables de cada una de estas tres dimensiones. De todas las variables consideradas, la claridad en la organización en la tienda online y la limpieza y organización en la tienda física resultan ser claves. Por último, también consideramos los efectos moderadores de la categoría de producto. Este trabajo fue publicado en 2013 la revista *Electronic Commerce Research and Applications*. 
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faPencilSquareO{}} *Metodologías de análisis*
+
+- *Logit Multinomial*
+- *Regresión por quantiles*
+- *Regresión múltiple con efectos fijos*     
+
+```
+
+En esta línea hemos seguido profundizando en el papel que juegan los servicios de distribución en el valor que proporcionan el conjunto de canales. Así, en 2016 publicamos un trabajo conceptual en la revista *Journal of Interactive Marketing* (Q1 ISI-JCR) en el que analizamos cuál es la diferencia fundamental entre los canales de distribución online y los canales tradicionales. Así, identificamos una característica de estos canales, la separabilidad de la producción, distribución y consumo de los servicios de distribución en tiempo y espacio que proporcionan los canales electrónicos y asociamos esta característica con los niveles de servicio que pueden proporcionar los canales físicos y los canales online.
+
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faLaptop{}} *Software de Análisis:* 
+
+- *Stata*      
+- *R*
+
+```
+
+En los canales físicos, los servicios de distribución no tienen normalmente un precio explícito y se ofrecen en bloque con el producto o servicio central, de forma que disminuyendo o aumentando el nivel de estos servicios, los detallistas pueden absorber el coste de la distribución o trasladarlos a los consumidores [@betancourt1988economics]. Sin embargo, la diferencia fundamental en la estructura de los canales de distribución que supone la aparición de Internet con respecto a otros canales a distancia como son, los canales de venta telefónica o por catálogo, es que la aparición de Internet permite desagregar estos servicios de distribución y trasladar los costes, por ejemplo, de localización, al consumidor. Así, los canales online tienen capacidades distintas para proporcionar servicios de distribución demandados por los consumidores a un coste mínimo.
+
+De esta forma, en este trabajo derivamos los resultados presentados en la Tabla \ref{separability}, donde P indica Producción del Servicio, D es Distribución del Servicio y C consumo del servicio. Cuando estas dimensiones aparecen entre llaves, no pueden separarse, mientras que si aparecen fuera de las llaves pueden realizarse de forma separada en tiempo o espacio. Por ejemplo, la producción, distribución y consumo de la información se realizan de forma conjunta en tiempo y espacio cuando el consumidor acude al establecimiento y los empleados le proporcionan la información que solicita, mientras que en los canales online puede producirse por parte de los redactores de contenido, distribuirse en una o más páginas web y consumirse cuando el consumidor realiza una búsqueda en momentos de tiempo y espacio físicos separados.  
+
+
+```{r}
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+       Services = c("1. Accesibilidad de la localización", "2. Información", "3. Surtido", "4. Fiabilidad en la entrega", "5. Ambiente"),
+       Space=c("{P,D,C}", "{P,D,C}","P/{D,C}", "P/{D,C}", "P/{D,C}"),
+       Time=c("P/D/C", "{P,D,C}","P/D/C", "P/D/C", "P/D/C"),
+       SpaceOn=c("P/D/C", "P/D/C","P/D/C", "P/D/C", "P/D/C"),
+       TimeOn=c("P/D/C", "P/D/C","P/D/C", "P/D/C", "P/D/C"))
+names(tabla)<- c("Servicios", "EspacioOn", "TiempoOn", "EspacioOff", "TiempoOff")
+
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = c("Servicios", "Espacio", "Tiempo", "Espacio", "Tiempo"), format = "latex",booktabs = T, escape=T,
+             caption = "\\label{separability} Separabilidad de los servicios de distribución en canales online y offline")  %>% 
+            kable_styling(latex_options = c("scale_down")) %>%
+      column_spec(1, width = "8em")%>%
+      add_header_above(c(" " = 1, "Offline" = 2, "Online" = 2))%>%
+add_footnote(c("Fuente: Betancourt, Chocarro, Cortiñas, Elorz y Múgica (2016)"),
+notation = "symbol") 
+
+```
+
+Realizamos una primera aplicación empírica de este marco teórico para un modelo de negocio especialmente interesante, los clubs privados de venta. Este trabajo fue publicado en el *Journal of Interactive Marketing* (Q1 ISI-JCR) en 2017. En este caso estamos ante un modelo detallista exclusivamente online que se beneficia, por tanto, de las características de la separabilidad. Este modelo de negocio se ha mostrado muy exitoso en los último años, con la empresa líder facturando más de 1.000 millones de euros desde 2012 [@venteprivee2015]. Desde el punto de vista de los canales de distribución, nos encontramos con un operador minorista que desde el punto de vista del fabricante, actúa como un canal de descuento externo. Para analizar cómo afectan a este contexto tanto la separabilidad de los servicios de distribución, como la existencia de niveles mínimos y máximos para este formato, distintos a los de los operadores en el canal de tiendas físicas, recogimos datos a través de un panel online para clientes de estos formatos. 
+
+Realizamos el análisis empírico de esta base de datos aplicando regresión por quantiles, que mejora las estimaciones en presencia de outliers y permite acomodar efectos no lineales en las colas de la distribución [@koenker2001quantile]. El análisis empírico muestra cómo ignorar las asimetrías en la función de respuesta en la satisfacción del cliente puede suponer importantes distorsiones para los gestores de los clubs de venta. Además, observamos diferencias en el efecto de los servicios de distribución en función del tipo de producto. En el caso de productos sensoriales, cuya evaluación solo se puede producir una vez recibidos, la información previa tiene efectos limitados, ya que los consumidores están preocupados por el resultado final. Sin embargo, en productos no sensoriales, el servicio crítico es la información. Además, la funcionalidad de la web es importante en la satisfacción en todos los niveles, pero el atractivo de la página es crítico para niveles de satisfacción por encima del 75%. 
+
+```{marginfigure, echo=TRUE}
+
+
+\textcolor{Red}{\faCheckSquareO{}} *Algunos resultados y aportaciones clave*
+      
+- *En general, los canales informativos tienden a ser sustitutivos en lugar de complementarios, utilizándose uno de ellos en lugar de una combinación de canales.*
+- *La entropía es una medida útil del grado de combinación de canales de distribución.*
+- *En el sector financiero, la tipología de productos contratados es un antecedente importante del comportamiento multicanal posterior.*
+- *En los servicios de búsqueda, el grado de sustitución de las fuentes informativas es mayor,: se consultan pocas fuentes y es necesario que la información crítica esté disponible rápida y sencillamente.*      
+- *En servicios de experiencia, como la restauración, se consultan todas las fuentes disponibles: la información adicional aporta más valor y por otro lado, el coste de búsqueda es menor, al asociarse también valor al disfrute de la propia búsqueda.*      
+- *En los servicios de creencia se confía más en las fuentes de información personales y se consultan menos fuentes, por lo que la informacion disponible en la primera fuente consultada es crítica para el resultado del encuentro.*  
+- *Los canales online permiten la separabilidad completa de la produccción, distribución y consumo de los servicios de distribución lo que permite la aparición de nuevos modelos de negocio, en la intermediación de cada uno de estos servicios.*       
+- *El efecto de los servicios de distribución en un canal online depende de la categoría de producto, en productos sensoriales la información previa no es tan importante como la fiabilidad de la conformidad con el resultado final, mientras que lo contrario ocurre con respecto a los productos no sensoriales, que pueden evaluarse más correctamente con anterioridad a la compra.*     
+- *Los efectos de los servicios de distribución en los resultados de marketing no son lineales. Por ejemplo, la funcionalidad de la página web tiene efectos importantes para cualquier nivel de satisfacción, mientras que los aspectos ligados al atractivo de la página web son únicamente determinanantes en los niveles de satisfacción superior.*      
+
+```
+
+Por último, hemos profundizado en los procesos de búsqueda de información y las consecuencias de las diferencias en estos procesos para la combinación de canales de distribución en función de la naturaleza de los servicios. Para ello, utilizamos dos corrientes en la literatura, por un lado, desde una perspectiva psicológica [@barnard1947administrative] consideramos el impacto de los límites en la capacidad de procesamiento de la información del individuo. Por otro lado, desde la perspectiva de economía de la información [@Stigler1961], consideramos los costes marginales de la inversión en la búsqueda de información. Con estas dos corrientes, derivamos hipótesis sobre las diferencias en el proceso de búsqueda de información para servicios de búsqueda, experiencia y creencia [@Nelson1974]. Para testar estas hipótesis, recogemos una base de datos mediante un panel online para nueve servicios distintos, clasificados en la literatura como pertenecientes a estas tres categorías (tres servicios para cada categoría) y testamos las seis hipótesis que establecen diferencias en la intensidad del proceso de búsqueda, en la variedad de las fuentes utilizadas y en el uso de fuentes de información personales, comerciales y online. Así, en los servicios de búsqueda, como ya adelantábamos en el caso de las entradas, los canales de información tienden a ser sustitutivos, se consultan pocas fuentes de información y, por tanto, es necesario que la información sea accesible rápidamente y correcta. En los servicios de experiencia, la variedad de fuentes y la intensidad de la búsqueda es mucho mayor. Las fuentes adicionales proporcionan valor y además, hay interés en el propio proceso de búsqueda de información. Sin embargo, en los servicios de creencia, pese al mayor riesgo se consultan menos fuentes pero más fiables: básicamente fuentes personales y offline. Este trabajo ha sido publicado en la revista *Service Industries Journal* en 2018.
+
+### Proyectos en curso y líneas futuras
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faPuzzlePiece{}} *Esta linea de trabajo se encuadra en el tema* "3. The Rise of Omnichannel Promotion and Distribution" *de las prioridades de investigación del* Marketing Science Institute *para el periodo 2018-2020*.
+
+\includegraphics[width=4cm, height=5cm]{images/RPmsi.jpg}
+
+
+\vspace{5mm}
+
+*Detalle*:
+      
+\vspace{5mm}      
+      
+\includegraphics[width=3cm, height=4cm]{images/RPmsi3.jpg}
+
+
+
+\vspace{2mm}
+
+\hfill{---Fuente de la Imagen: MSI }
+
+```
+
+En esta línea seguimos trabajando en el análisis de los servicios de distribución proporcionados por el mix de canales, en lo que, más recientemente en la literatura, se ha denominado "omnichannel marketing". El análisis de los servicios de distribución es cada vez más relevante, ya que los consumidores son cada vez más exigentes y demandan poder satisfacer sus deseos, dónde y cuándo quieran, pagar de la forma más conveniente e interaccionar con los vendedores según sus preferencias. Es decir, en sus procesos de compra son cada vez más determinantes, no solo las características de los bienes y servicios que compran, sino también los servicios adicionales asociados a los canales de distribución [@Zeithaml2006]. 
+
+Por ejemplo, según el informe de @Accenture2015 y @Accenture2016, los compradores en tienda demandan a los vendedores mayor capacidad para solicitar los productos que no están en stock y, además, consideran esencial el acceso a wifi en el interior del establecimiento, mientras que los dos factores más valorados en la experiencia de compra online son la posibilidad de elegir dónde y cuándo un producto es recogido o entregado y el tiempo de entrega. Tanto en la compra en el establecimiento físico como en la compra online se demandan servicios adicionales que permitan una experiencia de compra satisfactoria.
+
+Como respuesta, los minoristas están siendo obligados a cambiar la manera en la que comercializan sus mercancías, rompiendo los límites entre los canales físicos y digitales para satisfacer las demandas de los consumidores con éxito. Esta integración no es directa ni sencilla y puede verse condicionada por las características del detallista [@Cao2018]. Los consumidores esperan poder usar indistintamente una variedad de canales cuando van de compras [@Verhoef2015], y los vendedores buscan integrar sus canales de venta con el fin de ofrecer una experiencia conveniente y “sin costuras”. Este fenómeno ha sido denominado *omnichannel retailing* [@Guillot2015]. La venta omnicanal pretende mejorar el valor total de la compra ofrecido al consumidor a través del conjunto de canales que ofrece la empresa [@Neslin2009; @Venkatesan2007] permitiendo a los consumidores combinar canales de distintos minoristas con costes de cambio mínimos. Así, la gestión omnicanal implica una integración de canales adecuada y trata también de minimizar las posibilidades de ceder clientes a la competencia durante el proceso de compra [@Bendoly2005].
+
+El crecimiento en el uso del término "omnicanal" tanto en la literatura académica como profesional en los últimos años ha sido exponencial. Es una muestra de ello que la *omnicanalidad* aparezca como una de las cinco líneas prioritarias de investigación para el periodo 2018-2020 según el Marketing Science Institute [@MarketignS2018]. Además, si realizamos de nuevo el  análisis bibliométrico [@Aria2017] de la literatura en marketing para el término *omnichannel* a partir de los datos obtenidos de la base de datos ISI, encontramos menos registros en los casos anteriores, pero es llamativo el rápido crecimiento de la literatura desde la primera aparición del término en 2011, pasando de un artículo en 2011 a 31 en el año 2018 todavía en curso. Podemos observar esta evolución en la Figura \ref{ISI3}.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faSearch{}} El análisis bibliométrico se ha realizado con 69 registros obtenidos de la búsqueda por temas "Omnichannel" *30 de septiembre de 2018*.
+
+```
+
+```{r ISI3, fig.cap="\\label{ISI3} Evolución del número de referencias en ISI-Wos para la línea de Omnichannel",fig.align='center', out.width='100%'}
+
+knitr::include_graphics("figures/linea3anos.pdf")
+
+```
+
+Con respecto a los temas más tratados, la tabla \ref{keywordslinea1}  muestra las diez palabras clave más seleccionadas por los autores y las clasificaciones de palabras clave de la propia base de datos ISI-Clarivate Analytics Web of Science.
+
+```{r}
+library(readr)
+
+keywords1 <- read.csv("../figures/keywords3.csv", header = FALSE, stringsAsFactors =FALSE)
+
+keywords2<-keywords1[2:11,]
+
+keywords3<-keywords2[,2:5]
+
+names(keywords3)<- c("Palabras Clave Autores", "Artículos", "Palabras Clave ISI", "Artículos")
+
+library(tidyverse)
+library(kableExtra)
+
+keywords3 %>%
+knitr::kable(keywords3, format = "latex", booktabs = T, escape=F,row.names = FALSE,
+             caption = "\\label{keywordslinea3} Palabras clave en la literatura en Omnichannel Marketing")  %>% 
+      kable_styling(latex_options = c("scale_down")) %>%
+      column_spec(1, width = "8em") %>%
+      column_spec(2, width = "4em") %>%
+      column_spec(3, width = "8em") %>%
+      column_spec(4, width = "4em") 
+
+
+```
+
+Al igual que en el caso de las dos líneas anteriores, en la Figura \ref{networklinea3} se representa la Red de co-ocurrencia de los términos clave, representando asociaciones entre términos que aparecen frecuentemente juntos en un mismo artículo [@Aria2017].
+
+
+```{r networklinea3,fig.fullwidth=TRUE, fig.cap="\\label{networklinea3} Red de Asociación entre Términos Clave. Línea 1",fig.align='center', out.width='100%'}
+
+knitr::include_graphics("figures/plotLinea3Keywords.pdf")
+
+```
+
+En este caso, toda la Red está íntimamente relacionada. La literatura en la omnicanalidad está relacionada con el comercio electrónico, las combinaciones de canales, los servicios de distribución, la experiencia en la compra y los "cruces" entre canales.
+
+En la actualidad, estamos trabajando en un proyecto en esta línea, en el que, por un lado, desde un punto de vista de la aportación conceptual, trabajamos en la definición del comportamiento omnicanal y, por otro lado, en la descripción de los segmentos de consumidores según su comportamiento. El estudio del comportamiento omnicanal ha sido abordado principalmente desde una perspectiva de gestión y no tanto desde el punto de vista del comportamiento del consumidor. La definición básica de gestión del cliente multicanal [@Neslin2006] implica una visión de los canales que se describen como “puntos de contacto con el cliente, o un medio de interacción entre la empresa y el cliente” [@Verhoef2015]. @Verhoef2015 proporcionan una definición más amplia de la gestión omnicanal como “La gestión sinérgica de los numerosos canales y puntos de contacto con el cliente disponibles, de forma que se optimice la experiencia del cliente y el rendimiento entre canales”. Esta definición es más amplia que la de @Neslin2006 ya que incluye también a canales tradicionales de comunicación unidireccional como la publicidad en medios masivos. 
+
+Una diferencia clave entre esta literatura y la perspectiva del consumidor está en el uso del término “canal”. En la perspectiva de gestión, que tiene como foco el uso de Internet y sus aplicaciones como canal de comunicación, resulta conveniente considerar todos los mecanismos de comunicación con el cliente como canales. Desde la perspectiva del consumidor, sin embargo, lo que resulta relevante son los canales de distribución que se definen como aquellos que proporcionan servicios de distribución. Estos servicios de distribución que acompañan al producto central comercializado son accesibilidad de la localización, información, surtido, seguridad de entrega y ambiente [@betancourt1988economics], de forma que la información proporcionada por los canales de comunicación es solo un aspecto parcial de los servicios que debe proporcionar un detallista para completar una interacción en un proceso de compra [@Betancourt2016]. Por ejemplo, considerando el servicio de accesibilidad de la localización, el poder recoger un producto comprado online en un establecimiento conveniente para el consumidor es claramente un comportamiento omnicanal desde el punto de vista del cliente, sea cual sea el tipo de canal que se considere desde una perspectiva de gestión. El consumidor combina dos canales de distribución, comprando únicamente en uno de ellos (ya sea a través de una tablet, ordenador fijo o teléfono móvil). Además, este ejemplo ilustra como los canales online pueden ser iguales desde el punto de vista del consumidor para algunos propósitos, pero no para otros. Desde el punto de vista de la empresa, puede es sumamente útil distinguir cuales son estos casos.
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faFileTextO{}} *Documento de Trabajo esta línea:*
+
+- *Cortiñas, M., Chocarro, R., & Elor, M. Omnichannel Behavior, Definitions and Covariables.*  Available at SSRN: https://ssrn.com/abstract=3096461
+
+```
+
+En este proyecto, hemos recogido datos para los clientes que compran a un minorista del sector textil a través de dos grandes canales: tiendas físicas y canales online. Los primeros resultados de este proyecto han sido presentados en el congreso Aemark 2017 y en el International Marketing Trends Conference 2017, donde ha sido premiado como *mejor trabajo del congreso* y ha sido de momento publicado como trabajo en curso. Esperamos tener próximamente más publicaciones en esta línea.
+
+\clearpage
+
+## Procesos de elección en mercados online y offline 
+
+La segunda línea de trabajo se centra en el cliente, analizando los procesos de decisión de compra tanto de en canales tradicionales como online.
+
+Así, con respecto a los aspectos relacionados con el proceso de evaluación del producto, hemos trabajado por un lado en el análisis de las evaluaciones de productos para dos categorías de producto de gran importancia en la región: el espárrago blanco y el vino, ambos productos con una Indicación Geográfica Protegida y Denominación de Origen reconocida y, por otro lado, en el análisis del impacto de otros atributos extrínsecos (precio y promociones) en las decisiones de elección en el establecimiento minorista. 
+
+En esta línea de trabajo, los objetivos principales son, por un lado, la valoración de la importancia relativa de los distintos atributos y especialmente los elementos de información geográfica en la elección del producto y, en segundo lugar, el análisis de los posibles efectos moderadores en esta elección que pueden jugar el conocimiento y la experiencia con la categoría o el efecto de las recomendaciones de expertos.
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faFileTextO{}} *Publicaciones destacadas en esta línea:*
+
+- *Chocarro, R., & Cortinas, M. (2013). The impact of expert opinion in consumer perception of wines*. International Journal of Wine Business Research, *25(3), 227–248*.
+- *Andreeva, M., Cortinas, M., & Elorz, M. (2010). The role of Purchase Regularity and Purchase Frequency in Price and Discount Sensitiviy.* Journal of Marketing Trends, *1(4)*.
+- *Chocarro, R., Cortinas, M., & Elorz, M. (2009). The impact of product category knowledge on consumer use of extrinsic cues - A study involving agrifood products.* Food Quality and Preference, *20(3), 176–186*.
+- *Cortinas, M., Elorz, M., & Mugica, J. M. (2008). The use of loyalty-cards databases: Differences in regular price and discount sensitivity in the brand choice decision between card and non-card holders.* Journal of Retailing and Consumer Services, *15(1), 52–62.*   
+- *Cortinas, M., Chocarro, R., Elorz, M., & Villanueva, M. L. (2007). La importancia del atributo origen en la elección de productos agroalimentarios. El caso del espárrago de Navarra* Economía Agraria y Recursos Naturales, *7(13), 57–90*.
+- *Cortinas, M., Elorz, M., & Mugica, J. M. (2006). El Problema De Elección De Marca en una Categoría Compleja: Aplicación de una Red Neuronal Artificial.* Revista Española de Investigación En Marketing-ESIC, *10(1), 111–138.*
+- *Berné, C., Cortinas, M., Elorz, M., & Mugica, J. M. (2004). The Use of a Retail Store Database for Brand Choice Analysis.* The International Review of Retail, Distribution and Consumer Research, *14(1), 19–29.*      
+
+```
+
+Con respecto al primer objetivo, analizamos el peso de las denominaciones de origen y las indicaciones geográficas protegidas (IGPs) en la elección del producto. Los productos se pueden concebir como una combinación determinada de atributos, donde cada atributo proporciona una base para desarrollar impresiones del producto en sí [e.g. @darwar1994]. La calidad de los productos agroalimentarios no es tanto un concepto unidimensional, sino que se hace necesario utilizar una aproximación multiatributo [@olsonjacoby1972]. En el caso de la IGP, ésta es atributos con gran capacidad de influencia en el valor asignado a los productos agroalimentarios [@minhan1990] y esta influencia es incluso mayor cuando terceras partes se encargan de certificar este origen [@Hatanaka2005]. Esto se debe a que la información sobre el origen, por una lado actúa como un estímulo informativo que aporta información acerca de la calidad del producto y, por otro lado, produce otros efectos en la actitud hacia el producto o en las respuestas afectivas hacia este producto, relacionados con las creencias y actitudes del consumidor sobre el país o la región, como un gran número de trabajos previos han demostrado [e.g. @samiee2005; @Teas2000; @vanderlans2001].
+
+Sin embargo, los efectos del origen en la evaluación de los productos difieren enormemente entre regiones, categorías de producto y consumidores. En esta línea de trabajo contribuimos a este conocimiento a través de un análisis de la importancia de los distintos atributos en la elección del consumidor en la categoría de espárrago enlatado. Para hacer este análisis, en un primer trabajo, se recogió información sobre 7.092 elecciones de 402 consumidores, a los que se les planteó la elección entre alternativas que difieren en marcas, precios y orígenes. 
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faQuestionCircleO{}} *Cuestiones de investigación*
+      
+- *¿Cuál es el peso de los atributos extrínsecos en la elección de producto en el establecimiento?*      
+- *¿Cuál es la importancia del atributo "origen" en la elección de productos agroalimentarios?*
+- *¿Existe heterogeneidad en esta importancia entre los consumidores?*
+- *¿Cómo influye el conocimiento y la experiencia previa en la valoración de los atributos?*   
+- *¿Los clientes que se unen a los programas de fidelización de los minoristas se comportan igual que los que no lo hacen?*      
+- *¿Qué peso tienen las recomendaciones de los expertos en estas evaluaciones?*    
+- *¿Puede la inteligencia artificial ser útil para conocer el comportamiento de los clientes en el establecimiento?*    
+- *¿Qué potencial tienen las bases de datos de fidelización para la gestión del Valor del Tiempo de Vida del Cliente (CLV)?*
+       
+```
+
+
+Los resultados indican que el atributo precio apenas tiene importancia en la elección del producto, en comparación con el peso que tienen la marca y el origen de los espárragos señalado en la lata. Además, respecto al origen, se observa cómo los consumidores discriminan positivamente que los espárragos pertenezcan al Consejo Regulador, mientras que apenas lo hacen entre latas de espárragos que declaran un origen y aquellas que no señalan su origen. Comparando los atributos marca y origen, su importancia es similar en la formación de preferencias y, por tanto, estos atributos pueden jugar un papel compensatorio en la gestión de las marcas. 
+
+Así, una empresa puede gestionar el posicionamiento de su marca de espárragos, bien dotando a la marca de un prestigio y valor superior o bien dejando que sea el Consejo Regulador quien otorgue valor a la alternativa. 
+
+Además, comparando la información que proporciona una estimación de los modelos completos con la que se deriva de considerar distintos segmentos latentes del mismo, detectamos que las preferencias de los consumidores por el espárrago enlatado son heterogéneas, por lo que los resultados obtenidos partiendo de preferencias homogéneas deben de completarse con un análisis específico de cada segmento, que muestre aquellos consumidores que tienen fuentes otras que inflyen en sus preferencias diferentes a las del modelo general. Este análisis se realizó mediante segmentación latente para el modelo logit multinomial y es la principal aportación metodológica en este trabajo. Este trabajo fue publicado en *Economía Agraria y Recursos Naturales*.
+
+Con respecto al segundo objetivo, el análisis de los efectos moderadores en el impacto de los atributos, en un segundo trabajo para la categoría de espárragos, analizamos cómo afecta el conocimiento previo sobre la categoría de producto a la valoración de los atributos del producto, distinguiendo entre atributos extrínsecos e intrínsecos [@BelloAcebron2000], con el objetivo de entender mejor el papel de los indicadores de calidad en la formación de preferencias [@westerlund2007].
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faTable{}} *Fuentes de Información*
+      
+- *Declarativa: Encuestas con asignación a sujetos según diseño experimental*.  
+- *Bases de datos de escáner de establecimientos*.  
+- *Bases de datos de tarjetas de fidelización de una cadena de supermercados*.  
+- *Diseño experimental y encuesta*
+```
+
+Los atributos de calidad extrínsecos son importantes en la política de producto ya que éstos se pueden manipular sin necesidad de modificar el producto físico. Sin embargo, determinadas características inherentes a los individuos, como el grado de conocimiento de la categoría, pueden ser capaces de modificar el comportamiento de los consumidores hacia esos atributos de los productos y, por lo tanto, su evaluación y percepción de la calidad puede variar entre unos y otros [@Bettman1980; @Rao1992]. El objetivo general de esta línea de trabajo es, por tanto, analizar el efecto moderador que tiene el conocimiento de la categoría del producto en la relación entre la importancia de los distintos atributos extrínsecos y la elección del consumidor. Para analizar este efecto, utilizamos la misma base de datos para la categoría de espárragos utilizada en el trabajo anterior. Las escalas de interés fueron agregadas mediante Análisis de Componentes Principales y los modelos se estimaron mediante un modelo Logit Multinomial.
+
+Como consecuencia de los análisis realizados, en esta línea concluimos que la experiencia y el conocimiento objetivo que tienen los consumidores en una categoría de producto son importantes mediadores del papel que juegan los atributos extrínsecos del producto en la utilidad generada en la elección. Utilizando dos indicadores de conocimiento (conocimiento espontáneo u objetivo y frecuencia de compra o experiencia) comprobamos, por un lado, cómo ambos influyen de forma importante en la formación de las preferencias y, por otro lado, como sus efectos son diferentes y dependen del atributo considerado.
+
+En primer lugar, si se considera el atributo “marca”, el mayor o menor conocimiento espontáneo del número de marcas de la categoría no tiene influencia sobre la importancia individual de cada una de las marcas. Sin embargo, la experiencia de compra en la categoría, hace que los individuos sean más capaces de discriminar entre las distintas marcas, aumentando la preferencia de las marcas con utilidades mayores y disminuyendo las de las menores.
+Por el contrario, los atributos de origen son menos valorados por los consumidores con mayor experiencia en la compra y su influencia en la compra es menor. Así mismo, los consumidores con mayor conocimiento del atributo origen valoran en mayor medida la denominación de origen y menos negativamente el origen nacional.
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faIndustry{}} *Productos agroalimentarios y de gran consumo*
+      
+- *Diseño experimental: Espárrago, Vino*
+- *Datos de comportamiento: Aceite de oliva, girasol, leche, café, margarina, pizza, tomate frito, papel higiénico, toallitas y mayonesa.*
+      
+```
+
+En esta categoría de productos en la que existe un número de marcas disponibles elevado y un número de orígenes reducido, podemos concluir que la función de estos atributos como indicadores de calidad es diferente. En el caso del origen, parece ser un buen indicador de calidad para aquellos consumidores que tienen poca experiencia con el producto. Estos consumidores valoran más positivamente la Denominación de Origen regional y más negativamente el origen nacional e importado. Sin embargo, los consumidores que compran más habitualmente en la categoría y, por tanto, tienen una experiencia mayor, pueden no necesitar tanto este indicador extrínseco para valorar el producto y el origen del producto ayuda menos a discriminar entre alternativas. Cuando se tiene en cuenta el conocimiento espontáneo de los orígenes, los consumidores que muestran mayor interés por los distintos orígenes valoran éstos en mayor medida. En el caso de las marcas, al existir mayor variedad de marcas, utilizarlas como indicador de calidad por consumidores poco experimentados con la categoría puede ser más difícil y, por tanto, existe mayor diferenciación en la valoración de las marcas por parte de los consumidores con mayor experiencia. Los consumidores más experimentados pueden haber probado más marcas y establecido mejor sus preferencias y lealtades, mientras que los consumidores que compran poco pueden estar más confusos ante las diferencias existentes entre las marcas. Este trabajo fue publicado en *Food Quality and Preference* (Q1 ISI-JCR).
+
+Por último, en la línea de productos agroalimentarios, hemos analizado también cuál es el efecto moderador que tiene, no el conocimiento interno adquirido previamente por los consumidores, sino el que proporcionan los prescriptores externos. La literatura muestra cómo en las evaluaciones de productos que implican cierto grado de incertidumbre, los consumidores utilizan fuentes de recomendación, desde recomendaciones personales de su círculo cercano [@Andersson2004; @Harvey2000; @Kiel1981] a recomendaciones de especialistas [@Holbrook1999; @Eliashberg1997]. 
+
+Además, también se ha comprobado cómo la respuesta a las fuentes de información personal varía en función del tipo de atributos a considerar [@Nelson1974], siendo más importante en la evaluación de productos con atributos de "experiencia", lo que implica que no pueden ser evaluados de forma precisa hasta después de su consumo. Así, @Duhan1997 muestran como para este tipo de productos, las fuentes de información personal de *lazo débil* como los expertos pueden ser más importantes que aquellas fuentes personales más cercanas como amigos y familiares. 
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faPencilSquareO{}} *Metodologías de análisis*
+
+- *Modelos de Elección Discreta: Logit Multinomial*
+- *Modelos Logit Multinomial con Segmentación Latente*
+- *Manova: Análisis Multivariate de la Varianza*
+- *Análisis de Regresión Múltiple*
+``` 
+
+En el caso del vino, un producto de experiencia, podemos esperar que las fuentes de información de lazo débil jueguen un papel importante, que puede estar moderado por el conocimiento y la experiencia en la categoría. Así, diseñamos un experimento en el que se integran tres posibles efectos moderadores de la información de expertos: el nivel de consenso, el conocimiento de los consumidores y la complejidad de la información presentada. Algunos estudios habían considerado el efecto del nivel de consenso [e.g. @Mueller2001] y también el conocimiento de los consumidores [e.g. @Strebel2004] pero en la literatura no se habían considerado estos factores conjuntamente con el nivel de complejidad de la información.
+ 
+Para ello, se diseñó un experimento, para el que, en primer lugar, se realizó una cata de expertos con la que se diseñaron unos informes de recomendación para los consumidores. Estos informes fueron modificados para fijar los niveles de complejidad. Posteriormente se realizó el experimento propiamente dicho, con manipulación también del nivel de consenso en la evaluación de expertos y con medición del conocimiento previo del consumidor. El experimento como tal incluía, primero, la revisión por parte de los consumidores de la información de los expertos, en segundo lugar, una cata de distintos vinos de D.O. Navarra y posteriormente una evaluación de los vinos y un cuestionario con las escalas necesarias.
+
+Los resultados mostraban cómo, efectivamente, los informes de los expertos tienen impacto en la evaluación de los distintos vinos. Estos informes son más importantes para los consumidores con menor nivel de conocimiento. Sin embargo, no pudimos encontrar efectos significativos para el nivel de consenso o la complejidad de la información. Este trabajo fue publicado en *International Journal of Wine Business Research* y fue premiado por la revista con el "2013. Outstanding Paper Award" al mejor trabajo publicado ese año.
+
+
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faLaptop{}} *Software de Análisis:* 
+
+- *Matlab*            
+- *SPSS*
+- *Limdep*
+- *Stata*
+
+```
+
+En segundo lugar, en esta línea también hemos trabajado en el análisis del impacto de los atributos extrínsecos en la toma de decisiones en el establecimiento, analizando el impacto de precios y promociones. Este trabajo se inición en la tesis doctoral en la que se analizaba la aplicabilidad de las metodologías de inteligencia artificial y, concretamente, la familia de modelos de redes neuronales artificiales a la gestión minorista. En esta línea de investigación, ya en 2003, analizábamos el impacto de lo que hoy se conoce como Big Data en la política de precios y promociones y la gestión del cliente en la distribución minorista. 
+
+Las Redes Neuronales Artificiales son una familia de modelos que aparece en los años 50 relacionadas con la investigación sobre la forma de funcionamiento del cerebro humano. Sin embargo, la evolución de estos modelos ha seguido dos líneas de investigación divergentes. Mientras, por un lado, la línea investigadora original tiene como objetivo desarrollar estos modelos de forma que se aproximen cada vez más a esta forma de funcionamiento cerebral, por otro lado, existe otra línea de investigación cuyo objetivo es desarrollar modelos con buenas capacidades para representar distintos patrones de datos [@Park2016]. En esta línea de investigación, el objetivo no es tanto desarrollar modelos plausibles desde un punto de vista biológico, como el que estos modelos sirvan para aproximar distintos fenómenos que van desde el reconocimiento de emociones en los textos al diagnóstico de enfermedades [@gurney2014]. 
+
+En la tesis, una de las escasas aplicaciones en ese momento de las técnicas de inteligencia artificial al campo del marketing, nos centrábamos en un primer capítulo en analizar la aplicabilidad de un modelo RNA al análisis del problema de elección de marca utilizando la información que procede de las cajas de salida de los establecimientos y centrándonos en dos aspectos: (1) capacidad de las RNA para estimar las cuotas de mercado para una categoría de producto dada y (2) información que este modelo proporciona acerca del impacto de los instrumentos de marketing en estas cuotas de mercado. Comparamos esta Red con un modelo clásico en el tratamiento del problema de elección, como es el modelo logit multinomial. Los resultados de ajuste del modelo RNA resultaron ser superiores a los del modelo logit multinomial, debido a que algunos de los supuestos del modelo logit multinomial no se cumplen, por lo que concluimos que este tipo de RNA resulta útil en el contexto de elección dentro de una categoría de producto. Este trabajo se publicó en la Revista Española de Investigación en Marketing-Esic con el título "Las redes neuronales artificiales y el modelo logit multinomial en el problema de elección de marca". 
+
+En los capítulos dos y tres de la tesis doctoral se analizaban los procesos de decisión de compra a partir de otra fuente de información sumamente importante en la gestión minorista, la que proviene de las tarjetas de fidelización de clientes. A principios de los años 90 presenciamos una explosión en la implantación de programas de fidelización de clientes, inicialmente en sectores como la navegación aérea o la banca que después se extienden a múltiples industrias [@Grahame1997; @Sharp1997] como la distribución de carburantes y especialmente la distribución detallista, donde las principales empresas a nivel mundial implantaron programas de tarjetas de fidelización [@Mauri2003].
+
+El objetivo inicial de los programas de fidelización era el aumento de la lealtad de los clientes de la empresa, intentando aumentar las tasas de recompra o los volúmenes de compra. Sin embargo, algunos autores han cuestionado la utilidad de estos programas para alcanzar dichos objetivos [@Magi2003; @Mauri2003; @Smith2003] , debido por una lado a la proliferación de múltiples esquemas de fidelización y a que, en algunos casos, se diseñan únicamente como respuesta a las acciones de la competencia [@Grahame1997]. Así, el principal potencial de las tarjetas de fidelización puede estar no tanto en su capacidad para generar lealtad, sino en su capacidad para recoger datos útiles sobre el comportamiento de los clientes de una empresa, que después pueden utilizarse para diseñar estrategias de marketing más adecuadas [@Ziliani2004]. Pero, ¿las tarjetas proporcionan una información fiable que pueda ser utilizada para las decisiones de marketing que afectan a todos los clientes con y sin tarjeta?. Los clientes con tarjeta pueden tener un comportamiento muy diferente al del resto, por efecto de los instrumentos de marketing incorporados en la tarjeta (promociones, precios rebajados, regalos) o por un efecto auto-selección que afecta a la probabilidad de convertirse en miembro del programa, por ejemplo en el caso de clientes frecuentes o más sensibles a precios y descuentos. Si estos efectos están presentes, las decisiones que se tomen sobre los precios regulares, las promociones abiertas a todos los clientes y las características del surtido de las distintas marcas basadas en la información que proporciona la tarjeta podrían estar sesgadas.
+
+
+
+```{marginfigure, echo=TRUE}
+
+
+\textcolor{Red}{\faCheckSquareO{}} *Algunos resultados clave*
+
+- *El origen del producto tiene un peso mucho mayor cuando está avalado por la denominación con respecto a cuando es solamente una indicación en el etiquetado.*
+- *Los consumidores expertos valoran menos la denominación de origen y más el atributo marca, mientras que las indicaciones geográficas son más importantes para los consumidores con poca experiencia en la categoría.*
+- *Los consumidores con menor conocimiento en la categoría utilizan más la opinión de los expertos a la hora de valorar su satisfacción con el producto.*
+- *Las redes neuronales permiten explicar mejor el comportamiento del consumidor porque son más flexibles para acomodar relaciones no lineales y de tipo umbral y efectos complementarios complejos entre alternativas.*
+- *Las redes neuronales son peores que los modelos clásicos cuando pretendemos analizar el porqué de un determinado resultado.*    
+- *Los clientes que pertenecen a un programa de fidelización tienen una sensibilidad a precios y promociones distinta a otros clientes minoristas. El efecto de las promociones es en general menor para estos clientes, salvo en categorías fácilmente almacenables y con un coste de trasporte bajo, donde ocurre lo contrario.*   
+- *Los clientes que compran más frecuentemente son más sensibles al precio, tanto a la hora de decidir entre marcas, como a la hora de decidir si comprar o no comprar.*    
+    
+      
+      
+```
+
+La línea de investigación que trata de responder a estas preguntas comenzó a desarrollarse con el segundo capítulo empírico de la tesis doctoral en el que se analizaban solo las diferencias en la elección de una única categoría de producto y estos primeros resultados fueron presentados en la 12th International Conference of Research in the Distribute Trades of the European Association of Education and Research in Comercial Distribution (EAERCD) en Julio de 2003. 
+
+Las contribuciones del mismo, tanto en el análisis de los datos como en las implicaciones a la gestión, hicieron que se incluyese dentro de las cinco mejores investigaciones aportadas en el congreso, por lo que entró a formar parte del número especial que recoge una selección de las aportaciones más sobresalientes del congreso y, en una versión revisada, fueron publicados en la revista The International Review of Retail, Distribution and Consumer Research en 2004. En esta línea, combinamos la información de los escáneres de salida de los distintos establecimientos de una cadena de distribución minorista del sector de alimentación con la información sobre las compras de los clientes, que procede de las tarjetas de fidelización de este minorista.
+
+
+Posteriormente, el análisis se amplió a diez categorías de producto distintas, generalizando en mayor grado los resultados obtenidos y el trabajo fue publicado en la revista Journal of Retailing and Consumer Services (Q2 ISI-JCR en 2017). En este trabajo se divide a los clientes que compran sin tarjeta de cliente en tres segmentos diferenciados: aquellos que tienen tarjeta del establecimiento y no la utilizan, aquellos clientes habituales que no están interesados en tener tarjeta del establecimiento y aquellos clientes no habituales que no tienen tarjeta del establecimiento. En función de esta división se establecen las hipótesis relativas a las diferencias en comportamiento esperadas entre estos clientes y los clientes con tarjeta del establecimiento y se contrastan las diferencias con un modelo de elección. 
+
+En nuestro análisis se muestra cómo la utilización de la base de datos de clientes para el análisis del problema de elección generará sesgos en las estimaciones totales. En general, no es adecuado tener en cuenta únicamente este tipo de datos para la toma de decisiones sobre el total de las compras en el establecimiento. Podemos extraer conclusiones sobre el tipo de sesgos en los que estaríamos incurriendo. En primer lugar, el efecto del precio regular para los clientes que compran con tarjeta será en general similar al de las compras sin tarjeta y, cuando existan diferencias, estas serán negativas. Es decir, el efecto estimado del precio será menor al que se produce para las compras totales. 
+
+En segundo lugar, en general podemos esperar cometer sesgos cuando analizamos los efectos promocionales. En la mayoría de los casos el sesgo será negativo, infravalorando el efecto de la promoción, pero en categorías fácilmente almacenables y con un coste de trasporte bajo, los clientes con tarjeta pueden reaccionar en mayor medida que los no clientes. Por último, la preferencia por los formatos de menor tamaño es mayor para los miembros del programa. Por tanto, los minoristas deben tener en cuenta que, si tenemos en cuenta sólo las compras realizadas con tarjeta del programa, se estarán minusvalorando el atractivo para el conjunto de los clientes de los formatos de mayor tamaño.
+
+Como consecuencia de los resultados obtenidos, otro trabajo en esta línea de análisis de la información profundizó en las diferencias en las reacciones a los precios y promociones en función de los hábitos de los consumidores, específicamente en lo relativo a la regularidad en los patrones de compra. Este trabajo fue presentado en el Congreso Internacional Marketing Trends en 2008 y premiado como mejor contribución en el congreso, por lo que fue posteriormente publicado en 2010 en la revista Journal of Marketing Trends.
+
+
+### Proyectos en curso y líneas futuras
+
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faPuzzlePiece{}} *Esta linea de trabajo se encuadra en el tema* "1.2 The Customer-Technology Interface" *de las prioridades de investigación del* Marketing Science Institute *para el periodo 2018-2020*.
+
+\includegraphics[width=4cm, height=5cm]{images/RPmsi.jpg}
+
+
+\vspace{5mm}
+
+*Detalle*:
+      
+\vspace{5mm}      
+      
+\includegraphics[width=3cm, height=4cm]{images/RPmsi4.jpg}
+
+
+
+\vspace{2mm}
+
+\hfill{---Fuente de la Imagen: MSI }
+
+```
+
+En la actualidad estoy codirigiendo junto con el profesor Javier Cebollada una tesis doctoral que se encuadra en esta línea centrada en el paso desde las plataformas tradicionales a las plataformas móviles en el caso de los Videojuegos Móviles. Esta línea es especialmente interesante, en primer lugar porque el sector de los videojuegos ha sido escasamente estudiado en la literatura pese a ser el de mayor facturación dentro del mundo del entretenimiento, alcanzando los 137 millones de dólares de facturación en 2018 [@newzoo2018] y, en segundo lugar, por ser un caso de estudio en el que el canal de distribución del servicio (móvil, cd, streaming...) modifica fundamentalmente las características del propio servicio. El análisis de los procesos de cambio entre plataformas puede por tanto, aportar conocimiento válido sobre cómo los canales electrónicos están modificando la experiencia del usuario. 
+
+Realizando un análisis bibliométrico de las publicaciones sobre juegos móviles dentro de campos de ciencias sociales, podemos ver que ésta es también una línea en rápido crecimiento, pasando de seis artículos en 2008 a 36 en 2017 y 19 en el año 2018 todavía en curso. Podemos observar esta evolución en la Figura \ref{ISI4}.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faSearch{}} *El análisis bibliométrico se ha realizado con 154 registros obtenidos de la búsqueda por temas "Mobile gaming"/"Mobile games" restringiendo los resultados al ámbito de ciencias sociales el 30 de septiembre de 2018*.
+
+```
+
+```{r ISI4, fig.cap="\\label{ISI4} Evolución del número de referencias en ISI-Wos para la línea de Mobile Gaming",fig.align='center', out.width='100%'}
+
+knitr::include_graphics("figures/linea4anos.pdf")
+
+```
+
+Con respecto a los temas más tratados, la tabla \ref{keywordslinea4}  muestra las diez palabras clave más seleccionadas por los autores y las clasificaciones de palabras clave de la propia base de datos ISI-Clarivate Analytics Web of Science.
+
+```{r}
+library(readr)
+
+keywords1 <- read.csv("../figures/keywords4.csv", header = FALSE, stringsAsFactors =FALSE)
+
+keywords2<-keywords1[2:11,]
+
+keywords3<-keywords2[,2:5]
+
+names(keywords3)<- c("Palabras Clave Autores", "Artículos", "Palabras Clave ISI", "Artículos")
+
+library(tidyverse)
+library(kableExtra)
+
+keywords3 %>%
+knitr::kable(keywords3, format = "latex", booktabs = T, escape=F,row.names = FALSE,
+             caption = "\\label{keywordslinea4} Palabras clave en la literatura de VideoJuegos Móviles")  %>% 
+      kable_styling(latex_options = c("scale_down")) %>%
+      column_spec(1, width = "8em") %>%
+      column_spec(2, width = "4em") %>%
+      column_spec(3, width = "8em") %>%
+      column_spec(4, width = "4em") 
+
+
+```
+
+Al igual que en el caso de las dos líneas anteriores, en la Figura \ref{networklinea3} se representa la Red de co-ocurrencia de los términos clave, representando asociaciones entre términos que aparecen frecuentemente juntos en un mismo artículo [@Aria2017].
+
+
+```{r networklinea4,fig.fullwidth=TRUE, fig.cap="\\label{networklinea3} Red de Asociación entre Términos Clave. Línea 2. Proyecto 1",fig.align='center', out.width='100%'}
+
+knitr::include_graphics("figures/plotLinea4Keywords.pdf")
+
+```
+
+Nuestra línea aparece representada en azul claro, haciendo referencia a los modelos de aceptación, motivaciones, determinantes y comunicación en juegos móviles.
+
+El doctorando Xiaowei Cai está finalizando su segundo año y ha completado un primer borrador del primer capítulo que ha sido presentado en el Congreso Internacional de Marketing Aemark y está preparando para enviar a una revista. En este trabajo se han recogido datos de jugadores de videojuegos en plataformas tradicionales en China para analizar los procesos de cambio hacia o desde las plataformas móviles. Se ha especificado un modelo teórico para los procesos de cambio basado en los modelos Push-Pull-Mooring para explicar procesos de migración [@Bansal2005]. Las primeras estimaciones muestran como los aspectos más determinantes para explicar la resistencia al cambio son los factores relacionados con el rendimiento percibido y los costes de cambio, mientras que los factores que facilitan el cambio de plataforma son la flexibilidad en tiempo y espacio en el acceso y los efectos de Red.
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faPuzzlePiece{}} *Esta linea de trabajo se encuadra en el tema* "1.3. Macro Trends Influencing Consumer Decision Making" *de las prioridades de investigación del* Marketing Science Institute *para el periodo 2018-2020*.
+
+\includegraphics[width=4cm, height=5cm]{images/RPmsi.jpg}
+
+
+\vspace{5mm}
+
+*Detalle*:
+      
+\vspace{5mm}      
+      
+\includegraphics[width=3cm, height=4cm]{images/RPmsi1.jpg}
+
+
+
+\vspace{2mm}
+
+\hfill{---Fuente de la Imagen: MSI }
+
+```
+
+En un segundo capítulo en esta línea la pregunta general es el análisis de los factores de compra *in-game* dentro de los juegos móviles, mientras que en el tercer capítulo pretendemos analizar el efecto de la publicidad insertada en los juegos móviles, más especificamente, cómo afecta la congruencia percibida a los efectos de esa publicidad.
+
+Además, en esta misma línea, un segundo proyecto pretende desarrollar en mayor medida la investigación sobre evaluación de productos agroalimentarios. Esta es un área especialmente fructífera dadas las características experienciales de estos productos y los posibles efectos de atributos extrínsecos en su comercialización siguen siendo objeto de interés en la literatura.
+
+En este sentido, una línea que considero especialmente interesante es la relacionada con la sostenibilidad. El consumo sostenible puede implicar, por un lado, cambios en los patrones de la categorías de consumo en el sector agroalimentario, cambiando las cantidades consumidas en determinadas categorías de producto (por ejemplo, carne) y también pueden suponer cambios en los criterios y en los procesos por los que los consumidores seleccionan un determinado producto dentro de una categoría [@Verain2015]. Existen evidencias en ambos casos de que el criterio de sostenibilidad está jugando un papel cada vez mayor en los procesos de decisión de los consumidor [@Panzone2016; @Grunert2014]. 
+
+
+
+En el caso de la elección de producto dentro de una categoría, son especialmente importantes las etiquetas relacionadas con la sostenibilidad, que se han venido desarrollando en los últimos treinta años [@Grunert2014] con el objetivo de incrementar la transparencia en la cadena de producción alimentaria y proporcionar información a los consumidores de manera que pueda promocionarse el consumo sostenible. Estas etiquetas de sostenibilidad pueden tener además efectos, no solamente sobre las percepciones de los consumidores en esa dimensión, sino en otras dimensiones asociadas como los atributos de salud [@Verain2016]. Estas relaciones además son muy distintas según la categoría de producto y cambian rápidamente en el tiempo [@Siegrist2015]. En línea con la metodología que ya hemos utilizado, los diseños experimentales son especialmente utilizados en la investigación en el área [e.g. @Grebitus2016; @Zhou2016; @Pomarici2018; @Rousseau2015]. 
+
+
+Para realizar un breve análisis bibliométrico en el área [@Aria2017], hemos realizado una búsqueda en la base de datos ISI que nos permita valorar la evolución de la literatura en este área.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faSearch{}} El análisis bibliométrico se ha realizado con 443 registros obtenidos de las búsquedas por temas "Sustainability labels consumption" (249 resultados) y "Sustainability food product choice" (210 resultados) en la base de datos ISI-Clarivate Analytics Web of Science.
+
+```
+
+En primer lugar, analizamos la evolución histórica del número de artículos por año. Esta evolución se muestra en la Figura \ref{ISI1}. Podemos observar el crecimiento exponencial de resultados desde el año 2012. La tasa de crecimiento anual durante el periodo es de 24.05%. Es necesario señalar que el número de referencias es menor para 2018 por estar el año todavía incompleto.
+
+```{r ISI1, fig.cap="\\label{ISI1} Evolución del número de referencias en ISI-Wos para la línea en etiquetas de sostenibilidad",fig.align='center', out.width='100%'}
+
+knitr::include_graphics("figures/IsiLinea1.pdf")
+
+```
+
+Con respecto a los temas más tratados, la tabla \ref{keywordslinea1}  muestra las diez palabras clave más seleccionadas por los autores y las clasificaciones de palabras clave de la propia base de datos ISI-Clarivate Analytics Web of Science.
+
+```{r}
+library(readr)
+
+keywords1 <- read.csv("../figures/keywords1.csv", header = FALSE, stringsAsFactors =FALSE)
+
+keywords2<-keywords1[2:11,]
+
+keywords3<-keywords2[,2:5]
+
+names(keywords3)<- c("Palabras Clave Autores", "Artículos", "Palabras Clave ISI", "Artículos")
+
+library(tidyverse)
+library(kableExtra)
+
+keywords3 %>%
+knitr::kable(keywords3, format = "latex", booktabs = T, escape=F,row.names = FALSE,
+             caption = "\\label{keywordslinea1} Palabras clave en la literatura sostenibilidad y procesos de decisión")  %>% 
+      kable_styling(latex_options = c("scale_down")) %>%
+      column_spec(1, width = "8em") %>%
+      column_spec(2, width = "4em") %>%
+      column_spec(3, width = "8em") %>%
+      column_spec(4, width = "4em") 
+
+
+```
+
+
+\clearpage
+
+
+Ahora bien, ¿cómo se relacionan esos términos clave entre sí?. En la Figura \ref{networklinea1} se representa la Red de co-ocurrencia de los términos clave, representando asociaciones entre términos que aparecen frecuentemente juntos en un mismo artículo [@Aria2017].
+
+
+```{r network1,fig.fullwidth=TRUE, fig.cap="\\label{networklinea1} Red de Asociación entre Términos Clave. Línea 2. Proyecto 2",fig.align='center', out.width='100%'}
+
+knitr::include_graphics("figures/coocurrenLinea1.pdf")
+
+```
+
+Podemos ver que existe una agrupación de palabras clave relacionadas con el trabajo realizado hasta el momento y que tienen que ver con la evaluación de atributos, la formación de preferencias y actitudes, la elección y las etiquetas. Esta agrupación aparece representada en verde. En el otro extremo de la Red, en otra línea no relacionada se encuentra la literatura que tiene que ver con la gestión y la medición del impacto medioambiental de la producción.
+
+En el último trabajo que desarrollamos en esta línea no pudimos confirmar o contrastar los efectos del nivel de consenso de los expertos en las recomendaciones sobre el vino. Las informaciones contradictorias reducen la credibilidad de la información presentada, creando incertidumbre y reduciendo la influencia del mensaje [e.g. @Dean2007]. Sin embargo, no siempre un cierto nivel de desacuerdo entre los expertos es negativo. De acuerdo con @West1998, la respuesta de los consumidores al consenso depende de las categorías, de manera que se puede preferir un cierto desacuerdo para decisiones asociadas con alto riesgo social o alto valor económico. 
+
+Así, un proyecto de investigación en esta línea, que en este momento está en estado embrionario, tiene como objetivo principal la exploración del papel de las afirmaciones de sostenibilidad en la elección de productos agroalimentarios, considerando la interacción con los niveles de consenso y el conocimiento del consumidor. 
+
+En este sentido, una fuente de información personal cada vez más importante es el denominado "e-WOM" (Electronic Word of Mouth) o *Boca-Oreja Electrónico* [e.g. @Gupta2010a], de modo que el objetivo incial de esta línea será la comparación del papel moderador de dos tipos de fuentes personales "de lazo débil" [@Granovetter1977; @Constant1996] en el papel de las etiquetas de sostenibilidad, por un lado la información de fuentes con reputación de expertos y por otro la información que proviene de redes sociales. 
+
+En este sentido, y en la línea de trabajos anteriores, en este proyecto se utilizará metodología experimental, favorecida en este caso por el hecho de que en el seno del Inarbe - Institute for Advanced Research in Business and Economics- se está equipando un laboratorio de análisis experimental que entrará en funcionamiento a principios de 2019.
+
+\clearpage
+
+
+## El encuentro entre la oferta y la demanda y la productividad del marketing 
+
+En tercer lugar, en la última línea se analiza la interacción empresa-cliente en el encuentro en servicios minoristas y los efectos de esta interacción en los resultados de marketing y la productividad. 
+
+Esta línea aúna el trabajo en las dos anteriores y desarrolla cómo, en el caso de los servicios, la interacción entre proveedor y cliente determina el resultado del encuentro.
+
+
+Las primeras publicaciones en esta línea se desarrollaron en paralelo a la elaboración de la tesis doctoral y en ellas pone el foco en los resultados de marketing claves para la distribución: la generación de satisfacción y lealtad y las diferencias en este proceso de generación en distintos sectores. El objetivo principal es detectar posibles diferencias en la productividad del marketing entre distintos tipos de establecimientos detallistas, utilizando un modelo que incluye el esfuerzo de la empresa y el del consumidor. Esta aproximación sigue la línea de investigación iniciada por @Ingene1985 y desarrollada entre otros por @betancourt1988economics y @Val1996.
+
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faFileTextO{}} *Publicaciones destacadas en esta línea:*
+
+- *Ibañez Fernandez, A., Reinares Lara, P., Cortiñas Ugalde, M., & Singh Sisodia, G. (2018). Distinctive competencies and competency-based management in regulated sectors: A methodological proposal applied to the pharmaceutical retail sector in Spain.* Journal of Retailing and Consumer Services, *42, 29–36*.
+- *Chocarro, R., Cortinas, M., & Villanueva, M. L. (2015). Customer heterogenity in the development of e-loyalty*. Journal of Research in Interactive Marketing, *9(3).* 
+- *Betancourt, R., Chocarro, R., Cortinas, M., Elorz, M., & Mugica, J. M. (2014). The Impact of Market Environments on Marketing Relationships*. International Journal of Marketing Studies, *6(1), 45–65.*.
+- *Cortinas, M., Chocarro, R., & Villanueva, M. L. (2010). Heterogeneity of Outcome in the Consumer Evaluation of the Retail Encounter: A Post-hoc Segmentation Analysis in Structural Equation Models*. Revista Española de Investigación En Marketing-ESIC, *14(1), 91–114.*.
+- *Betancourt, R. R., Cortiñas, M., Elorz, M., & Mugica, J. M. (2007). The demand for and the supply of distribution services: A basis for the analysis of customer satisfaction in retailing*. Quantitative Marketing and Economics, *5(3) 293–312.*
+- *Cortinas, M., Elorz, M., & Mugica, J. M. (2005). Loyalty cards: Are retailers ignoring non-card-holder behaviour*. European Retail Digest, *45, 18–20*.
+- *Cortinas, M., Elorz, M., & Villanueva, M. L. (2004). Retail Store Loyalty Management via an Analysis of Heterogeneity of the Service Elements*. The International Review of Retail, Distribution and Consumer Research, 14(4), 407-437.
+```
+
+
+
+En la aplicación empírica de este trabajo se incluyeron dos contextos de servicio distintos: supermercados y gasolineras. Se recogieron encuestas en supermercados y gasolineras y la modelización se realizó con Modelos de Ecuaciones Estructurales.
+
+Los resultados de este trabajo fueron publicados en 2004 en *The International Review of Retail, Distribution and Consumer Research* y muestran como, en primer lugar, el vínculo entre satisfacción y lealtad es mayor para los supermercados que para el caso de las gasolineras y cómo en el caso de las gasolineras, es la localización el principal determinante en la formación de lealtad. 
+
+En el año 2003, el profesor Roger Betancourt, de la Universidad de Maryland, uno de los precursores en esta línea de investigación, participó en el tribunal de defensa de mi tesis doctoral y desde entonces comenzamos a colaborar en proyectos de investigación de este mismo enfoque. Así, hemos trabajado en la unificación de dos líneas diferentes en la literatura: por un lado la literatura en satisfacción del cliente [e.g. @Anderson1993] y, por otro lado, la que se centra en el papel que juega el consumidor en la distribución minorista [e.g. @Oi1992], utilizando un enfoque de marketing en el estudio de la productividad minorista.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faQuestionCircleO{}} *Cuestiones de investigación*
+      
+- *¿Qué esfuerzos de los minoristas son determinantes en la generación de satisfacción y lealtad?¿Hay diferencias entre servicios?*  
+- *¿Cuál es el impacto en la satisfacción del cliente de incrementar los niveles de los servicios de distribución?*    
+- *¿Qué sucede con los resultados de marketing cuando hay cambios significativos en la estructura del mercado?*
+- *¿Qué diferencia a la elección de canal en presencia de Internet a la de elección de canales tradicionales?¿Qué implicaciones tiene esto para la gestión multicanal?*
+
+
+```
+
+En el primer trabajo publicado conjuntamente con miembros del equipo investigador en Pamplona y el profesor Roger Betancourt en esta línea se amplía el marco conceptual presentado en @betancourt2004 mostrando cómo los distintos roles asignados al consumidor en la literatura de distribución minorista pueden capturarse utilizando una adecuada especificación para las funciones de demanda y oferta de servicios de distribución. Los servicios de distribución han sido identificados como los principales outputs de la distribución minorista por varios autores [@bucklin1973; @Oi1992; @betancourt1988economics] y pueden agruparse en las siguientes categorías: accesibilidad de la localización, información, surtido (amplitud y profundidad), fiabilidad en la entrega del prodcto (en la forma deseada o en el momento deseado) y ambiente. 
+
+Así, el nivel de cada uno de estos servicios que proporciona un determinado establecimiento es el resultado de un equilibrio entre la oferta de servicios que hacen los detallistas y la utilización de estos servicios por parte de los consumidores al completar sus actos de compra, como resultado de su función de demanda para los servicios. 
+
+Así, este enfoque es compatible con el argumento de @mugica1999, ya que el resultado del encuentro entre el detallista y el cliente es una relación entre las cantidades demandadas y las ofertadas para los dos tipos de outputs de los minoristas (productos y servicios de distribución).
+
+En la implementación empírica del análisis teórico de este trabajo utilizamos una encuesta a clientes de supermercados y estimamos las ecuaciones de interés mediante un análisis de regresión ajustando los errores por la agrupación según establecimiento. Este trabajo fue publicado en la revista *Quantitative Marketing and Economics*.
+
+\clearpage
+
+Otro trabajo en esta misma línea analiza el impacto de la heterogeneidad de los consumidores en los resultados de satisfacción y lealtad. Las necesidades y deseos de los consumidores que demandan los servicios del minorista son diversas y cada vez son más difíciles de satisfacer con estrategias de marketing indiferenciadas [@kamakura1996]. Además, desde el punto de vista analítico, puede llevar a obtener una imagen errónea de la realidad como consecuencia de los sesgos en la estimación [@Jedidi1997; @Ansari2000].
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faTable{}} *Fuentes de Información*
+      
+- *Encuestas*
+ 
+
+```
+
+El objetivo general de este trabajo es analizar la influencia de la heterogeneidad no observada de los clientes en la formación del resultado del encuentro de servicio en un contexto minorista, cuya especificación se ha traducido en un modelo de ecuaciones estructurales. En concreto, se desea: 1) comprobar si existe tal heterogeneidad, aplicando un método de segmentación post hoc; 2) valorar los posibles sesgos en que se incurre si esta heterogeneidad no es controlada; 3) analizar los distintos segmentos que presentan diferencias en la estimación empírica del modelo y 4) describir los distintos segmentos de clientes en función de sus características demográficas y hábitos de compra. El modelo se plantea como un modelo de ecuaciones estructurales con clases latentes y se utiliza la misma base de datos de supermercados que en el trabajo anterior.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faIndustry{}} *Sectores*
+      
+  - *Supermercados*
+  - *Gasolineras*
+  - *Clubs de venta privada online*  
+  - *Farmacias*  
+```
+
+Los resultados muestran que el mejor modelo es el modelo con tres segmentos, en el que la muestra se divide en tres grupos del 27%, 41% y 31% de los datos, respectivamente. En todos los casos, algunos elementos de servicio, como el surtido y variedad, la comodidad y rapidez de pago o los horarios, tienen un efecto similar en el nivel de satisfacción de todos los clientes. Asimismo, la satisfacción tiene un impacto directo sobre la lealtad en todos los segmentos, pero se puede concluir que, aunque esta relación se mantiene con respecto a la estimada por el modelo general, sin embargo el impacto total es mucho menor. No obstante, existe un primer grupo de individuos en los que, en general, el efecto de los elementos del servicio en la satisfacción y la lealtad es menor. Los minoristas que deseen mejorar su nivel de satisfacción y lealtad tienen una capacidad de actuación mucho menor en este grupo por lo que inversiones en mejora de servicios destinados a este grupo de individuos no ofrecerían los resultados esperados por el modelo general. No obstante, si desean mejorar el nivel de satisfacción y lealtad de estos clientes deberían realizar esfuerzos en el surtido y variedad de producto y el trato. un segundo grupo de consumidores que se caracteriza por tener niveles medios de lealtad y satisfacción superiores a la media. El trato del personal es el elemento clave en este segmento ya que incide no sólo en la satisfacción sino también en la lealtad por lo que mejoras en este aspecto tendrán una doble vía de impacto en la capacidad de retención de clientes de los minoristas. para los que la ubicación es el principal determinante de la lealtad. Un tercer grupo está en general satisfecho con el servicio que le ofertan estos establecimientos minoristas, pero la localización es el principal motivo para la repetición de las compras. Este trabajo fue publicado en la *Revista Española de Investigación en Marketing-ESIC*
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faPencilSquareO{}} *Metodologías de análisis*
+
+- *Modelos de Ecuaciones Estructurales*
+- *Clases latentes en Modelos de Ecuaciones Estructurales*      
+- *Regresión múltiple con corrección cluster*      
+- *Regresión por Quantiles* 
+      
+``` 
+
+La primera base de datos de análisis de gasolineras con la que trabajamos en esta línea se recogió en 1998. Dado que de forma inmediatamente posterior a la recogida de los datos se produjo la liberalización del sector [@Bello2008] surgió la posibilidad de contrastar los efectos de un cambio importante en las condiciones de mercado en las relaciones básicas de marketing. Así, recogimos de nuevo datos de resultados de marketing con una nueva encuesta similar a la utilizada en el año 2007. 
+
+Nuestro objetivo principal era comprobar si las relaciones básicas de marketing a nivel de establecimiento son robustas a cambios sustanciales en el mercado, como la liberalización y el resto de cambios macroeconómicos que sucedieron durante el periodo, y así mismo, si las relaciones de marketing para los establecimientos nuevos son las mismas que para los antiguos. Así, el cambio producido en el mercado puede asimilarse a un experimento natural, en el que podemos comparar dos situaciones, no solo para ver las diferencias, sino para contrastar qué es lo que permanece. 
+
+Los resultados del trabajo muestran cómo los eventos macroeconómicos acontecidos durante el periodo que afectan a los precios del producto principal no cambian la importancia de los de los servicios de distribución más importantes: la fiabilidad en la entrega del producto y el ambiente. Sin embargo, sí que cambian la importancia de la información sobre precios (debido a la mayor variabilidad existente en el mercado) y sobre todo, la localización. Este trabajo fue publicado en la revista *International Journal of Marketing Studies*.
+
+
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faLaptop{}} *Software de Análisis:* 
+      
+- *EQS*
+- *Stata*
+- *MPlus*
+- *R*      
+```
+
+Además, en otro trabajo en esta línea, tenemos como objetivo principal el análisis de la lealtad al canal online. Pese al crecimiento del comercio electrónico, en general los detallistas tienen que lidiar con unos costes de atracción de consumidores que son mayores que en el comercio tradicional [@LahuertaOtero2014] y con dificultades para incrementar la lealtad del consumidor debido a la falta de contacto personal y los bajos costes de cambio [@Valvi2012]. Por ejemplo, @reichheld2000loyalty estiman una diferencia de entre un 20-40% en los costes de adquisición para el sector textil lo que hace que tengan que retener a sus clientes durante una media de dos a tres años para recuperar los costes, cuando, sin embargo, más del 50% de los clientes habrán dejado la empresa antes de 3 años. Así, encontrar las claves para mejorar la lealtad online es fundamental para los minoristas. En el trabajo identificamos diferencias específicas en los procesos de formación de lealtad al establecimiento online teniendo en cuenta la heterogenidad inobservada. Más específicamente, contrastamos primero la existencia de esta heterogeneidad, valorando su sesgo potencial en un modelo general de lealtad online y, además, analizamos los segmentos resultantes en un sistema de segmentación post-hoc. De esta forma, no es necesario definir previamente cuales serán los criterios de segmentación. En nuestro conocimiento, este trabajo es el primero en el que se utiliza una segmentación latente en un modelo de ecuaciones estructurales para analizar el impacto de la heterogeneidad del concumidor en la formación de la lealtad online.
+
+Encontramos que el vínculo entre satisfacción y lealtad no es homogéneo para todos los compradores. Solo en uno de los tres segmentos resultantes hay un impacto directo de los niveles de satisfacción en la lealtad. El modelo agregado sobreestima el efecto de la satisfacción para dos de los segmentos, mientras que lo subestima en otro. El papel de las ventajas, desventajas y riesgo del canal también es distinto entre segmentos, por lo que los detallistas necesitan ajustar su estrategia a cada uno de ellos. Este trabajo fue publicado en la revista *Journal of Research in Interactive Marketing* en 2015.
+
+```{marginfigure, echo=TRUE}
+
+
+\textcolor{Red}{\faCheckSquareO{}} *Algunos resultados clave*
+
+- *En el sector de gasolineras, el mayor antecedente de la lealtad es la localización, indicando ciertos monopolios espaciales en los que la satisfacción con el servicio tiene poco efecto.*
+- *Los servicios de distribución son el principal mecanismo por el que los detallistas pueden aumentar la satisfacción del cliente con la transacción.*      
+- *En el caso de los supermercados, algunos consumidores están motivados por el surtido, mientras que para otros es el personal el elemento clave. Hay un tercer grupo en el que es la localización el principal determinante de la lealtad.*      
+- *Cuando cambia la estructura del mercado, como una liberalización de precios en el sector, la importancia de algunos servicios permanece estable como la del trato al cliente mientras que otros aspectos como la localización afectan de forma distinta a los nuevos entrantes que a los ya presentes.*  
+- *La satisfacción solo es antecedente directo de la lealtad online para un segmento de consumidores por lo que no es condición suficiente para generar e-loyalty.*            
+- *La imagen del establecimiento, la gestión del conocimeinto y el control, en ese orden son las competencias clave para la ventaja competitiva en el sector farmaceútico.*     
+      
+```
+
+Por último, en esta línea también hemos trabajado en un análisis más amplio, con una perspectiva de gestión, para un sector específico de especial interés, el sector farmaceútico en la codirección de la tesis doctoral de Alberto Ibáñez Fernández *Competencias distintivas y gestión por competencias en el pequeño comercio. La generación de ventajas competitivas en el sector minorista de distribución farmacéutica*. Esta tesis fue codirigida junto con el Dr. Pedro Reinares Lara y defendida con Sobresaliente Suma Cum Laude en 2012 en la Universidad Rey Juan Carlos.
+
+En el origen de esta tesis reside el deseo de aportar conocimiento sobre las causas del éxito de la pequeña empresa y en concreto aquellas relevantes al pequeño comercio minorista. Para ello, en primer lugar es preciso caracterizar los factores que implican el éxito de una pequeña empresa. Recurriendo a la literatura y las investigaciones precedentes, el éxito está muy unido a la posesión de una ventaja competitiva. En este primer concepto reside una de las bases de la investigación. El segundo paso consiste en determinar cómo medir la posesión de una ventaja competitiva. Siendo un tema ampliamente tratado en la literatura, se han tomado indicadores ya testados para determinar la posesión de ventajas competitivas. 
+
+A continuación, este trabajo se centra en indagar sobre las áreas que están dentro del rango de acción de los gestores de los pequeños comercios que permiten alcanzar dichas ventajas competitivas. El estudio y la identificación de las competencias distintivas en el pequeño comercio minorista forman la base de la  tesis doctoral. De esta manera, su objetivo consiste en identificar qué competencias distintivas están ligadas a un rendimiento superior. Parece viable inferir que si este rendimiento superior se mantiene de manera constante, generará ventajas competitivas sostenibles en el tiempo.  El caso del sector farmaceútico es además especialmente interesante, dado que es un sector ampliamente regulado con competencia creciente, por un lado de grandes cadenas de distribución y de establecimientos de otros sectores. Parte del trabajo en esta tesis, se ha publicado en 2018 en la revista *Journal of Retailing and Consumer Services* (Q2 ISI-JCR). En esta trabajo se comprueba como ciertas competencias distintivas pueden ser la base de una ventaja competitiva sostenible en el sector.
+
+### Investigación en curso y líneas futuras
+
+El trabajo actual en esta línea está orientado a analizar la interacción minorista-cliente pero en este caso en un entorno online. Para ello, utilizamos una aproximación metodológica novedosa, combinando una técnica observacional, la técnica de seguimiento de la mirada o *eye-tracking*, con la información declarativa obtenida mediante encuestas, para conocer los procesos de atención al comercio online. 
+
+En esta línea, estamos colaborando con investigadores del área de conocimiento de Teoría de la Señal para estudiar los procesos perceptivos en el canal digital.
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faPuzzlePiece{}} *Esta linea de trabajo se encuadra en el tema* "4.4. Approaches to Ingesting and Analyzing Data to Drive Marketing Insights" *de las prioridades de investigación del* Marketing Science Institute *para el periodo 2018-2020*.
+
+\includegraphics[width=4cm, height=5cm]{images/RPmsi.jpg}
+
+
+\vspace{5mm}
+
+*Detalle*:
+      
+\vspace{5mm}      
+      
+\includegraphics[width=3cm, height=4cm]{images/RPmsi2.jpg}
+
+
+
+\vspace{2mm}
+
+\hfill{---Fuente de la Imagen: MSI }
+
+```
+
+Los consumidores están inmersos en un comportamiento cada vez más complejo denominado el *viaje del cliente* (*customer journey*) en el que combinan múltiples canales de compra y puntos de contacto para satisfacer sus necesidades y deseos de compra [@Cassab2009]. Por ejemplo, en el caso de un teléfono móvil, una persona podría recibir información sobre un nuevo modelo en una Red social, posteriormente ir a ver el producto en una gran superficie, para acabar comprando el teléfono en una tienda online después de comparar precios en un comparador. Así, el proceso de compra tradicionalmente lineal se transforma en un "camino hacia la compra" cada vez más complejo e impredecible y el análisis de la experiencia del cliente en ese viaje es cada vez más importante [@Beck2015] tanto desde el punto de vista de las empresas como desde un punto de vista académico. 
+
+Sin embargo, la experiencia del cliente es interna y subjetiva [@Meyer2007] por lo que su medición mediante técnicas declarativas es compleja. En esta línea de investigación proponemos el uso de una técnica de tipo observacional, la técnica de seguimiento de la mirada o *eye-tracking* como herramienta que, como sugieren @Lemon2016, puede ser útil para profundizar en esta experiencia del cliente a lo largo del *customer journey*. 
+
+Las técnicas de seguimiento de la mirada tienen gran potencial para descubrir patrones que quedan normalmente ocultos cuando la información se recoge de forma declarativa ya que la mirada es uno de los indicadores más relevantes de la atención del individuo [@Wedel2008]. De la misma forma, esta atención es un antecedente fundamental en la experiencia del cliente y, así, gran parte de las actuaciones de los detallistas están principalmente dirigidas a captar la atención del cliente [@Puccinelli2009]. Los sistemas de seguimiento de la mirada llevan tiempo empleándose para el análisis de movimientos oculares en psicología y marketing [@Majaranta2011] ya que la captura de los procesos de atención permite inferir aspectos de otras funciones cognitivas [@Pieters2004]. Los dispositivos del seguimiento ocular son especialmente apropiados para medir la atención en entornos ricos en información como son los entornos digitales [@Wedel2015]. Por ejemplo, @Velasquez2013 hace uso de dispositivos de seguimiento ocular para identificar cuales son los objetos clave en una página web de manera más precisa que usando las herramientas de minería de datos de uso web. 
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faSearch{}} El análisis bibliométrico se ha realizado con 268 registros obtenidos de las búsquedas por temas "Eye-tracking Marketing" (252 resultados) y "Eye-tracking online purchases" (35 resultados) "Eye-tracking e-commerce" (72 resultados) "Eye-tracking e-commerce" (72 resultados) y "Eye-tracking webpage" (33 resultados) en la base de datos ISI-Clarivate Analytics Web of Science.
+
+```
+
+Si realizamos un análisis bibliométrico [@Aria2017] de la literatura en marketing que ha utilizado técnicas de *eye-tracking* a partir de los datos obtenidos de la base de datos ISI, podemos observar en la Figura \ref{ISI2}, la evolución creciente en cuanto a las aplicaciones en los últimos años.
+
+
+```{r ISI2, fig.cap="\\label{ISI2} Evolución del número de referencias en ISI-Wos para la línea de Eye-Tracking y Marketing",fig.align='center', out.width='100%'}
+
+knitr::include_graphics("figures/linea2anos.pdf")
+
+```
+
+Con respecto a los temas más tratados, la tabla \ref{keywordslinea2}  muestra las diez palabras clave más seleccionadas por los autores y las clasificaciones de palabras clave de la propia base de datos ISI-Clarivate Analytics Web of Science.
+
+```{r}
+library(readr)
+
+keywords1 <- read.csv("../figures/keywords2.csv", header = FALSE, stringsAsFactors =FALSE)
+
+keywords2<-keywords1[2:11,]
+
+keywords3<-keywords2[,2:5]
+
+names(keywords3)<- c("Palabras Clave Autores", "Artículos", "Palabras Clave ISI", "Artículos")
+
+library(tidyverse)
+library(kableExtra)
+
+keywords3 %>%
+knitr::kable(keywords3, format = "latex", booktabs = T, escape=F,row.names = FALSE,
+             caption = "\\label{keywordslinea2} Palabras clave en la literatura de Eye-Tracking y Marketing")  %>% 
+      kable_styling(latex_options = c("scale_down")) %>%
+      column_spec(1, width = "8em") %>%
+      column_spec(2, width = "4em") %>%
+      column_spec(3, width = "8em") %>%
+      column_spec(4, width = "4em") 
+
+
+```
+
+Ahora bien, ¿cómo se relacionan esos términos clave entre sí?. En la Figura \ref{networklinea2} se representa la Red de co-ocurrencia de los términos clave, representando asociaciones entre términos que aparecen frecuentemente juntos en un mismo artículo [@Aria2017].
+
+
+```{r networklinea2,fig.fullwidth=TRUE, fig.cap="\\label{networklinea2} Red de Asociación entre Términos Clave. Línea 3",fig.align='center', out.width='100%'}
+
+knitr::include_graphics("figures/plotLinea2Keywords.pdf")
+
+```
+
+En esta Red, nuestra línea de investigación se sitúa en la parte izquierda de la Red, relacionada con las actitudes, respuestas y preferencias de los consumidores a los estímulos en Internet.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faFileTextO{}} *Trabajo en Revisión en esta línea:*
+
+- *Cortiñas, M., Cabeza, R., Chocarro, R., & Villanueva, A. Attention to Online Channels across the Path to Purchase: An Eye-Tracking
+Study.* Electronic Commerce Research and Applications. Primera revisión
+
+
+```
+
+En esta línea, ya hemos elaborado un primer trabajo, relacionado con los patrones de exploración de los sitios de comercio electrónico. Cuando los usuarios visitan un sitio web, su comportamiento y percepciones dependen del objetivo que quieran conseguir [@Leuthold2011]. Por ejemplo, en algunos casos, el usuario de un sitio web puede no tener tareas específicas que cumplir, y pueden estar simplemente explorado un sitio web. En otros casos, los usuarios saben exactamente lo que quieren y el objetivo puede ser relativamente simple, como conocer el precio de un producto o comprar una referencia en concreto. Sin embargo, habrá ocasiones en que los usuarios requerirán, por ejemplo, buscar toda la información necesaria para tomar una decisión de compra lo que puede considerarse una tarea más compleja. @Leuthold2011 confirmaron que las tareas complejas son más duras de resolver que las tareas simples y los participantes de su estudio fueron significativamente más rápidos en hacer el primer click para cargar una nueva página, necesitaban menor fijación de los ojos para hacerlo e hicieron clicks más correctos cuando resolvían tareas simples en comparación con tareas complejas.
+
+```{r varufino,  fig.margin = TRUE, fig.cap="\\label{varufino} Tienda online generada para Zapatillas"}
+
+knitr::include_graphics("images/varufino.png")
+
+```
+
+Así, el objetivo de este trabajo es analizar específicamente cómo afecta la etapa del proceso de compra en la que está inmerso el consumidor, un factor de los denominados top-down [@Wedel2015], en los procesos de atención en entornos digitales mediante técnicas observacionales. Más específicamente: 
+
+1. El efecto de la etapa del proceso de compra en los elementos de interés de un sitio web: ¿influye la etapa en el proceso de compra en las áreas del sitio web a las que se les presta más atención? ¿qué áreas del sitio tienen atención preferente en cada caso?
+2. El efecto de la etapa del proceso de compra en el proceso de exploración: ¿cuál es el patrón de exploración del sitio web? ¿se procesa la información en un sitio web de manera diferente en función de la tarea?
+3. El efecto de la etapa del proceso de compra en el tiempo de exploración: ¿cuál es el tiempo necesario hasta que se complete la tarea?¿se necesita un tiempo mayor y se realizan scanpaths más complejos en tareas más complejas que en las tareas más simples?
+
+Para analizar estas preguntas, utilizamos un diseño experimental.  En este diseño, el factor de estudio, la etapa en el proceso de compra, incluye tres niveles diferentes: etapa precompra (selección de alternativa), etapa de compra (localización de alternativa elegida e inclusión en el carro de la compra) y etapa postcompra (búsqueda de información sobre el estado de un pedido). Además, introducimos una tarea adicional no directamente orientada a la compra que actúe como nivel de control. En esta tarea el objetivo propuesto es la evaluación del sitio web. 
+
+Las variables dependientes de interés son el tiempo empleado en la tarea y la atención a cada zona del sitio web. Para medir ambas variables planteamos técnicas observacionales en lugar de declarativas. El tiempo empleado en la tarea se mide mediante una función embebida en los sitios web que recoge el tiempo desde el mismo momento en que finaliza la carga de la página hasta que el individuo hace su primer click, lo que indica la finalización de la tarea.  Para analizar la atención al sitio web utilizamos una herramienta de eye-tracking. Así, incluimos como indicadores del proceso de atención, además del ya mencionado tiempo invertido en la tarea, el número de fijaciones de mirada en cada área de interés (la importancia relativa del área) y las transiciones entre las AOIs (el patrón de exploración). A partir de las transiciones de cada individuo entre las zonas en cada tarea se construyen las matrices de transición individuales para las AOIs.
+
+
+Para implementar este diseño, se crean cuatro tiendas web falsas de comercio de estas cuatro categorías. El uso de sitios simulados no es nuevo en este tipo de estudios [@Wang2014; @Leuthold2011] y, aunque presenta la desventaja de tener un menor nivel de realismo, permite controlar de manera precisa otros factores que puedan afectar a los resultados del estudio. Se utiliza una misma plantilla para los cuatro establecimientos en la que se cambian los colores, pero no el resto de elementos para controlar otros posibles factores de sesgos. Se utiliza una plantilla que resulte natural dentro de un sitio de comercio electrónico y que permita al mismo tiempo ubicar de forma no ambigua las tres áreas de interés (AOI). Estas áreas se ubican en los sitios que resultan más naturales en un gran número de áreas geográficas [@Bernard2004]. Así, la primera área de interés, el encabezado con la información corporativa, se sitúa en la parte central superior y tiene un menú adicional con la información de contacto, el botón de "Home" a la izquierda y el carrito de la compra a la derecha. La segunda área de interés, el área de productos ocupa la parte central debajo del encabezado y se presenta como escaparate con la fotografía de los artículos y debajo el precio y el botón de añadir al carro. La tercera área de interés, el área de servicios, se sitúa en la parte izquierda debajo del encabezado.
+
+
+```{r resultados,  fig.margin = TRUE, fig.cap="\\label{resultados} Ejemplo de resultados: patrón de atención para tarea de búsqueda"}
+
+knitr::include_graphics("images/agg_heatmap_task_2.png")
+
+```
+
+Además de construir los sitios web, el diseño experimental se implementa en una plataforma online ([Qualtrics](https://www.qualtrics.com/es/)). Se codifica un cuestionario online en el que para cada visitante se genera una asignación aleatoria de las cuatro tareas a las cuatro categorías, manteniendo cuotas tarea/categoría equilibradas. Este cuestionario está enlazado con las cuatro tiendas online de modo que cuando se presenta la tarea asociada a una determinada categoría y se pulsa el enlace para abrir la tienda, se registra el tiempo que se emplea en el establecimiento hasta hacer el primer click y una vez completado este click se vuelve al cuestionario. Antes de cada tarea se recogen medidas sobre la frecuencia de compra online en cada categoría y después de cada tarea se recogen datos sobre implicación con la categoría e importancia de los atributos. 
+
+Los participantes en el estudio fueron reclutados entre los estudiantes de cuarto curso del grado de administración y dirección de empresas. En el experimento participaron 58 personas que fueron invitados a acudir al laboratorio donde se recogieron los datos. La duración total de la recogida de información en cada caso fue aproximadamente de unos 15 minutos por persona incluyendo la calibración del instrumento de medida, la realización del cuestionario y las tareas asociadas. Un investigador acompañó a los usuarios durante todo el proceso. 
+
+El análisis de los datos combinados de los tiempos de realización de tareas, los datos del eye-tracker y los datos declarativos obtenidos del cuestionario permite extraer conclusiones sobre cuál es el patrón perceptual de una página de comercio electrónico y el tiempo y esfuerzo necesario para explorarla además de contrastar cómo cambian estos patrones en función de la tarea a abordar. 
+
+Dado que el diseño del experimento es intra-sujeto y cada individuo ha realizado cuatro tareas, es necesario utilizar un método de análisis que tenga en cuenta esta correlación intra-sujetos, por lo que utilizamos en la estimación modelos de regresión y modelos logit con efectos fijos por individuo [@carey2001mixed]. 
+
+Nuestro análisis muestra cómo, cuando el objetivo es la exploración del sitio web, se necesita más tiempo, se presta atención a todas las áreas y se producen más transiciones entre áreas. Cuando el objetivo es la evaluación de alternativas, el tiempo empleado también es mayor, pero la atención se concentra en mayor medida en el área más relevante, el área de productos. Con respecto a la tarea de compra, una vez definida la alternativa a comprar, el patrón de atención es similar al de la búsqueda de información, aunque el tiempo empleado es menor, dado que esta tarea tiene una complejidad menor. Por último, en la tarea relacionada con la postcompra, como se espera, el tiempo empleado es bajo y la atención se focaliza en el menú relevante, pero las transiciones en este caso son mayores, las otras zonas contienen estímulos que atraen la atención del individuo. 
+
+Este trabajo está actualmente en revisión en la revista **Electronic Commerce Research and Applications**.
+
+En esta línea, en los siguientes trabajos, pretendemos profundizar en la atención a los distintos estímulos más allá de estas tres áreas de interés (precios, marca...). Además, en este caso no hemos encontrado suficientes diferencias en cuanto a los efectos relacionados con la comodidad con la búsqueda de información y la compra online, quizás por la homogeneidad de la muestra en este aspecto, por lo que ésta es otra área de interés para las próximas investigaciones. Por último, otra línea de investigación futura son las diferencias en estos efectos en función de características de la categoría como su complejidad o el hecho de que implique la evaluación de atributos sensoriales o no sensoriales [@Trijp1996]. Pese a que nuestro diseño experimental no está diseñado para medir efectos de la categoría, parece haber diferencias en función del interés que generan, por lo que ésta puede ser también una línea de investigación fructífera.
+
+
+
+

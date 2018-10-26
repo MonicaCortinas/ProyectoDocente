@@ -1,0 +1,57 @@
+---
+output:
+  tufte::tufte_handout:
+    latex_engine: xelatex
+---
+
+`r newthought('El presente proyecto docente e investigador')` se ha elaborado para la participación en el concurso de acceso al cuerpo de Titular de Universidad en la Universidad Pública de Navarra,  Resolución número 12154 de 16 de agosto de 2018, de la Universidad Pública de Navarra, por la que se convoca concurso de acceso a plazas de cuerpos docentes universitarios, plaza número 2391, tomando como referencia la normativa en el Reglamento A6/2009^[Reglamento para los Concursos de Acceso a Cuerpos de Funcionarios Docentes Universitarios de la Universidad Pública de Navarra modificado por A26/2009 y por A28/2011 (B.O.N. de 9 de junio de 2011): https://www.unavarra.es/digitalAssets/115/115253_100000Reglamento-accesomodificado.pdf]. 
+
+En el mencionado Reglamento se indica que el Proyecto docente e investigador:  
+
+\noindent\rule{2cm}{0.4pt}
+
+> "... incluirá el programa de una de las materias o especialidades correspondiente a la plaza de que se trate ... que el candidato se propone desarrollar de serle adjudicada la plaza a la que concursa."
+
+
+Sin embargo, no se incluyen especificaciones adicionales con respecto al contenido del proyecto. La Ley Orgánica 4/2007^[Ley Orgánica 4/2007 de 12 de abril, de Universidades: https://www.unavarra.es/digitalAssets/115/115118_100000LOUmodificada-de-Universidades.pdf] dice en su artículo 62.4:
+
+\noindent\rule{2cm}{0.4pt}
+
+> "4. Igualmente, los estatutos regularán el procedimiento que ha de regir en los concursos, que deberá valorar, en todo caso, el historial académico, docente e investigador del candidato o candidata, su proyecto docente e investigador, así como contrastar sus capacidades para la exposición y debate en la correspondiente materia o especialidad en sesión pública"
+
+
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faAngleDoubleRight{}} *Los Estatutos de cada Universidad regularán el procedimiento que ha de regir en los concursos, que deberá valorar, en todo caso, el historial académico, docente e investigador del candidato o candidata, su proyecto docente e investigador, así como contrastar sus capacidades para la exposición y debate ante la Comisión en la correspondiente materia o especialidad en sesión pública.*  
+      
+```
+
+Así mismo, el Real Decreto 1313/2007, de 5 de octubre, por el que se regula el régimen de los concursos de acceso a cuerpos docentes universitarios fija este contenido de forma muy similar. De esta forma, el marco normativo no especifica los requisitos a cumplir en cuanto a contenidos y estructura que debe incluir este Proyecto Docente. 
+
+Así pues, se han considerado algunas referencias adicionales para orientar el contenido de este proyecto, como las indicaciones que se marcaban en las extintas Pruebas de Habilitación Nacional y algunas referencias adicionales como @Segovia2009, @marcelo2001proyecto y @hernandez1989disenar.
+
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faAngleDoubleRight{}} *La normativa de las pruebas de habilitación nacional indicaba que el Proyecto Docente debe ser una propuesta personal y original que incluya el programa de una o varias asignaturas de las **materias troncales** entre las asignadas al área de conocimiento en los planes de estudio.*
+      
+```
+
+Como conclusión de esta revisión, este proyecto docente e investigador se plantea como una propuesta personal y realista de desarrollo docente de una materia, como indica el reglamento de la Universidad Pública de Navarra y, más especificamente, de una materia básica en el área de conocimiento. Para cumplir con esta definición, he seleccionado la asignatura **Dirección Comercial I** del título de **Graduado/a en Administración de Empresas** que se imparte en la Universidad Pública de Navarra. Esta asignatura se incluye en la materia **Fundamentos de Marketing** que se imparte dividida en tres asignaturas distintas: Dirección Comercial I, Dirección Comercial II e Investigación de Mercados. 
+
+En este Proyecto Docente e Investigador toma, por tanto como punto de partida el Plan de Estudios de la Titulación^[https://bit.ly/2w3pjKU], incluída la definición de la materia y sus competencias, la Guía de la Asignatura I^[http://www.unavarra.es/ficha-asignaturaDOA?languageId=100000&codPlan=172&codAsig=172402] y la Guía de la Asignatura II^[http://www.unavarra.es/ficha-asignaturaDOA?languageId=100000&codPlan=172&codAsig=172502].
+
+Además, se incluye en el mismo documento el proyecto investigador, ya que como se indica en la LOU, no es posible separar la docencia universitaria de la actividad investigadora.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *La investigación científica es fundamento esencial de la docencia y una herramienta primordial para el desarrollo social a través de la transferencia de sus resultados a la sociedad. Como tal, constituye una función esencial de la universidad, que deriva de su papel clave en la generación de conocimiento y de su capacidad de estimular y generar pensamiento crítico, clave de todo proceso científico.*
+- LOU, Art. 39.1 - 
+      
+```
+
+Además, incluye así mismo una visión personal sobre el marco de referencia en el que se desarrolla esta docencia e investigación^[Capítulo \ref{capitulo1}], el enfoque tanto epistemológico^[Capítulo \ref{capitulo2}] como metodológico^[Capítulo \ref{capitulo3}] y la definición docente en los contenidos, selección de objetivos, actividades a desarrollar, metodología de evaluación y temporalización^[Capítulo \ref{capitulo4}]. Por último, se desarrolla la planificación de líneas de investigación enmarcadas en la investigación realizada hasta el momento.^[Capítulo \ref{capitulo5}] Además, he incluído en el Anexo I una propuesta de guía de asignatura que incluye otros aspectos que deben ser conocidos por los estudiantes como la política de abandono de la asignatura, recomendaciones para el uso de material de grabación y el cronograma detallado y en el Anexo II la guía del profesor que incluye el detalle para implementar todas las actividades propuestas. 
+
+El proceso de elaboración de este Proyecto Docente e Investigador ha supuesto una oportunidad de reflexión sobre la actividad universitaria en esta área de conocimiento que considero ha resultado muy enriquecedora para mi. Así, espero que este proyecto pueda ser también de interés para la Comisión de Evaluación.
+
+
+
+
+

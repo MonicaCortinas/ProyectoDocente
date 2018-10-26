@@ -1,0 +1,825 @@
+---
+documentclass: book
+classoption: a4paper
+#classoption: a4paper,oneside
+#bibliography: bib/library.bib
+bibliography: "D:/Dropbox/2_ Investigacion/4_Referencias/library.bib"
+#csl: methods-in-ecology-and-evolution.csl
+csl: spanish-journal-of-marketing-esic.csl
+link-citations: yes
+fontsize: 12pt # 10pt,11pt
+geometry: margin = 2.5cm
+output: 
+  pdf_document: 
+    keep_tex: yes
+    number_sections: yes
+#    toc: yes
+    fig_caption: yes
+
+---
+
+
+
+```{r include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(fig.path = 'figures/',
+                      echo = FALSE, warning = FALSE, message = FALSE,
+                      fig.align="center",out.width="95%",
+                      cache=FALSE)
+
+```
+
+
+<!-- \setcounter{chapter}{3} -->
+<!-- \setcounter{chapter}{3} escribir 2 para capítulo 3  -->
+<!-- \pagenumbering{arabic} -->
+
+# Metodología Docente  \label{capitulo3}
+
+`r newthought('En este capítulo abordamos las metodologías docentes')` en el ámbito universitario. Con este fín, entendiendo la docencia como una actividad humana organizada que debe planificarse, decidimos adoptar un proceso de planificación similar al empleado en la actividad empresarial [@nicastro1994cooperative]. 
+
+```{r proceso, fig.margin = TRUE, fig.cap="\\label{proceso} El proceso de planificación para la docencia en marketing. Adaptado a partir de Nicastro y Jones (1994)",fig.align='center'}
+
+knitr::include_graphics("images/procesodocente_vert.pdf")
+
+```
+
+Así, la figura \ref{proceso} representa las etapas en la planificación docente. Como muestra la figura, la primera etapa en la planificación de la docencia universitaria es el análisis, definiendo la visión del proceso enseñanza/aprendizaje, y considerando el contexto en que desempeñará las tareas docentes^[\textcolor{Red}{\faAngleDoubleRight{}} Estos aspectos han sido el foco de los dos capítulos anteriores]. Tras esta primera etapa, se estará en disposición de fijar los objetivos docentes. Posteriormente desarrollará las estrategias y acciones docentes, que se deberán concretar en los programas o guías de las asignaturas a impartir. La evaluación del alumno y la evaluación del propio docente, servirán como instrumento de control de la actividad docente y como medio para detectar desviaciones de los objetivos. En este capítulo analizamos los aspectos a tener en cuenta en cada una de estas etapas.
+
+## El proceso Enseñanza-Aprendizaje
+
+La docencia universitaria es un proceso en el que podemos distinguir, por un lado, el proceso de enseñanza, en el que el principal implicado es el docente, por otro lado, el proceso de aprendizaje, protagonizado por el alumno y, por último, el proceso de comunicación, que surge de la interrelación de ambos pero que sólo tiene sentido si es considerado como un todo [@garrison2000].
+
+El análisis del proceso enseñanza-aprendizaje exige considerar el conjunto de oportunidades y condiciones que, organizadas de manera sistemática e intencional, se ofrecen a los estudiantes, que promueven directamente el aprendizaje o propician que ocurra [@DeMiguel2005]. En la Tabla \ref{modelos} se muestran los elementos característicos de tres modelos fundamentales en el proceso enseñanza-aprendizaje: el modelo de transmisión-recepción, el modelo de descubrimiento y el modelo constructivista.
+
+En los últimos años se ha producido un cambio en el modelo predominante, desde una concepción más próxima al modelo de transmision-recepción hacia una docencia más centrada en el alumnado en el marco de los modelos constructivistas y de descubrimiento, con un aprendizaje basado en competencias [@lopez2010proceso]. Así, el Espacio Europeo de Eduación Superior promovió una serie de cambios en la metodología docente que afectaron necesariamente al planteamiento docente universitario a partir de ese momento [@Lopez2017].
+
+Aún y todo, estos modelos no deben ser considerados como modelos de enseñanza enfrentados. Cada uno de ellos puede ser complementario con otros en la instrucción de una materia. De hecho, algunos autores son muy críticos con la idea de que los modelos constructivistas son netamente superiores al modelo transmisión-recepción en la enseñanza superior. Por ejemplo, @Kirschner2006 sugieren que los métodos de aprendizaje autónomo son mucho menos eficaces para aprender disciplinas nuevas que el aprendizaje guiado y estructurado por el profesor, ya que este aprendizaje guiado es la forma más eficaz de adquirir conocimientos en campos desconocidos. 
+
+
+```{r}
+tabla <- data.frame(stringsAsFactors=FALSE,
+       Fundamentos = c("Fundamentos Psicológicos",
+                  "Fundamentos Epistemológicos",
+                  "Aprender es...",
+                  "Enseñar es...",
+                  "Elementos",
+                  "Sistema Social"),
+     Transmision = c("El estudiante es una página en blanco.\n El conocimiento se transmite ya elaborado.", 
+                        "Correspondencia Ciencia y realidad, la ciencia es un cuerpo cerrado de conocimiento.", 
+                        "Asimilar contenidos.",
+                        "Exposición de contenidos.",
+                        "Programar es listar contenidos, el profesor sólo debe conocer la materia.\n  Lección magistral, experiencias prácticas como ilustraciones de la teoría.\n  Realización de tareas y actividades de forma individual, libro de texto como material de instrucción.",
+                         "El alumno sólo actúa a petición del profesor, profesor como transmisor y autoridad.\n  Poca interacción entre profesor y alumno.\n  Se evalúan el aprendizaje de hechos y conceptos y el grado de aproximación a las del profesor o texto."),
+     Descubrir= c("El estudiante aprende lo que descubre. \n El conocimiento se construye activamente.", 
+                        "La Ciencia se caracteriza por el método científico, los conceptos se descubren por inducción.", 
+                        "Dominar procesos del método científico.",
+                        "Coordinación de actividades experimentales.",
+                        "Intereses de alumnos prioritarios, en el programa se recogen destrezas cognitivas y procesos. \n  El profesor debe conocer la materia y técnicas psicopedagógicas, métodos didácticos cooperativos.\n  Se precisan recursos materiales, libro de texto y guiones de trabajo.",
+                         "Profesor como coordinador, Interacción alumno-profesor y alumno-alumno. \n Se evalúa la capacidad de utilizar los conocimientos adquiridos en nuevas situaciones."),
+     Construc= c("Aprendizaje significativo.\n El conocimiento se construye personalmente.", 
+                  "La Ciencia es la interpretación de la realidad mediante modelos, experimentación condicionada por la teoría.", 
+                  "Reconstruir conocimientos.",
+                  "Planificar y ordenar actividades",
+                  "Las ideas del alumno, el punto de partida.\n El programa es un proyecto de actividades.\n El profesor debe conocer la materia y las técnicas psicopedagógicas, Métodos didácticos cooperativo,  Material: Libro de texto, guión de trabajo y guías para el profesorado.",
+                         "El alumno es responsable del aprendizaje.\n Profesor evalúa y dirige las actividades, interacción alumno-alumno.\n Se evalúan conceptos y las destrezas, también autoevaluación del aprendizaje."))
+
+names(tabla)<- c(" ", "Modelo de transmisión-recepción", "Modelo de descubrimiento", "Modelo constructivista")
+library(tidyverse)
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, format = "latex",  longtable = T, booktabs = T, escape=F,
+             caption = "\\label{modelos} Principales Modelos Proceso Enseñanza-Aprendizaje")  %>% 
+      kable_styling(latex_options = c("repeat_header"), repeat_header_text = "(cont.)",font_size = 8) %>%
+      column_spec(1, width = "7em") %>%
+      column_spec(2:4, width = "16em") %>%
+      landscape() %>%
+      footnote(general = c("Adaptado de González, Ibáñez, Casalí, López y Novak (2007)"),
+               general_title="Fuente:")
+
+```
+
+
+
+Por tanto, el enfoque del proceso enseñanza-aprendizaje debe combinar elementos de los tres enfoques didácticos e incorporar los principales cambios en el nuevo contexto educativo, que, según @Lopez2017, son los siguientes :
+
+1. Reconsideración del plan de enseñanza para el trabajo durante el curso 
+2. Ampliación y mayor especificación de la planificación 
+3. Reformulación de los objetivos de enseñanza y aprendizaje 
+4. Mayor especificación de estos objetivos 
+5. Especificación detallada de las actividades a desarrollar por el alumno 
+6. Incorporación de tecnologías de la información y la comunicación (TIC) 
+7. Referencia clara a los sistemas de evaluación
+
+Todas estas tendencias apuntan también en una misma dirección: la corresponsabilidad de alumnado y profesorado en las dinámicas de enseñanza y aprendizaje [@sanchezbascones2011]. En el nuevo EEES los roles de docente y estudiante ya no se conciben como jerarquizados y unidireccionales como en el modelo de transmisión-recepción, sino como complementarios en la línea de los modelos de descrubrimiento y constructivistas. Así, debe existir un marco de diálogo en que el profesorado debe ser capaz de responder a las demandas y necesidades de sus estudiantes, adaptando su práctica según la evolución de los procesos y resultados de cada curso. Así mismo, el alumnado tiene el reto de convertirse en agente dentro de su propio aprendizaje, ganando en autonomía a medida que va superando créditos y asignaturas, hasta convertirse en un profesional con las necesarias habilidades. 
+
+## Objetivos docentes
+
+La formulación explícita de objetivos es una tarea fundamental en el proceso de planificación docente. Permite al docente una elección coherente de las estrategias didácticas a seguir, así como de los medios a utilizar, le facilita la elección de los contenidos de los temas, y del nivel al que deben de ser tratados, le obliga a programar de una forma más precisa las actividades a realizar, le ofrece las bases para la elección del sistema de evaluación más adecuado, constituye una base para la mejora constante del proceso de enseñanza-aprendizaje y facilita la comunicación entre profesores y alumnos [@Navarro2000]. Así, la fijación de objetivos debe ser siempre previa a la elección de métodos docentes o mecanismos de evaluación en la enseñanza de materias complejas [@merrienboer2017].
+
+Aunque existen diversas clasificaciones de los objetivos cognitivos, la taxonomía de Bloom es la que se ha utilizado en mayor medida [@bloom1956taxonomy]. En la Figura \ref{bloom} se muestran los seis niveles jerárquicos en esta taxonomía, desde los objetivos más simples hasta los más complejos, así como los verbos que típicamente pueden utilizarse al enunciar estos objetivos.
+
+```{r bloom, fig.margin = TRUE, fig.cap="\\label{bloom} Taxonomía de Objetivos Cognitivos. Adaptado a partir de Bloom (1956)",fig.align='center'}
+
+knitr::include_graphics("images/bloom.pdf")
+
+```
+
+@anderson2001taxonomy, en su libro *A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom's Taxonomy of Educational Objectives* facilitan la implementación de la taxonomía, haciendo la clasificación bidimensional, configurando una dimensión de conocimiento y una dimensión cognitiva.  Esta taxonomía de @anderson2001taxonomy se presenta en la Tabla \ref{Anderson}. 
+
+Así, cada objetivo de aprendizaje puede clasificarse en 24 categorías distintas, en función de la combinación de estas dos dimensiones. Esta categorización es útil, no solo para fijar los objetivos de aprendizaje, sino también para seleccionar la metodología más adecuada en cada caso, como vamos a ver en el apartado \ref{metodo}. Estrategias y Métodos Docentes
+
+
+```{r}
+tabla <- data.frame(stringsAsFactors=FALSE,
+       Conocimiento = c("A. Conocimiento sobre Hechos",
+                  "B. Conocimiento Conceptual",
+                  "C. Conocimiento Procedimental",
+                  "D. Conocimiento MetaCognitivo"),
+     Recordar = c(" ", 
+                  " ", 
+                  " ",
+                  " "),
+     Comprender= c(" ", 
+                  " ", 
+                  " ",
+                  " "),
+     Aplicar= c(" ", 
+                  " ", 
+                  " ",
+                  " "),
+      Analizar= c(" ", 
+                  " ", 
+                  " ",
+                  " "),
+      Evaluar= c(" ", 
+                  " ", 
+                  " ",
+                  " "),
+     Crear= c(" ", 
+                  " ", 
+                  " ",
+                  " "))
+
+names(tabla)<- c("Conocimiento", "1.Recordar", "2. Comprender", "3. Aplicar", "4. Analizar",
+                 "5. Evaluar", "6. Crear")
+knitr::kable(tabla, row.names = FALSE, format = "latex",  longtable = T, booktabs = T, 
+             caption = "\\label{Anderson} A Taxonomy for Learning, Teaching and Assessing")  %>% 
+      kable_styling(font_size =7) %>%
+      column_spec(1, width = "8em") %>%
+      add_header_above(c(" " = 1, "Proceso Cognitivo" = 6)) %>%
+      footnote(general = c("Adaptado de Anderson y Krathwoohl, 2001"),
+               general_title="Fuente:")
+
+```
+
+## Estrategias y métodos docentes \label{metodo}
+
+Una vez fijados los objetivos docentes, el profesor debe establecer los pasos para conseguirlos. Para ello, debe seleccionar la estrategia docente, entendida como el conjunto de metodologías docentes que va a utilizar para conseguir los objetivos. Para ello necesitamos conocer cuáles son estos métodos, sus ventajas e inconvenientes^[Existen otras posibilidades como son las conferencias y seminarios, visitas a empresas o clases exclusivamente de ejercicios. Consideramos estos métodos como actividades puntuales que son un complemento útil para las metodologías generales que se incluyen en la tabla.]. A continuación, sin ánimo de exhaustividad, vamos a comentar las metodologías docentes más utilizadas en la enseñanza superior en España, que permiten una adecuada combinación de enfoques didácticos para abordar distintos objetivos. Estos métodos se recogen, según el número de alumnos a los que van dirigidos, en la tabla \ref{metodosdocentes}.
+
+
+```{r}
+tabla <- data.frame(stringsAsFactors=FALSE,
+       Grupos = c("Clase Magistral",
+                  "Flipped Classroom",
+                  " "),
+     Reducidos = c("Trabajo por Proyectos", 
+                  "El método del caso",
+                  "Simulaciones de Empresa"),
+     Individuales= c("Tutorías", 
+                  "Lectura y discusión de textos",
+                  " "))
+
+names(tabla)<- c("Métodos para grupos", "Métodos para grupos reducidos", "Métodos individuales")
+knitr::kable(tabla, row.names = FALSE, format = "latex",  longtable = F, booktabs = T, 
+             caption = "\\label{metodosdocentes} Métodos Didácticos")  %>% 
+      kable_styling(latex_options = c("scale_down")) %>%
+      footnote(general = c("Elaboración propia"),
+               general_title="Fuente:")
+
+```
+
+A continuación se van a describir en mayor profundidad cada una de estos métodos.
+
+### Métodos para grupos grandes \label{grandes}
+
+\vspace{5mm} 
+
+**La clase magistral**
+
+\vspace{2mm}
+
+La lección magistral, es el método docente utilizado por excelencia en la educación superior. Podemos definir la clase magistral como la exposición continua de un tema por parte del profesor, con la intención de que los alumnos comprendan, o al menos adquieran información, sobre dicho tema. En ella, los estudiantes pueden tener la opción de hacer preguntas o participar en pequeñas discusiones, aunque, por lo general, se limitan a atender las explicaciones dadas y tomar apuntes. 
+
+```{marginfigure, echo=TRUE}
+
+*Como ventajas destacables de la clase magistral, podemos encontrar:* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faThumbsOUp{}} *Su eficacia para hacer llegar la enseñanza a un mayor número de alumnos.*
+
+\textcolor{Red}{\faThumbsOUp{}} *La posibilidad de transmitir numerosos conocimientos en un espacio reducido de tiempo.*
+
+\textcolor{Red}{\faThumbsOUp{}} *Permite introducir temas de estudio no incluidos en libros de texto.*
+
+\textcolor{Red}{\faThumbsOUp{}} *El profesor puede ofrecer una visión más equilibrada y equitativa que la presentada en los libros.*
+
+\textcolor{Red}{\faThumbsOUp{}} *Ofrece al estudiante la oportunidad de ser motivados por quienes son expertos en el conocimiento de una determinada materia.*
+
+\textcolor{Red}{\faThumbsOUp{}} *Es perfectamente compatible con otras técnicas de enseñanza*
+
+\vspace{2mm}
+```
+
+Este método educativo ha sido muy criticado, especialmente por los estudiantes, dado que, en la mayor parte de los casos, el alumno adquiere un papel pasivo, reduciéndose el desarrollo de la clase a una mera transmisión de conocimientos por parte del profesor, al contrario de lo que ocurre en otros métodos docentes (realización de trabajos, discusión de lecturas…), en los que el alumnado participa de una forma más activa.
+
+La lección magistral exige una exhaustiva preparación, para lo que es imprescindible un profundo conocimiento del tema, así como una adecuada presentación.
+Para su preparación, el docente deberá de tener en cuenta cuáles son los objetivos de la misma, empleando una adecuada introducción y un claro desarrollo; el tiempo de duración de la clase, programando las ideas a exponer en cada momento de la misma, y adecuando las lecciones a dicho tiempo; introducir breves sintetizaciones para enlazar distintas sesiones así como preparar anticipadamente los medios materiales o audiovisuales.
+
+```{marginfigure, echo=TRUE}
+
+*Como desventajas o puntos débiles de la clase magistral, podemos encontrar:*
+      
+\vspace{2mm}
+
+\textcolor{Red}{\faThumbsODown{}} *Fomenta la actitud pasiva de los alumnos, por lo que se les debe motivar continuamente, y así conseguir mantener su atención.*
+
+\textcolor{Red}{\faThumbsODown{}} *Pueden producirse efectos negativos en el alumno, tales como falta de interés, absentismo o antagonismo hacia el profesor, en el caso de que éste sea un mal expositor.*
+
+\textcolor{Red}{\faThumbsODown{}} *Se crea una falta de contacto entre profesor y alumno.*
+
+```
+
+En lo relativo a la exposición, ésta ha de ser ordenada y clara. De acuerdo con [@Amat2010], las clases en las que se sigue la lección magistral se estructuran en tres partes: introducción o presentación, exposición o desarrollo del tema y conclusiones.
+
+En la primera parte, introducción o presentación, se justifica el tema, dando una visión general del mismo, estableciendo relaciones con los conocimientos adquiridos en sesiones anteriores. 
+
+La segunda parte, exposición o desarrollo, es donde se expone la estructura principal del tema, detallando los conceptos y aspectos más importantes, intentando la participación del alumno mediante reflexiones favorables o contrarias a los planteamientos explicados. La parte final, conclusiones, trata de hacer un resumen de todo lo expuesto en la sesión.
+
+Generalmente, durante el desarrollo de estas clases, el alumno se limita a tomar por escrito lo expuesto en las mismas. No obstante, el alumnado suele solicitar un texto sobre el tema, realizado por el profesor, y que se adapte de una forma exacta a lo expuesto en clase. Esto puede facilitar el aprendizaje del alumno, ya que le ayuda a disponer de un guión de estudio. Pero, por otra parte, incentiva el absentismo en las aulas, propiciando, además, el que los alumnos desechen la lectura de otros textos sobre el tema, centrándose en el estudio de los apuntes facilitados como único contenido exigible en el examen. Por todo ello, es sugerible la realización de un manual-guión, pero, recalcando a los alumnos que éste no se adecua totalmente a lo expuesto en la asignatura, por lo que dicho manual-guión se complementará con una bibliografía de referencia. Así los estudiantes se familiarizan con el manejo de distintos textos sobre una misma asignatura, pudiendo comprobar la existencia de distintos puntos de vista sobre la misma.
+
+Pese a ser el método docente más empleado, hay que indicar que no es perfecto, por lo que sólo será útil si el profesor es consciente de los efectos que sus explicaciones producen en los alumnos, realizando las pausas o distensiones necesarias para sacar el máximo aprovechamiento de estas clases. Además, este método debe alternarse y complementarse con otros métodos docentes. Aún así, resulta casi insustituible para transmitir un volumen de información sintético, selecto y ordenado, y dadas las posibilidades de introducir fácilmente un tema a un gran número de alumnos, adecuadamente combinada con otras metodologías docentes más participativas, constituye un pilar fundamental sobre el que edificar el proceso de enseñanza-aprendizaje. Además, la utilización de medios audiovisuales a la hora de impartir una lección magistral puede facilitar la comunicación y hacer la exposición oral más atractiva. 
+
+
+\vspace{5mm} 
+
+**Clase invertida o *flipped classroom***
+
+\vspace{2mm}
+
+Según @martincalvillo2017, la metodología conocida como Flipped Classroom (FC) consiste en trasladar determinados procesos de aprendizaje como las explicaciones y la transmisión de contenidos a casa, fundamentalmente a través de vídeos, presentaciones, audios, lecturas, etc., mientras que el trabajo que se realizaba tradicionalmente en casa se realiza en el aula bajo la supervisión del profesorado.
+
+Así, la Flipped Learning Network^[https://flippedlearning.org/] la define como:
+
+\noindent\rule{2cm}{0.4pt}
+
+> \faQuoteLeft{} *La enseñanza inversa es un enfoque pedagógico en el que la instrucción directa se desplaza del espacio del aprendizaje en grupo al espacio del aprendizaje individual, como resultado de ello, el espacio del grupo se transforma en un ambiente de aprendizaje dinámico e interactivo, en el que el educador guía a los estudiantes mientras estos aplican los conceptos y se implican creativamente en la materia.*
+
+\hfill{Flipped Learning Network, 2014}
+
+\vspace{2mm}
+
+
+```{marginfigure, echo=TRUE}
+
+*Ventajas del Flipped Learning:*
+      
+\vspace{2mm}
+
+\textcolor{Red}{\faThumbsOUp{}} *El alumnado obtiene mayores logros. *
+
+\textcolor{Red}{\faThumbsOUp{}} *Hay una mayor participación de los estudiantes. *
+
+\textcolor{Red}{\faThumbsOUp{}} *Se produce una mejora de las actitudes hacia el aprendizaje y la enseñanza en general (escuela, profesorado, etc.).* 
+
+\textcolor{Red}{\faThumbsOUp{}} *Genera una mayor satisfacción del profesorado implicado en el modelo.* 
+
+\textcolor{Red}{\faThumbsOUp{}} *Produce una mayor interacción del profesorado con los estudiantes.*
+
+\vspace{2mm}
+
+*\hfill{- Calvillo y Martín, 2017}*
+```
+
+En esta metodología, no basta con que los estudiantes vean vídeos o realicen lecturas en casa, sino que lo importante es que se aproveche el tiempo de clase para hacer actividades que de otra forma no hubieran tenido lugar, para que tenga lugar un aprendizaje profundo y significativo [@Tucker2012]. La evidencia recogida hasta el momento muestra resultados positivos en cuanto a la recepción de este método por los estudiantes pero sin embargo, no existen hasta el momento evidencia sólida en la literatura de diferencias significaticas en el aprendizaje mediante esta metodología [@Lowell2013].
+
+En este modelo, el problema puede surgir si no se toma en consideración que tanto el docente como el alumno han de asumir roles distintos a los que han venido desempeñando tradicionalmente en el aula. ¿Cuáles son estos nuevos roles? Para el docente, el cambio supone desplazarse desde el lugar de quien tiene el conocimiento y el poder, de quien que decide qué, cómo y cuándo hay que hacer, al de un facilitador o coach que ayuda a los estudiantes a adquirir el control de su propio proceso de aprendizaje [@Schlairet2014]. 
+
+```{marginfigure, echo=TRUE}
+
+*Desventajas del Flipped Learning:*
+      \vspace{2mm}
+      
+\textcolor{Red}{\faThumbsODown{}} *Es más complejo de implementar que el modelo tradicional para el profesorado novel.*
+
+\textcolor{Red}{\faThumbsODown{}} *La reacción inicial de los estudiantes puede ser de resistencia al cambio. *
+
+\textcolor{Red}{\faThumbsODown{}} *Requiere mayor seguimiento y feedback por parte del profesor para no desmotivar a los estudiantes.* 
+
+\textcolor{Red}{\faThumbsODown{}} *Presenta retos en la evaluación de estas actividades.* 
+\vspace{2mm}
+
+*\hfill{- Halili y Zainuddin, 2015}*
+```
+
+Para los estudiantes, el aprendizaje invertido exige abandonar el lugar de quien obedece, reproduce y hace lo que le dicen, para ocupar el de quien se hace responsable de su propio aprendizaje y aplica sus conocimientos y habilidades en diversas actividades.
+
+El modelo flipped-learning exige también una cuidadosa planificación que permita la improvisación en clase, ajustando, por ejemplo, el nivel de dificultad de las actividades a la comprensión alcanzada por los estudiantes en el tiempo fuera de clase y puede presentar problemas para estudiantes con algún tipo de discapacidad [@halili2015flipping].
+
+### Métodos para grupos reducidos 
+
+\vspace{5mm} 
+
+**Trabajo por proyectos (PBL)**
+
+\vspace{2mm}
+
+El *Aprendizaje basado en Proyectos* o *Project Based Learning* [@blumenfeld1991] es una metodología didáctica dentro del enfoque constructivista en el que se trata de incentivar la motivación de los estudiantes presentándoles problemas reales, que tienen que resolver. Esta metodología permite el aprendizaje más significativo mediante la mayor implicación del estudiante en el proceso [@Krajcik2013].
+
+```{marginfigure, echo=TRUE}
+
+*Ventajas del Aprendizaje por Proyectos:*
+      
+\vspace{2mm}
+
+\textcolor{Red}{\faThumbsOUp{}} *Desarrolla la automía de los estudiantes*
+
+\textcolor{Red}{\faThumbsOUp{}} *Fomenta la cooperación*
+
+\textcolor{Red}{\faThumbsOUp{}} *Mayor motivación por partir de los intereses de los estudiantes* 
+
+\textcolor{Red}{\faThumbsOUp{}} *Se trabajan competencias básicas* 
+
+\textcolor{Red}{\faThumbsOUp{}} *Permite basar el aprendizaje en distintas estrategias y tipos de inteligencia*
+
+\vspace{2mm}
+
+*\hfill{- Reverte et al, 2007}*
+```
+
+El objetivo de la realización de trabajos es capacitar a los alumnos para analizar por sí mismos un tema de interés, vinculado con el contenido de la asignatura (la elección del tema puede realizarla el propio alumno o también el profesor puede proponer una lista con los temas más relevantes de la materia). Se trata de que los alumnos profundicen en la comprensión de dicho tema y aborden por sí mismos la resolución de las tareas propias que conlleva la realización de un trabajo: conocer y utilizar las distintas fuentes bibliográficas y aprender a buscar sus propias fuentes, desarrollar sus capacidades analíticas y sintéticas, entrenarse en el estudio sistemático de cada asunto, manejar técnicas de análisis y aumentar la capacidad de iniciativa. Si el trabajo se realiza en grupo, el alumno además aprende a trabajar bajo esta dinámica (división de las tareas, respeto hacia los demás miembros del grupo, etc.).
+
+```{marginfigure, echo=TRUE}
+
+*Desventajas del Aprendizaje Basado en Proyectos*
+
+\vspace{2mm}
+      
+\textcolor{Red}{\faThumbsODown{}} *Exige cambios fundamentales en la forma de enseñar por parte del profesor*
+
+\textcolor{Red}{\faThumbsODown{}} *Puede requerir más tiempo para conseguir los mismos resultados de aprendizaje*
+
+\textcolor{Red}{\faThumbsODown{}} *Es necesario gestionar conflictos potenciales en los grupos* 
+
+\vspace{2mm}
+
+*\hfill{- Reverte et al, 2007}*
+```
+
+Este trabajo por proyectos normalmente se realiza en grupos, combinándolo así con el llamado *aprendizaje cooperativo* que es una metodología de enseñanza-aprendizaje grupal, centrada en el estudiante, bajo la cual se organiza a los alumnos en pequeños grupos de trabajo para la consecución de las tareas que el profesor asigna, de forma que se optimice o maximice su propio aprendizaje y el de los otros miembros del grupo  [@BenitoCapa2011, @ReverteBernabeu2007]. 
+
+Esta metodología favorece el intercambio de distintos puntos de vista entre los miembros del grupo, se basa en el logro de los resultados del grupo (y no tanto en el resultado individual), y permite el desarrollo de habilidades tales como la escucha, la participación, la comunicación, la resolución de conflictos, la toma de decisiones y el liderazgo [@BenitoCapa2011].
+
+En esta línea se pueden encuadrar también los proyectos de Aprendizaje-Servicio, con los que se une el aprendizaje con el compromiso social [@martinez2010aprendizaje]. 
+
+\vspace{5mm} 
+
+**El estudio de casos**
+
+\vspace{2mm}
+
+Es una de las técnicas más empleadas, junto con la clase magistral, en las escuelas de negocios y se considera como uno de las más eficaces para situar a los alumnos en situaciones de la vida real, y para concentrar las asignaturas en problemas prácticos y concretos.
+
+El estudio de casos une la teoría y la práctica y conlleva un aprendizaje significativo ya que muestra y analiza cómo los expertos han resuelto o pueden resolver sus problemas, las decisiones que han tomado o podrían tomar y los valores, técnicas y recursos implicados en cada una de las posibles alternativas.
+
+
+```{marginfigure, echo=TRUE}
+
+*Ventajas del Método del Caso:*
+      
+\vspace{2mm}
+
+\textcolor{Red}{\faThumbsOUp{}} *El acercamiento del alumno al mundo comercial real, los casos elegidos, en la medida de lo posible, estarán relacionados con el entorno social del alumno.*
+
+\textcolor{Red}{\faThumbsOUp{}} *Fomenta la participación activa del alumno y su compromiso con el aprendizaje propio.*
+
+\textcolor{Red}{\faThumbsOUp{}} *Obliga al alumno a considerar otras disciplinas, le exige un esfuerzo de visión global de los problemas.* 
+
+\textcolor{Red}{\faThumbsOUp{}} *Orienta a los alumnos hacia su futura actuación en la vida empresarial.* 
+
+\textcolor{Red}{\faThumbsOUp{}} *Como norma general, no existe una única solución, por lo que se posibilita la evaluación de las soluciones individuales aportadas.*
+
+\textcolor{Red}{\faThumbsOUp{}} *Los estudiantes toman conciencia de que, en ocasiones, en la realidad empresarial no existen verdades o soluciones absolutas.*
+```
+
+El supuesto pedagógico fundamental de este método está basado en que cada práctica comercial puede sostenerse en una teoría. Dada la diversidad de situaciones de marketing y las distintas formas personales de actuación que es posible encontrar en la realidad, se hace necesario el conocimiento de numerosos y variados casos para poder llegar a dicha teoría. Con este método se facilita el análisis de un hecho  o problema real para que los alumnos se enfrenten con situaciones que no se pueden resolver sólo con la formación teórica, y sean capaces de abordar el problema y de plantear soluciones viables [@BenitoCapa2011; @DeMiguel2005]. De esta forma, el alumno reflexiona sobre las posibilidades de aplicación de los conocimientos adquiridos en situaciones más abiertas y complejas que las de tipo estandarizado que se pueden plantear en las clases teóricas y prácticas de ejercicios y problemas. En conclusión, se crean situaciones similares a las que el alumno tendrá que enfrentarse de manera profesional al finalizar sus estudios.
+
+
+Las características básicas que un caso debe presentar son:
+
+```{marginfigure, echo=TRUE}
+
+*Desventajas del Método del Caso*
+
+\vspace{2mm}
+      
+\textcolor{Red}{\faThumbsODown{}} *El tiempo requerido para su análisis y examen es prolongado*
+
+\textcolor{Red}{\faThumbsODown{}} *Es complicado incluir todos los hechos necesarios para una solución satisfactoria*
+
+\textcolor{Red}{\faThumbsODown{}} *Es un método que no proporciona modelos extrapolables o soluciones generalizadas* 
+      
+\textcolor{Red}{\faThumbsODown{}} *El profesor debe tener ciertas dotes de moderador, y el número de alumnos participantes no debe ser muy alto.*       
+
+\vspace{2mm}
+
+*\hfill{- Reverte et al, 2007}*
+```
+
+- Ser una situación concreta producida en la realidad, en la vida profesional.
+- Ser un problema que exige un diagnóstico, una decisión o ambos.
+- Suministrar información suficiente que permita al alumno un enfoque correcto del problema.
+- Ser una situación total en el sentido de que la información anterior más otras eventuales sean la base completa para el desarrollo del caso.
+- Ilustrar la utilización de nuevas técnicas y el desarrollo de nuevos conceptos y conocimientos.
+- No ser excesivamente largo.
+- Permitir generalizaciones posteriores en base a los resultados producidos.
+
+\clearpage
+
+La Figura \ref{caso} presenta la estructura operativa para organizar y dirigir casos [@Castellanos-Verdugo1998]:
+
+```{r caso, out.width='75%', fig.margin = FALSE, fig.fullwidth=FALSE, fig.cap="\\label{caso} Estructura Operativa del Método del Caso. García del Junco y Castellanos-Verdugo  (1998)"}
+
+knitr::include_graphics("images/casos.png")
+
+```
+
+Además, en la docencia mediante casos resulta útil  seguir las etapas planteadas por @sanchezperez2006. Estas etapas se resumen en la tabla \ref{casos}.
+
+
+```{r}
+tabla <- data.frame(stringsAsFactors=FALSE,
+       Etapa = c("Leer el caso", "¿hay información suficiente", "¿Cómo podemos aprender más?", "Realizar análisis de la situación", "Diagnóstico de problemas planteados", "Analizar aspectos más significativos", "Desarrollar alternativas", "Evaluar las alternativas", "Realizar una recomendación", "Implementar la recomendación", "Feedback"),
+     Cuestiones = c("Es aconsejable leerlo varias veces", "Se puede buscar información adicional.", "Discusión, participación de todos, rol-playing...", "Utilizar DAFO u otras herramientas de análisis estratégico", "Se trata de definir exactamente cuales son los problemas planetados", "Cómo se descompone el problema general en problemas más específicos", "Lista de alternativas posibles", "Evaluación sobre la evidencia disponible, ventajas e inconvenientes", "Lógica, razonada y posible", "Formular cómo podría llevarse a la práctica la recomendación", "Comprobar si se puede encontrar feedback adicional sobre la solución planteada."))
+
+names(tabla)<- c("Condición ", "Definición")
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, format = "latex",  longtable = F, booktabs = T, escape=F,
+             caption = "\\label{casos} Proceso de resolución de un caso estratégico de marketing.")  %>% 
+      kable_styling(latex_options = c("scale_down")) %>%
+      column_spec(1, width = "10em") %>%
+      column_spec(2, width = "20em") %>%
+      footnote(general = c("Adaptado de Sánchez et al, 2006"),
+               general_title="Fuente:")
+
+```
+
+\clearpage
+
+\vspace{5mm} 
+
+**Simuladores empresariales**
+
+\vspace{2mm}
+
+
+```{marginfigure, echo=TRUE}
+
+*Ventajas de los Juegos de Empresa:*
+      
+\vspace{2mm}
+
+\textcolor{Red}{\faThumbsOUp{}} *Desarrolla la habilidad del alumno para reconocer nuevas situaciones y tomar iniciativas.*
+
+\textcolor{Red}{\faThumbsOUp{}} *Desarrolla la capacidad de analizar, organizar y usar la información proveniente de un entorno de incertidumbre, complejo y cambiante.*
+
+\textcolor{Red}{\faThumbsOUp{}} *Estimula al estudiante para marcar y definir objetivos.* 
+
+\textcolor{Red}{\faThumbsOUp{}} *Enseña a los estudiantes a buscar las fuentes de información y a extraer de ellas la información precisa y necesaria.* 
+
+\textcolor{Red}{\faThumbsOUp{}} *Permite que los estudiantes conozcan y comprendan las relaciones que existen entre las distintas actividades de la empresa.*
+
+\textcolor{Red}{\faThumbsOUp{}} *Promueven la capacidad de predecir en base a informaciones anteriores y a planificar en función de las predicciones realizadas.*
+      
+\textcolor{Red}{\faThumbsOUp{}} *Aumentan la motivación, al plantear una situación competitiva y similar a un juego.*      
+```
+
+La llamada "gamificación" como mecanismo de aprendizaje se ha hecho muy popular en los últimos años [e.g. @lee2011gamification], pero ya en 1975, Rodríguez publicó un libro de análisis sobre *Juegos de Empresa* [@rodriguezcarrasco1975] en el que se definía el juego de empresa como: 
+
+\noindent\rule{2cm}{0.4pt}
+
+> \faQuoteLeft{} *una situación imaginada que pone a los jugadores en un entorno empresarial simulado, en el que periódicamente deben tomar decisiones de alta dirección.*
+
+\hfill{Rodríguez, 1975}
+
+\vspace{2mm}
+
+Durante este tiempo, obviamente, los simuladores han evolucionado enormente, gracias al avance experimentado en la informática, permitiendo el manejo de numerosa información y de generar entornos visuales más atractivos; y, por otra, debido al avance de las metodologías de simulación, que facilitan simular entornos cada vez más complejos y similares a los que las empresas pueden encontrarse en la vida real.
+
+Principalmente existen dos tipos de juegos. En el primer tipo, los estudiantes por grupos gestionan las empresas, las cuales compiten entre sí, determinando de esta manera los niveles de competición del juego. Así, los estudiantes compiten directamente entre ellos. En el otro tipo, el competidor del alumno es un ordenador al que se le han introducido unos parámetros relevantes o incluso equipos distantes geográficamente. El carácter dinámico de esta técnica está garantizado en ambos casos. Los jugadores deben tomar decisiones en base a sus conocimientos, observando las consecuencias de las decisiones tomadas en relación a sus rivales y así tomar nuevas decisiones, repitiendo todo el proceso hasta la finalización del juego.
+
+```{marginfigure, echo=TRUE}
+
+*Desventajas de los Juegos de Empresa*
+
+\vspace{2mm}
+      
+\textcolor{Red}{\faThumbsODown{}} *Puede existir un grado de disparidad entre el modelo y la realidad representada.*
+
+\textcolor{Red}{\faThumbsODown{}} *El riesgo percibido en la toma de decisiones no es real por lo que se pude tender a tomar decisiones más arriesgadas de las que se tomarían en otras circunstancias.*
+
+\textcolor{Red}{\faThumbsODown{}} *Los estudiantes toman en ocasiones decisiones irracionales con resultados en el corto plazo impulsados por la motivación de ganar y quedan insatisfechos cuando pierden.* 
+      
+\textcolor{Red}{\faThumbsODown{}} *El hecho de perder o ganar no garantiza que se haya producido un aprendizaje sobre las causas de los resultados.*      
+      
+
+\vspace{2mm}
+
+```
+
+En general, la satisfación de los estudiantes con los simuladores es muy alta [@Mera2015; @BlazquezJimenez2014; @Martinez-fiestas2013]. 
+
+Existen multitud de juegos de simulación que han surgido debido que cada vez se utilizan en mayor medida en la enseñanza de las materias relacionadas con la empresa. Para la enseñanza del marketing, destacan entre ellos la simulación MarkStrat^[https://web.stratxsimulations.com/simulation/strategic-marketing-simulation/], desarrollada por los profesoresLarreché de INSEAD y Gatignon de la Universidad de Pennsylvania en 1977, el MarkOps^[https://web.stratxsimulations.com/simulation/a-marketing-mix-simulation-software/], igualmente desarrollado por los profesores anteriormente citados, Marketplace Simulations^[https://www.marketplace-simulation.com/es/] desarrollado por Ernest R. Cadotte o el juego Quantum^[http://quantrack.net] de los profesores Esteban, Lado y Vidal. 
+
+Algunos de estos juegos, como Marketplace y las últimas versiones de Markstrat se desarrollan en un entorno online, en el que las simulaciones de las decisiones se realizan en servidores del juego, mientras que en otros es el instructor el encargado de llevar a cabo las simulaciones y presentar los resultados a los estudiantes.
+
+
+### Métodos de trabajo individual
+
+\vspace{5mm} 
+
+**Las tutorías**
+
+\vspace{2mm}
+
+Las tutorías son el tiempo de interacción individual por excelencia en la enseñanza superior. Tutoría es el tiempo que el profesor se encuentra a disposición del alumno para que éste realice consultas, plantee y resuelva posibles dudas sobre la asignatura, trabajos encomendados u otras cuestiones de la vida universitaria. También permiten al alumno recibir orientación sobre metodologías de estudio, bibliografías a emplear, elección de asignaturas (optativas o de libre elección), especialidad, prácticas en empresas…
+
+Preferentemente se fijan en distintas horas de la semana, solapándose lo menos posible con el horario de clases de otras asignaturas. La ventaja de esta técnica radica en que es la más personal de todas las mencionadas. El profesor intenta adaptarse a las necesidades individuales de cada alumno, favoreciendo la fluidez en la comunicación y las relaciones docente-alumno. Permite al profesor conocer los resultados de la transmisión de conocimientos y la captación de los mismos por parte del alumno, y valorar la revisión del desarrollo y contenido de la asignatura.
+
+El inconveniente detectado es el escaso uso que el alumno hace de él, salvo en las fechas próximas de exámenes, que es cuando se produce un uso extenso y generalizado de la tutoría, incluso fuera del horario de la misma.
+
+\vspace{5mm} 
+
+\clearpage
+
+**La lectura y discusión de textos**
+
+\vspace{2mm}
+
+La lectura y discusión de textos permite al alumno profundizar en temas concretos, familiarizarse con la literatura relevante y desarrollar una participación activa en el proceso de enseñanza-aprendizaje. De esta forma, el alumno puede desarrollar la capacidad de comprensión global de un texto, la capacidad de síntesis, y comprender y afianzar los contenidos teóricos aprendidos en la asignatura.^[\textcolor{Red}{\faAngleDoubleRight{}} La discusión de textos se puede producir de forma presencial y en grupo o mediante la elaboración de informes.] Así, se desarrollan también competencias relacionadas con la expresión escrita y se pueden desarrollar habilidades relacionadas por ejemplo con el manejo y cita de bibliografía.
+
+El docente debe seleccionar y estimular la lectura de textos de manuales, libros, revistas especializadas y noticias de la prensa económico-empresarial que considere de interés y que permitan completar los contenidos teóricos explicados. También puede proponer a los alumnos que ellos mismos seleccionen textos, en especial noticias de actualidad, relacionados con el contenido de la asignatura. Es conveniente que se trate de un texto controvertido y que despierte el interés del alumnado, que sea lo más reciente posible, que se haya publicado en alguna revista profesional o especializada y que se base en hechos reales de empresas, con el fin de que el alumno observe que lo explicado en el aula tiene un reflejo en el mundo empresarial.
+
+## El programa de la asignatura: La guía docente
+
+De acuerdo con la Declaración de Bolonia [@bolonia1998], la guía docente supone una herramienta básica del Sistema Europeo de Transferencia de créditos para promover la cooperación europea mediante el desarrollo de metodologías y criterios que sean comparables. En otras palabras, es un documento público donde se concreta la oferta docente asociada a la asignatura. Es, por lo tanto, un instrumento transparente, fácilmente comprensible y comparable, entre las distintas universidades. Una de sus finalidades es ofrecer al alumnado los elementos informativos relativos a qué conocimientos, capacidades y competencias se pretende que adquiera, cómo se va a producir esa adquisición y cómo va a ser evaluado [@sanchezbascones2011]. 
+
+La elaboración de la guía docente de una asignatura debe tener como referente el plan de estudios de la titulación a la que pertenece, ya que el mismo recoge el conjunto de objetivos, estrategias, actividades, contenidos y criterios de evaluación para que el alumnado tenga una información específica previamente determinada, así como el conocimiento de las competencias a adquirir en cada uno de los perfiles académicos-profesionales del grado. 
+
+Las guías docentes son, siguiendo el documento de Buenas Prácticas de la Universidad Pública de Navarra [@bbppUPNA2018], *.. un "contrato" entre
+el estudiante y la Universidad* y deben contener los siguientes aspectos:
+
+1. Descriptores
+2. Competencias genéricas
+3. Competencias específicas
+4. Resultados aprendizaje
+5. Metodología docente – Actividades Formativas
+6. Relación actividades formativas-competencias 
+7. Idiomas
+8. Sistemas de evaluación
+9. Contenidos
+10. Temario
+11. Bibliografía
+
+El modelo de guía docente de la Universidad Politécnica de Valencia [@EstudiosYConvergenciaEuropea2006] indica como pasos en la elaboración de la guía docente los que se muestran en la Figura \ref{guiaUPV}
+
+```{r guiaUPV, out.width='100%', fig.margin = FALSE, fig.fullwidth=TRUE, fig.cap="\\label{guiaUPV} Pasos en la elaboración de la Guía Docente. Universidad Politécnica de Valencia (2006)"}
+
+knitr::include_graphics("images/guiaUPV.png")
+
+```
+
+\clearpage
+
+## Evaluación del proceso de Enseñanza-Aprendizaje
+
+La evidencia muestra cómo los mecanismos de evaluación no son únicamente un medio de certificación de la forma en la que se han alcanzado unos determinados objetivos, sino que evaluar a los alumnos propicia un mejor aprendizaje y recuerdo posterior de lo aprendido [@adesope2017; @Bangert-Drown1991; @phelps2012]. Así, la investigación académica ha demostrado desde los años 70 que uno de los factores que influencia el aprendizaje en mayor medida es, no tanto cómo se enseña, sino cómo se evalúa [@snyder1970hidden; @miller1974up]. Así, establecer mecanismos de evaluación que incentiven el aprendizaje deseado es una actividad fundamental en la planificación docente.
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *En el libro de Snyder (1970) se analiza el denominado* "Hidden Curriculum" *por el que los estudiantes centran sus esfuerzos en averiguar la forma más sencilla de aprobar*.
+\vspace{2mm}
+      
+\textcolor{Red}{\faAngleDoubleRight{}} *El libro de Miller y Parlet (1974)* "Up to the mark: A study of the examination game" *con un enfoque similar, ilustra cómo los estudiantes buscan pistas sobre cuáles son los requisitos reales para superar las asignaturas*.
+      
+
+\vspace{2mm}
+
+```
+
+@Gibbs2004 establecen 10 condiciones bajo las cuales un sistema de evaluación favorece el aprendizaje significativo. Estas condiciones se presentan en la tabla \ref{requisitos}:
+
+```{r}
+tabla <- data.frame(stringsAsFactors=FALSE,
+       Condiciones = c("Condición 1",  "Condición 2", "Condición 3", "Condición 4", "Condición 5", "Condición 6", "Condición 7", "Condición 8", "Condición 9", "Condición 10"),
+     Transmision = c("Se han asignado tareas a los estudiantes que aseguren que se dedica suficiente tiempo al estudio", "Estas tareas compromenten a los estudiantes hacia asignar el tiempo y esfuerzo adecuado a los aspectos más importantes del curso.", "Las tareas llevan a los estudiantes a actividades de aprendizaje productivo.", "Se proporciona suficiente feedback tanto en frecuencia como en detalle.", "El feedback se centra en el rendimiento del estudiante, en su aprendizaje y en acciones bajo su control y no en el estudiante en sí mismo o sus características.", "El feedback se proporciona a tiempo y cuando todavía existen posibilidades para mejorar en su aprendizaje o recibir más apoyo.", "El feedback es adecuado para el propósito de la tarea y sus criterios de éxito.", "El feedback es apropiado en relación con lo que los estudiantes entienden que deberían estar haciendo", "El feedback se recibe y se le presta atención.", "El feedback es utilizado por el estudiante, por lo que se deben cumplir las condiciones anteriores y, además, debe ser útil en tareas posteriores."))
+
+names(tabla)<- c("Condición ", "Definición")
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, format = "latex",  longtable = T, booktabs = T, escape=F,
+             caption = "\\label{requisitos} Requisitos de un sistema de evaluación efectivo.")  %>% 
+      kable_styling(font_size = 7.5) %>%
+      column_spec(1, width = "8em") %>%
+      column_spec(2, width = "22em") %>%
+      footnote(general = c("Adaptado de Gibbs y Simpson, 2004"),
+               general_title="Fuente:")
+
+```
+
+De estas condiciones podemos extraer algunas conclusiones para la planificación docente. En primer lugar, la definición del sistema de evaluación es un aspecto crítico en la planificación, ya que la definición de qué tareas se evalúan y cómo se realiza esta evaluación va a ser determinante en el aprendizaje de los estudiantes.^[\textcolor{Red}{\faAngleDoubleRight{}} Por ejemplo, podríamos plantear la evaluación de un tema a partir de preguntas de test extraídas de una batería. Sin embargo, memorizar una batería de preguntas sobre el tema más importante podría satisfacer la condición de tiempo y centrarse en el tema adecuado (condición 2) pero puede implicar un aprendizaje poco adecuado.] En segundo lugar, el feedback que se proporciona es fundamental para que los estudiantes puedan progresar^[\textcolor{Red}{\faAngleDoubleRight{}} Una condición previa es que los estudiantes entiendan la tarea y sus requisitos]. Este feedback puede ser cuantitativo o cualitativo o de ambos tipos pero tiene que estar disponible cuando existen posibilidades para mejorar^[\textcolor{Red}{\faAngleDoubleRight{}} A veces puede ser necesario incentivar la atención al feedback, por ejemplo, solicitando autoevaluación y comparación con la del profesor o proporcionando primero solo feedbak y posteriormente nota.].
+
+Así, para cumplir estas condiciones es necesario establecer un sistema adecuado de evaluación continua a lo largo del curso, porque permite ir observando la evolución del alumno a lo largo de todo el periodo de formación. De forma general, suele ser el resultado de ponderar trabajos individuales, en grupo, participaciones, así como distintas pruebas teóricas o prácticas en relación a los conocimientos adquiridos. En ella se produce una comunicación bidireccional, de manera que tal información pueda retroalimentar el proceso de enseñanza-aprendizaje que se está llevando a cabo. 
+
+En cuanto al tipo de pruebas que se pueden utilizar para realizar la evaluación de contenidos, las más frecuentes son las pruebas escritas y las pruebas orales. Las primeras son las más utilizadas actualmente, debido a las condiciones, ya mencionadas que mediatizan la enseñanza en la universidad, sobre todo, el elevado número de alumnos que componen habitualmente los grupos. Éstas, a su vez, pueden ser [@Brookfield2015]:
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *En las evaluaciones de test es habitual utilizar penalizaciones por respuestas incorrectas, que eliminan sesgo por respuestas correctas de forma aleatoria pero que tiene como inconvenientes (Nicol, 2007; Lesage, Valcke y Sabbe, 2013): *
+      
+\vspace{2mm}
+
+\textcolor{Red}{\faThumbsODown{}} *Se introducen sesgos en la calificación. Los estudiantes tienen distinta propensión a responder a las preguntas sobre las que no tienen absoluta seguridad*.
+
+\textcolor{Red}{\faThumbsODown{}} *Se introduce un elemento de cálculo adicional en el examen, por lo que los estudiantes pierden tiempo decidiendo cuál es la mejor estrategia, si contestar o no contestar*.
+```
+
+- Pruebas tipo test, también conocidas como pruebas objetivas o pruebas de respuesta múltiple. En ellas se ofrece al alumno un enunciado sobre el que se muestran una serie de alternativas, entre las que el alumno debe elegir aquella, o aquellas, que crea son correctas. Son útiles para averiguar el grado de cumplimiento de algunos objetivos cognoscitivos. Se caracterizan por su sencillez y rapidez en la corrección, porque permiten considerar una muestra amplia del contenido de la materia y porque no da lugar a interpretaciones sobre la respuesta del alumno. En cambio, tiene ciertos inconvenientes como son la complejidad de la redacción de las preguntas y el tiempo que requiere su planificación y diseño. Además, estas pruebas no dan a los estudiantes libertad para expresarse ni permiten valorar la capacidad de comprensión de algunos temas concretos.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Una alternativa para la puntuación de test es el método de **fijación de estándar** o **fijación de nuevo umbral**. En este caso es necesario responder más de la mitad de las preguntas correctamente para superar la prueba que tiene como ventajas (Nicol, 2007; Lesage, Valcke y Sabbe, 2013)*:
+
+\vspace{2mm}
+
+\textcolor{Red}{\faThumbsOUp{}} *Con respecto a la suma sin penalización, elimina el efecto adicional de respuestas correctas debido al azar.*
+\vspace{2mm}
+
+\textcolor{Red}{\faThumbsOUp{}} *Con respecto a la puntuación negativa de respuestas incorrectas:*
+
+- *Un examen nunca puede tener una puntuación negativa*  
+      
+- *Se eliminan los cálculos sobre la mejor estrategia y el estudiantes solo tiene que preocuparse sobre la mejor forma de responder a **todas** las preguntas*
+- *Se eliminan los sesgos ante el "miedo" a equivocarse*
+
+```
+
+- Pruebas con cuestiones de respuesta breve, que son más fáciles de diseñar, aunque su corrección es más lenta.
+
+- Pruebas con cuestiones de respuesta abierta o de desarrollo, donde el alumno debe exponer un determinado tema. En éste tipo de pruebas es más sencillo evaluar el nivel de conocimientos y la capacidad de síntesis aunque la subjetividad en la corrección de las preguntas puede aumentar. Estas pruebas son generalmente tildadas de puramente memorísticas y con poca capacidad para mostrar el verdadero aprendizaje del alumno. Sin embargo, la inclusión en el examen de preguntas teorico-prácticas que hagan al estudiante reflexionar y razonar sobre los conceptos y sus relaciones, puede mitigar en parte dicho problema. 
+
+- Pruebas con cuestiones prácticas, que consiste en la resolución de un supuesto, o varios, acorde a los conocimientos teóricos suministrados en el período considerado.  
+
+- Las pruebas orales consisten en la evaluación verbal de las cuestiones requeridas de forma individual y personaliza a cada alumno. Para llevar a cabo este tipo de evaluación, es recomendable dejar un espacio de tiempo para que el alumno reflexione la pregunta y esquematice la respuesta que vaya a dar posteriormente. Este tipo de pruebas, permiten al profesor conocer con mayor precisión el grado de conocimiento alcanzado por el estudiante, además de su capacidad de expresión oral y de comunicación. 
+
+Además, es necesario establecer mecanismos de evaluación de la adquisición de competencias, que en algunos casos, no pueden medirse con las pruebas de evaluación. Así, para medir determinadas competencias puede ser necesario establacer exposiciones orales o rúbricas de trabajo en grupo, por ejemplo [@GarciaSanz2014].
+
+
+## Medios didácticos: las TIC en la educación superior
+
+Las Tecnologías de la Información y de la Comunicación pueden jugar un papel clave en el desarrollo del proceso Enseñanza-Aprendizaje, ofreciendo nuevos contextos y
+posibilidades para potenciar el papel más activo del estudiante, la iniciativa y el pensamiento crítico [@FrancescEsteve2009].Así, las herramientas Web 2.0 pueden modificar de forma drástica los contextos de aprendizaje [@Bower2009]. En este último apartado del capítulo se van a repasar algunas herramientas TIC que pueden ser útiles en su integración en las distintas metodologías docentes y mecanismos de evaluación. Aunque se presentan las herramientas separadas por metodología, hay que tener en cuenta que muchas pueden utilizarse para múltiples metodologías.
+
+\vspace{5mm} 
+
+**Herramientas TIC en la clase magistral**
+
+\vspace{2mm}
+
+La clase magistral en la educación superior no necesariamente debe consistir en un discurso oral unidireccional del docente a los estudiantes. En primer lugar, con respecto a los medios de transmisión del discurso, tradicionalmente este discurso oral se ha apoyado en imágenes o textos, inicialmente en una pizarra, posteriormente con proyectores de transparencias. 
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faTelevision{}} *Podemos distintinguir tres tipos de posibilidades para crear presentaciones:*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Software tradicional: principalmente PowerPoint para PC y KeyNote para iOS*
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Herramientas online: e.g. Google Slides, Prezi, eMaze, HaikuDeck*
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Herramientas basadas en código:  e.g. Beamer, Reveal.js, Slidy, WebSlides, ioslide*
+
+
+```
+
+La introducción de las TIC ha facilitado y ampliado el tipo de elementos que se pueden incorporar incluyendo posibilidades de vídeo, sonido y contenido web, por un lado, con la inclusión generalizada en las aulas de ordenadores y cañones de proyección o pizarras digitales y, por otro lado, con presentaciones más sofisticada con el software disponible. 
+
+Por otro lado, con respecto a la unidireccionalidad del discurso, desde que surgen las primeras teorías sobre el aprendizaje activo, se han ido introduciendo herramientas de interactividad en la clase tradicional, por ejemplo, con preguntas abiertas a los estudiantes o con las denominadas *One minute papers* [@stead2005] para comprobar el aprendizaje al final de una clase y poder además tener un registro de asistencia poco invasivo, pero las TIC también han facilitado esta interacción haciéndola más rápida y cómoda para grupos grandes. Así, existen distintas herramientas online que permiten lanzar preguntas y recoger feedback de los estudiantes de forma inmediata. 
+
+```{r kahoot, out.width='75%', fig.margin = TRUE, fig.fullwidth=FALSE, fig.cap="\\label{kahoot} Las herramientas TIC permite proporcionar feedback en tiempo real en la clase tradicional. Ejemplo con Kahoot"}
+
+knitr::include_graphics("images/kahoot.png")
+
+```
+
+De esta forma, el docente puede comprobar la comprensión de los conceptos y ajustar la clase, y los estudiantes pueden hacer una autoevaluación de su comprensión. Además, estas herramientas permiten cambiar el ritmo de la clase, haciendo que posteriormente se puedan recuperar los niveles de atención. Entre estas herramientas online destacan Socrative^[https://www.socrative.com/], Kahoot^[https://kahoot.com/] y Mentimeter^[https://www.mentimeter.com/].
+
+Por último, las herramientas TIC también han cambiado la forma en que se proporciona el material de apoyo a la clase magistral. Tradicionalmente el material de apoyo consiste en uno o varios manuales de referencia, unos apuntes elaborados por el profesor o una combinación de ambos. Las TIC permiten la distribución de material bibliográfico a los estudiantes de manera mucho más rápida y sencilla, ya sea a través de las plataformas que se proporcionan en cada universidad^[En la Universidad Pública de Navarra la plataforma online se denomina MiAulario y se basa en el software de código abierto Sakai (https://sakaiproject.org/). Otras universidades utilizan plataformas distintas, entre las que destacan por su popularidad Moodle (https://moodle.org) y Edmodo (https://www.edmodo.com/). También Google (https://edu.google.com/) y Microsoft (https://education.microsoft.com/) han desarrollado sus propias plataformas para educadores.] o a través de otras herramientas online como blogs o páginas web.
+
+\vspace{5mm} 
+
+\clearpage
+
+**Herramientas TIC en el aprendizaje invertido**
+
+\vspace{2mm}
+
+Como ya hemos señalado en el apartado \ref{grandes}, para implantar métodos de aprendizaje invertido no es estrictamente necesario utilizar herramientas TIC, aunque normalmente sí que se utilizan ya que mejoran enormemente las posibilidades de hacer efectiva la parte no presencial del aprendizaje. Entre las herramientas que se utilizan para la clase invertida, podemos destacar:
+
+- Plataformas para compartir materiales: en la clase invertida es todavía más importante que en la tradicional tener una plataforma donde los materiales de cada actividad estén organizados y accesibles a distancia. Así, las plataformas mencionadas en el punto anterior (Moodle, Sakai, Google for Educators) son casi un requisito para poder desarrollar correctamente este tipo de enseñanza.
+
+- Herramientas para crear materiales: Además de las herramientas ya señaladas para crear presentaciones, en el aprendizaje invertido se utilizan frecuentemente videos creados específicamente, que sustituyen a la tradicional exposición en la lección magistral. Estos vídeos deben ser de duración muy inferior a ésta, por lo que el contenido se debe condensar en una duración entre 10 y 20 minutos como máximo.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faVideoCamera{}} *Entre las herramientas de video más populares destacan la herramienta de grabación de transparencias de Microsoft PowerPoint, Camtasia https://discover.techsmith.com/, Panopto https://www.panopto.com/, Screncastomatic https://screencast-o-matic.com/education o ScreenFlow https://www.telestream.net/screenflow/overview.htm para iOS.*
+
+```
+
+- Herramientas para introducir elementos interactivos en vídeo: si en las clases magistrales es importante introducir elementos interactivos para aumentar la atención, ésto es todavía más importante en los vídeos que se utilizan en la clase invertida. EdPuzzle^[https://edpuzzle.com/] y PlayPosit^[https://learn.playposit.com/learn/] son herramientas que permiten incluir preguntas de test dentro de cualquier vídeo, de forma que los estudiantes puedan autoevaluarse y que, además, el docente tenga un registro de quién y cómo ha visto estos vídeos. 
+
+```{r edpuzzle, out.width='100%', fig.margin = TRUE, fig.fullwidth=FALSE, fig.cap="\\label{edpuzzle} Incrustar una pregunta en video con EdPuzzle"}
+
+knitr::include_graphics("images/edpuzzle.png")
+
+```
+
+\clearpage
+
+\vspace{5mm} 
+
+**Herramientas TIC para el trabajo en grupos**
+
+\vspace{2mm}
+
+Además de las ya mencionadas, hay otros dos tipos de herramientas especialmente adecuadas para el trabajo por proyectos (ABP) y para todo tipo de proyectos colaborativos y en grupo como la preparación de casos prácticos y la elaboración de informes y presentaciones que se elaboran en la participación en juegos de simulación. Estas herramientas son las herramientas para la preparación de documentos en grupos y las herramientas para la organización del trabajo y *curación de contenidos*^[\textcolor{Red}{\faAngleDoubleRight{}} Selección y organización de recursos para una determinda temáticas.].
+
+- Herramientas para la escritura en grupo: las wikis son páginas web con formatos predefinidos que facilitan la publicación de contenidos pensadas para escribir de forma cooperativa, con varios usuarios publicando información y modificándola. Las principales ventajas de las wikis para la docencia son el facilitar la escritura conjunta por grupos, permitiendo al profesor observar la evolución del informe en el tiempo y por miembro de grupo y el posibilitar comparar las distintas versiones de un determinado informe. Se pueden utilizar páginas públicas como Wikipedia o las propias herramientas de Wiki implantadas en Sakai o Moodle. Las Wikis fueron muy populares en la web 1.0 pero en los últimos años están desapareciendo en favor de otras alternativas para la gestión de documentos como Google Docs o Dropbox o sitios web especializados en escritura colaborativa.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faPencilSquareO} *Ejemplos de sitios especializados en escritura colaborativa:*
+
+\vspace{2mm}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *PenFlip* *https://www.penflip.com/ *
+
+\textcolor{Red}{\faAngleDoubleRight{}} *TypeWrite* *https://typewrite.io/ *
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Overleaf* *https://www.overleaf.com/ *
+
+
+```
+
+- Herramientas para la organización del trabajo y curación de contenidos: Durante el trabajo por proyectos es habitual que los miembros del grupo consulten muchas fuentes diferentes, se asignen diferentes tareas y vayan organizando y estructurando el contenido conforme se avanza en el proyecto. Las herramientas de organización y curación de contenidos permiten recoger y organizar toda esa información para poder en todo momento conocer cual es el estado del proyecto. Entre estas herramientas destacan Trello^[https://trello.com/], Slack^[https://slack.com/] y Padlet^[https://es.padlet.com].
+
+```{r trello, results='asis', out.width='100%', fig.margin = FALSE, fig.fullwidth=FALSE, fig.cap="\\label{trello} Ejemplo de Curación de contenidos con Trello"}
+
+knitr::include_graphics("images/trello.png")
+
+```
+
+\clearpage
+
+\vspace{5mm} 
+
+**Herramientas TIC para el trabajo con individuos**
+
+\vspace{2mm}
+
+Por último, las herramientas TIC también pueden ser muy útiles en los métodos didácticos que implican trabajar uno a uno con cada estudiante. Por un lado, en la labor de tutoría del docente tiene cada vez más peso el correo electrónico ya que reduce los costes psicológicos para el estudiante de acudir a tutorías. Esto tiene la ventaja de aumentar el número de estudiantes que consultan con el profesor, pero también la desventaja de ser un método poco adecuado e ineficiente para consultas sobre aspectos complejos del contenido del temario o de las tareas. Otras herramientas como Skype^[https://www.skype.com/es/] para videoconferencias son más eficaces para sustituir a la tutoría presencial en estos casos.
+
+Para finalizar, las plataformas educativas como Moodle, Sakai, etc... son obviamente muy útiles en la gestión de tareas y entregas individuales de los estudiantes y para proporcionar el necesario feedback. La gestión digital de las entregas y evaluaciones:
+
+- facilita comunicar a los estudiantes los calendarios, requisitos y condiciones de cada tarea
+- facilita recoger el cumplimiento de plazos de entrega
+- permite almacenar mejor los documentos para referencia futura
+- facilita la posterior evaluación global
+
+Además, estas plataformas pueden ser útiles para implementar una forma alternativa de evaluación de trabajos individuales la *evaluación por pares* [@Moore2012], habitual en el mundo académico pero todavía poco utilizada en la evaluación de los estudiantes. La evaluación por pares permite a los estudiantes, por un lado, desarrollar su capacidad crítica cuando actúan como evaluadores y, por otro lado, recibir una evaluación que pueden percibir como menos sesgada. Las plataformas de e-learning permiten la asignación anónima de tareas de forma que se pueda implementar esa evaluación de forma sencilla. Además, permiten al docente tener un input adicional en la propia tarea de evaluación de trabajos.
+
+Ahora bien, la evaluación por pares necesita de una cuidadosa planificación para desarrollarse sin problemas ya que los estudiantes no tienen normalmente experiencia previa en la tarea. Para ello es necesario^[\textcolor{Red}{\faAngleDoubleRight{}} El Teaching Center de la  Washington University, St. Louis tiene buenos recursos para implantar la evaluación por pares: https://bit.ly/2nfFKfQ]:
+
+- Redactar y explicar cuidadosamente las rúbricas que deben seguir los evaluadores al evaluar cada trabajo .
+- Dedicar tiempo a "entrenar" a los estudiantes en tareas de evaluación por ejemplo, haciendo evaluaciones conjuntas por consenso en clase.
+- Evaluar también la propia evaluación de forma que los evaluadores poco competentes sepan que ese comportamiento se reflejará en sus propias calificaciones.
+

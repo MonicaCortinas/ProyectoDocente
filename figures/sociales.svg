@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   class="main-svg"
+   width="800"
+   height="600"
+   style=""
+   version="1.1"
+   id="svg205"
+   sodipodi:docname="sociales.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata209">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="724"
+     inkscape:window-height="480"
+     id="namedview207"
+     showgrid="false"
+     inkscape:zoom="0.355"
+     inkscape:cx="400"
+     inkscape:cy="300"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg205" />
+  <rect
+     x="0"
+     y="0"
+     width="800"
+     height="600"
+     style="fill: rgb(255, 255, 255); fill-opacity: 1;"
+     id="rect2" />
+  <defs
+     id="defs-c060b4">
+    <g
+       class="gradients"
+       id="g4" />
+    <g
+       class="clips"
+       id="g6" />
+  </defs>
+  <g
+     class="bglayer"
+     id="g9" />
+  <g
+     class="layer-below"
+     id="g15">
+    <g
+       class="imagelayer"
+       id="g11" />
+    <g
+       class="shapelayer"
+       id="g13" />
+  </g>
+  <g
+     class="cartesianlayer"
+     id="g17" />
+  <g
+     class="ternarylayer"
+     id="g19" />
+  <g
+     class="geolayer"
+     id="g21" />
+  <g
+     class="layer-above"
+     id="g27">
+    <g
+       class="imagelayer"
+       id="g23" />
+    <g
+       class="shapelayer"
+       id="g25" />
+  </g>
+  <g
+     class="pielayer"
+     id="g113">
+    <g
+       stroke-linejoin="round"
+       class="trace"
+       style="opacity: 1;"
+       id="g55">
+      <g
+         class="top part"
+         id="g53">
+        <g
+           class="slice"
+           id="g39">
+          <path
+             class="surface"
+             d="M157.89161696695896,315.38810988500387a49.275,49.275 0 1 0 11.608383033041036,-97.16310988500388l0,-60.225a109.5,109.5 0 1 1 -25.796406740091193,215.91802196667527Z"
+             style="pointer-events: all; stroke-width: 0; fill: rgb(17, 123, 215); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;"
+             id="path29" />
+          <g
+             class="slicetext"
+             id="g37">
+            <text
+               data-notex="1"
+               class="slicetext"
+               transform="translate(248.3269122109879,276.91769969425684)translate(-0.1328125,-3.796875)"
+               text-anchor="middle"
+               x="0"
+               y="0"
+               style="font-family: Roboto; font-size: 12px; fill: rgb(255, 255, 255); fill-opacity: 1; white-space: pre;"
+               id="text35">
+              <tspan
+                 class="line"
+                 dy="0em"
+                 x="0"
+                 y="0"
+                 id="tspan31">703,218</tspan>
+              <tspan
+                 class="line"
+                 dy="1.3em"
+                 x="0"
+                 y="0"
+                 id="tspan33">53.8%</tspan>
+            </text>
+          </g>
+        </g>
+        <g
+           class="slice"
+           id="g51">
+          <path
+             class="surface"
+             d="M169.5,218.225a49.275,49.275 0 0 0 -11.608383033041024,97.16310988500388l-14.188023707050156,58.5299120816714a109.5,109.5 0 0 1 25.796406740091165,-215.91802196667527Z"
+             style="pointer-events: all; stroke-width: 0; fill: rgb(54, 50, 153); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;"
+             id="path41" />
+          <g
+             class="slicetext"
+             id="g49">
+            <text
+               data-notex="1"
+               class="slicetext"
+               transform="translate(90.67308778901209,258.08230030574316)translate(-0.1328125,-3.796875)"
+               text-anchor="middle"
+               x="0"
+               y="0"
+               style="font-family: Roboto; font-size: 12px; fill: rgb(255, 255, 255); fill-opacity: 1; white-space: pre;"
+               id="text47">
+              <tspan
+                 class="line"
+                 dy="0em"
+                 x="0"
+                 y="0"
+                 id="tspan43">604,243</tspan>
+              <tspan
+                 class="line"
+                 dy="1.3em"
+                 x="0"
+                 y="0"
+                 id="tspan45">46.2%</tspan>
+            </text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       stroke-linejoin="round"
+       class="trace"
+       style="opacity: 1;"
+       id="g83">
+      <g
+         class="top part"
+         id="g81">
+        <g
+           class="slice"
+           id="g67">
+          <path
+             class="surface"
+             d="M415.6765525736114,213.59524139234082a54.2025,54.2025 0 1 0 45.95375482932709,90.17331029882516l49.2314868258137,44.32822984475845a120.45,120.45 0 1 1 -102.11945517628241,-200.38513399738923Z"
+             style="pointer-events: all; stroke-width: 0; fill: rgb(54, 50, 153); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;"
+             id="path57" />
+          <g
+             class="slicetext"
+             id="g65">
+            <text
+               data-notex="1"
+               class="slicetext"
+               transform="translate(343.544589210819,307.15087629535196)translate(-0.1015625,-3.796875)"
+               text-anchor="middle"
+               x="0"
+               y="0"
+               style="font-family: Roboto; font-size: 12px; fill: rgb(255, 255, 255); fill-opacity: 1; white-space: pre;"
+               id="text63">
+              <tspan
+                 class="line"
+                 dy="0em"
+                 x="0"
+                 y="0"
+                 id="tspan59">6743</tspan>
+              <tspan
+                 class="line"
+                 dy="1.3em"
+                 x="0"
+                 y="0"
+                 id="tspan61">61.7%</tspan>
+            </text>
+          </g>
+        </g>
+        <g
+           class="slice"
+           id="g79">
+          <path
+             class="surface"
+             d="M461.6303074029385,303.768551691166a54.2025,54.2025 0 0 0 -45.953754829327124,-90.17331029882516l-6.9342135211416815,-65.88359385380565a120.45,120.45 0 0 1 102.1194551762825,200.38513399738923Z"
+             style="pointer-events: all; stroke-width: 0; fill: rgb(17, 123, 215); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;"
+             id="path69" />
+          <g
+             class="slicetext"
+             id="g77">
+            <text
+               data-notex="1"
+               class="slicetext"
+               transform="translate(499.15541078918096,227.84912370464804)translate(-0.1015625,-3.796875)"
+               text-anchor="middle"
+               x="0"
+               y="0"
+               style="font-family: Roboto; font-size: 12px; fill: rgb(255, 255, 255); fill-opacity: 1; white-space: pre;"
+               id="text75">
+              <tspan
+                 class="line"
+                 dy="0em"
+                 x="0"
+                 y="0"
+                 id="tspan71">4192</tspan>
+              <tspan
+                 class="line"
+                 dy="1.3em"
+                 x="0"
+                 y="0"
+                 id="tspan73">38.3%</tspan>
+            </text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       stroke-linejoin="round"
+       class="trace"
+       style="opacity: 1;"
+       id="g111">
+      <g
+         class="top part"
+         id="g109">
+        <g
+           class="slice"
+           id="g95">
+          <path
+             class="surface"
+             d="M664.8860977446421,213.4985275941251a54.20249999999999,54.20249999999999 0 1 0 23.202249073967305,104.93516168402309l22.657979444967218,62.252286895514466a120.44999999999999,120.44999999999999 0 1 1 -51.56055349770512,-233.18924818671798Z"
+             style="pointer-events: all; stroke-width: 0; fill: rgb(54, 50, 153); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;"
+             id="path85" />
+          <g
+             class="slicetext"
+             id="g93">
+            <text
+               data-notex="1"
+               class="slicetext"
+               transform="translate(584.283215878616,286.35336746206934)translate(-0.1015625,-3.796875)"
+               text-anchor="middle"
+               x="0"
+               y="0"
+               style="font-family: Roboto; font-size: 12px; fill: rgb(255, 255, 255); fill-opacity: 1; white-space: pre;"
+               id="text91">
+              <tspan
+                 class="line"
+                 dy="0em"
+                 x="0"
+                 y="0"
+                 id="tspan87">3820</tspan>
+              <tspan
+                 class="line"
+                 dy="1.3em"
+                 x="0"
+                 y="0"
+                 id="tspan89">54.2%</tspan>
+            </text>
+          </g>
+        </g>
+        <g
+           class="slice"
+           id="g107">
+          <path
+             class="surface"
+             d="M688.0883468186095,318.4336892781482a54.20249999999999,54.20249999999999 0 0 0 -23.202249073967266,-104.93516168402309l-5.700324978770554,-66.00179960718044a120.44999999999999,120.44999999999999 0 0 1 51.56055349770504,233.18924818671798Z"
+             style="pointer-events: all; stroke-width: 0; fill: rgb(17, 123, 215); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;"
+             id="path97" />
+          <g
+             class="slicetext"
+             id="g105">
+            <text
+               data-notex="1"
+               class="slicetext"
+               transform="translate(754.8167841213839,248.64663253793066)translate(-0.1015625,-3.796875)"
+               text-anchor="middle"
+               x="0"
+               y="0"
+               style="font-family: Roboto; font-size: 12px; fill: rgb(255, 255, 255); fill-opacity: 1; white-space: pre;"
+               id="text103">
+              <tspan
+                 class="line"
+                 dy="0em"
+                 x="0"
+                 y="0"
+                 id="tspan99">3230</tspan>
+              <tspan
+                 class="line"
+                 dy="1.3em"
+                 x="0"
+                 y="0"
+                 id="tspan101">45.8%</tspan>
+            </text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+     class="glimages"
+     id="g115" />
+  <defs
+     id="topdefs-c060b4">
+    <clipPath
+       id="legendc060b4">
+      <rect
+         width="302"
+         height="29"
+         x="0"
+         y="0"
+         id="rect117" />
+    </clipPath>
+  </defs>
+  <g
+     class="infolayer"
+     id="g203">
+    <g
+       class="g-gtitle"
+       id="g125">
+      <text
+         class="gtitle"
+         x="400"
+         y="12.5"
+         text-anchor="middle"
+         style="font-family: Roboto; font-size: 17px; fill: rgb(68, 68, 68); opacity: 1; font-weight: normal; white-space: pre;"
+         id="text123">
+        <tspan
+           style="font-weight:bold"
+           id="tspan121">Peso Relativo Ciencias Sociales y Jurídicas</tspan>
+      </text>
+    </g>
+    <g
+       class="legend"
+       pointer-events="all"
+       transform="translate(60, 558.5)"
+       id="g171">
+      <rect
+         class="bg"
+         shape-rendering="crispEdges"
+         width="302"
+         height="29"
+         x="0"
+         y="0"
+         style="stroke: rgb(68, 68, 68); stroke-opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke-width: 0px;"
+         id="rect127" />
+      <g
+         class="scrollbox"
+         transform="translate(0, 0)"
+         clip-path="url(#legendc060b4)"
+         id="g167">
+        <g
+           class="groups"
+           id="g165">
+          <g
+             class="traces"
+             transform="translate(0, 14.5)"
+             style="opacity: 1;"
+             id="g145">
+            <g
+               class="layers"
+               style="opacity: 1;"
+               id="g139">
+              <g
+                 class="legendfill"
+                 id="g129" />
+              <g
+                 class="legendlines"
+                 id="g131" />
+              <g
+                 class="legendsymbols"
+                 id="g137">
+                <g
+                   class="legendpoints"
+                   id="g135">
+                  <path
+                     class="legendpie"
+                     d="M6,6H-6V-6H6Z"
+                     transform="translate(20,0)"
+                     style="stroke-width: 0; fill: rgb(54, 50, 153); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;"
+                     id="path133" />
+                </g>
+              </g>
+            </g>
+            <text
+               class="legendtext user-select-none"
+               text-anchor="start"
+               x="40"
+               y="4.680000000000001"
+               style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+               id="text141">Sociales y Jurídicas</text>
+            <rect
+               class="legendtoggle"
+               pointer-events="all"
+               x="0"
+               y="-9.5"
+               width="302"
+               height="19"
+               style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;"
+               id="rect143" />
+          </g>
+          <g
+             class="traces"
+             transform="translate(150.6875, 14.5)"
+             style="opacity: 1;"
+             id="g163">
+            <g
+               class="layers"
+               style="opacity: 1;"
+               id="g157">
+              <g
+                 class="legendfill"
+                 id="g147" />
+              <g
+                 class="legendlines"
+                 id="g149" />
+              <g
+                 class="legendsymbols"
+                 id="g155">
+                <g
+                   class="legendpoints"
+                   id="g153">
+                  <path
+                     class="legendpie"
+                     d="M6,6H-6V-6H6Z"
+                     transform="translate(20,0)"
+                     style="stroke-width: 0; fill: rgb(17, 123, 215); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;"
+                     id="path151" />
+                </g>
+              </g>
+            </g>
+            <text
+               class="legendtext user-select-none"
+               text-anchor="start"
+               x="40"
+               y="4.680000000000001"
+               style="font-family: Roboto; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+               id="text159">Otros ámbitos</text>
+            <rect
+               class="legendtoggle"
+               pointer-events="all"
+               x="0"
+               y="-9.5"
+               width="302"
+               height="19"
+               style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;"
+               id="rect161" />
+          </g>
+        </g>
+      </g>
+      <rect
+         class="scrollbar"
+         rx="20"
+         ry="2"
+         width="0"
+         height="0"
+         style="fill: rgb(128, 139, 164); fill-opacity: 1;"
+         id="rect169" />
+    </g>
+    <g
+       class="annotation"
+       data-index="0"
+       style="opacity: 1;"
+       id="g181">
+      <g
+         class="annotation-text-g"
+         transform="rotate(0,162.51,267.5)"
+         id="g179">
+        <g
+           class="cursor-default"
+           transform="translate(124, 258)"
+           id="g177">
+          <rect
+             class="bg"
+             x="0.5"
+             y="0.5"
+             width="77"
+             height="18"
+             style="stroke-width: 1px; stroke: rgb(0, 0, 0); stroke-opacity: 0; fill: rgb(0, 0, 0); fill-opacity: 0;"
+             id="rect173" />
+          <text
+             class="annotation-text"
+             text-anchor="middle"
+             x="39.546875"
+             y="14"
+             style="font-family: 'Open Sans', verdana, arial, sans-serif; font-size: 11px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text175">Total Nacional</text>
+        </g>
+      </g>
+    </g>
+    <g
+       class="annotation"
+       data-index="1"
+       style="opacity: 1;"
+       id="g191">
+      <g
+         class="annotation-text-g"
+         transform="rotate(0,417.7,267.5)"
+         id="g189">
+        <g
+           class="cursor-default"
+           transform="translate(395, 258)"
+           id="g187">
+          <rect
+             class="bg"
+             x="0.5"
+             y="0.5"
+             width="44"
+             height="18"
+             style="stroke-width: 1px; stroke: rgb(0, 0, 0); stroke-opacity: 0; fill: rgb(0, 0, 0); fill-opacity: 0;"
+             id="rect183" />
+          <text
+             class="annotation-text"
+             text-anchor="middle"
+             x="22.5625"
+             y="14"
+             style="font-family: 'Open Sans', verdana, arial, sans-serif; font-size: 11px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text185">Navarra</text>
+        </g>
+      </g>
+    </g>
+    <g
+       class="annotation"
+       data-index="2"
+       style="opacity: 1;"
+       id="g201">
+      <g
+         class="annotation-text-g"
+         transform="rotate(0,665.1899999999999,267.5)"
+         id="g199">
+        <g
+           class="cursor-default"
+           transform="translate(648, 258)"
+           id="g197">
+          <rect
+             class="bg"
+             x="0.5"
+             y="0.5"
+             width="34"
+             height="18"
+             style="stroke-width: 1px; stroke: rgb(0, 0, 0); stroke-opacity: 0; fill: rgb(0, 0, 0); fill-opacity: 0;"
+             id="rect193" />
+          <text
+             class="annotation-text"
+             text-anchor="middle"
+             x="16.9375"
+             y="14"
+             style="font-family: 'Open Sans', verdana, arial, sans-serif; font-size: 11px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;"
+             id="text195">UPNA</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

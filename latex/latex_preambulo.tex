@@ -1,0 +1,207 @@
+
+% \usepackage[utf8]{inputenc}
+
+\geometry{a4paper}
+
+
+% now we can do some math!
+% For A4 paper
+\geometry{
+  left=25.8mm, % left margin
+  textwidth=102mm, % main text block
+  marginparsep=6.2mm, % gutter between main text block and margin notes
+  marginparwidth=49.4mm % width of margin notes
+}
+
+\usepackage{framed}
+\usepackage{titletoc}
+\usepackage{etoolbox}
+\definecolor{myred}{RGB}{220,20,60}
+\definecolor{myyellow}{RGB}{65,105,225}
+
+\patchcmd{\tableofcontents}{\contentsname}{\sffamily\contentsname}{}{}
+
+\renewenvironment{leftbar}
+  {\def\FrameCommand{\hspace{6em}%
+    {\color{myyellow}\vrule width 2pt depth 6pt}\hspace{1em}}%
+    \MakeFramed{\parshape 1 0cm \dimexpr\textwidth-6em\relax\FrameRestore}\vskip2pt%
+  }
+ {\endMakeFramed}
+
+\titlecontents{chapter}
+  [0em]{\vspace*{\baselineskip}}
+  {%
+    \begin{minipage}{\textwidth}
+    \parbox{4.5em}{\hfill\Huge\sffamily\bfseries\color{myred}\thecontentspage}%
+   \vspace{-2.3\baselineskip}\leftbar{\sffamily\chaptername~\thecontentslabel}\\
+   \sffamily
+  }
+  {%
+    \begin{minipage}{\textwidth}
+    \parbox{4.5em}{%
+    \hfill\Huge\sffamily\bfseries\color{myred}\thecontentspage}%
+   \vspace{-2.3\baselineskip}\leftbar\textsf{}\\\sffamily}
+  {\endleftbar\end{minipage}\nopagebreak}[\vskip2pt\nopagebreak]
+\titlecontents{section}
+  [8.4em]
+  {\sffamily\contentslabel{3em}}{}{}
+  {\hspace{0.5em}\nobreak\itshape\color{myred}\contentspage}
+\titlecontents{subsection}
+  [8.4em]
+  {\sffamily\contentslabel{3em}}{}{}
+  {\hspace{0.5em}\nobreak\itshape\color{myred}\contentspage}
+
+\usepackage{lscape}
+
+
+\newcommand{\blandscape}{\begin{landscape}}
+\newcommand{\elandscape}{\end{landscape}}
+
+\usepackage[T1]{fontenc}
+
+\newcommand\myshade{85}
+\colorlet{mylinkcolor}{black}
+\colorlet{mycitecolor}{RoyalBlue}
+\colorlet{myurlcolor}{RoyalBlue}
+
+\hypersetup{
+  linkcolor  = mylinkcolor!\myshade!black,
+  citecolor  = mycitecolor!\myshade!black,
+  urlcolor   = myurlcolor!\myshade!black,
+  colorlinks = true,
+}
+
+\usepackage[spanish,es-nodecimaldot,es-noshorthands,es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ifxetex}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{float}
+
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{colortbl}
+
+
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+
+\renewcommand{\chaptermark}[1]{%
+\markboth{#1}{}}  
+\fancyhf{} % clear header and footer fields
+\ifthenelse{\boolean{@tufte@twoside}}
+  {\fancyhead[LE]{\thepage\quad\smallcaps{\newlinetospace{Mónica Cortiñas. Proyecto Docente e Investigador}}}%
+    \fancyhead[RO]{\smallcaps{\newlinetospace{\chaptername{}~\thechapter. \leftmark}}\quad\thepage}}
+  {\fancyhead[RE,RO]{\smallcaps{\newlinetospace{\chaptername{}~\thechapter. \leftmark}}\quad\thepage}}
+
+% \setmainfont[Ligatures=TeX,Numbers=OldStyle]{Cardo}
+\setmainfont[Scale=1.2]{Cardo}[%
+  Path = fonts/ ,
+  Extension = .ttf ,
+  UprightFont = *104s ,
+  BoldFont = *b101 ,
+  ItalicFont = *i99,
+  Ligatures=TeX,Numbers=OldStyle
+]
+\setsansfont[Scale=1]{Roboto}[%
+  Path = fonts/ ,
+  Extension = .ttf ,
+  BoldFont = *_Bold ,
+  ItalicFont = *_Italic,
+  BoldItalicFont = *_Bold_Italic,
+  Scale=0.94
+]
+% \setmonofont[Scale=0.94]{Consolas}
+\setmonofont{Consolas}[%
+  Path = fonts/ ,
+  Extension = .ttf ,
+  BoldFont = *_Bold ,
+  ItalicFont = *_Italic,
+  BoldItalicFont = *_Bold_Italic,
+  Scale=0.94
+]
+\usepackage{fontawesome}
+
+\newcommand\sectionnote[1]{\marginnote{\color{RubineRed}#1}}
+
+\ifxetex
+  \newcommand{\textls}[2][5]{%
+    \begingroup\addfontfeatures{LetterSpace=#1}#2\endgroup
+  }
+  \renewcommand{\allcapsspacing}[1]{\textls[15]{#1}}
+  \renewcommand{\smallcapsspacing}[1]{\textls[10]{#1}}
+  \renewcommand{\allcaps}[1]{\textls[15]{\MakeTextUppercase{#1}}}
+  \renewcommand{\smallcaps}[1]{\smallcapsspacing{\scshape\MakeTextLowercase{#1}}}
+  \renewcommand{\textsc}[1]{\smallcapsspacing{\textsmallcaps{#1}}}
+\fi
+
+\usepackage{ragged2e}
+
+\renewcommand{\maketitlepage}{%
+  \cleardoublepage
+  \begin{fullwidth}%
+    \sffamily
+    \RaggedRight\sloppy% <-- added this line
+    \fontsize{24}{26}\selectfont\par\noindent\textcolor{darkgray}{\smallcaps{\thanklessauthor}}%
+    \vspace{11.5pc}%
+    \fontsize{40}{44}\selectfont\par\noindent\textcolor{darkgray}{\smallcaps{\thanklesstitle}}%
+    \vfill
+    \fontsize{16}{18}\selectfont\par\noindent{\thanklesspublisher}%
+  \end{fullwidth}%
+  \thispagestyle{empty}%
+  \clearpage
+}
+
+
+%% Font settings suggested by fbb documentation.
+% \usepackage{textcomp} % to get the right copyright, etc.
+% \usepackage[lining,tabular]{fbb} % so math uses tabular lining figures
+% \usepackage[scaled=.94,type1]{cabin} % sans serif in style of Gill Sans
+% \usepackage[varqu,varl]{zi4}% inconsolata typewriter
+% \useosf % change normal text to use proportional oldstyle figures
+%\usetosf would provide tabular oldstyle figures in text
+
+\setsidenotefont{\sffamily\footnotesize}
+\setmarginnotefont{\sffamily\footnotesize}
+\setcaptionfont{\sffamily\itshape\footnotesize}
+\titleformat{\part}{\mdseries\huge}{\textsc{Part \thepart}}{1em}{\textsc}
+
+\usepackage[os=win]{menukeys}
+\renewmenumacro{\directory}{pathswithfolder}
+\renewcommand\drawtikzfolder[1][black]{\textcolor{#1}\faFolderO{}}
+
+\usepackage{graphicx}
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{3}
+\usepackage{enumitem}
+\setlist[itemize,enumerate]{noitemsep}
+
+
+\usepackage{mdframed}
+\mdfsetup{backgroundcolor=Beige!30!white,hidealllines=true}
+\surroundwithmdframed{minted}
+
+\usepackage{silence}
+\WarningFilter{latex}{Marginpar on page}
+
+\newsavebox{\titleimage}
+\savebox{\titleimage}{\includegraphics[height=3\baselineskip]{latex/logo.png}}
+
+\newsavebox{\tipo}
+\savebox{\tipo}{\sffamily\LARGE\smallcaps{\hspace{2em}Concurso de Acceso Cuerpos Docentes Universitarios}}
+\newsavebox{\plaza}
+\savebox{\plaza}{\sffamily\LARGE\smallcaps{\hspace{2em}Cuerpo de Titulares de Universidad- Plaza nº 2391}}
+\newsavebox{\fecha}
+\savebox{\fecha}{\sffamily\small\smallcaps{\hspace{2em}Noviembre de 2018 }}
+
+
+

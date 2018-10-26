@@ -1,0 +1,9 @@
+﻿Figura,Tipo,Acr,Agencia,Programa
+Profesor Asociado ,Personal laboral,No,- ,-
+Profesor Ayudante,Personal laboral,No,-,-
+Profesor Ayudante Doctor,Personal laboral,Sí,"Aneca, Autonómica",PEP
+Profesor Visitante,Personal laboral,No,-,- 
+Profesor Contratado Doctor,Personal laboral,Sí,"Aneca, Autonómica",PEP
+Profesor Emérito,Personal laboral,No,-,-
+Profesor Titular de Universidad,Cuerpos Docentes,Sí,Aneca,ACADEMIA
+Catedrático de Universidad,Cuerpos Docentes,Sí,Aneca,ACADEMIA

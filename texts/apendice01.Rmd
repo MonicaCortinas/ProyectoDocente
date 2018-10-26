@@ -1,0 +1,275 @@
+---
+documentclass: book
+classoption: a4paper
+#classoption: a4paper,oneside
+#bibliography: bib/library.bib
+bibliography: "D:/Dropbox/2_ Investigacion/4_Referencias/library.bib"
+#csl: methods-in-ecology-and-evolution.csl
+csl: spanish-journal-of-marketing-esic.csl
+link-citations: yes
+fontsize: 12pt # 10pt,11pt
+geometry: margin = 2.5cm
+output: 
+  pdf_document: 
+    keep_tex: yes
+    number_sections: yes
+#    toc: yes
+    fig_caption: yes
+---
+
+
+```{r include=FALSE}
+knitr::opts_chunk$set(fig.path = 'figures/',
+                      echo = FALSE, warning = FALSE, message = FALSE,
+                      fig.align="center",out.width="95%",
+                      cache=FALSE)
+```
+
+
+<!-- \appendix -->
+<!-- \setcounter{chapter}{0} -->
+<!-- \setcounter{chapter}{0} escribir 0 para apéndice A  -->
+
+<!-- \pagenumbering{arabic} -->
+
+
+# Anexo.-Dirección Comercial I: Guía del estudiante \label{anexo1}
+
+\noindent\hbox to 0.06\textwidth{\textcolor{Green}{\faUser} }Mónica Cortiñas  
+\noindent\hbox to 0.06\textwidth{\textcolor{Green}{\faPhoneSquare}}948169895  
+\noindent\hbox to 0.06\textwidth{\textcolor{Green}{\faEnvelopeO}}mcortinas@unavarra.es  
+\noindent\hbox to 0.06\textwidth{\textcolor{Green}{\faMapMarker}}Dpto. Gestión de Empresas. Ed. Los Madroños. D-0.25  
+\noindent\hbox to 0.06\textwidth{\textcolor{Green}{\faClockO}} Horario tutorías: L. y J. 10-13h  
+\noindent\hbox to 0.06\textwidth{\textcolor{Green}{\faCalendar}} Calendario semanal: http://www.unavarra.es/pdi?uid=2001&dato=tutorias
+
+## Objetivos del curso
+
+Mucha gente piensa que el marketing es solo *publicidad* para persuadir a los consumidores para comprar productos y servicios o que se centra en *crear falsas necesidades*. Sin embargo, el marketing es mucho más (y mucho más complicado que eso). Ni los directivos más avispados pueden convencer a los mercados para comprar cosas que no quieren. 
+
+
+```{r procesomk, out.width='100%' , fig.margin = TRUE,fig.cap = "El proceso de marketing"}
+
+knitr::include_graphics("images/procesomk.png")
+
+```
+
+En realidad, el marketing tiene que ver con (1) identificar las necesidades de los consumidores, (2) satisfacer estas necesidades con una oferta adecuada, (3) asegurar que esta oferta esté disponible a través de los mejores canales, asegurar que se conozca y que se motive la compra y asegurar que esta oferta tenga un precio adecuado para (4) mantener la satisfacción de los consumidores y de ese modo, (5) asegurar la rentabilidad de la empresa. 
+
+En esta asignatura nos vamos a centrar en las preguntas 1, 2, 4 y 5, mientras que la asignatura *Dirección Comercial II* se centrará en todos los aspectos que implica la pregunta 3. Proporcionaremos las bases para comprender los conceptos, análisis y actividades que implica la Dirección Comercial en la empresa además de práctica en la solución y evaluación de problemas de marketing.
+
+Estas dos asignaturas, junto con la asignatura *Investigación de Mercados*, forman la materia *Fundamentos de Marketing* que proporciona las bases que después se desarrollan en las materias optativas de la *Mención en Marketing* en el cuarto curso. En la guía de la asigntura de la página web se exponen en detalle las competencias y resultados de aprendizaje a alcanzar y cómo se relacionan con las actividades que desarrollamos en la asignatura.
+
+## Clases
+
+En el cronograma, se especifican las actividades que se van a realizar en cada sesión. 
+
+En las clases en **grupo grande**, se proporciona una visión general de la teoría y además se realizan distintas actividades de aplicación. Se espera de los estudiantes que **acudan regularmente** a estas clases en grupo grande y que además **participen** en las actividades. Esta participación tiene una valoración en la evaluación final. ^[\textcolor{Red}{\faExclamationTriangle} Las clases **no cubren necesariamente todos los contenidos de la teoría**. Se espera de los estudiantes que tengan disponible el manual recomendado y lo utilicen para el estudio.]
+ 
+
+En las clases en **grupo pequeño** (seminario) se realizan dos tipos de actividades en grupo: proyecto grupal y casos prácticos. La asistencia y trabajo en estas clases es un **requisito** para superar la asignatura. La falta de asistencia a uno de estos seminarios supondrá una puntuación de un cero en la actividad correspondiente en el caso de los casos prácticos y una penalización de dos puntos en la nota final del proyecto. 
+
+\clearpage
+
+## Integridad Académica
+
+Se espera de los estudiantes que respeten la normativa sobre integridad académica que se firma en la primera matrícula. Todos los trabajos que se entregan en esta asignatura son sometidos a **control de plagio**. En relación con ésto, es especialmente importante el punto tres de dicha normativa^[\textcolor{Red}{\faAngleDoubleRight{}} Cualquier estudiante que disponga o se valga de medios fraudulentos en la realización de un trabajo académico requerido para su evaluación, como el plagio y la utilización de material no original (salvo aquel autorizado explícitamente por el profesorado), incluido aquél obtenido a través de internet, sin indicación expresa de su procedencia y, si es el caso, permiso de su autor, podrá ser suspendido en la evaluación de dicho trabajo y calificado de suspenso (0,0) de la asignatura en la correspondiente convocatoria y podrá ser objeto de sanción, previa apertura de expediente disciplinario.].
+
+La normativa completa puede consultarse en la [página web de la universidad](https://www.unavarra.es/digitalAssets/123/123946_1000001DECLARACION-DE-INTEGRIDAD-ACADEMICA.pdf).
+Bajo ninguna circunstancia se realizarán excepciones a esta política.
+
+## Política relacionada con el abandono de la asignatura
+
+Las actividades en grupo son fundamentales en el desarrollo de esta asignatura. El estudiante que, una vez incorporado a un grupo, no participe finalmente en los casos o en el proyecto, obtendrá una calificación final de *Suspenso* independientemente de que se haya presentado o no al examen final.
+
+## Proyecto Grupal
+
+El proyecto por grupo es una de las principales actividades prácticas de la asignatura. En términos generales, busca proporcionar una visión más cercana de las estrategias de marketing en el contexto de la realidad del mundo empresarial; conocer el valor de la información y de la investigación de mercados en la toma de decisiones; identificar y manejar las distintas fuentes de información internas y externas que pueden utilizarse para la elaboración de informes empresariales; conocer las dificultades que conlleva la elaboración de informes; realizar una aplicación a un caso real de los conceptos genéricos y temas estudiados, y desarrollar habilidades de trabajo en equipo y de expresión oral.
+
+Para apoyar la consecución de estas competencias, el proyecto grupal se va a apoyar en la herramienta de trabajo colaborativo [https://trello.com](https://trello.com).
+
+```{r proyectogrupo, out.width='100%' , fig.margin = TRUE}
+
+knitr::include_graphics("images/grupo.jpg")
+
+```
+
+Se trata de un trabajo original *(ver apartado sobre integridad académica)* relacionado con el análisis de las estrategias de marketing de una determinada industria. El trabajo se realiza por grupos de forma tutorizada durante todo el semestre. Es necesario presentar tanto un informe final escrito como realizar una presentación oral.
+
+### Formación de los grupos
+
+Los estudiantes deben formar grupos de como máximo cuatro personas. La fecha límite de formación de los grupos se indica en el cronograma. Los estudiantes se inscribirán en los distintos grupos mediante la herramienta *Secciones* disponible en MiAulario. Los estudiantes asumen la responsabilidad de formar los grupos por lo que deben valorar la dinámica de trabajo que se puede generar en cada caso.^[La lectura ["Cómo enfrentarse a los jetas y los mantas"](http://bioinfo.uib.es/~joemiro/TTrGrupo/jtasmantas.pdf) es muy recomendable y da algunos consejos útiles para el trabajo por grupos.]. Los estudiantes también pueden apuntarse de forma individual a una de las secciones con sitio disponible para formar un grupo.
+
+Además, los estudiantes deben darse de alta en [Trello](https://trello.com/), formar un equipo, dar de alta a la profesora y establecer un primer panel con la tarea "Elección de Tema".
+
+### Elección del tema
+
+Cada equipo debe seleccionar una industria sobre la que debe realizar el análisis. Para ello, pueden tener en cuenta:
+
+- Se debe poder identificar a las principales empresas en la industria y que estas sean un grupo Reducido (cinco como máximo).
+- Se debe poder obtener información secundaria suficiente para poder analizar las estrategias de marketing.
+- Es recomendable que el mercado elegido sea B2C para poder recoger información primaria adicional si es necesario.
+
+Los equipos deben ir añadiendo fuentes de información sobre la industria y sus empresas en el panel Trello de elección de industria.
+
+Cada grupo elige una industria y comunica a la profesora su decisión.^[\textcolor{Red}{\faExclamationTriangle} Esta información se debe enviar por correo electrónico antes de la fecha marcada en el cronograma]. En esa semana, cada grupo debe acudir a **tutorías** para justificar y discutir esa elección.
+
+### Estructura
+
+El proyecto de análisis se estructura de la siguiente forma:
+
+1. Introducción
+
+1.1. Resumen ejecutivo: 150-200 palabras explicando los principales aspectos abordados en el trabajo.^[\textcolor{Red}{\faAngleDoubleRight{}} Este apartado se completa al final.]   
+1.2. Justificación de la elección de la industria
+
+2. La industria
+
+2.1. Descripción de la industria y los principales actores. Principales empresas del sector: Descripción e historia. Misión, visión y ubicación.  
+2.2. Productos-mercados  
+2.3. Cuotas de mercado, facturación  
+
+3. Análisis del Entorno de Marketing
+
+3.1. El Macroentorno en la industria: demográfico, económico, socio-cultural, medioambiental, político-legal, tecnológico.  
+3.2. Aspectos de microentorno en la industria: Análisis de la competencia, proveedores, distribuidores, grupos de interés.  
+
+4. Comportamiento del consumidor
+
+4.1. Factores que influyen en su comportamiento  
+4.2. Proceso de decisión de compra  
+
+5. Estrategias de Segmentación
+
+5.1. Segmentación del Mercado  
+5.2. Valoración del Atractivo de los Segmentos y Estrategias de Selección del Público Objetivo  
+5.3. Estrategias de Diferenciación y Posicionamiento  
+
+6. Recomendaciones y Conclusiones
+
+A la luz de la información que se ha descrito en los apartados anteriores y de los conocimientos que estás adquiriendo en la asignatura, ¿qué recomendaciones haces a las empresas en esta industria en cuanto a sus estrategias de marketing?
+
+¿Qué has aprendido del estudio de estas empresas, de su mercado y de sus estrategias de marketing?  
+
+### Seguimiento
+
+Además de la tutoría inicial de discusión de la industria elegida, se mantendrán dos reuniones de trabajo con cada grupo para hacer un seguimiento del estado del proyecto. En estas reuniones de trabajo:
+
+- El equipo presenta el estado del proyecto hasta ese momento mediante un informe escrito con la Redacción del proyecto.
+- El equipo presenta las cuestiones abiertas y las tareas pendientes mediante la discusión de la evolución del **panel Trello**.
+- La profesora proporciona feedback sobre el trabajo realizado hasta el momento y las tareas pendientes.
+
+Se realizan al menos dos reuniones de seguimiento.
+
+- Primera reunión: deben estar completos los puntos 1 y 2 del trabajo ^[\textcolor{Red}{\faAngleDoubleRight{}} Salvo el resumen ejecutivo.]
+- Segunda reunión: deben estar completos los puntos 3 y 4 del trabajo.
+
+Estas dos reuniones se realizan en dos clases de seminario. El material para la reunión se entregará en una tarea en MiAulario con dos días de antelación^[\textcolor{Red}{\faExclamationTriangle{}} Consultar cronograma.]. Además de estas dos reuniones, los grupos podrán solicitar una tutoría sobre el proyecto en cualquier momento.
+
+### Presentación
+
+El informe final sobre el proyecto se entrega en la tarea de MiAulario en la fecha marcada en el cronograma de la asignatura. No se establecen requisitos en cuanto a extensión o número de palabras.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *A modo orientativo, el informe sobre el proyecto puede tener entre 25 y 30 páginas más anexos.* 
+
+\textcolor{Red}{\faAngleDoubleRight{}} *No se establecen requisitos en cuanto a formato, seguir las recomendaciones de esta [guía para presentar un trabajo académico](https://www2.uned.es/biblioteca/guia_rapida/presentacion_trabajos.htm)*.
+
+```
+
+Además, se realiza una presentación final del proyecto en clase tanto a la profesora como al resto de estudiantes. Esta presentación tiene una duración entre 10-12 minutos e incluye un turno de preguntas posterior. Los grupos deben preparar material de apoyo^[\textcolor{Red}{\faAngleDoubleRight{}} e.g. transparencias] para esta exposición pero no es necesario entregar este material a la profesora.
+
+
+Así, en la evaluación del proyecto grupal se tiene en cuenta:
+
+- organización y trabajo durante el curso: reuniones de trabajo y panel Trello.
+- informe escrito: aspectos formales, contenido adecuado y capacidad de análisis y síntesis, bibliografía, creatividad en las propuestas presentadas.
+- presentación: materiales, uso del lenguaje y control corporal, contenido, control del tiempo.
+
+
+## Casos Prácticos
+
+Durante el curso se realizarán cuatro casos prácticos en las clases en grupo pequeño. En MiAulario, se indica el caso a resolver en cada sesión. Los casos se resuelven por grupos en la primera parte de la clase y se discuten entre todos en la última parte de la clase. Para ello, en los primeros minutos se dedicará algo de tiempo a releer el caso (pero es conveniente haberlo leído con antelación). ^[\textcolor{Red}{\faExclamationTriangle{}} Para hacer una buena propuesta de solución un caso, es importante la **confrontación de opiniones y discusión de grupo** por lo que no es recomendable repartir las preguntas entre los componentes del grupo.] Los casos son descripciones de situaciones reales de empresas por lo que:
+
+- no hay una única respuesta válida: es necesario valorar opciones y justificar la elección.
+- hay incertidumbre o falta de información, no se dispone de todos los datos necesarios: es necesario justificar qué otra información podría ser útil y su posible impacto.
+- normalmente no se cubre un único tema sino, como en las situaciones reales, pueden haber cuestiones diversas: en las soluciones es necesario integrar conocimientos de esta asignatura y de otras asignaturas en el título.
+
+En la evaluación de los casos prácticos se tiene en cuenta:
+
+- el informe escrito presentado
+- la participación y exposición en la discusión en clase
+
+La nota de los casos, como norma general, se asigna a todos los componentes del grupo presentes el día de la clase. Puede haber penalizaciones en esta nota en función de la participación individual en la fase de discusión.
+
+## Lecturas
+
+Para cada tema en la asignatura, se indica una lectura recomendada. Estas lecturas son material requerido para el examen final de la asignatura. Además, dos de estas lecturas tienen una tarea asociada relacionada con el análisis de sus contenidos. En estos casos se requiere:
+
+- La entrega en la fecha indicada del informe sobre esta lectura.
+- La evaluación de las tareas de dos compañeros: A este sistema se le denomina *evaluación por pares* y fomenta las competencias de evaluación crítica y análisis que se requieren esta asignatura, proporcionando además un feedback valioso a los compañeros. 
+
+La *evaluación por pares* se realizará en base a la rúbrica que se proporcionará para cada tarea^[\textcolor{Red}{\faExclamationTriangle} Tanto el trabajo que estáis evaluando como la posterior evaluación son **anónimas para los estudiantes pero no para el profesor**.]. La no realización de la evaluación o la realización de evaluaciones no ajustadas a la rúbrica de evaluación (tanto por rigurosas en exceso como por lo contrario) penalizarán la nota del evaluador. Las evaluaciones de los pares no son vinculantes para la calificación final de la tarea, que la realiza el profesor.
+
+## Examen
+
+En esta asignatura está previsto un examen final que es recuperable en el examen extraordinario. La nota obtenida en el examen final supone un 50% de la nota final de la asignatura. ^[\textcolor{Red}{\faExclamationTriangle} La fecha de ambos exámenes está publicada en la página web de la [Facultad de Ciencias Económicas y Empresariales](http://www.unavarra.es/fac-economicas/estudios/grado/grado-en-administracion-y-direccion-de-empresas/periodos-de-evaluacion?submenu=yes). Estas fechas se fijan de acuerdo con la estructura del plan de estudios y tras consulta a los delegados y aprobación por la Junta de la Facultad por lo que **no son modificables** bajo ningún concepto.] 
+
+Tanto los contenidos que se han discutido en clase, como el contenido de los capítulos del Manual Básico incluídos en esta asignatura (señalados en la bibliografía) y las lecturas de cada tema pueden aparecer en el examen.
+
+Es necesario superar el examen final con un **5 sobre 10** para poder promediar la nota final con el resto de actividades evaluables. El examen tendrá una parte de preguntas tipo test y una parte de preguntas con respuesta corta, suponiendo cada una el 50% de la calificación y siendo compensables entre sí.
+
+## Materiales
+
+Manual Básico^[\textcolor{Red}{\faAngleDoubleRight{}} Este manual cubre también los contenidos de la asignatura Dirección Comercial II. También pueden utilizarse ediciones anteriores del mismo texto.]: Kotler, P., & Armstrong, G. (2018). Principios de Marketing. Principios de Marketing (17th ed.). Pearson. 
+
+Los materiales complementarios y las lecturas de cada tema se recogen en MiAulario
+
+
+## Sitio MiAulario
+
+En el sitio de MiAulario están disponibles las transparencias utilizadas en clase, así como la bibliografía básica y complementaria y las lecturas desglosadas por tema. 
+
+Además, se utilizará la herramienta *Tareas* para todas las entregas asignadas (grupales e individuales)^[\textcolor{Red}{\faExclamationTriangle} No se considerará como entregada cualquier tarea enviada por email o en papel.]. Las calificaciones de las distintas tareas se comunicarán a través de la herramienta *Libro de Evaluación*. Para asegurar la transparencia en el sistema de calificación, la lista de notas finales se publicará además como anuncio en el sitio interno de MiAulario.
+
+La comunicación con los estudiantes también se realiza a través de MiAulario ya sea por la vía del **correo interno** o por la vía de **anuncios**. Es imprescindible que los estudiantes consulten con frecuencia el **correo institucional**.^[\textcolor{Red}{\faExclamationTriangle} Se recomienda encarecidamente configurar el correo en el móvil ([Instrucciones](https://www.unavarra.es/servicio-informatico/ayuda-sobre-los-servicios/correo-electronico/clientes-de-correo)).]
+
+## Evaluación
+
+La Tabla \ref{evaluacionguia} resume los elementos de la evaluación y su ponderación:
+
+```{r}
+
+tabla2 <- data.frame(stringsAsFactors=FALSE,
+       Criterios = c("a.1. Trabajo durante el curso", "a.2. Entregas para las lecturas", "a.3. Desempeño en el examen final", "b.1. Proyecto de Análisis", "b.2. Casos en grupo"),
+       Ponderacion=c("5%", "5%", "50%", "20%", "20%"))
+
+names(tabla2)<- c("Instrumento","Ponderación")
+
+library(tidyverse)
+
+tabla2 %>%
+knitr::kable(tabla2, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=T, caption = "\\label{evaluacionguia} Resumen de la evaluación")  %>%
+            group_rows(index=c("Evaluación Individual" = 3, "Evaluación Grupal" = 2)) %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "16em") 
+
+```
+
+## Uso de medios audiovisuales
+
+Se permite utilizar en clase medios como tablets, portátiles o teléfonos móviles con el fin de tomar notas, seguir las transparencias o participar en los test. La utilización de estos medios para otros fines no está permitida por lo que, si es detectada, se puede requerir al estudiante a abandonar la clase o a guardar el dispositivo.
+
+Así mismo, si algún estudiante desea **realizar grabaciones de audio o video** durante la clase, debe **solicitar permiso expreso por adelantado**. Normalmente ese permiso se concede, sin embargo, las grabaciones se permiten exclusivamente para dichos fines, por lo que queda **expresamente prohibida su copia, reproducción o distribución a terceras personas** sin permiso explícito.
+
+
+## Cronograma
+
+
+```{r, fig.margin = FALSE, fig.fullwidth=TRUE, out.width='100%'}
+
+knitr::include_graphics("images/cronograma.pdf")
+
+```
+
+

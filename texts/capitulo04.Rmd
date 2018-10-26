@@ -1,0 +1,2101 @@
+---
+documentclass: book
+classoption: a4paper
+#classoption: a4paper,oneside
+#bibliography: bib/library.bib
+bibliography: "D:/Dropbox/2_ Investigacion/4_Referencias/library.bib"
+#csl: methods-in-ecology-and-evolution.csl
+csl: spanish-journal-of-marketing-esic.csl
+link-citations: yes
+fontsize: 12pt # 10pt,11pt
+geometry: margin = 2.5cm
+output: 
+  pdf_document: 
+    keep_tex: yes
+    number_sections: yes
+#    toc: yes
+    fig_caption: yes
+
+---
+
+
+
+```{r include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(fig.path = 'figures/',
+                      echo = FALSE, warning = FALSE, message = FALSE,
+                      fig.align="center",out.width="95%",
+                      cache=FALSE)
+
+```
+
+
+<!-- \setcounter{chapter}{4} -->
+<!-- \setcounter{chapter}{4} escribir 2 para capítulo 3  -->
+<!-- \pagenumbering{arabic} -->
+
+# Propuesta Docente: Dirección Comercial I \label{capitulo4}
+
+`r newthought('En este capítulo')` se presenta la planificación de la asignatura "Dirección Comercial I", del plan de estudios del Grado en Administración y Dirección de Empresas impartido en la Universidad Pública de Navarra^[\textcolor{Red}{\faAngleDoubleRight{}} Registro de Universidades, Centros y Títulos: https://www.educacion.gob.es/ruct/estudio.action?codigoCiclo=SC&codigoTipo=G&CodigoEstudio=2501666]. 
+
+## Datos descriptivos y situación de la asignatura en el Plan de Estudios
+
+La Tabla \ref{basico} presenta los datos básicos de la asignatura:
+
+```{r}
+tabla <- data.frame(stringsAsFactors=FALSE,
+       Datos = c("Titulación",  "Código RUCT", "Centro", "Rama de Conocimiento", "Créditos ECTS del Título", "Útima memoria verificada", "Nivel 1: Módulo", "Nivel 2: Materia", "Datos básicos Materia", "Nivel 3: Asignatura", "Datos básicos Asignatura", "Otras Asignaturas en la materia"),
+     Transmision = c("Graduado o Graduada en Administración y Dirección de Empresas por la Universidad Pública de Navarra", "2501666", "Facultad de Ciencias Económicas y Empresariales", "Ciencias Sociales y Jurídicas", "240.00", "10/10/2017", "Marketing", "Fundamentos de Marketing", "Obligatoria. 18 ECTS", "Dirección Comercial I", "Obligatoria. 6 ECTS. Semestre 4", "Dirección Comercial II \n Investigación de Mercados"))
+names(tabla)<- c("Datos básicos", " ")
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex",  booktabs = T, escape=F,
+             caption = "\\label{basico} Dirección Comercial I. Información básica")  %>% 
+      kable_styling(font_size = 8) %>%
+      column_spec(1, width = "12em") %>%
+      column_spec(2, width = "16em")
+
+```
+
+\clearpage
+
+Como se indica en la tabla \ref{basico}, la asignatura se imparte en el cuarto semestre de la titulación, es decir en el semestre de primavera del segundo curso.La Tabla \ref{titulo} presenta el plan de estudios completo de la titulación de Administración y Dirección de Empresas con el fin de enmarcar los objetivos y contenidos de esta asignatura. Todas las asignaturas tienen 6ECTS y son básicas u obligatorias, salvo las asignaturas del cuarto curso que son optativas. Están subrayadas las tres asignaturas que forman parte de la materia "Fundamentos de Marketing".
+
+```{r}
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     semestreo = c("Economía de la Empresa", "Introducción a la Economía", "Introducción al Derecho Privado",
+                   "Matemáticas", "Operaciones Financieras",
+                   "Contabilidad Financiera II", "Diseño y Comport. Organiz.", "Estadística II",
+                   "Macroeconomía", "Métodos Cuant. para Gestión Emp.",
+                   "Análisis de Inf. Contable", "Dirección Comercial II", 
+                   "Dirección Financiera I", "Dirección de Operaciones", "Org. Industrial y Comp. Estrat.", "Optativas"),
+     semestrep=c("Contabilidad Financiera I","Economía Aplicada","Estadística I"," Microeconomía Básica",
+                 "Derecho Mercantil","Historia Económica de la Empresa", "Dirección Comercial I", "Econometría",
+                 "Gestión de Recursos Humanos", "Mercados e Instrumentos Financieros",
+                 "Contabilidad de Gestión I", "Dirección Estratégica", "Dirección Financiera II",
+                 "Sistema Fiscal de la Empresa", "Investigación de Mercados", "Optativas"))
+
+library(tidyverse)
+      
+tabla %>%
+mutate_all(linebreak) %>%
+mutate(
+      semestreo = cell_spec(semestreo, "latex", bold=c(F, F, F, F, F,F, F, F, F, F,
+                                                        F, T, F, F, F,F), underline=c(F, F, F, F, F,F, F, F, F, F,
+                                                                                      F, T, F, F, F,F)),
+      semestrep = cell_spec(semestrep, "latex", bold=c(F, F, F, F, F,F, T, F, F, F,
+                                                        F, F, F, F, T,F), underline=c(F, F, F, F, F,F, T, F, F, F,
+                                                                                      F, F, F, F, T,F))
+      ) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = c("Semestre Otoño", "Semestre Primavera"), format = "latex",  booktabs = T, escape=F,
+             caption = "\\label{titulo} Plan de Estudios Administración y Dirección de Empresas")  %>% 
+      kable_styling(latex_options = c("scale_down")) %>%
+      group_rows("Primer Curso", 1, 5) %>%
+      group_rows("Segundo Curso", 6, 10) %>%
+      group_rows("Tercer Curso", 11, 15) %>%
+      group_rows("Cuarto Curso", 16, 16) %>%
+      column_spec(1, width = "14em")%>%
+      column_spec(2, width = "14em")%>%
+      footnote(general = "Las asignaturas subrayadas forman Fundamentos de Marketing",
+           general_title = "Nota: ",
+           footnote_as_chunk = T           )
+
+```
+
+Así, en el tercer curso se imparten las otras dos asignaturas que forman parte de la materia. En el cuarto curso se concentra toda la optatividad de la titulación. Los estudiantes pueden optar por una de las cuatro menciones ofertadas o por cursar las asignaturas que más les interesen, incluyendo la posibilidad de hacer prácticas curriculares de 24 ECTS en el último semestre. Para obtener una mención en su certificación académica, los estudiantes deben cursar 54ETCS de mención^[\textcolor{Red}{\faAngleDoubleRight{}} 12 ECTS de la mención pueden completarse con cualquier asignatura optativa de la bolsa de optatividad, asignaturas de otras titulaciones que se abren al Grado en ADE en otros grados de la Facultad y por participar en actividades culturales, deportivas, de representación estudiantil, solidaridad y cooperación.] en los semestres 5 y 6, de los cuales 24 ECTS son obligatorios de mención y además, deberán cursar tres asignaturas (18 ECTS) del paquete de asignaturas optativas asignadas a cada mención.
+
+Entre las cuatro menciones está la *Mención en Marketing* que avanza en las competencias y los resultados de aprendizaje desarrollados en la materia Fundamentos de Marketing y además, la *Mención en Organización de empresas*, la *Mención en Contabilidad y Auditoría* y la *Mención en Banca y Finanzas*. 
+
+La tabla \ref{mencion} muestra las asignaturas obligatorias y optativas para obtener la *Mención en Marketing*.
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     otono = c("Comportamiento del Consumidor", "Estrategia de Producto y Precio",
+                "International Trade Management", "Sistemas Integrados de Gestión (SAP)", "Finanzas Internacionales"  ),
+     primavera=c("Distribución y Logística", "Comunicación y Ventas", 
+                 "Innovación y Creación de Empresas", "Métodos Avanzados en Tratamiento de Datos", "Derecho del Consumo"))
+
+library(tidyverse)
+      
+tabla %>%
+knitr::kable(tabla, row.names = FALSE, col.names = c("Semestre Otoño", "Semestre Primavera"), format = "latex",  booktabs = T, escape=F,
+             caption = "\\label{mencion} Asignaturas de cuarto curso para obtener la Mención en Marketing (42ECTS +12 ECTS a elegir de la bolsa general de optatividad, de otros grados o de actividades de extensión.)")  %>% 
+      kable_styling(font_size = 7.5) %>%
+      group_rows("Asignaturas Obligatorias de Mención (24ETCS)", 1, 2) %>%
+      group_rows("Asignaturas Optativas de Mención (18ECTS a elegir de 36ECTS)", 3, 5) %>%
+      column_spec(1, width = "15em")%>%
+      column_spec(2, width = "15em")
+
+```
+
+Como conclusión, para planificar la asignatura Dirección Comercial I es necesario tener en cuenta:
+
+1. Los estudiantes están en el tercer semestre de la titulación por lo que las compentencias transversales del título todavía no están muy desarrolladas y es necesario elaborar estrategias para trabajarlas.
+2. Es el primer contacto en el título relacionado con contenidos de marketing.
+3. La planificación debe tener muy en cuenta la planificación de las otras dos asignaturas de la materia que se imparten en el tercer curso: Dirección Comercial II e Investigación de Mercados para evitar vacíos y duplicidades.
+4. También es necesario tener en cuenta que algunos estudiantes cursarán más contenidos de marketing en cuarto curso, mientras que otros cursarán solamente esta materia. Es necesario asegurar unos resultados de aprendizaje mínimos para todos los graduados.
+
+\clearpage
+
+## Objetivos: Competencias y Resultados de Aprendizaje 
+
+Para planificar adecuadamente la asignatura, como se ha descrito en el capítulo 3 de Metodología Docente, partimos de la definición de competencias y resultados de aprendizaje establecidos en la memoria del título. A partir de esta definición, enmarcaremos este conjunto de objetivos en la taxonomía de @anderson2001taxonomy con el fin de planificar las metodologías, desarrollo de contenidos y mecanismos de evaluación a utilizar.
+
+### Competencias básicas
+
+La memoria del título establece las competencias básicas, generales (transversales) y específicas de la materia Fundamentos de Marketing. En primer lugar, con respecto a las competencias básicas, estas son generales para la titulación y no se relacionan específicamente con las actividades desarrolladas en una determinada asignatura, por lo que se presentan en la Tabla \ref{compbasicas} como marco general.
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     competencia = c("CB1", "CB2" , "CB3", "CB4", "CB5"),
+     enunciado=c("Que los estudiantes hayan demostrado poseer y comprender conocimientos en un área de estudio que parte de la base de la educación secundaria general, y se suele encontrar a un nivel que, si bien se apoya en libros de texto avanzados, incluye también algunos aspectos que implican conocimientos procedentes de la vanguardia de su campo de estudio", 
+"Que los estudiantes sepan aplicar sus conocimientos a su trabajo o vocación de una forma profesional y posean las competencias que suelen demostrarse por medio de la elaboración y defensa de argumentos y la resolución de problemas dentro de su área de estudio",
+"Que los estudiantes tengan la capacidad de reunir e interpretar datos relevantes (normalmente dentro de su área de estudio) para emitir juicios que incluyan una reflexión sobre temas relevantes de índole social, científica o ética",
+"Que los estudiantes puedan transmitir información, ideas, problemas y soluciones a un público tanto especializado como no especializado", 
+"Que los estudiantes hayan desarrollado aquellas habilidades de aprendizaje necesarias para emprender estudios posteriores con un alto grado de autonomía"))
+
+library(tidyverse)
+ 
+tabla %>%
+mutate_all(linebreak) %>%      
+knitr::kable(tabla, row.names = FALSE, col.names = c(" ", "Competencia"), format = "latex", booktabs = T, escape=T, caption = "\\label{compbasicas} Competencias Básicas en la Titulación de Administración y Dirección de Empresas")  %>% 
+      kable_styling(font_size = 7.5) %>%
+      column_spec(1, width = "3em")%>%
+      column_spec(2, width = "27em")
+```
+
+Podemos observar cómo estas competencias pueden desarrollarse con las actividades que se van a planificar para las competencias generales y específicas, por lo que no requieren de planificación de actividades y mecanismos de evaluación específicos.
+
+### Competencias genéricas y específicas de Fundamentos de Marketing
+
+Las competencias genéricas^[\textcolor{Red}{\faAngleDoubleRight{}} Las competencias genéricas también se denominan transversales] y específicas de la materia Fundamentos de Marketing se presentan en la Tabla \ref{competencias}. 
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     competencia = c("CG01", "CG02", "CG03", "CG04", "CG05", "CG06", "CG07", "CG08", "CG09", "CG12", "CG14", "CG15", "CG16", "CG17", "CG19", "CG24", "CE02", "CE03", "CE04", "CE05", "CE06", "CE07", "CE13", "CE14", "CE18"),
+     enunciado=c("Capacidad de análisis y síntesis", "Capacidad de organización y planificación", "Comunicación oral y escrita en la lengua nativa",
+                 "Comunicación oral y escrita de una lengua extranjera","Conocimientos de informática relativos al ámbito de estudio", 
+                 "Habilidad para analizar y buscar información proveniente de fuentes diversas","Capacidad para la resolución de problemas", 
+                 "Capacidad de tomar decisiones", "Capacidad para trabajar en equipo","Habilidad en las relaciones personales",
+                 "Capacidad crítica y autocrítica", "Compromiso ético en el trabajo","Capacidad para trabajar en entornos de presión",
+                 "Capacidad de aprendizaje autónomo", "Creatividad", "Respeto de los derechos humanos",  "Identificar las fuentes de información económica relevantes para la empresa y su contenido", "Derivar de los datos, información relevante para la empresa imposible de reconocer por no profesionales", "Aplicar al análisis de los problemas de gestión empresarial, criterios profesionales basados en el manejo de instrumentos técnicos", "Emitir informes de asesoramiento sobre situaciones concretas de empresas y mercados", "Redactar proyectos de gestión global o de áreas funcionales de la empresa" ,
+"Valorar a partir de los registros relevantes de información la situación y previsible evolución de una empresa", 
+"Identificar la empresa como sistema y reconocer las interdependencias entre las distintas áreas funcionales", 
+"Implementar políticas y prácticas encaminadas a una mejora en la eficacia y eficiencia de la gestión empresarial", 
+"Desarrollar políticas de marketing que mejoren el conocimiento de las necesidades de los consumidores y eleven su nivel de satisfacción"))
+
+library(tidyverse)
+usepackage_latex("threeparttable")      
+tabla %>%
+mutate_all(linebreak) %>%      
+knitr::kable(tabla, row.names = FALSE, col.names = c(" ", "Competencia"), format = "latex", booktabs = T, escape=T,        caption = "\\label{competencias} Competencias Genéricas y Específicas de Fundamentos de Marketing")  %>% 
+      kable_styling(font_size = 7.5) %>%
+      column_spec(1, width = "3em")%>%
+      column_spec(2, width = "27em")
+```
+
+La memoria de la titulación establece estas competencias para el conjunto de la materia Fundamentos de Marketing, pero no establece cómo deben dividirse entre las distintas asignaturas que se describen en los contenidos:
+
+Con esta definición, es necesario atribuir estos objetivos a las tres asignaturas que componen la materia. La propia memoria también define los contenidos de estas tres asignaturas:
+
+>*Dirección Comercial I*: El marketing en la actualidad. Planificación y gestión del proceso de marketing. Análisis del entorno del marketing. El comportamiento
+del consumidor. Segmentación de mercados. Investigación comercial. Nuevos productos y ciclo de vida del producto. Selección del público objetivo,
+diferenciación y posicionamiento. Crecimiento en productos y mercados. Marketing en mercados maduros. Temas actuales de marketing.
+
+>*Dirección Comercial II*: Productos y servicios. Estrategias de marca. Decisiones sobre precios. Canales de comercialización. Dirección y gestión de los
+canales de distribución. El mix de comunicación. Estrategias de comunicación de masas: publicidad, promoción y relaciones públicas. Estrategias de
+comunicación personal: fuerza de ventas y marketing directo.
+
+>*Investigación de Mercados*: La investigación de mercados en la empresa. Planificación de la investigación de mercados. Fuentes de información secundarias.
+Fuentes de información primarias. Diseño de un cuestionario. Muestreo. Análisis de datos. Aplicaciones de las técnicas de análisis de datos
+en investigaciones de mercados orientadas a las decisiones comerciales. Presentación de resultados e informes.
+
+> `r tufte::quote_footer('--- Memoria del Título')`
+
+En este proyecto docente consideramos que cada una de las asignaturas dentro de esta materia debe contribuir al desarrollo todas de las competencias generales por lo que todas se van a tener en cuenta en la planificación de Dirección Comercial I. También se incluyen todas las competencias específicas salvo dos^[\textcolor{Red}{\faAngleDoubleRight{}} Con respecto a las competencias específicas, consideramos que la Competencia Específica 6 (*Redactar proyectos de gestión global o de áreas funcionales de la empresa*) puede enmarcarse de forma más adecuada en la asignatura Dirección Comercial II y la Competencia Específica 7 (*Valorar a partir de los registros relevantes de información la situación y previsible evolución de una empresa*) encaja mejor en la asignatura Investigación de Mercados, por lo que no se van a tener en cuenta en la definición de objetivos para Dirección Comercial I.].
+
+### Resultados de aprendizaje
+
+Por último, la memoria del título establece los resultados de aprendizaje para la materia *Fundamentos de marketing* que se presentan en la Tabla \ref{rdosmateria}. 
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     resultado = c("R_MK_01.", "R_MK_02.", "R_MK_03.", "R_MK_04.", "R_MK_05.", "R_MK_06.", "R_MK_07.",
+                   "R_MK_08.", "R_MK_09."),
+     enunciado=c("Entender qué es marketing, sus conceptos más importantes y su importancia en las organizaciones y en la economía.",
+                 "Comprender la función del marketing en la organización y su relación con otras funciones.",
+                 "Comprender las distintas decisiones estratégicas que puede tomar una organización en el proceso de planificación de marketing.",
+                 " Comprender las distintas decisiones operativas que puede tomar una organización en el proceso de planificación de marketing.",
+                 "Ser capaz de analizar el entorno del marketing, en particular el mercado y el comportamiento de los consumidores y clientes.",
+                 "Ser capaz de tomar decisiones de marketing en las organizaciones.",
+                 "Entender la importancia de la información y de la investigación de mercados en los procesos de toma de decisiones emprendidos por las organizaciones.",
+"Comprender el proceso de planificación y ejecución de una investigación de mercados.",
+"Ser capaz de planificar y ejecutar una investigación de mercados."))
+
+library(tidyverse)
+      
+tabla %>%
+knitr::kable(tabla, row.names = FALSE, col.names = c("Resultado", "Enunciado"), format = "latex",  booktabs = T, escape=T,
+             caption = "\\label{rdosmateria} Resultados de Aprendizaje en la Materia Fundamentos de Marketing")  %>% 
+      kable_styling(font_size = 7.5) %>%
+      column_spec(1, width = "4em")%>%
+      column_spec(2, width = "24em")
+```
+
+
+Si tenemos en cuenta la definición de contenidos para cada asignatura que hace la memoria de la titulación, podemos asignar a cada asignatura los nueve resultados de aprendizaje que presentan en la Tabla \ref{rdosmateria} de la forma que se presenta en la tabla \ref{resultadosdci}.
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     resultado = c("R_MK_01.", "R_MK_02.", "R_MK_03.", "R_MK_04.", "R_MK_05.", "R_MK_06.", "R_MK_07.",
+                   "R_MK_08.", "R_MK_09."),
+     enunciado=c("Entender qué es marketing, sus conceptos más importantes y su importancia en las organizaciones y en la economía.",
+                 "Comprender la función del marketing en la organización y su relación con otras funciones.",
+                 "Comprender las distintas decisiones estratégicas que puede tomar una organización en el proceso de planificación de marketing.",
+                 "Comprender las distintas decisiones operativas que puede tomar una organización en el proceso de planificación de marketing.",
+                 "Ser capaz de analizar el entorno del marketing, en particular el mercado y el comportamiento de los consumidores y clientes.",
+                 "Ser capaz de tomar decisiones de marketing en las organizaciones.", "Entender la importancia de la información y de la investigación de mercados en los procesos de toma de decisiones emprendidos por las organizaciones.",
+"Comprender el proceso de planificación y ejecución de una investigación de mercados.",
+"Ser capaz de planificar y ejecutar una investigación de mercados."),
+      asignatura=c("Dirección Comercial I", "Dirección Comercial I", "Dirección Comercial I", "Dirección Comercial I y Dirección Comercial II", "Dirección Comercial I e Inv. de Mercados", "Dirección Comercial II","Dirección Comercial I e Inv. de Mercados", "Inv. de Mercados", "Inv. de Mercados" ))
+
+library(tidyverse)
+usepackage_latex("threeparttable")      
+tabla %>%
+mutate_all(linebreak) %>%      
+knitr::kable(tabla, row.names = FALSE, col.names = c("Resultado", "Enunciado", "Asignatura"), format = "latex", booktabs = T, escape=T,        caption = "\\label{resultadosdci} Resultados de Aprendizaje en cada asignatura")  %>% 
+      kable_styling(font_size = 7.5) %>%
+      column_spec(1, width = "4em")%>%
+      column_spec(2, width = "16em")%>%
+      column_spec(3, width = "10em")%>%
+      footnote(general = "Elaboración propia a partir de la memoria de la titulación.",
+           general_title = "Nota: ",
+           footnote_as_chunk = T,threeparttable=T)
+```
+
+\clearpage
+
+### Definición de Objetivos
+
+La definición de objetivos de Dirección Comercial I debe incluir tanto las competencias genéricas y específicas que deben desarrollar los estudiantes, como los resultados de aprendizaje que estos estudiantes deben alcanzar. 
+
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faCrosshairs{}} Así, como prescribe la memoria del título, los objetivos de la asignatura deben incluir:
+
+- Contribuir a adquirir las 7 competencias genéricas listadas en la Tabla \ref{competencias}.
+- Contribuir a adquirir las 9 competencias específicas en la Tabla \ref{competencias}, con la excepción de las competencias específicas 6 y 7.
+- Alcanzar los 6 resultados de aprendizaje seleccionados entre los de la Tabla \ref{resultadosdci}.
+
+```
+
+
+
+Esta definición que procede de la memoria incluye por tanto 21 enunciados de competencias y resultados a partir de los cuales desarrollar la planificación de contenidos, metodología y evaluación. Dada la complejidad de establecer actividades específicas para cada uno de estos objetivos y que muchos de ellos son complementarios entre sí, utilizamos la taxonomía de @anderson2001taxonomy para clasificar este conjunto de objetivos. Esta clasificación se muestra en la Tabla \ref{clasobjetivos}.
+
+Así, podemos observar cómo los objetivos de la asignatura incluyen en la mayor parte de los casos funciones cognitivas de orden superior a la simple identificación y recuerdo de hechos o conceptos, por lo que la metodología y sistemas de evaluación deberán ser capaces de incentivar y evaluar ese tipo de aprendizaje. 
+
+Los resultados de aprendizaje de la asignatura se relacionan sobre todo con conocimiento conceptual y de hechos, mientras que las competencias genéricas tienen que ver con aplicación del conocimiento sobre procedimientos en la mayor parte de los casos y también con el denominado "conocimiento metacognitivo", que tiene que ver con el conocimiento sobre los propios ámbitos de conocimiento en general y con el análisis de las capacidades propias.
+
+```{r}
+tabla <- data.frame(stringsAsFactors=FALSE,
+       Conocimiento = c("A. Conocimiento sobre Hechos",
+                  "B. Conocimiento Conceptual",
+                  "C. Conocimiento Procedimental",
+                  "D. Conocimiento MetaCognitivo"),
+     Recordar = c("CE02", 
+                  " ", 
+                  " ",
+                  " "),
+     Comprender= c("CE13, RMk02", 
+                  "RMk01, RMk03, RMk04", 
+                  "CG05, RMk07",
+                  " "),
+     Aplicar= c(" ", 
+                  "CE04, CE14", 
+                  "CG02, CG03, CG04, CG06, CG09, CG12, , CG16",
+                  "CG15, CG24"),
+      Analizar= c(" ", 
+                  "RMk05", 
+                  " ",
+                  "CG01, CG14"),
+      Evaluar= c("CE03", 
+                  " ", 
+                  "CG07",
+                  " "),
+     Crear= c(" ", 
+                  "CE05, CE18", 
+                  "CG08, CG17",
+                  "CG19"))
+
+names(tabla)<- c("Conocimiento", "1.Recordar", "2. Comprender", "3. Aplicar", "4. Analizar",
+                 "5. Evaluar", "6. Crear")
+knitr::kable(tabla, row.names = FALSE, format = "latex",  longtable = T, booktabs = T, 
+             caption = "\\label{clasobjetivos} Objetivos para Dirección Comercial I enmarcados en la taxonomía de Anderson y Krathwohl")  %>% 
+      kable_styling(font_size =7.5) %>%
+      row_spec(2, bold = T, color = "white", background = "Gray") %>%
+      row_spec(4, bold = T, color = "white", background = "Gray") %>%
+      column_spec(1, width = "14em") %>%
+      column_spec(2:7, width = "7em") %>%
+      landscape() %>%
+      add_header_above(c(" " = 1, "Proceso Cognitivo" = 6)) %>%
+      footnote(general = c("Elaboración propia a partir de la memoria del título"),
+               general_title="Fuente:")
+
+```
+
+
+
+## Contenidos 
+
+Como es prescriptivo, en este Proyecto Docente se toman como referencia para la definición de los contenidos de la asignatura aquellos que se establecen en la memoria de la titulación. A partir de esta definición, estructuramos una programación con cuatro unidades didácticas:
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faQuoteLeft} *Contenidos de Dirección Comercial I*: 
+
+\vspace{2mm} 
+
+El marketing en la actualidad. Planificación y gestión del proceso de marketing. Análisis del entorno del marketing. El comportamiento del consumidor. Segmentación de mercados. Investigación comercial. Nuevos productos y ciclo de vida del producto. Selección del público objetivo, diferenciación y posicionamiento. Crecimiento en productos y mercados. Marketing en mercados maduros. Temas actuales de marketing.
+
+\vspace{2mm} 
+\hfill{---Memoria de la Titulación}
+```
+
+- **Unidad 1. Definición del marketing y su ámbito de actuación**: El marketing en la actualidad. Planificación y gestión del proceso de marketing.
+- **Unidad 2. La relación de la empresa con su mercado**: Análisis del entorno del marketing. El comportamiento del consumidor. Investigación comercial.
+- **Unidad 3. Los objetivos y estrategias de marketing**: Segmentación de mercados. Selección del público objetivo, diferenciación y posicionamiento. Crecimiento en productos y mercados. Marketing en mercados maduros.
+- **Unidad 4. Temas actuales de marketing**: marketing digital o e-marketing.
+
+Así, hemos agrupado los contenidos listados en la memoria en cuatro unidades didácticas que tienen una mayor relación entre sí y que reflejan en parte el proceso de creación y entrega de valor al cliente. En la primera unidad, se define el marketing y se describe en detalle este proceso de entrega de valor, incluyendo también la definición de los conceptos básicos de marketing. En la segunda unidad se incluye tanto el análisis del entorno de marketing como el del comportamiento del consumidor, incluyendo también los mercados B2B y se incluye una somera introducción a la investigación comercial, ya que este contenido se desarrolla en la asignatura obligatoria Investigación de Mercados. En la tercera unidad, el foco son los objetivos específicos de marketing y las estrategias para alcanzarlos. Además, se incluye en esta unidad algunas especificidades de las estrategias en mercados nuevos y maduros. Por último, la memoria de la titulación recoge una referencia genérica a Temas Actuales de Marketing. En este proyecto se desarrolla ese contenido con un tema específico sobre marketing digital y mercados digitales. 
+
+El detalle de los contenidos de cada una de estas unidades se realiza en la sección \ref{programacion}. 
+
+## Metodología de enseñanza 
+
+De entre los distintos métodos didácticos presentados en el Capítulo 3 *Metodología Docente* y, dados los objetivos docentes planteados, en este proyecto planteamos como metodología docente una combinación de^[\textcolor{Red}{\faAngleDoubleRight{}} Se ha considerado también la inclusión de un juego de empresa, pero se considera más adecuado impartirlo, como efectivamente sucede, en la asignatura Dirección Comercial II, cuando los estudiantes ya han adquirido algunas competencias básicas en esta disciplina. Así, el juego de empresa refuerza los conceptos de marketing estratégico adquiridos en Dirección Comercial I y los conecta con su aplicación al marketing operativo. El juego de empresa que se imparte en la actualidad en Dirección Comercial II es la simulación Quantum.]:
+
+- Clases magistrales con herramientas de dinamización
+- Actividades de aprendizaje cooperativo:  
+  - Casos prácticos
+  - Aprendizaje por proyectos: elaboración de informe de empresa
+- Actividades individuales  
+  - Informes sobre Lecturas
+  - Tutorías
+
+Esta combinación permite alcanzar objetivos de conocimiento de distinto tipo. Las clases magistrales permiten transmitir de forma más efectiva el conocimiento que sea preciso recordar y, sobre todo, comprender. Además, las herramientas de dinamización en cada una de estas clases permiten, por una lado, mantener la atención durante estas clases y, por otro lado, incentivar la asistencia de los estudiantes proporcionando experiencias que no pueden sustituirse por la lectura autónoma de los materiales de referencia.
+
+Otros objetivos implican desempeño en procesos cognitivos más complejos como la aplicación de conocimientos, el análisis, la evaluación o creación de contenidos nuevos. En estos casos es preciso la utilización de otras metodologías de aprendizaje que permitan a los estudiantes desarrollar estas competencias y al docente, evaluar los resultados alcanzados. Así, se plantean actividades tanto grupales (dado que la capacidad de trabajo en equipo es una competencia genérica de la asignatura) como individuales. Dentro de las actividades grupales consideramos especialmente adecuados para la adquisición de conocimientos relacionados con la estrategia de marketing los casos prácticos que favorecen la capacidad de análisis y crítica. Con el fin de alcanzar los objetivos relacionados con la creación de conocimiento nuevo, incluímos también la elaboración de un informe de empresa. Por último, con el fin de profundizar en el conocimiento metacognitivo y las capacidades de análisis y crítica, se incluyen actividades individuales de informes sobre lecturas, en las que se realizarán revisión por pares. En estas metodologías de aprendizaje activo y también en el estudio autónomo es importante la labor de tutoría del profesor, por lo que ésta es la última metodología propuesta.
+
+El detalle de la metodología que se aplica en el desarrollo de los contenidos de cada unidad se realiza en la sección \ref{programacion}.
+
+Además, el Anexo \ref{anexo1} incluye la **Guía para el Estudiante** y en el Anexo \ref{anexo2} la **Guía para el docente** que concretan los detalles de la implementación de todas las actividades.
+
+## Medios didácticos
+
+### Manual de la asignatura \label{manual}
+
+Para apoyar la adquisición de contenidos, consideramos adecuado seleccionar un manual básico de referencia para los estudiantes. 
+
+```{marginfigure, echo=TRUE}
+
+*Entre las ventajas de un manual de referencia destacan:* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faThumbsOUp{}} *Permite dar a los estudiantes una perspectiva global de los contenidos de la materia de una forma organizada.*
+
+\textcolor{Red}{\faThumbsOUp{}} *Proporciona una fuente de información más fiable a los estudiantes que la interpretación que ellos pueden hacer del discurso durante la clase, que puede contener errores.*
+
+\textcolor{Red}{\faThumbsOUp{}} *Proporciona mayor detalle en los contenidos y puede complementar puntos que se han tocado más superficialmente en la exposición.*
+
+\textcolor{Red}{\faThumbsOUp{}} *A menudo se incluyen materiales multimedia complementarios y guías del profesor que facilitan la planificación y el desarrollo de la docencia.*
+
+\textcolor{Red}{\faThumbsOUp{}} *En este caso, la selección de un único manual para Dirección Comercial I y Dirección Comercial II permite a los estudiantes comprender la interrelación de los contenidos y avanzar o repasar contenidos de una u otra asignatura según sea necesario.*
+
+\vspace{5mm}
+
+Sin embargo, la selección de un único manual de referencia también tiene inconvenientes:
+      
+\textcolor{Red}{\faThumbsODown{}} *Su contenido puede no ajustarse exactamente a los contenidos a desarrollar en la asignatura.*
+      
+\textcolor{Red}{\faThumbsODown{}} *Las preguntas que presentan suelen requerir respuestas de bajo nivel o factuales lo que lleva a pensar a los estudiantes que el contenido es simple y poco complejo.*
+
+\textcolor{Red}{\faThumbsODown{}} *No se adaptan a posibles diferencias de nivel de partida entre los estudiantes.*
+
+\textcolor{Red}{\faThumbsODown{}} *Obliga a un desembolso por parte de los estudiantes si se plantea como material requerido.*
+```
+
+
+Dadas las ventajas del uso de un manual y para superar sus inconvenientes, se va a combinar la utilización de un manual de referencia básico complementándolo con bibliografía adicional cuando sea requerido. Para seleccionar el manual, se tienen en cuenta los siguientes requisitos:
+
+
+- El contenido del manual debe ajustarse en la medida de lo posible a los contenidos de las asignaturas Dirección Comercial I y Dirección Comercial II así como al nivel de los estudiantes de segundo curso del grado.
+- El manual debe presentar retos de distinta complejidad y preguntas abiertas que permitan la comprensión y aplicación de conceptos complejos a los estudiantes.
+- Los materiales complementarios deben permitir realizar actividades de autoaprendizaje de manera que cada estudiante pueda progresar según su nivel.
+- El manual debe ser de amplia distribución de forma que se pueda consultar en bibliotecas y adquirir también en librerías de segunda mano.
+- Es deseable que el manual tenga una versión en castellano y una en inglés, ya que la docencia se imparte también en el Grado Internacional en Administración y Dirección de Empresas y en el Doble Grado en Administración de Empresas y Economía en inglés.
+
+Para establecer el listado de posibles textos, se ha hecho una revisión de los manuales que se emplean en las universidades más prestigiosas en el área de marketing^[Para ello, tomamos como referencia el listado University Research Productivity in the Premier AMA Journals (2007-2016): https://www.ama.org/academics/Documents/University-Productivity-AMA-Journals-2016.pdf] y las principales universidades españolas en el área de empresa^[Se ha considerado el índice U-Multirank: https://www.umultirank.org/ ]. 
+
+En estas universidades, se han localizado los cursos introductorios de marketing de nivel de grado en las páginas web y el manual básico recomendado. En muchos casos esta información no está públicamente disponible y en otros no se utiliza un manual pero hemos recopilado una lista de los manuales en los casos en los que se ha encontrado la información. En los casos en los que se recomienda más de un manual como bibliografía básica se presenta solamente el primero. En algunos casos se recomiendan distintas ediciones del mismo manual, pero en la tabla se presenta únicamente la última edición disponible. 
+
+El manual recomendado en este momento en la Universidad Pública de Navarra es *Principios de Marketing* de Philip Kotler en su 12ª edición.
+
+\clearpage
+
+```{r}
+
+library(readr)
+manuales <- readr::read_csv(file="../data/manuales.csv")
+
+
+knitr::kable(manuales, row.names = FALSE, format = "latex", longtable=T, booktabs = T, 
+             caption = "\\label{manuales} Manuales utilizados en la docencia de cursos de introducción al marketing en distintas universidades")  %>% 
+      kable_styling(font_size =7.5) %>%
+      column_spec(1, width = "16em") %>%
+      column_spec(2, width = "27em")
+
+```
+
+En función del idioma en el que se va a impartir la docencia podemos considerar las siguientes opciones.
+
+```{marginfigure, echo=TRUE}
+
+\includegraphics[width=3cm, height=4cm]{images/fundamentos.jpg}
+
+
+\vspace{2mm}
+
+\includegraphics[width=3cm, height=4cm]{images/principios.jpg}
+
+\vspace{2mm}
+
+\includegraphics[width=3cm, height=4cm]{images/management.jpg}
+
+\hfill{---Los tres manuales de Kotler}
+
+\vspace{20mm}
+
+\includegraphics[width=3cm, height=4cm]{images/kerin.jpg}
+
+\hfill{---El manual de Kerin y Hartley}
+```
+
+- Manuales para impartir docencia en castellano y en inglés:
+  - Armstrong & Kotler (2017) *Marketing: An Introduction*, 13th Edition/ *Fundamentos de marketing*, 13e, Pearson: Este es un manual de introducción que cubre los contenidos básicos de forma somera. Como punto débil, puede ser adecuada para cursos más cortos, pero es escaso si se utiliza como material único para dos asignaturas de 6ECTS. En España se han publicado también versiones anteriores de este manual en inglés con el título "Introducción al marketing". Como puntos fuertes, está bien condensado, tiene un coste económico Reducido, tiene buenos materiales complementarios online y se puede utilizar en combinación con otros materiales como lecturas. Los contenidos se solapan bien con la definición de contenidos de Dirección Comercial I y II.
+  - Kotler & Armstrong (2018) *Principles of Marketing*, 17th Edition / *Principios de marketing* 17ed. Como puede observarse en la tabla, este es el manual más popular en los grados en universidades españolas. Aunque tiene la misma estructura y contenidos básicos que el libro de introducción, es bastante más extenso y sobre todo tiene muchos más ejemplos y casos complementarios. Este manual es muy adecuado para utilizarse como material en exclusiva durante la asignatura. Al igual que en el caso anterior, este manual cubre bien los contenidos de las dos asignaturas.
+  - Kotler & Keller (2016) *Marketing Management*, 15th Edition / *Dirección de Marketing*, 15ed. Este manual que también se utiliza en universidades españolas y extranjeras es el más avanzado de los tres que tienen a Kotler por autor, ya que, aunque es algo más extenso que el anterior, la diferencia principal está en el enfoque, de dirección y más analítico que los anteriores. Puede ser muy adecuado en curso de máster, por ejemplo, pero, en mi opinión, no es adecuado para su uso en un segundo curso.
+  - Kerin & Hartley (2017) *Marketing*, 17th Edition / *Marketing* , 13 Ed., Mc Graw Hill. Por contenido y por profundidad, este manual se adapta bien a las dos asignaturas y puede ser comparable a *Principios de marketing*. Destaca por tener contenidos quizás más atractivos. Como inconveniente, la traducción no es específica para España y los ejemplos, por tanto, pueden resultar más ajenos a los estudiantes. 
+
+```{marginfigure, echo=TRUE}
+
+\includegraphics[width=3cm, height=4cm]{images/santesmases.jpg}
+
+
+\vspace{2mm}
+
+
+\hfill{---El manual de Santesmases}
+
+\vspace{5mm}
+
+\includegraphics[width=3cm, height=4cm]{images/esteban.jpg}
+
+\hfill{---El manual de Esteban y Mondejar}
+
+\includegraphics[width=3cm, height=4cm]{images/rivera.jpg}
+
+\hfill{---El manual de Rivera}
+
+\vspace{20mm}
+```
+
+- Otros manuales para impartir docencia solo en castellano
+  - Santesmases Mestre, M. (2012). *Marketing: conceptos y estrategias*. 6 edición. Ediciones Pirámide. Esta es la sexta edición de este manual que cubre con amplitud todos los contenidos de las dos asignaturas. El manual tiene un nivel asequible y adecuado para estudiantes de segundo curso. Como inconveniente, además del hecho de que no exista versión en inglés, podemos indicar que la última edición tiene ya seis años.
+  - Esteban, A., Mondéjar, J.A. (2013). *Fundamentos de Marketing*. Esta es la primera edición de este manual cuyos contenidos se adecúan quizás bien a los previstos en Dirección Comercial I, pero dejan más de lado a los previsto en Dirección Comercial II, por lo que habría que complementarlo con otro manual más centrado en la parte operativa Para ello está dispoible también el manual Esteban, A., Lorenzo, C., & Millán, A. (2013) Dirección Comercial. 
+  - Rivera Vilas, L. M. (2015). *Decisiones en marketing: cliente y empresa*. (3a). Universidad Politécnica de Valencia. Manual muy práctico y aplicado, disponible también de forma muy asequible como ebook. El enfoque puede ser demasiado operativo para los contenidos de Dirección Comercial I.
+
+
+```{marginfigure, echo=TRUE}
+
+\includegraphics[width=3cm, height=4cm]{images/lamb.jpg}
+
+
+\vspace{2mm}
+
+
+\hfill{---El manual de Lamb}
+
+```
+
+- Otros manuales para impartir docencia solo en inglés:
+  - Lamb, Hair, & McDaniel, (2019). *MKTG12:Principals of Marketing* (12th ed.). Cengage Learning. De la observación de la Tabla \ref{manuales} podemos concluir que este manual es bastante popular entre las escuelas de negocio más prestigiosas del mundo. EL manual tiene una traducción en México pero puede ser poco adecuada para impartir clase en castellano en España. Este manual es introductorio y visualmente atractivo y cubre los contenidos de las dos asignaturas de manera adecuada. Tiene abundantes materiales suplementarios y está pensando para poderse utilizar como único material en la asignatura.
+  - Otras opciones: En la tabla \ref{manuales} podemos ver que algunas escuelas usan otros manuales como el @chernev2014 o @lambin2012. Estos manuales son más analíticos y pueden ser menos adecuados en segundo curso. 
+
+
+```{marginfigure, echo=TRUE}
+
+\includegraphics[width=3.6cm, height=4.8cm]{images/principios.jpg}
+
+
+\vspace{2mm}
+
+
+\hfill{---Manual básico de la asignatura}
+
+```
+
+Tras esta revisión y dados los requisitos planteados, en este proyecto docente se plantea como manual básico de la asignatura el manual **Principios de  Marketing, ed. 17** de Kotler y Armstrong. Las razones de esta elección son:
+
+- Sus contenidos se adaptan bien a las asignaturas Dirección Comercial I y Dirección Comercial II.
+- Sus contenidos se adaptan bien al enfoque de entrega de valor de las últimas definiciones AMA y el enfoque actual de la disciplina que se describen en la sección \ref{evolucion} de este proyecto.
+- Tiene ediciones frecuentemente actualizadas en castellano y en inglés.
+- Tiene abundantes ejemplos cercanos al entorno del estudiante por tener una traducción específica para España por lo que se transmiten con mayor rapidez y eficacia los conceptos claves para ayudar en su *recuerdo* y *comprensión*.
+- Otros resultados de aprendizaje más complejos como la *aplicación* o el *análisis* se adquieren mejor con otras metodologías activas como las que se plantean en este proyecto docente. 
+- La utilización de un manual más la inclusión de actividades de fuentes diversas permite actualizar estas actividades más frecuentemente (cada curso, por ejemplo) y que los estudiantes puedan usar ediciones distintas del mismo texto para la adquisición de contenidos.
+- Tiene versión en papel y digital.
+
+**Ficha biliográfica**
+
+*Título*: Principios de marketing 
+
+*Edición*: 17a edición
+
+*Autores*: Kotler, Philip; Armstrong, Gary 
+
+*Año de publicación*: 2018
+
+*Editorial*: Pearson
+
+*ISBN*: 9788490356128
+
+*ISBN eBook*: 9786073238465
+
+La elección de este manual como manual básico no implica que no se utilicen y consulten otros manuales de forma complementaria. En la sección \ref{programacion} se describe para cada tema, la bibliografía complementaria para el profesor y para los estudiantes.
+
+### Sitio Web y Materiales de apoyo
+
+Como punto de apoyo para la comunicación e intercambio de información de la asignatura se utiliza la plataforma institucional MiAulario basada en Sakai. Esta plataforma tiene como ventaja principal que los estudiantes ya están muy familiarizados con ella y que permite utilizar una variedad de herramientas para las distintas actividades docentes. Así, las herramientas que se implementan se muestra en la Figura \ref{miaularioinicio}.
+
+```{r miaularioinicio, out.width='85%', fig.margin = FALSE, fig.fullwidth=TRUE, fig.cap="\\label{miaularioinicio} Estructura del Sitio Web de la Asignatura Dirección Comercial I"}
+
+knitr::include_graphics("images/miaularioinicio.pdf")
+
+```
+
+De esta estructura destacan las siguientes herramientas:
+
+- Calendario: para tener el cronograma de actividades permanentemente actualizado.
+- Programa: Incluye la guía detallada de la asignatura en el Anexo \ref{anexo1}.
+- Contenidos: Pestaña que desarrolla el programa: se incluye en una misma pestaña las transparencias, la bibliografía de cada tema y los enlaces a las tareas, lo que facilita su localización.
+- Proyecto Grupal: Pestaña con la guía para la realización del proyecto y las tareas a las que subir los materiales de cada etapa.
+- Tareas: Pestaña con las tareas para los casos prácticos y las lecturas individuales.
+- Libro de evaluación: permite acceder al contenido de evaluación permamentemente actualizado, de forma que el feedback proporcionado pueda ser efectivo.
+- Estadísticas: esta herramienta proporciona estadísticas de uso de herramientas para cada participante, lo que en algunos casos puede ser un indicador interesante de seguimiento de la asignatura durante el curso.
+
+### Otras herramientas
+
+El manual básico y la bibliografía recomendada así como el sitio en MiAulario proporcionan todos los recursos necesarios para adquirir los resultados de aprendizaje relacionados con los contenidos de la asignatura y, al tratarse de herramientas con las que los estudiantes están ya familiarizados, no precisan de un aprendizaje específico.
+
+Sin embargo, con el fin de trabajar la autoevaluación y algunas competencias transversales, se incorporan en esta programación dos de las herramientas TIC mencionadas en el capítulo \ref{capitulo3}:
+
+- **Socrative**^[https://www.socrative.com/]: Esta herramienta permite introducir pequeñas baterías de preguntas de tipo test durante las clases magistrales consiguiendo:
+  - Dinamizar la clase haciendo pequeñas pausas para mejorar la atención.
+  - Evaluar "en directo" el grado de comprensión de los estudiantes, pudiendo repasar los conceptos si no se han entendido bien.
+  - Fomentar la autoevaluación de los estudiantes, comparando su grado de cumplimiento con los datos globales que se presentan en vivo.
+  - Recoger un registro de asistencia complementario para la evaluación continua.
+- **Trello**^[https://trello.com/]: Esta herramienta se plantea como recurso para trabajar las competencias de Capacidad de organización y planificación [CG02], Habilidad para analizar y buscar información proveniente de fuentes diversas [CG06] y Capacidad para trabajar en equipo [CG09]. Así, en el proyecto grupal cada equipo deberá llevar un panel Trello que complementa el trabajo final. Esto permite:
+  - Planificar el trabajo en equipo temporalizando tareas durante el semestre.
+  - Recoger de forma organizada información de distintas fuentes para incorporarla posteriormente.
+  - Tener un registro en vivo de quién y cuando ha realizado las tareas asignadas.
+
+\clearpage
+
+## Programación didáctica de la materia \label{programacion}
+
+### Propuesta de programa sintético
+
+- **Unidad 1. Definición del marketing y su ámbito de actuación**: 
+  - Tema 1: El marketing en la actualidad
+  - Tema 2: Planificación y gestión del proceso de marketing
+- **Unidad 2. La relación de la empresa con su mercado**: 
+  - Tema 3: Análisis del entorno del marketing
+  - Tema 4: La gestión de la información sobre el mercado
+  - Tema 5: El comportamiento del consumidor
+  - Tema 6: El comportamiento de las organizaciones
+
+- **Unidad 3. Los objetivos y estrategias de marketing**: 
+  - Tema 7: Segmentación de mercados
+  - Tema 8: Selección del público objetivo, diferenciación y posicionamiento
+  - Tema 9: Crecimiento en productos y mercados. Marketing en mercados maduros
+- **Unidad 4. Temas actuales de marketing**: 
+  - Tema 10: Marketing digital o e-marketing
+
+\clearpage
+
+### Propuesta de programa desglosado
+
+\vspace{5mm} 
+
+**Tema 1: El marketing en la actualidad**
+
+\vspace{2mm}
+
+- Contenidos
+
+```{marginfigure, echo=TRUE}
+
+*Objetivos Específicos: tras este tema, los estudiantes deberán ser capaces de...* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *definir del marketing y los pasos en el proceso de marketing.*
+
+\textcolor{Red}{\faCaretRight{}} *explicar cómo el marketing descubre y satisface necesidades de los clientes.*
+
+\textcolor{Red}{\faCaretRight{}} *identificar los cinco conceptos centrales en el mercado.*
+
+\textcolor{Red}{\faCaretRight{}} *identificar los elementos en una estrategia centrada en el valor al cliente.*
+
+\textcolor{Red}{\faCaretRight{}} *explicar en qué consiste la gestión de relaciones con los clientes.*
+
+\textcolor{Red}{\faCaretRight{}} *discutir las orientaciones de la dirección de marketing para la estrategia de marketing.*
+
+\textcolor{Red}{\faCaretRight{}} *identificar las estrategias para crear valor a los clientes y captar valor de estos clientes.*
+
+```
+
+1. Definición del marketing y su ámbito de aplicación  
+  1.1. Definición del marketing  
+  1.2. El proceso de marketing
+  
+2. Comprensión del mercado y las necesidades de los clientes  
+  2.1. Necesidades, deseos y demandas  
+  2.2. Oferta de valor  
+  2.3. Valor para el cliente y Satisfacción  
+  2.4. Intercambios, relaciones y mercados  
+  
+3. Diseño de la estrategia de marketing basada en el valor al cliente  
+  3.1. Estrategia de marketing basada en valor  
+  3.2. Plan de marketing integrado  
+  
+4. Gestión de las relaciones con los clientes y captura de valor  
+  4.1. Gestión de relaciones con los clientes  
+  4.2. Captura del valor del cliente  
+
+5. Marketing Sostenible: Responsabilidad Social y Marketing
+
+- Sesiones
+  - Clases Magistrales: Tres sesiones de dos horas
+  - Clases Prácticas: Caso práctico
+
+- Actividades 
+
+
+Como refleja la Tabla \ref{actividadesT1}, el tema se estructura en tres sesiones en grupo grande, además de un caso práctico, dado que los estudiantes no tienen en un primer momento ningún conocimiento de los contenidos. En primer lugar, se realiza la presentación de la asignatura a través del repaso de la Guía del Estudiante (Anexo \ref{anexo1}). A continuación, y antes del punto 1 del temario sobre la definición del marketing, se realiza la Actividad I (Anexo \ref{anexo2}) que tiene como objetivo conocer las impresiones de los estudiantes sobre la profesión y los profesionales de marketing. Después, se exponen los contenidos del punto 1 y 2. Dado que el punto 2 implica definiciones de conceptos, se introduce como actividad final en la primera sesión un test de repaso de estos conceptos (Anexo \ref{anexo2}) para poder valorar el nivel de comprensión de los estudiantes.
+
+En la segunda sesión, se expone en primer lugar el punto 3. Tras esta exposición, los estudiantes tienen una mayor comprensión del proceso de marketing que van a describir en el proyecto grupal, por lo que en este momento se presentan los contenidos del trabajo. A continuación, se expone el punto 4.
+
+La tercera sesión se dedica a la exposicón del punto 5: Márketing sostenible, responsabilidad social y marketing a a la Actividad II cuyo objetivo es profundizar en los aspectos éticos en las relaciones de intercambio (Anexo \ref{anexo2}). 
+
+Por último, en la sesión en grupo pequeño se realiza el primer caso práctico, que repasa los conceptos analizados y es útil al mismo tiempo como introducción a los contenidos del Tema 2. Este caso práctico se refiere a una empresa conocida y cercana a los estudiantes y es relativamente corto, por lo que se puede cubrir en el tiempo que dura la sesión.
+
+Con respecto a las actividades no presenciales, la lectura seleccionada discute el papel de la satisfacción en la formación de relaciones con los clientes, los problemas en su medición y sus límites como objetivo específico de marketing. 
+
+Además, dentro del Proyecto Grupal, tras la formación de los grupos y la elección de temas, está prevista una tutoría grupal de discusión de estos temas. 
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+       clase = c("Sesión 1 GG", "Sesión 2 GG" , "Sesión 3 GG" ,"Sesión GP", "No Presencial"),
+       actividad=c("1. Presentación y Repaso de la Guía del Estudiante \n 2. Actividad de aplicación I: Percepciones sobre el marketing. \n 3. Contenidos: exposición puntos 1 y 2 Tema 1 \n 4. Test Socrative: Repaso de Conceptos básicos en el Mercado.", "1. Contenidos: exposición punto 3 Tema 1 \n 2. Presentación de Estructura del Proyecto Grupal \n 3. Contenidos: exposición punto 4 Tema 1","1. Contenidos: exposición punto 5 Tema 1 \n 2. Actividad de aplicación 2: Ética en marketing: Medelinked", "Caso Práctico I: Inditex y Zara: El Ejemplo Paradigmático de Orientación al Mercado","1. Lectura I: El alto precio de la satisfacción del cliente \n 2. Tutoría de discusión de tema elegido para el proyecto (grupal)."))
+names(tabla)<- c("Sesión", "Actividad")
+
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=F,
+             caption = "\\label{actividadesT1} Programación Tema 1")  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "6em") %>%
+      column_spec(2, width = "20em") 
+
+
+```
+
+\clearpage
+
+- Bibliografía básica y complementaria
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     Tipo = c("Bibliografía Básica", "Complementaria Estudiantes" , "Complementaria Profesor"),
+     Referencias=c("- Kotler, P., Armstrong, G. (2018) Principios de Marketing (17E), Pearson: Tema 1  \n - Keiningham, T., Gupta, S., Aksoy, L., y Buoye, A. (2014). El alto precio de la satisfacción del cliente. Hardvard Deusto Marketing y Ventas, 125, 6–17.", "- Munuera Alemán, J. y Rodríguez Escudero, A. I. (2012). Estrategias de marketing : un enfoque basado en el proceso de dirección. ESIC \n - Solomon, M. R., Marshall, G. W., y Stuart, E. W. (2016). Marketing: real people, real choices. Pearson. Tema 1 \n - González Vázquez, E., Alén González, E. y Cerviño Fernández, J. (2005). Casos de dirección de marketing. Prentice Hall","- Stanton, W. J., Etzel, M. J., y Walker, B. J. (2007). Fundamentos de marketing. McGraw-Hill Interamericana. Tema 1 \n - Ferrell, O. C., y Hartline, M. D. (2012). Estrategia de marketing. Cengage learning. - Fripp, G. (2017). The practical marketing workbook (2E): Activity 1  \n - Lamb, C. W., Hair, J. F., y McDaniel, C. (2018). MKTG12 : Marketing (12E). Tema 3"))
+
+library(tidyverse)
+ 
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex",  booktabs = T, escape=F, caption = "\\label{compbasicas} Bibliografía básica y complementaria. Tema 1")  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "7em")%>%
+      column_spec(2, width = "20em")
+```
+
+\clearpage
+
+**Tema 2: Planificación y gestión del proceso de marketing**
+
+\vspace{2mm}
+
+- Contenidos
+
+```{marginfigure, echo=TRUE}
+
+*Objetivos Específicos: tras este tema, los estudiantes deberán ser capaces de...* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Explicar en qué consiste el proceso global de planificación estratégica y sus etapas.*
+
+\textcolor{Red}{\faCaretRight{}} *Analizar cómo se diseñan las carteras de negocio y cómo se desarrollan las estrategias de crecimiento.*
+
+\textcolor{Red}{\faCaretRight{}} *Explicar el papel del marketing en la planificación estratégica y cómo colabora el marketing con sus socios para crear y proveer valor al cliente.*
+
+\textcolor{Red}{\faCaretRight{}} *Describir los elementos de una estrategia de marketing y un marketing mix basados en el cliente y qué fuerzas influyen sobre ellos.*
+
+\textcolor{Red}{\faCaretRight{}} *Listar las funciones de la dirección de marketing, incluyendo los elementos de un plan de marketing, y argumentar la importancia de medir y gestionar el ROI de marketing.*
+```
+
+1. La planificación estratégica en la empresa 
+
+  1.1. Proceso de planificación estratégica  
+  1.2. El papel del marketing en la planificación estratégica  
+  
+2. Planificación de marketing  
+
+  2.1. Estrategia de marketing  
+  2.2. Marketing mix  
+
+3. Gestión del esfuerzo de marketing y medición y gestión del ROI  
+
+- Sesiones
+  - Clases Magistrales: Una sesión de dos horas
+
+
+- Actividades 
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+       clase = c("Sesión 1 GG", "No Presencial"),
+       actividad=c("1. Exposición puntos 1, 2 y 3 Tema 2 \n 2. Actividad III: Niveles en la estrategia \n 3. MiniTest Socrative",  "1. Lectura II: ¿Su empresa necesita realmente un departamento de Márketing?"))
+names(tabla)<- c("Sesión", "Actividad")
+
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=F,
+             caption = "\\label{actividadesT2} Programación Tema 2")  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "6em") %>%
+      column_spec(2, width = "20em") 
+
+
+```
+
+Como refleja la Tabla \ref{actividadesT2}, la exposición de contenidos se plantea en una única sesión, dadas las restricciones de tiempo para el conjunto de la materia y que este tema tiene solapamientos en el punto 1 con contenidos que los estudiantes han visto ya en la asignatura de primer curso *Economía de la Empresa* y, en menor medida, en la asignatura de primer semestre de segundo curso *Diseño y Comportamiento Organizativo*. 
+
+Así, en la sesión en Grupo Grande, se realiza la exposición de los puntos 1, 2, y 3 y se realiza la Actividad III (Anexo \ref{anexo2}) que permite reflexionar sobre los distintos niveles estratégicos en la toma de decisiones corporativas. Además, se realiza un minitest final de repaso aplicado de los elementos de marketing mix en Socrative (Anexo \ref{anexo2})
+
+Con respecto a las actividades no presenciales, la lectura seleccionada reflexiona sobre la integración de funciones de marketing con el resto de funciones de la empresa y la necesidad o no de un departamento específico en la toma de decisiones estratégicas de marketing. En esta semana, los estudiantes pueden empezar a trabajar en la descripción de la industria elegida. 
+
+- Bibliografía básica y complementaria
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     Tipo = c("Bibliografía Básica", "Complementaria Estudiantes" , "Complementaria Profesor"),
+     Referencias=c("- Kotler, P., Armstrong, G. (2018) Principios de Marketing (17E), Pearson: Tema 2 \n - Kotler, P., y Reibstein, D. (2014). ¿Su empresa necesita realmente un departamento de Márketing? Harvard Deusto Márketing y Ventas, 122, 6–9.", "- Rivera Vilas, L. M. (2015). Decisiones en marketing : cliente y empresa (3E). Universidad Politécnica de Valencia. Tema 2 ","- Levens, M. (2012). Marketing: Defined, Explained, Applied (2E). Pearson. Tema 2. \n Best, R. J. (2007). Marketing estratégico. Pearson Prentice Hall .\n - Montero Simó, M. J., Araque Padilla, R. A., y Gutiérrez Villar, B. (2006). Fundamentos de marketing : ejercicios y soluciones. McGraw Hill Interamericana."))
+
+library(tidyverse)
+ 
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex",  booktabs = T, escape=F, caption = "\\label{biblio2} Bibliografía básica y complementaria. Tema 2")  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "7em")%>%
+      column_spec(2, width = "20em")
+```
+
+\clearpage
+
+**Tema 3: Análisis del entorno de marketing**
+
+\vspace{2mm}
+
+- Contenidos
+
+```{marginfigure, echo=TRUE}
+
+*Objetivos Específicos: tras este tema, los estudiantes deberán ser capaces de...* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Describir las fuerzas del entorno que afectan a la capacidad de la empresa para atender a su mercado.*
+
+\textcolor{Red}{\faCaretRight{}} *Explicar cómo afectan a las decisiones de marketing los cambios en el entorno inmediato de la empresa.*
+
+\textcolor{Red}{\faCaretRight{}} *Identificar las principales tendencias del entorno demográfico, económico, natural y tecnológico.*
+
+\textcolor{Red}{\faCaretRight{}} *Explicar los cambios principales del entorno político y cultural.*
+
+\textcolor{Red}{\faCaretRight{}} *Analizar cómo pueden reaccionar las empresas frente al entorno de marketing.*
+```
+
+1. El macroentorno de la empresa 
+
+2. El microentorno de la empresa
+
+3. La respuesta al entorno de la empresa
+  
+
+- Sesiones
+  - Clases Magistrales: Dos sesiones de dos horas
+  - Clases Prácticas: Caso práctico
+
+- Actividades 
+
+
+Como refleja la Tabla \ref{actividadesT3}, el tema se estructura en dos sesiones en grupo grande, además de un caso práctico. En la primera sesión se exponen los contenidos del punto 1, el macroentorno de la empresa. Además, se realiza una actividad de análisis de tendencias basada en el informe Nielsen *Nueva Era, nuevo consumidor: Cómo y porqué compramos alRededor del mundo* [@nielsen2013]. Esta actividad se describe en el Anexo \ref{anexo2}. En la segunda sesión se presentan los puntos 2 y 3 del programa además de realizar la actividad 5 *Superjoya*, implementada en Socrative que resulta muy adecuada para comprender las diferencias entre factores de micro y macroentorno (Anexo \ref{anexo2}). En ambas sesiones se plantean dos test de comprensión. Por último, el tema se completa con el caso *Fitbit: cabalgando la ola del fitness hacia la gloria* [@Kotlermkyventas].
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+       clase = c("Sesión 1 GG","Sesión 2 GG", "Sesión 1 GP"),
+       actividad=c("1. Exposición punto 1 Tema 3 \n 2. Actividad de Aplicación IV: Análisis Informe Nielsen \n 3. Test Socrative","1. Exposición punto 2 \n 2. Actividad de Aplicación V: Superjoya \n 3. Exposición punto 3 \n 4. Test Socrative",   "1. Caso práctico 2: Fitbit: cabalgando la ola del fitness hacia la gloria"))
+names(tabla)<- c("Sesión", "Actividad")
+
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=F,
+             caption = "\\label{actividadesT3} Programación Tema 3")  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "6em") %>%
+      column_spec(2, width = "20em") 
+
+
+```
+  
+\clearpage
+
+
+
+- Bibliografía básica y complementaria
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     Tipo = c("Bibliografía Básica", "Complementaria Estudiantes" , "Complementaria Profesor"),
+     Referencias=c("- Kotler, P., Armstrong, G. (2018) Principios de Marketing (17E), Pearson: Tema 3  \n - Matzler, K., y Kathan, W. (2015). Adapting to the Sharing Economy. MIT Sloan Management Review, 56(2), 71–77. ", "- Esteban Talaya, A. y Mondéjar Jiménez, J. A. (2013). Fundamentos de marketing (2E). ESIC. \n  - Kerin, R. A., Berkowitz, E., Rudelius, W., y Hartley, S. (2018). Marketing (13E). McGraw-Hill Education. Tema 3.","- Stanton, W. J., Etzel, M. J., y Walker, B. J. (2007). Fundamentos de marketing. McGraw-Hill Interamericana. Tema 2 \n  - Montero Simó, M. J., Araque Padilla, R. A., y Gutiérrez Villar, B. (2006). Fundamentos de marketing : ejercicios y soluciones. McGraw Hill Interamericana "))
+
+library(tidyverse)
+ 
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex",  booktabs = T, escape=F, caption = "\\label{biblioT3} Bibliografía básica y complementaria. Tema 3")  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "7em")%>%
+      column_spec(2, width = "20em")
+```
+
+\clearpage
+
+\vspace{5mm} 
+
+**Tema 4: La gestión de la información sobre el mercado**
+
+\vspace{2mm}
+
+- Contenidos
+
+```{marginfigure, echo=TRUE}
+
+*Objetivos Específicos: tras este tema, los estudiantes deberán ser capaces de...* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *explicar la importancia de la información para comprender el mercado y los consumidores.*
+
+\textcolor{Red}{\faCaretRight{}} *definir el sistema de información de marketing y discutir sus componentes.*
+
+\textcolor{Red}{\faCaretRight{}} *señalar los pasos en el proceso de investigación de mercados.*
+
+\textcolor{Red}{\faCaretRight{}} *identificar los elementos en una estrategia centrada en el valor al cliente.*
+
+\textcolor{Red}{\faCaretRight{}} *explicar cómo usan las empresas la información de marketing.*
+
+\textcolor{Red}{\faCaretRight{}} *discutir las orientaciones de la dirección de marketing para la estrategia de marketing.*
+
+\textcolor{Red}{\faCaretRight{}} *discutir los aspectos éticos y de políticas públicas relacionadas con la investigación de marketing.*
+
+```
+
+1. La información de marketing y el conocimiento sobre el mercado  
+
+  1.1. La información y el big data   
+  1.2. la gestión de la información de marketing
+  
+2. Evaluación de necesidades de información y el desarrollo de los datos  
+
+  2.1. Evaluación de necesidades de información  
+  2.2. Desarrollo del Sistema de Información de Marketing  
+
+3. La investigación de mercados  
+
+  3.1. Definición del problema y objetivos  
+  3.2. Desarrollo del plan de investigación  
+  3.3. Recogida de datos secundarios  
+  3.4. Recogida de datos primarios  
+  3.5. Implementación e informes en el plan de investigación  
+  
+  
+4. Análisis y uso de la información del mercado  
+
+  4.1. Sistemas CRM  
+  4.2. Big Data y Analytics  
+  4.3. Distribución y uso de la información de marketing  
+
+5. Otras consideraciones relacionadas con la información de marketing  
+
+  5.1. La investigación de marketing en pequeñas empresas y organizaciones sin ánimo de lucro   
+  5.2. La investigación de marketing internacional  
+  5.3. Aspectos éticos en la investigación de marketing  
+
+
+- Sesiones
+  - Clases Magistrales: Dos sesiones de dos horas
+  - Clases Prácticas: Ninguna
+
+- Actividades 
+
+
+Como refleja la Tabla \ref{actividadesT4}, el tema se estructura en dos sesiones en grupo grande. En la primera sesión se exponen los contenidos del punto 1, 2 y los tres primeros subapartados del punto 3. Además, se realiza la actividad VI relacionada con la selección de los tipos de investigación(Anexo \ref{anexo2}). En la segunda sesión se presentan los puntos 3.4 y 3.5 y los puntos 4 y 5. Se realiza también la actividad VII de la interpretación de los resultados de una investigación. Los contenidos del tema se completan con la lectura *La revolución analítica: el Big Data en la práctica*.
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+       clase = c("Sesión 1 GG","Sesión 2 GG"),
+       actividad=c("1. Exposición puntos 1, 2 y 3.1 Tema 4 \n 2. Actividad de Aplicación VI: Tipos de Investigación \n 3. Exposición puntos 3.2 y 3.3","1. Exposición puntos 3.3,3.4,3.5 \n 2. Actividad de Aplicación VII: Interpretación de resultados \n 3. Exposición punto 4 y 5"))
+names(tabla)<- c("Sesión", "Actividad")
+
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=F,
+             caption = "\\label{actividadesT4} Programación Tema 4")  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "6em") %>%
+      column_spec(2, width = "20em") 
+
+
+```
+  
+
+- Bibliografía básica y complementaria
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     Tipo = c("Bibliografía Básica", "Complementaria Estudiantes" , "Complementaria Profesor"),
+     Referencias=c("- Kotler, P., Armstrong, G. (2018) Principios de Marketing (17E), Pearson: Tema 4 \n - Casado, J. L. (2015). La revolución analítica: el Big Data en la práctica. Harvard Deusto Marketing y Ventas, 133, 28–37.", "- Santesmases Mestre, M. (2012). Marketing: conceptos y estrategias (6th ed.). Pirámide. Tema 8. \n - Grande Esteban, I., y Abascal, E. (2017). Fundamentos y técnicas de investigación comercial (13E e)d.","- Kerin, R. A., Hartley, S. W., y Rudelius, W. (2014). Marketing (11E). McGrawHill Education. Tema 8. \n Malhotra, N. K. (2016). Investigación de mercados. Pearson Educación \n - González Vázquez, E., López Miguens, M. J., y Otero Neira, M. C. (2014). Manual práctico de marketing. Pearson Educación \n - Fripp, G. (2017). The practical marketing workbook (2E)"))
+
+library(tidyverse)
+ 
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex",  booktabs = T, escape=F, caption = "\\label{biblioT4} Bibliografía básica y complementaria. Tema 4")  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "7em")%>%
+      column_spec(2, width = "20em")
+```
+
+\clearpage
+
+\vspace{5mm} 
+
+**Tema 5: El comportamiento del consumidor**
+
+\vspace{2mm}
+
+- Contenidos
+
+```{marginfigure, echo=TRUE}
+
+*Objetivos Específicos: tras este tema, los estudiantes deberán ser capaces de...* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *definir los mercados de consumo y construir un modelo simple de comportamiento del consumidor.*
+
+\textcolor{Red}{\faCaretRight{}} *nombrar los cuatro principales factores de comportamiento del consumidor.*
+
+\textcolor{Red}{\faCaretRight{}} *listar y definir los principales tipos de decisión y las etapas en el proceso de decisión de compra.*
+
+```
+
+1. Modelo general de comportamiento del consumidor  
+
+2. Características que afectan al comportamiento del consumidor
+
+  2.1. Factores culturales  
+  2.2. Factores sociales  
+  2.3. Factores personales  
+  2.4. Factores psicológicos  
+  
+3. Comportamiento de compra
+  
+  3.1. Tipos de decisión  
+  3.2. El proceso de decisión de compra  
+  
+  
+- Sesiones
+  - Clases Magistrales: Tres sesiones de dos horas  
+
+- Actividades 
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+       clase = c("Sesión 1 GG","Sesión 2 GG","Sesión 3 GG"),
+       actividad=c("1. Exposición Punto 1 \n 2. Actividad de Aplicación VIII: Modelo de Comportamiento \n 3. Exposición Puntos 2.1 y 2.2. \n 2. Actividad de Aplicación IX: Grupos de referencia","1. Exposición Puntos 2.3 y 2.4 \n 2. Minicaso: Las infusiones de Sara Lee España. \ 3. Test Socrative", "1. Exposición punto 3 \n 2. Actividad de Aplicación X: Ejercicios"))
+names(tabla)<- c("Sesión", "Actividad")
+
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=F,
+             caption = "\\label{actividadesT5} Programación Tema 5")  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "6em") %>%
+      column_spec(2, width = "20em") 
+
+
+```
+
+Este tema se estructura en tres sesiones en grupo grande. En la primera sesión, se expone primero el modelo general de comportamiento del consumidor y se realiza una actividad de aplicación que consiste en la identificación de los elementos del modelo en el caso de la categoría concreta (Anexo \ref{anexo2}). A continuación, se exponen los dos factores grupales de comportamiento y se termina con una actividad de identificación de grupos de referencia (Anexo \ref{anexo2}). En la segunda sesión, se comienza con la exposición de los puntos 2.3 y 2.4, incluyendo la realización y evaluación de la encuesta VALS por parte de los estudiante. Dado que en este tema no hay sesión en grupo pequeño (se plantea una para los temas 5 y 6 en el tema 6), se discute en esta sesión un minicaso extraído de @GonzalezVazquez2005. Se termina con un test en Socrative de repaso de conceptos.
+
+En la tercera sesión, se expone en primer lugar el punto 3 del programa y el resto de la sesión se dedica a la realización de ejercicios sobre los procesos de decisión de compra (Anexo \ref{anexo2}. El tema se completa con la lectura *La gestión de la experiencia del cliente como primera palanca del “branding”* que es muy adecuada para ilustrar la importancia de comprender el *customer journey* y la experiencia del cliente y complementa muy bien el punto 3 del programa.
+
+\clearpage
+
+- Bibliografía básica y complementaria
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     Tipo = c("Bibliografía Básica", "Complementaria Estudiantes" , "Complementaria Profesor"),
+     Referencias=c("- Kotler, P., Armstrong, G. (2018) Principios de Marketing (17E), Pearson: Tema 5 \n - Sancho, E. L. (2018). La gestión de la experiencia del cliente como primera palanca del “branding.” Harvard Deusto Business Review, 279, 6–16. ", "- Sellers, R. R., y Casado, D. A. B. (2013). Introducción al marketing. Tema 4 \n - Alonso Rivas, J. y Grande Esteban, I. (2015). Comportamiento del consumidor : decisiones y estrategia de marketing. (8E) ESIC. \n - Lilien, G. L., Rangaswamy, A., y De Bruyn, A. (2017). Principles of marketing engineering and analytics.  \n - González Vázquez, E., Alén González, E.,y  Cerviño Fernández, J. (2005). Casos de dirección de marketing. Pearson","- Hawkins, D. I., y Mothersbaugh, D. L. (2016). Consumer behavior : building marketing strategy. \n - Lilien, G. L., Kotler, P., y Moorthy, K. S. (2009). Marketing models. Trafford. \n - Levens, M. (2012). Marketing: Defined, Explained, Applied (2E). Pearson. Tema 8 \n - Solomon, M. R., Marshall, G. W., y Stuart, E. W. (2016). Marketing: real people, real choices. Pearson. Tema 4"))
+
+library(tidyverse)
+ 
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex",  booktabs = T, escape=F, caption = "\\label{biblioT5} Bibliografía básica y complementaria. Tema 5")  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "7em")%>%
+      column_spec(2, width = "20em")
+```
+
+\clearpage
+
+\vspace{5mm} 
+
+**Tema 6: El comportamiento de las organizaciones**
+
+\vspace{2mm}
+
+- Contenidos
+
+```{marginfigure, echo=TRUE}
+
+*Objetivos Específicos: tras este tema, los estudiantes deberán ser capaces de...* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Definir el mercado organziacional y explciar en qué difieren los mercados de consumo de los organizacionales.*
+
+\textcolor{Red}{\faCaretRight{}} *Identificar los principales factores que influyen en el comportamiento de compra corporativo.*
+
+\textcolor{Red}{\faCaretRight{}} *Definir los pasos en el proceso de decisión de compra corporativo.*
+
+\textcolor{Red}{\faCaretRight{}} *Explicar las decisiones de compra en los mercados gubernamentales e institucionales.*
+```
+
+1. Los mercados corporativos  
+
+  1.1. Estructura y demanda del mercado  
+  1.2. Naturaleza de la unidad compradora  
+  1.3. Tipo de decisiones  
+  
+2. Comportamiento de compra organizacional
+
+  2.1. Principales situaciones de compra  
+  2.2. Los participantes en el proceso de compra 
+  
+3. El proceso de decisión corporativo
+
+4. Los mercados institucionales y gubernamentales
+
+- Sesiones
+  - Clases Magistrales: Una sesión
+  - Clases en grupo pequeño: Caso práctico
+  
+
+- Actividades 
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+       clase = c("Sesión 1 GG","Sesión 1 GP"),
+       actividad=c("1. Exposición punto 1. \n 2. Test Socrative Tipos de compra \n 3. Exposición Puntos 2, 3 y 4 \n 4. Actividad XI. Decisiones de compra conjunta ","Caso Práctico: Airbus, Empresa Europea que ha volado de éxito en éxito."))
+names(tabla)<- c("Sesión", "Actividad")
+
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=F,
+             caption = "\\label{actividadesT6} Programación Tema 6")  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "6em") %>%
+      column_spec(2, width = "20em") 
+
+
+```
+
+Este tema se estructura en una sesión magistral además de una sesión en grupo práctico. Este tema no es muy extenso en contenidos, pero necesita más apoyo en actividades prácticas y de comprensión de conceptos que otros, ya que los estudiantes de segundo curso están generalmente poco familiarizados con las relaciones B2B y les resulta más complejo comprender los contenidos. 
+
+Así, en la sesión en grupo grande se incluye un test de aplicación sobre los tipos de compra y una actividad en la que los estudiantes tienen que realizar una compra conjunta (Anexo \ref{anexo2}).
+
+El caso práctico analiza el proceso de compra y el análisis del mercado de los clientes de Airbus. Por último, la lectura seleccionada, además de completar los contenidos del tema, complementa la reflexión sobre competencias transversales incluídas en la asignatura como *Capacidad para trabajar en equipo*, *Habilidad en las relaciones personales* y *Capacidad crítica y autocrítica*.
+
+
+- Bibliografía básica y complementaria
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     Tipo = c("Bibliografía Básica", "Complementaria Estudiantes" , "Complementaria Profesor"),
+     Referencias=c("- Kotler, P., Armstrong, G. (2018) Principios de Marketing (17E), Pearson: Tema 6 \n - Peterson, R. S. (2017). ¿Qué tipo de negociador eres ? Harvard Deusto Business Review, 264, 62–66.", "- Esteban Talaya, A., y Mondéjar Jiménez, J. A. (2013). Fundamentos de marketing (2E). ESIC. Tema 5 \n - Lilien, G. L., Rangaswamy, A., y De Bruyn, A. (2017). Principles of marketing engineering and analytics. \n - González Vázquez, E., Alén González, E. y Cerviño Fernández, J. (2005). Casos de dirección de marketing. Prentice Hall","- Lilien, G. L., Kotler, P., y Moorthy, K. S. (2009). Marketing models. Trafford. \n - Kerin, R. A., Hartley, S. W., y Rudelius, W. (2017). Marketing (13E). McGrawHill Education. \n - Lambin, J.J., Galluci, C., y Sicurello, C. (2008). Dirección de Marketing (2E). Tema 4"))
+
+library(tidyverse)
+ 
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex",  booktabs = T, escape=F, caption = "\\label{biblioT6} Bibliografía básica y complementaria. Tema 6")  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "7em")%>%
+      column_spec(2, width = "20em")
+```
+
+\clearpage
+
+\vspace{5mm} 
+
+**Tema 7: Segmentación de mercados**
+
+\vspace{2mm}
+
+- Contenidos
+
+```{marginfigure, echo=TRUE}
+
+*Objetivos Específicos: tras este tema, los estudiantes deberán ser capaces de...* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Definir las etapas principales en el diseño de una estrategia de mercado orientada al cliente.*
+
+\textcolor{Red}{\faCaretRight{}} *Describir y analizar los criterios principales para segmentar los mercados de consumidores y empresas.*
+      
+\textcolor{Red}{\faCaretRight{}} *Explicar cómo identifican las empresas a los segmentos del mercado más atractivos y cómo eligen una estrategia de selección de mercados objetivo.*
+```
+
+1. La estrategia de marketing
+
+2. Segmentación del mercado 
+
+  2.1. La segmentación de los mercados de consumo  
+  2.2. La segmentación de los mercados de empresas  
+  2.3. La segmentación de los mercados internacionales  
+  2.4. Requisitos de una segmentación eficaz  
+  
+3. Selección de mercados objetivo
+
+  3.1. Evaluación de los mercados objetivo  
+  3.2. Elección de los segmentos objetivo en el mercado  
+
+- Sesiones
+  - Clases Magistrales: Dos sesiones
+  - Clases en grupo pequeño: No hay
+
+- Actividades 
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+       clase = c("Sesión 1 GG","Sesión 2 GG"),
+       actividad=c("1. Exposición puntos 1 y 2 \n 2. Test Socrative criterios de segmentación \n 3. Actividad de Aplicación XII","1. Exposición punto 3 \n 2. Actividad de Aplicación XIII"))
+names(tabla)<- c("Sesión", "Actividad")
+
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=F,
+             caption = "\\label{actividadesT7} Programación Tema 7")  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "6em") %>%
+      column_spec(2, width = "20em") 
+
+
+```
+
+En el primero de los dos temas dedicados a la estrategia de marketing se realizan dos sesiones en grupo grande. En la primera sesión se exponen en primer lugar los dos primeros puntos del temario para, a continuación hacer un test de repaso de los distintos criterios de segmentación, tratando de incidir en aspectos como la diferencia entre criterios demográficos y aspectos psicográficos o las distintas dimensiones de los criterios psicográficos.
+
+A continuación, se realiza una actividad de aplicación que plantea un ejercicio de segmentación con el método de Belson que complementa este punto.
+
+En la segunda sesión, el contenido teórico se centra en la evaluación del atractivo de los segmentos. Se realiza la actividad de aplicación XIII que relaciona el concepto de *Customer Lifetime Value* con las estrategias de segmentación.
+
+La lectura en este tema se centra en la sostenibilidad como elemento de diferenciación basándose en una estrategia de segmentación por estilo de vida. 
+
+- Bibliografía básica y complementaria
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     Tipo = c("Bibliografía Básica", "Complementaria Estudiantes" , "Complementaria Profesor"),
+     Referencias=c("- Kotler, P., Armstrong, G. (2018) Principios de Marketing (17E), Pearson: Tema 7 \n - AlbaReda Vivo, L., y González Bree, F. (2015). Innovación sostenible nuevo espacio de
+márketing y competitividad. Harvard Deusto Marketing y Ventas, 133, 6–14.", "- Esteban Talaya, A., y Mondéjar Jiménez, J. A.
+(2013). Fundamentos de marketing (2E). ESIC.","- Kerin, R. A., Hartley, S. W., y Rudelius, W. (2017). Marketing (13E). McGrawHill Education. \n - Lambin, J.J., Galluci, C., y Sicurello, C. (2008). Dirección de Marketing (2E) - Lilien, G. L., Kotler, P., y Moorthy, K. S. (2009). Marketing models. Trafford.  \n - Montero Simó, M. J., Araque Padilla, R. A., y Gutiérrez Villar, B. (2006). Fundamentos de marketing : ejercicios y soluciones. McGraw Hill Interamericana"))
+
+library(tidyverse)
+ 
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex",  booktabs = T, escape=F, caption = "\\label{biblioT7} Bibliografía básica y complementaria. Tema 7")  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "7em")%>%
+      column_spec(2, width = "20em")
+```
+
+
+\clearpage
+
+\vspace{5mm} 
+
+**Tema 8: Selección del público objetivo, diferenciación y posicionamiento**
+
+\vspace{2mm}
+
+- Contenidos
+
+```{marginfigure, echo=TRUE}
+
+*Objetivos Específicos: tras este tema, los estudiantes deberán ser capaces de...* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Analizar cómo diferencian y posicionan las empresas sus productos para lograr la máxima ventaja competitiva en el mercado.*
+
+
+```
+
+
+1. Mapas de posicionamiento  
+2. Elección de la estrategia de diferenciación y posicionamiento  
+3. Comunicación y aplicación del posicionamiento elegido
+
+
+- Sesiones
+  - Clases Magistrales: Dos sesiones
+  - Clases en grupo pequeño: No hay
+
+- Actividades 
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+       clase = c("Sesión 1 GG","Sesión 2 GG"),
+       actividad=c("1. Exposición Punto 1. \n 2. Actividad de Aplicación XIV. Construcción de mapas de posicionamiento","1. Exposición puntos 2 y 3. \n 2. Actividad de Aplicación XV. Diagnóstico de posicionamiento"))
+names(tabla)<- c("Sesión", "Actividad")
+
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=F,
+             caption = "\\label{actividadesT8} Programación Tema 8")  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "6em") %>%
+      column_spec(2, width = "20em") 
+
+
+```
+
+En la primera sesión del tema se expone el concepto de mapas de posicionamiento que se desarrolla principalmente con la actividad de aplicación. Esta actividad tiene una tarea primero conceptual, de identificación de dimensiones relevantes y posicionamiento en el mapa. Para esta tarea se utilizan las materias impartidas en el grado la familiaridad de los estudiantes con estas materias. A continuación, se realiza una aplicación cuantitativa mediante un ejercicio de ejemplo.
+
+En la segunda sesión se exponen los puntos 2 y 3 del temario y se realiza otra actividad de aplicación centrada en la identificación de estrategias de posicionamiento. La actividad se centra en el sector del automóvil y, tras ilustrar la situación con un video de ejemplo del caso reposicionamiento de Mercedes-Benz, se pide la aplicación al segmento de coches urbanos. La lectura amplía el conocimiento sobre el mismo sector, ilustrando el caso de BMW. La elección de un mismo sector para la actividad de aplicación y para la lectura permite en este caso conseguir un grado de profundidad mayor permitiendo integrar las distintas perspectivas que se ofrecen. 
+
+\clearpage
+
+- Bibliografía básica y complementaria
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     Tipo = c("Bibliografía Básica", "Complementaria Estudiantes" , "Complementaria Profesor"),
+     Referencias=c("- Kotler, P., Armstrong, G. (2018) Principios de Marketing (17E), Pearson: Tema 7 \n - Gónzalez Moreno, J., Gallo, Í., y Foncillas, P. (2018). Caso BMW de “poseer” a “vivir”: veinte años experiencias. Harvard Deusto Márketing y Ventas, 150, 42–49.", "- Kotler, P., y Keller, K. L. (2016). Dirección de Marketing (15E). Pearson.","- Kerin, R. A., Berkowitz, E., Rudelius, W., y Hartley, S. (2017). Marketing (13E). McGraw-Hill Education  \n - Ferrell, O. C., y Hartline, M. D. (2012). Estrategia de marketing. Cengage learning. \n - Fripp, G. (2017). The practical marketing workbook (2E)"))
+
+library(tidyverse)
+ 
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex",  booktabs = T, escape=F, caption = "\\label{biblioT8} Bibliografía básica y complementaria. Tema 8")  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "7em")%>%
+      column_spec(2, width = "20em")
+```
+
+\clearpage
+
+\vspace{5mm} 
+
+**Tema 9: Crecimiento en productos y mercados. Marketing en mercados maduros**
+
+\vspace{2mm}
+
+- Contenidos
+
+```{marginfigure, echo=TRUE}
+
+*Objetivos Específicos: tras este tema, los estudiantes deberán ser capaces de...* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Describir el proceso de adopción y difusión de productos nuevos.*
+      
+\textcolor{Red}{\faCaretRight{}} *Describir las etapas del ciclo de vida del producto y cómo cambian las estrategias de marketing a lo largo del ciclo de vida.*
+      
+\textcolor{Red}{\faCaretRight{}} *Enumerar y definir los pasos del proceso de desarrollo de nuevos productos.*
+```
+
+1. El proceso de decisión ante productos nuevos
+
+  1.1. Etapas en el proceso de adopción  
+  1.2. Diferencias individuales en la capacidad de innovación  
+  1.3. Influencia de las características del producto sobre la tasa de adopción  
+  
+2. Estrategias en el ciclo de vida del producto
+
+  2.1. El ciclo de vida del producto  
+  2.2. Estrategias en el ciclo de vida del producto   
+  
+3. Etapas en el proceso de desarrollo de productos nuevos
+
+
+- Sesiones
+  - Clases Magistrales: Tres sesiones
+  - Clases en grupo pequeño: Una sesión de caso para el conjunto de la Unidad 3: *Yatekomo: Aquí te pillo y aquí te como*
+
+- Actividades 
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+       clase = c("Sesión 1 GG","Sesión 2 GG","Sesión 3 GG","Sesión 1 GP"),
+       actividad=c("1. Exposición Punto 1 \n 2.Test Socrative \n 3. Actividad de Aplicación XV: Elige tu posicionamiento","1. Exposición Punto 2 \n 2.Test Socrative ","1. Exposición Punto 3 \n 2. Actividad de Aplicación XVI: Tacones Convertibles","Caso Práctico: Yatekomo: Aquí te pillo y aquí te como, Kotler (2018)"))
+names(tabla)<- c("Sesión", "Actividad")
+
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=F,
+             caption = "\\label{actividadesT9} Programación Tema 9")  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "6em") %>%
+      column_spec(2, width = "20em") 
+
+
+```
+
+En la primera sesión se expone el punto uno relacionado con el proceso de adopción de nuevos productos y se completa la exposición con un test de repaso de la clasificación de individuos en función del proceso de adopción de nuevos productos. La sesión termina con una actividad de aplicación de selección de posicionamiento en el lanzamiento de un nuevo producto que complementa y repasa también la definición de la estrategia de marketing que se ha estudiado en los temas 7 y 8 (Anexo \ref{anexo2}).
+
+La segunda sesión comienza con la exposición del punto relativo a las estrategias en el ciclo de vida del producto. La parte expositiva en este tema es bastante extensa ya que se incluyen vídeos y ejemplos de discusión de distintos productos y marcas en momentos del ciclo de vida del producto. Para terminar la sesión, se realiza un test de aplicación en Socrative (Anexo \ref{anexo2}).
+
+Por último, en la tercera sesión se presenta el punto 3, etapas en el desarrollo de productos nuevos y se realiza un caso en video de repaso de todo el tema, el caso de los tacones convertibles, que se describe en el \ref{anexo2} y que está incluido en los materiales del instructor del manual de la asignatura [@Kotler2018]. 
+
+El tema se completa con el caso *Yatekomo* seleccionado entre los incluídos en el manual porque une bien los contenidos de este tema con los de la estrategia de marketing de los temas 7 y 8 y sirve por tanto de cierre para este bloque. Además, como material complementario, se incluye la lectura " Why Great New Products Fail" [@SIMESTER2016]
+
+\clearpage
+
+- Bibliografía básica y complementaria
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     Tipo = c("Bibliografía Básica", "Complementaria Estudiantes" , "Complementaria Profesor"),
+     Referencias=c("- Kotler, P., Armstrong, G. (2018) Principios de Marketing (17E), Pearson: Tema 5 (última parte), Tema 9 \n -Simester, D. (2016). Why Great New Products Fail. MIT Sloan Management Review, 57(3), 33–39", "- Santesmases Mestre, M. (2012). Marketing: conceptos y estrategias (6E). Pirámide (Tema 10). \n - Esteban Talaya, A. (2008). Principios de marketing. Esic Editorial. Tema 12","- Lilien, G. L., Kotler, P., y Moorthy, K. S. (2009). Marketing models. Trafford. \n -Kerin, R. A., Berkowitz, E., Rudelius, W., y Hartley, S. (2018). Marketing (13E.). McGraw-Hill Education. \n - Levens, M.  (2012). Marketing: Defined, Explained, Applied (2E). Pearson. "))
+
+library(tidyverse)
+ 
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex",  booktabs = T, escape=F, caption = "\\label{biblioT9} Bibliografía básica y complementaria. Tema 9")  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "7em")%>%
+      column_spec(2, width = "20em")
+```
+
+\clearpage
+
+\vspace{5mm} 
+
+**Tema 10: Marketing digital o e-Marketing**
+
+\vspace{2mm}
+
+- Contenidos
+
+```{marginfigure, echo=TRUE}
+
+*Objetivos Específicos: tras este tema, los estudiantes deberán ser capaces de...* 
+
+\vspace{2mm}
+
+\textcolor{Red}{\faCaretRight{}} *Conocer, comprender y evaluar el efecto de la economía de la información en la dirección de marketing*.
+
+\textcolor{Red}{\faCaretRight{}} *Conocer y analizar los distintos Modelos de Comercio y Negocio electrónico, sus características y posible evolución*.
+
+\textcolor{Red}{\faCaretRight{}} *Explicar los cambios que ha producido Internet en el comportamiento del consumidor*.
+
+\textcolor{Red}{\faCaretRight{}} *Explicar las dificultades y oportunidades que implica para la estrategia de marketing la economía de la información*.
+```
+
+
+1. La economía de la información
+
+2. Modelos de negocio en la economía digital
+
+3. Clientes digitales
+
+4. La estrategia de marketing en la economía digital
+
+- Sesiones
+  - Clases Magistrales: Tres sesiones
+  - Clases en grupo pequeño: No hay
+
+- Actividades 
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+       clase = c("Sesión 1 GG","Sesión 2 GG", "Sesión 3 GG"),
+       actividad=c("1. Exposición Puntos 1 y 2 \n 2. Test Socrative \n 3. Actividad de Aplicación XVII","1. Exposición Punto 3 \n 2. Actividad de Aplicación XVIII","1. Exposición Punto 4 \n 2. Actividad de Aplicación XIX \n 3. Test Socrative "))
+names(tabla)<- c("Sesión", "Actividad")
+
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=F,
+             caption = "\\label{actividadesT10} Programación Tema 10") %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "6em") %>%
+      column_spec(2, width = "20em") 
+
+
+```
+
+En la primera sesión se exponen los puntos uno y dos del contenido, incluyendo la descripción de los efectos de las tecnologías de la información en la economía y los mercados y la exposición de los distintos modelos de negocio en la economía digital. Este contenido se completa con un repaso de conceptos en Socrative y la actividad XVII que se centra en el análisis del modelo de negocio de una de las empresas de la llamada *nueva economía*, Lime, la empresa de uso compartido de patinetes eléctricos (Anexo \ref{anexo2}). En la segunda sesión expositiva se presenta el punto tres, que analiza el comportamiento del consumidor y las organizaciones en un entorno digital. En esta sesión se realiza una actividad de aplicación centrada en los aspectos de privacidad del consumidor en entornos online (Anexo \ref{anexo2}). Por último, en la tercera sesión del tema se expone el punto 4 que desarrolla las implicaciones de la economía digital en las distintas etapas de la planificación estratégica de marketing. El tema termina con un test de conceptos en Socrative y una actividad de resumen centrada en marketing móvil (Anexo \ref{anexo2}). Los contenidos del tema se completan con la última lectura que incide en las particularidades de las plataformas de la nueva economía: *¿Por qué valen tanto las “startups” digitales que solo pierden dinero?* (2018)
+- Bibliografía básica y complementaria
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     Tipo = c("Bibliografía Básica", "Complementaria Estudiantes" , "Complementaria Profesor"),
+     Referencias=c("- Stanton, W. J., Etzel, M. J., y Walker, B. J. (2007). Fundamentos de marketing. McGraw-Hill Interamericana. Capítulo 22 \n - Somalo, N. (2018). Modelos de negocio digitales. ¿Por qué valen tanto las “startups” digitales que solo pierden dinero? Harvard Deusto Business Review, 276, 20–28.", "- Laudon, K. C., y Guercio Traver, C. (2014). E-commerce 2013 (español). Pearson Educación \n - Hofacker, C. F. (2018). Digital marketing : communicating, selling and connecting. Edward Elgar. \n - Ministerio de Industria Energía y Turismo. (2015). Libro Blanco para el diseño de las Titulaciones Universitarias en el Marco de la Economía Digital.","- Shapiro, C., y Varian, H. R. (1999). Information rules: a strategic guide to the network economy. Harvard Business School Press. \n - Chaffey, D., y Smith, P. R. (2017). Digital marketing excellence : planning, optimizing and integrating online marketing. Routledge. \n - Strauss, J., Frost, R., y Sinha, N. (2016). E-marketing. Routledge. \n - Laudon, K. C., y Traver, C. G. (2018). E-commerce 2018 (14th ed.). Pearson. \n - Ryan, D., y Jones, C. (2009). Understanding digital marketing: Marketing strategies for engaging the digital generation. Kogan Page"))
+
+library(tidyverse)
+ 
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex",  booktabs = T, escape=F, caption = "\\label{biblioT10} Bibliografía básica y complementaria. Tema 10")  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "7em")%>%
+      column_spec(2, width = "20em")
+```
+
+\clearpage
+
+## Cronograma
+
+A continuación, el la Tabla \ref{programa} se resume la programación propuesta^[En el Anexo A, guía del estudiante, se muestra la adaptación de este cronograma genérico al supuesto del calendario del grupo 3 de la asignatura Dirección Comercial I para el curso 2018/2019]. 
+
+Este cuadro o cronograma de la asignatura, adaptado a las fechas adecuadas en cada semestre, se les proporciona a los alumnos el primer día de clase y también está disponible en la plataforma virtual. 
+
+El conocimiento de los contenidos y las tareas que se llevaran a cabo a medio y largo plazo posibilita al alumnado una planificación personal más efectiva de dedicación a la asignatura. 
+
+```{r}
+
+
+programa <- data.frame(stringsAsFactors=FALSE,
+     Semana=c("1", "1", "2", "2", "2",  "2", "3", "3", "3", "3",
+              "4", "4", "5", "5", "6", "6", "7", "7",
+              "8", "8", "9", "9", "10", "10","11", "11",
+              "12", "12", "12", "13", "13", "14", "14", "15", "15", " "),                  
+     Sesion = c("1", "2" , "1", "2", "-",  "-", "1", "2", "-",  "-", 
+                "1", "2", "1", "2", "1", "2", "1", "2", "1", "2",
+                 "1", "2",  "1", "2",  "1", "2", "1", "2", "-",
+                 "1", "2", "1", "2", "1", "2", " "),
+     Tipo=c("Sesión GG", "Sesión GG",  "Sesión GG", "Sesión GP", "No presencial",  "No presencial" , "Sesión GG", "Sesión GG",
+            "No presencial",  "No presencial", "Sesión GG", "Sesión GP", "Sesión GG", "Sesión GG",
+             "Sesión GG", "Sesión GP", "Sesión GG",  "Sesión GG",
+            "Sesión GG",  "Sesión GP", "Sesión GG",  "Sesión GG",
+             "Sesión GG",  "Sesión GP","Sesión GG",  "Sesión GG",
+            "Sesión GG", "Sesión GG", "No presencial",
+            "Sesión GG", "Sesión GP", "Sesión GG", "Sesión GG", "Sesión GP", "Examen", " "),
+     Tema=c("Tema 1", "Tema 1", "Tema 1", "Caso 1","Proyecto Grupal", "Lecturas", "Tema 2", "Tema 3",
+            "Proyecto Grupal","Proyecto Grupal", "Tema 3", "Caso 2",  "Tema 4", "Tema 4",
+            "Tema 5", "Proyecto Grupal: reunión 1", "Tema 5", "Tema 5",
+            "Tema 6", "Caso 3", "Tema 7", "Tema 7",
+             "Tema 8", "Proyecto Grupal: reunión 2", "Tema 8", "Tema 9",  "Tema 9","Tema 9","Lecturas",
+            "Tema 10", "Caso 4", "Tema 10", "Tema 10","Exposición ", "Examen", " "),
+     Materiales=c("Guía del estudiante \n Manual Cap 1", "Manual Cap 1 ","Manual Cap 1", "Caso 1", 
+                  "Guía del estudiante", "Lectura I",  "Manual Cap 2 ","Manual Cap 3",
+                  "Guía del estudiante", "Guía del estudiante",
+                  "Manual Cap 3","Caso 2", "Manual Cap 4 ","Manual Cap 4",
+                  "Manual Cap 5","Guía del estudiante","Manual Cap 5","Manual Cap 5",
+                  "Manual Cap 6", "Caso 3", "Manual Cap 7", "Manual Cap 7",
+                  "Manual Cap 7","Guía del estudiante","Manual Cap 7 ","Manual Cap 5 y 9",
+                  "Manual Cap 9", "Manual Cap 9", "Lectura II",
+                  "Stanton Cap 22","Caso 4", "Stanton Cap 22", "Stanton Cap 22","Guía del estudiante", "Manual, Lecturas, Transparencias", " "),
+     Tareas=c(" ", " ", " ",  "Caso 1", "Formación grupos", "Lectura I", " ",  " ",
+              "Elección de Industria", "Tutoría Grupal", " ", "Caso 2", " ", " ",
+              " ", "Entrega 1", " ", " ", " ",  "Caso 3", " ", " ",
+               " ", "Entrega 2", " ", " ", " ", "", "Lectura II", " ", "Caso 4", " ", "",
+              "Informe Final", " ", "TOTAL"),
+     HorasP=c("2", "2", "2", "2", "0", "0", "2", "2",
+              "0", "0", "2", "2", "2", "2",
+              "2", "2", "2", "2", "2",  "2", "2", "2",
+               "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "2",
+              "2", "2", "60"),
+     HorasN=c("0", "0", "0", "0.5", "0.5", "2", "0", "0",
+              "1", "0.5", "0", "0.5", "0", "0",
+              "0", "20", "0", "0", "0",  "0.5", "0", "0",
+               "0", "20", "0", "0", "0", "0", "2", "0", "0.5", "0", "0",
+              "12", "30", "90"))
+
+names(programa)<- c("Semana", "Sesión", "Tipo", "Contenido", "Materiales", "Tareas", "Presenciales", "No Presenciales")
+
+programa %>%
+mutate_all(linebreak) %>%
+knitr::kable(programa, row.names = FALSE, col.names = NA, format = "latex",  longtable=T, booktabs = T, escape=F,
+             align=c("l","l", "l", "l", "l", "l", "c", "c"),  caption = "\\label{programa} Cronograma de la asignatura")  %>% 
+       add_header_above(c(" " = 6, "Carga Horaria" = 2))%>%
+      kable_styling(latex_options = c("repeat_header"),font_size =8, repeat_header_text = "(cont.)") %>%
+      landscape() %>%
+      column_spec(1:2, width = "3.5em") %>%
+      column_spec(3, width = "6em") %>%
+      column_spec(4:6, width = "9em") %>%
+      column_spec(4:6, width = "9em") %>%
+      column_spec(7:8, width = "7em") %>%
+      row_spec(2, color="white", background = "Gray") %>%
+      row_spec(4, color="white", background = "Gray") %>%
+      row_spec(6, color="white", background = "Gray") %>%
+      row_spec(8, color="white", background = "Gray") %>%
+      row_spec(10, color="white", background = "Gray") %>%
+      row_spec(12, color="white", background = "Gray") %>%
+      row_spec(14, color="white", background = "Gray") %>%
+      row_spec(16, color="white", background = "Gray") %>%
+      row_spec(18, color="white", background = "Gray") %>%
+      row_spec(20, color="white", background = "Gray") %>%
+      row_spec(22, color="white", background = "Gray") %>%
+      row_spec(24, color="white", background = "Gray") %>%
+      row_spec(26, color="white", background = "Gray") %>%
+      row_spec(28, color="white", background = "Gray") %>%
+      row_spec(30, color="white", background = "Gray") %>%
+      row_spec(32, color="white", background = "Gray") %>%
+      row_spec(34, color="white", background = "Gray") %>%
+      row_spec(36, bold = T)
+            ```
+
+\clearpage
+
+## Evaluación y retroalimentación del aprendizaje
+
+La evaluación en la enseñanza, debe entenderse como el proceso mediante el cual se juzga el grado de consecución de los objetivos propuestos en la actividad de enseñanza-aprendizaje y, al mismo tiempo, permite analizar las posibles desviaciones observadas y estudiar las modificaciones a introducir para conseguir los fines establecidos. 
+
+Así, la evaluación final al alumno pretende incorporar todos los elementos mencionados en la metodología docente y los objetivos planteados. 
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faWpforms{}} El sistema de evaluación de la asignatura se describe también, desde el punto de vista del estudiante, en el Anexo \ref{anexo1} Guía del Estudiante.
+
+```
+
+La Tabla \ref{evaluacionponderacion} muestra los elementos generales en la evaluación y su ponderación:
+
+```{r}
+
+tabla2 <- data.frame(stringsAsFactors=FALSE,
+       Criterios = c("a.1. Trabajo durante el curso", "a.2. Entregas para las lecturas", "a.3. Desempeño en el examen final", "b.1. Proyecto de Análisis", "b.2. Casos en grupo"),
+       Ponderacion=c("5%", "5%", "50%", "20%", "20%"))
+
+names(tabla2)<- c("Instrumento","Ponderación")
+
+library(tidyverse)
+
+tabla2 %>%
+knitr::kable(tabla2, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=T, caption = "\\label{evaluacionponderacion} Resumen de elementos en la evaluación")  %>%
+            group_rows(index=c("Evaluación Individual" = 3, "Evaluación Grupal" = 2)) %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "16em") 
+
+```
+
+Con estos cinco elementos básicos, se van a evaluar las competencias genéricas y específicas y los resultados de aprendizaje^[\textcolor{Red}{\faAngleDoubleRight{}} Excluímos las competencias básicas de esta tabla, dado que todas las actividades de la asignatura contribuyen para su mejora.]. En la tabla \ref{evaluacionobjetivos} se presenta cómo se relacionan estos cinco mecanismos de evaluación con los objetivos de la asignatura. 
+
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     Competencia = c("CG01", "CG02", "CG03", "CG04", "CG05", "CG06", "CG07", "CG08", "CG09", "CG12", "CG14", "CG15", "CG16", "CG17", "CG19", "CG24", "CE02", "CE03", "CE04", "CE05", "CE06", "CE07", "CE13", "CE14", "CE18", "R_MK_01", "R_MK_02", "R_MK_03", "R_MK_04", "R_MK_05", "R_MK_06", "R_MK_07","R_MK_08", "R_MK_09"),
+     Enunciado=c("Capacidad de análisis y síntesis", "Capacidad de organización y planificación", "Comunicación oral y escrita en la lengua nativa",
+                 "Comunicación oral y escrita de una lengua extranjera","Conocimientos de informática relativos al ámbito de estudio", 
+                 "Habilidad para analizar y buscar información proveniente de fuentes diversas","Capacidad para la resolución de problemas", 
+                 "Capacidad de tomar decisiones", "Capacidad para trabajar en equipo","Habilidad en las relaciones personales",
+                 "Capacidad crítica y autocrítica", "Compromiso ético en el trabajo","Capacidad para trabajar en entornos de presión",
+                 "Capacidad de aprendizaje autónomo", "Creatividad", "Respeto de los derechos humanos",  "Identificar las fuentes de información económica relevantes para la empresa y su contenido", "Derivar de los datos, información relevante para la empresa imposible de reconocer por no profesionales", "Aplicar al análisis de los problemas de gestión empresarial criterios profesionales basados en el manejo instrumentos técnicos", "Emitir informes de asesoramiento sobre situaciones concretas de empresas y mercados", "Redactar proyectos de gestión global o de áreas funcionales de la empresa" ,
+"Valorar a partir de los registros relevantes de información la situación y previsible evolución de una empresa", 
+"Identificar la empresa como sistema y reconocer las interdependencias entre las distintas áreas funcionales", 
+"Implementar políticas y prácticas encaminadas a una mejora en la eficacia y eficiencia de la gestión empresarial", 
+"Desarrollar políticas de marketing que mejoren el conocimiento de las necesidades de los consumidores y eleven su nivel de satisfacción",
+"Entender qué es marketing, sus conceptos más importantes y su importancia en las organizaciones y en la economía",                "Comprender la función del marketing en la organización y su relación con otras funciones", "Comprender las distintas decisiones estratégicas que puede tomar una organización en el proceso de planificación de marketing"," Comprender las distintas decisiones operativas que puede tomar una organización en el proceso de planificación de marketing", "Ser capaz de analizar el entorno del marketing, en particular el mercado y el comportamiento de los consumidores y clientes",         "Ser capaz de tomar decisiones de marketing en las organizaciones", "Entender la importancia de la información y de la investigación de mercados en los procesos de toma de decisiones emprendidos por las organizaciones","Comprender el proceso de planificación y ejecución de una investigación de mercados","Ser capaz de planificar y ejecutar una investigación de mercados"),
+Mecanismo=c("Lecturas, Proyecto Grupal", "Trabajo durante el curso, Proyecto Grupal", "Trabajo durante el curso, Proyecto Grupal", "Lecturas", "Trabajo durante el curso, Proyecto Grupal", "Proyecto Grupal", "Trabajo durante el curso, Examen, Casos prácticos", "Examen, Proyecto Grupal", "Proyecto Grupal, Casos prácticos", "Proyecto Grupal, Casos prácticos", "Lecturas", "Proyecto Grupal, Lecturas", "Examen", "Examen", "Casos prácticos, proyecto grupal", "Trabajo durante el curso", "Proyecto Grupal", "Proyecto Grupal", "Proyecto Grupal, Casos prácticos, Examen", "Proyecto Grupal", "Proyecto Grupal", "Proyecto Grupal", "Proyecto Grupal", "Casos prácticos, Trabajo durante el curso", "Todos","Examen, Lecturas, Trabajo durante el curso ", "Casos prácticos, Proyecto Grupal", "Examen, Casos prácticos, Proyecto Grupal", "Examen", "Proyecto Grupal", "Casos prácticos, Trabajo durante el curso", "Examen","Examen, Trabajo durante el curso", "Examen"))
+
+library(tidyverse)
+ 
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(programa, row.names = FALSE, col.names = NA, format = "latex",  longtable=T, booktabs = T, escape=T,
+             caption = "\\label{evaluacionobjetivos} Relación objetivos de la asignatura y mecanismos de evaluación")  %>% 
+      kable_styling(latex_options = c("repeat_header"), repeat_header_text = "(cont.)",font_size =7.5)%>%
+      column_spec(1, width = "5em")%>%
+      column_spec(2, width = "16em")%>%
+      column_spec(3, width = "10em")
+```
+
+Una vez definidos los objetivos de cada mecanismo, podemos diseñarlos y establecer cómo se llevará a cabo el feedback.
+
+### Trabajo durante el curso  
+
+\vspace{2mm} 
+
+**Objetivos del instrumento**: Medir la adquisición de competencias relacionadas con la capacidad de organización y planificación, la comunicación oral y escrita en la lengua nativa, conocimientos de informática relativos al ámbito de estudio, capacidad para la resolución de problemas, respeto de los derechos humanos, implementar políticas y prácticas encaminadas a una mejora en la eficacia y eficiencia de la gestión empresarial, además de entender qué es marketing, sus conceptos más importantes y su importancia en las organizaciones y en la economía y ser capaz de tomar decisiones de marketing en las organizaciones.
+
+\vspace{2mm} 
+
+**Diseño del instrumento**: Para medir el trabajo durante el curso, se evaluará la participación y resultados en las actividades realizadas en las sesiones expositivas (actividades de aplicación y test Socrative en el anexo \ref{anexo2}) además del trabajo realizado en MiAulario durante el periodo. 
+
+\vspace{2mm} 
+
+**Indicadores de desempeño y fuentes de información**:
+
+- Número de test Socrative en los que ha participado (registros para cada estudiante en la aplicación)
+- Resultados en las actividades de aplicación de conceptos realizadas en clase (entregas en clase y registro del profesor)
+- Resultados en las estadísticas de utilización de MiAulario (resultados de la herramienta *Estadísticas* en MiAulario)
+
+\vspace{2mm} 
+
+**Criterios de evaluación**
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+       Elementos = c("El estudiante no ha participado al menos en el 50% de las actividades propuestas ni ha accedido regularmente a los materiales en MiAulario", "El estudiante ha participado regularmente en las clases y ha accedido a los materiales, aunque la participación oral ha sido escasa y/o el nivel de desempeño en las actividades y test ha sido bajo", "El estudiante ha participado en la mayor parte de las clases y ha utilizado el material regularmente, con buenos resultados en las actividades"),
+       Puntos=c("Menos de 5 puntos sobre 10", "Entre 5 y 7 puntos sobre 10", "Más de 7 puntos sobre 10"))
+names(tabla)<- c("Criterios","Puntuación")
+
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=T,
+             caption = "\\label{trabajorubrica} Criterios de evaluación del trabajo durante el curso")  %>% 
+            kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "20em") %>%
+      column_spec(2, width = "6em") 
+
+
+```
+
+\vspace{2mm} 
+
+**Ponderación y carácter recuperable o no**
+
+El trabajo durante el curso tiene una ponderación en la nota final de la asignatura del 5% del total. La normativa en la UPNA requiere especificar el carácter recuperable o no de la parte de la nota correspondiente a cada actividad. En este caso, dado que se evalúa el trabajo a lo largo de un semestre, esta parte de la evaluación es **no recuperable**.
+
+\clearpage
+
+\vspace{2mm} 
+
+**Mecanismos de feedback al estudiante**
+
+Esta parte de la nota tiene feedback continuo a lo largo de la asignatura, ya que los estudiantes saben si están accediendo o no a las actividades de MiAulario o si participan en las actividades en clase. La nota final se publica con las notas generales de la asignatura.
+
+\clearpage
+
+### Entregas de informes de lectura 
+
+\vspace{2mm} 
+
+**Objetivos del instrumento**: Los informes sobre las lecturas contribuyen a la capacidad de análisis y síntesis, la comunicación oral y escrita en una lengua
+extranjera, la capacidad crítica y autocrítica y el compromiso ético en el trabajo además de entender qué es marketing, sus conceptos más importantes y su importancia en las organizaciones y en la economía.
+
+\vspace{2mm} 
+
+**Diseño del instrumento**: Para medir el desempeño en los informes de lectura se plantean dos lecturas evaluables en las que los estudiantes:
+
+- Entregan en una fecha determinada un informe respondiendo a cuestiones de análisis de las dos lecturas seleccionadas
+- Evalúan los informes de lectura de dos compañeros a partir de la rúbrica proporcionada por el profesor.
+
+Este sistema pretende fomentar las competencias de capacidad crítica y autocrítica así como el compromiso ético en el trabajo.
+
+\vspace{2mm} 
+
+**Indicadores de desempeño y fuentes de información**:
+
+- Nota recibida en la evaluación por pares e informe de los pares (MiAulario)
+- Evaluaciones por pares realizadas (MiAulario)
+- Informe presentado en cada lectura (MiAulario)
+
+\vspace{2mm} 
+
+
+**Criterios de evaluación**
+
+```{r}
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+       Criterios = c("Grado en el que el estudiante responde correctamente a las preguntas", "Grado de aportación personal en la solución propuesta", "Calidad de la Redacción y presentación adecuada", "Calidad de la evaluación por pares realizada y ajuste a la rúbrica ", " "),
+       Puntos=c("Hasta 5 puntos", "Hasta 1.5 puntos", "Hasta 1.5 puntos", "Hasta 2 puntos", "Hasta 10 puntos"))
+names(tabla)<- c("Criterios","Puntuación")
+
+library(tidyverse)
+
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=T,
+             caption = "\\label{lecturasrubrica} Criterios de evaluación de los informes de lectura")  %>% 
+            kable_styling(font_size = 8,latex_options = c("hold_position")) %>%
+      column_spec(1, width = "16em") %>%
+      row_spec(5, bold = T)
+
+
+```
+
+\clearpage
+
+\vspace{2mm} 
+
+**Ponderación y carácter recuperable o no**
+
+\vspace{2mm} 
+
+Los informes de las dos lecturas tienen una ponderación en la nota final de la asignatura del 5% del total. En este caso, esta parte de la evaluación es **recuperable** solamente en parte, dado que la evaluación por pares no se puede recuperar.
+
+\vspace{2mm} 
+
+**Mecanismos de feedback al estudiante**
+\vspace{2mm} 
+
+El feedback de esta actividad se efectúa en primer lugar, a través de la propia evaluación de los estudiantes, una semana después de la entrega inicial y, por otro lado, con la evaluación final del profesor. Esta evaluación se entrega en un plazo de **dos semanas** tras la revisión por pares, de manera que el aprendizaje de la primera lectura pueda aplicarse en la segunda entrega. La nota final de la entrega se acompaña de un comentario breve con el punto más fuerte y el punto más débil de la entrega.
+
+\clearpage
+
+### Desempeño en el examen final
+
+\vspace{2mm} 
+
+**Objetivos del instrumento**: Como se observa en la Tabla \ref{evaluacionobjetivos}, el examen final tiene como objetivo evaluar el cumplimiento de muy diversos objetivos, desde la capacidad para la resolución de problemas, de tomar decisiones, de trabajar en entornos de presión y la capacidad de aprendizaje autónomo, hasta los diversos resultados de aprendizaje de contenidos.
+
+\vspace{2mm} 
+
+**Diseño del instrumento**: Dado que los objetivos a conseguir con el instrumento son de distintos niveles de complejidad (desde los más simples como entender o reproducir hasta más complejos como aplicar o decidir), el examen final se estructura en dos partes, con una primera parte de preguntas tipo test y con un tiempo más restringido y una segunda parte de preguntas cortas de resolución de problemas y una pregunta aplicada. 
+
+\vspace{2mm} 
+
+**Indicadores de desempeño y fuentes de información**:
+
+- Examen Final (MiAulario)
+
+\vspace{2mm} 
+
+**Criterios de evaluación**
+
+```{r}
+
+tabla2 <- data.frame(stringsAsFactors=FALSE,
+       Criterios = c("Nota obtenida en la parte tipo test", "Nota obtenida en la resolución de problemas", "Total"),
+       Puntos=c("Hasta 5 puntos", "Hasta 5 puntos", "Hasta 10 puntos"))
+
+names(tabla2)<- c("Criterios","Puntuación")
+
+library(tidyverse)
+
+tabla2 %>%
+knitr::kable(tabla2, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=F,
+             caption = "\\label{examenrubrica} Criterios de evaluación del examen")  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "16em") 
+
+```
+
+\vspace{2mm} 
+
+**Ponderación y carácter recuperable o no**
+
+\vspace{2mm} 
+
+El examen final tiene una ponderación en la nota final de la asignatura del 50% del total. En este caso, esta parte de la evaluación es **recuperable**.
+
+\vspace{2mm} 
+
+**Mecanismos de feedback al estudiante**
+
+\vspace{2mm} 
+
+El feedback de esta actividad se efectúa para la primera parte, a través de la propia herramienta una vez enviado el examen. La corrección de la segunda parte se produce en la semana siguiente a la entrega.
+
+\clearpage
+
+### Proyecto de Análisis  
+
+\vspace{2mm} 
+
+**Objetivos del instrumento**: Los objetivos del instrumento son la capacidad de análisis y síntesis, la capacidad de organización y planificación, la comunicación oral y escrita en la lengua nativa, conocimientos de informática relativos al ámbito de estudio, la habilidad para analizar y buscar información proveniente de fuentes diversas, la capacidad de tomar decisiones, la capacidad para trabajar en equipo, habilidad en las relaciones personales, compromiso ético en el trabajo, creatividad, la identificación de las fuentes de información económica relevantes para la empresa y su contenido, la capacidad de derivar de los datos información relevante para la empresa y de aplicar al análisis de los problemas de gestión empresarial criterios profesionales y la habilidad para emitir informes de asesoramiento entre otros.
+instrumentos técnicos
+
+\vspace{2mm} 
+
+**Diseño del instrumento**: La evaluación del proyecto grupal pretende evaluar al adquisición de estas competencias incorporando elementos de evaluación:
+
+- sobre el proceso de elaboración del proyecto
+- sobre el resultado del proyecto plasmado en el informe escrito
+- sobre el resultado del proyecto plasmado en la presentación oral
+
+\vspace{2mm} 
+
+**Indicadores de desempeño y fuentes de información**:
+
+- Trabajo durante el curso: reuniones de trabajo (registro del profesor) y panel Trello (indicadores por participante en la aplicación).
+- Informe escrito (MiAulario)
+- Presentación (Exposición en clase)
+
+\clearpage
+
+
+**Criterios de evaluación**
+
+```{r}
+
+tabla2 <- data.frame(stringsAsFactors=FALSE,
+       Criterios = c("Capacidad de organización y trabajo durante el curso", "Informe Escrito: aspectos formales, contenido adecuado, capacidad de análisis y síntesis, bibliografía, creatividad en las propuestas presentadas", "Presentación: materiales, uso del lenguaje y control corporal, contenido, control del tiempo", "Total"),
+       Puntos=c("Hasta 3 puntos", "Hasta 4 Puntos", "Hasta 3 Puntos", "Hasta 10 puntos"))
+
+names(tabla2)<- c("Criterios","Puntuación")
+
+library(tidyverse)
+
+tabla2 %>%
+knitr::kable(tabla2, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=F,
+             caption = "\\label{proeyctorubrica} Criterios de evaluación del proyecto grupal")  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "16em") 
+
+```
+
+\vspace{2mm} 
+
+
+**Ponderación y carácter recuperable o no**
+
+\vspace{2mm} 
+
+El proyecto grupal tiene una ponderación en la nota final de la asignatura del 20% del total. La nota del trabajo es la misma para todos los componentes del grupo, salvo posibles correcciones en la parte de trabajo durante el curso en base al registro Trello y las tutorías parciales. Esta parte de la evaluación es **no recuperable**.
+
+\vspace{2mm} 
+
+**Mecanismos de feedback al estudiante**
+
+Se proporciona a los estudiantes feedback cualitativo y cuantitativo sobre el estado del proyecto en las dos tutorías parciales y la nota final se publica en el plazo de una semana tras las presentaciones finales. 
+
+\vspace{2mm} 
+
+\clearpage
+
+### Casos Prácticos
+
+\vspace{2mm} 
+
+**Objetivos del instrumento**: La evaluación de los casos prácticos tiene como objtivo medir el desempeño en la capacidad para la resolución de problemas, la capacidad para trabajar en equipo, la habilidad en las relaciones personales, creatividad, la aplicación al análisis de los problemas de gestión empresarial de criterios profesionales, la implementación de políticas y prácticas encaminadas a una mejora en la eficacia y eficiencia de la gestión empresarial, además de otros resultados de aprendizaje.
+
+\vspace{2mm} 
+
+**Diseño del instrumento**:  Se han planteado cuatro casos cortos que, tras haberlos leído antes de la clase, se resuelven por grupos en la primera parte de la clase y se discuten en la última parte de la clase. En la evaluación de los casos prácticos se tiene en cuenta:
+
+- el informe escrito presentado
+- la participación y exposición en la discusión en clase
+
+La nota de los casos, como norma general, se asigna a todos los componentes del grupo presentes el día de la clase. Puede haber penalizaciones en esta nota en función de la participación individual en la fase de discusión
+
+\vspace{2mm} 
+
+**Indicadores de desempeño y fuentes de información**:
+
+- el informe escrito presentado (MiAulario)
+- la participación y exposición en la discusión en clase (registro del profesor)
+
+**Criterios de evaluación**
+
+```{r}
+
+tabla2 <- data.frame(stringsAsFactors=FALSE,
+       Criterios = c("Informe Escrito: aspectos formales, contenido adecuado, capacidad de análisis y síntesis, creatividad en las propuestas presentadas", "Presentación Oral: Uso del lenguaje y control corporal, contenido", "Total"),
+       Puntos=c("Hasta 6 puntos", "Hasta 4 puntos ", "Hasta 10 puntos"))
+
+names(tabla2)<- c("Criterios","Puntuación")
+
+library(tidyverse)
+
+tabla2 %>%
+knitr::kable(tabla2, row.names = FALSE, col.names = NA, format = "latex", booktabs = T, escape=F,
+             caption = "\\label{proeyctorubrica} Criterios de evaluación de los casos")  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "16em") 
+
+```
+
+\vspace{2mm} 
+
+**Ponderación y carácter recuperable o no**
+
+\vspace{2mm} 
+
+Los cuatro casos prácticos ponderan un 20% de la nota de la asignatura. En este caso, esta parte de la evaluación es **no recuperable**.
+
+\vspace{2mm} 
+
+**Mecanismos de feedback al estudiante**
+
+\vspace{2mm} 
+
+La evaluación de los casos prácticos se proporciona a lo largo del semestre, de forma que los estudiantes puedan conocer su desempeño y tomar medidas correctoras. Se establece como norma general que la evaluación de cada caso debe proporcionarse alRededor de una semana más tarde de cada sesión, y no más tarde de dos semanas tras la entrega.
+
+\clearpage
+
+
+## Evaluación y revisión de la asignatura
+
+Por último, en la planificación de la asignatura es necesario incluir los mecanismos previstos para recibir feedback de los estudiantes y poder introducir mejoras para cada curso. En este caso se plantean los siguientes elementos de feedback:
+
+- Los resultados de la asignatura: se preve una tasa de éxito entre los estudiantes en torno al 80-90% de los estudiantes matriculados. Resultados globales superiores o inferiores a este umbral indican la necesidad de revisar la programación y los mecanismos de evaluación.
+- Los resultados de las Encuestas de Satisfacción de Estudiantes programadas por el Servicio de Organización, Calidad y Procesos de la Universidad Pública de Navarra. Se espera que los resultados de las encuestas en sus tres dimensiones (Planificación, Desarrollo y Resultados) sean adecuados y, como mínimo, igualen las valoraciones medias para el curso y departamento. Resultados por debajo de estas medias requieren de un diagnóstico de sus causas así como de medidas correctoras para el siguiente curso. Por otro lado, las encuestas contienen además información cualitativa muy valiosa en los comentarios de los estudiantes, que proporcionan un buen feedback sobre cómo se han desarrollado las clases.
+- La propia experiencia del profesor al impartir la asignatura y los comentarios de los estudiantes durante las clases pueden indicar la necesidad de introducir cambios en el temario, metodologías, etc...
+- Encuesta específica a los estudiantes al final de la asignatura: aunque las encuestas generales de satisfacción de la universidad proporcionan una buena información sobre la satisfacción general con la asignatura y, sobre todo, un punto de referencia comparativo con el resto de asignaturas y materias, su caracter generalista hace que sean poco adecuadas para valorar actividades y contenidos específicos de la materia. Al final del semestre, se implementa una encuesta en MiAulario que valora cada una de las actividades realizadas.
+
+
+\clearpage
+
+## Bibliografía
+
+En la Tabla \ref{biblio} se presenta agrupada la bibliografía de la asignatura incluyendo la lista completa de lecturas por tema. Este listado incluye en primer lugar, el manual recomendado seleccionado según los criterios mencionados en el Apartado \ref{manual} y las lecturas de cada tema. En segundo lugar se incluye la bibliografía complementaria para publicar a los estudiantes y, por último, se incluye, sin ánimo de ser exhaustivos, otra bibliografía útil para al profesor en la preparación de los temas.
+
+```{r}
+
+
+tabla <- data.frame(stringsAsFactors=FALSE,
+     Tipo = c("Bibliografía Básica", "Lecturas", "Bib. Complementaria Estudiantes" , "Bib. Complementaria Profesor"),
+     Referencias=c("- Kotler, P., Armstrong, G. (2018) Principios de Marketing (17E), Pearson", "- Tema 1: Keiningham, T., Gupta, S., Aksoy, L., y Buoye, A. (2014). El alto precio de la satisfacción del cliente. Harvard Deusto Marketing y Ventas, 125, 6–17. \n - Tema 2: Kotler, P., y Reibstein, D. (2014). ¿Su empresa necesita realmente un departamento de Márketing? Harvard Deusto Marketing y Ventas, 122, 6–9.  \n - Tema 3: Matzler, K., y Kathan, W. (2015). Adapting to the Sharing Economy. MIT Sloan Management Review, 56(2), 71–77. \n - Tema 4: Casado, J. L. (2015). La revolución analítica: el Big Data en la práctica. Harvard Deusto Marketing y Ventas, 133, 28–37.  \n  - Tema 5: Sancho, E. L. (2018). La gestión de la experiencia del cliente como primera palanca del “branding.” Harvard Deusto Business Review, 279, 6–16.  \n - Tema 6: Peterson, R. S. (2017). ¿Qué tipo de negociador eres ? Harvard Deusto Business Review, 264, 62–66.  \n - Tema 7: Albareda Vivo, L., y González Bree, F. (2015). Innovación sostenible nuevo espacio de márketing y competitividad. Harvard Deusto Marketing y Ventas, 133, 6–14. \n - Tema 8: Gónzalez Moreno, J., Gallo, Í., y Foncillas, P. (2018). Caso BMW de “poseer” a “vivir”: veinte años experiencias. Harvard Deusto Márketing y Ventas, 150, 42–49.  \n - Tema 9: Simester, D. (2016). Why Great New Products Fail. MIT Sloan Management Review, 57(3), 33–39.  \n - Tema 10: Somalo, N. (2018). Modelos de negocio digitales. ¿Por qué valen tanto las “startups” digitales que solo pierden dinero? Harvard Deusto Business Review, 276, 20–28.", "- Santesmases Mestre, M. (2012). Marketing: conceptos y estrategias (6th ed.). Pirámide. \n - Solomon, M. R., Marshall, G. W., y Stuart, E. W. (2016). Marketing: real people, real choices. Pearson. \n - Kotler, P., y Keller, K. L. (2016). Dirección de Marketing (15E). Pearson. \n - Rivera Vilas, L. M. (2015). Decisiones en marketing : cliente y empresa (3a). Universidad Politécnica de Valencia. \n - Esteban Talaya, A., y Mondéjar Jiménez, J. A. (2013). Fundamentos de marketing (2E). ESIC. \n  - Esteban Talaya, A. (2008). Principios de marketing. Esic Editorial \n - Sellers, R. R., y Casado, D. A. B. (2013). Introducción al marketing. \n - Munuera Alemán, J. y Rodríguez Escudero, A. I. (2012). Estrategias de marketing : un enfoque basado en el proceso de dirección. ESIC \n - Alonso Rivas, J. y Grande Esteban, I. (2015). Comportamiento del consumidor : decisiones y estrategia de marketing. (8E) ESIC. \n - Lilien, G. L., Rangaswamy, A., y De Bruyn, A. (2017). Principles of marketing engineering and analytics. \n - Grande Esteban, I., y Abascal, E. (2017). Fundamentos y técnicas de investigación comercial (13E ed.).\n - Laudon, K. C., y Guercio Traver, C. (2014). E-commerce 2013 (español). Pearson Educación \n - Hofacker, C. F. (2018). Digital marketing : communicating, selling and connecting. Edward Elgar. \n - González Vázquez, E., Alén González, E. y Cerviño Fernández, J. (2005). Casos de dirección de marketing. Prentice Hall","- Kerin, R. A., Berkowitz, E., Rudelius, W., y Hartley, S. (2017). Marketing (13E). McGraw-Hill Education. \n - Lamb, C. W., Hair, J. F., y McDaniel, C. (2018). MKTG12 : Marketing (12E) \n - Stanton, W. J., Etzel, M. J., y Walker, B. J. (2007). Fundamentos de marketing. McGraw-Hill Interamericana. \n - Levens, M. (2012). Marketing: Defined, Explained, Applied (2nd ed.). Pearson. \n  - Lambin, J.J., Galluci, C., y Sicurello, C. (2008). Dirección de Marketing (2E) \n - Ferrell, O. C., y Hartline, M. D. (2012). Estrategia de marketing. Cengage learning. \n - Chernev, A. (2014). Strategic marketing management (8E). Cerebellum Press.\n - Best, R. J. (2007). Marketing estratégico. Pearson Prentice Hall \n- Hawkins, D. I., y Mothersbaugh, D. L. (2016). Consumer behavior : building marketing strategy. \n - Sánchez Pérez (coord.), M. (2006). Casos de marketing y estrategia. UOC. \n - Lilien, G. L., Kotler, P., y Moorthy, K. S. (2009). Marketing models. Trafford. \n - Malhotra, N. K. (2016). Investigación de mercados. Pearson Educación  \n -Strauss, J., Frost, R., y Sinha, N. (2016). E-marketing. Routledge. \n - Fripp, G. (2017). The practical marketing workbook (2E) \n - Montero Simó, M. J., Araque Padilla, R. A., y Gutiérrez Villar, B. (2006). Fundamentos de marketing : ejercicios y soluciones. McGraw Hill Interamericana. \n - Martín Armario, E. (1996). Ejercicios de marketing. Minerva."))
+
+library(tidyverse)
+ 
+tabla %>%
+mutate_all(linebreak) %>%
+knitr::kable(tabla, row.names = FALSE, col.names = NA, format = "latex",  longtable=T,  booktabs = T, escape=F, caption = "\\label{biblio} Listado bibliográfico de la asignatura")  %>% 
+      kable_styling(latex_options = c("repeat_header"), font_size = 9, repeat_header_text = "(cont.)") %>%
+      column_spec(1, width = "9em") %>%
+      column_spec(2, width = "27em")
+```
+

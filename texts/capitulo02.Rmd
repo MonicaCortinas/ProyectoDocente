@@ -1,0 +1,628 @@
+---
+documentclass: book
+classoption: a4paper
+#classoption: a4paper,oneside
+#bibliography: bib/library.bib
+bibliography: "D:/Dropbox/2_ Investigacion/4_Referencias/library.bib"
+#csl: methods-in-ecology-and-evolution.csl
+csl: spanish-journal-of-marketing-esic.csl
+link-citations: yes
+fontsize: 12pt # 10pt,11pt
+geometry: margin = 2.5cm
+output: 
+  pdf_document: 
+    keep_tex: yes
+    number_sections: yes
+#    toc: yes
+    fig_caption: yes
+
+---
+
+
+
+```{r include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(fig.path = 'figures/',
+                      echo = FALSE, warning = FALSE, message = FALSE,
+                      fig.align="center",out.width="95%",
+                      cache=FALSE)
+
+```
+
+
+<!-- \setcounter{chapter}{2} -->
+<!-- \setcounter{chapter}{2} escribir 2 para capítulo 3  -->
+<!-- \pagenumbering{arabic} -->
+
+# El sistema de producción científica y el marketing  \label{capitulo2}
+
+`r newthought('Como se ha establecido')` en el Capítulo \ref{capitulo1}, la docencia universitaria no puede ser un simple ejercicio de transmisión de conocimiento sino que el docente debe actuar como productor y transformador de este conocimiento. En el primer apartado de este capítulo se repasan algunos aspectos críticos del sistema de producción científica en ciencias sociales. Además, un proyecto sobre una materia debe partir de una reflexión sobre la propia disciplina. Esta reflexión se resume en la segunda parte de este capítulo.
+
+## El sistema de producción científica en el siglo XXI \label{produccion}
+
+### La producción científica en el sistema tradicional
+
+La Figura \ref{islandresearch} reproduce una ilustración publicada por primera vez en 1966 en *America Scientific* [@harburg1966] que muestra el mapa del proceso de investigación. Este mapa tiene una intención satírica pero refleja bien el proceso de investigación científica en general y en ciencias sociales en particular. En este proceso, el conocimiento de la literatura es el primer paso, al que sigue el desarrollo de hipótesis, diseño del estudio y los instrumentos, recogida de datos, análisis y contraste de hipótesis, redacción de manuscritos y finalmente publicación de resultados en la literatura. La figura ilustra también cómo la obtención de financiación es un tema crítico y recurrente en distintas partes de este proceso.
+
+Como se deduce de este proceso, la comunicación de resultados es un aspecto crítico de la producción científica porque es en esta literatura donde comienza y termina el proceso. En algunos casos incluso se ha señalado que la comunicación es precisamente la esencia de la ciencia [@Garvey1979].
+
+
+```{r islandresearch, out.width='85%', fig.margin = FALSE, fig.fullwidth=TRUE, fig.cap="\\label{islandresearch} Mapa de investigación científica. Reproducido a partir de Harburg (1966) en American Scientist"}
+
+knitr::include_graphics("images/islandofresearch.jpg")
+
+```
+
+Las primeras revistas científicas aparecen en el siglo XVII [@wells1976] aunque su mayor desarrollo se produce a principios del siglo XIX cuando la Royal Society comienza a publicar sus Proccedings siguiéndoles la francesa Académie des Sciences con las Comptes Rendues. Estas dos publicaciones ya tenían la vocación de ofrecer periódicamente un estado del arte de los avances en la ciencia. Otro hito importante se produce a partir de 1850 cuando se profesionalizan las revistas y se financian también con subvenciones públicas. En 1869 se publica el primer número de Nature. El sistema de revisión por pares se establece también en el mismo año 1869, en la revista British Medical Journal [@burnham1990].
+
+```{r nature,  fig.margin = TRUE, fig.cap="\\label{nature} Primera edición de Nature (1869)"}
+
+knitr::include_graphics("images/naturefirst.pdf")
+
+```
+
+En el siglo XX aparecen las primeras editoriales privadas en el sistema. Elsevier, que ya existía anteriormente, publica las primera revista científica en 1947, Springer se funda en 1950, Taylor & Francis Group en 1952 y SAGE Publications en 1965. Estas cinco editoriales controlan en 2013 más del 50% de las publicaciones científicas en el mundo [@Lariviere2015].
+
+Por último, podemos señalar como otro gran hito en el sistema, la aparición de los mecanismos para evaluar las publicaciones, especialmente el Science Citation Index^[https://apps.webofknowledge.com], que surge en 1963 y el Journal Citation Reports^[https://jcr.incites.thomsonreuters.com/] en 1975 [@Garfield2007a].
+
+La Figura \ref{tradicional} resume los elementos principales que resultan en este sistema de producción científica.
+
+```{r tradicional, out.width='85%', fig.margin = FALSE, fig.fullwidth=FALSE, fig.cap="\\label{tradicional} Sistema de Producción Científica. Fuente: Ruiz-de-Luzuriaga (2018) "}
+
+knitr::include_graphics("images/sistemapcion.png")
+
+```
+
+En este sistema, investigadores y publicaciones colaboran. Los investigadores proporcionan sus publicaciones y colaboran en los comités editoriales y de revisión por pares, mientras que las revistas proporcionan un feedback valioso durante el proceso de revisión que contribuye a la mejora de los trabajos, además de mejorar la visibilidad y el prestigio de los investigadores. Así, un proceso de revisión por pares de calidad juega un papel vital para el éxito del sistema [@csizar2016]. Además, las universidades y, finalmente, el financiador, proveen una doble financiación: por un lado proporcionando los recursos necesarios para realizar las investigaciones y, por otro lado, contratando el acceso a las publicaciones con el pago a las editoriales.
+
+Sin embargo, en los últimos años se han presentado dos factores que han erosionado el cierto equilibrio que presentaba este sistema:
+
+- Incremento exponencial en el número de publicaciones: @de1963little ya mostraba como el número de publicaciones científicas crecía exponencialmente, duplicándose su número cada 15 años. @larsen2010 amplían este estudio hasta el año 2010 y sus resultados muestran como este ritmo de crecimiento no ha disminuído en las publicaciones tradicionales, además de observarse un crecimiento aún mayor en otras publicaciones como proceedings de congresos y páginas web.
+
+```{r numberpub, out.width='85%', fig.margin = TRUE, fig.fullwidth=FALSE, fig.cap="\\label{numberpub} Número acumulado de abstracts en distintas disciplinas hasta 1960. Extraído de Little Science, Big Science, Derek J. de Solla Price. Columbia Paperback Edition 1965."}
+
+knitr::include_graphics("images/numberabstracts.jpg")
+
+```
+
+- Acceso digital: El acceso electrónico a las publicaciones científicas ha cambiado tanto la forma de acceso a la literatura científica como el uso que se hace de esa literatura [@Herring2002]. El acceso es más rápido y sencillo a una mayor variedad de fuentes de información aunque algunos estudios indican que, contra lo que se pudiera esperar, el rango de artículos y revistas citadas puede estar estrechándose debido a la navegación mediante hiperenlaces, además de citarse únicamente referencias más recientes que no precisan de acceso en papel [@Evans2008]. 
+
+Estos dos factores han hecho, además, que las editoriales cambien su forma de contratación con las bibliotecas y universidades, cambiando las suscripciones a revistas individuales por suscripciones por grandes paquetes, denominadas *big deal*, en el que se incluyen un mayor número de títulos que, quizás de otra forma no hubiesen sido contratados y que proporcionan teóricamente un coste por acceso menor [@glasser2013]. 
+
+
+En este contexto, aparece la denominada Ciencia 2.0. @rebiun2010 define la Ciencia 2.0 como la *aplicación de las tecnologías de la web social al proceso científico.* La web social, web 2.0 o web participativa se caracteriza por el empleo de tecnologías abiertas, tanto desde el punto de vista de la arquitectura de la información, como de la interconexión de servicios y, sobre todo, del trabajo colectivo que se realiza de forma telemática, colaborativa y desinteresada. [@rebiun2010]. 
+
+Según @Zapataros2016, la ciencia 2.0 es la *"actividad científica y de investigación a la que se aplican los nuevos recursos tecnológicos de apoyo con la consiguiente apertura de nuevos posibilidades de comunicación para que los científicos realicen su actividad y para la comunicación de su producción de forma interactiva, participativa y con recursos abiertos"*. 
+
+En general, en las definiciones se alude a tres elementos clave: acceso abierto,reproducibilidad en la ciencia y ciencia colaborativa mediante  herramientas TIC.
+
+### Ciencia en Acceso Abierto
+
+El movimiento "Open Access" comenzó en los años 90 al popularizarse el acceso electrónico a las publicaciones y tras el crecimiento de los movimientos "Open Source" para el software y "Open Education" [@laakso2011]. 
+
+Dentro de este movimiento, han surgido por un lado revistas que se ofrecen exclusivamente en acceso abierto, el denominado *Golden Open Access* y por otro lado, las prácticas de *Red Open Access* que permiten a los autores que publican en revistas tradicionales almacenar sus propios pre-prints en distintos repositorios^[Esta vía *Red Open Access* se ha convertido en algo imprescindible en muchos casos ya que los organismo financiadores de proyectos de investigación exigen que se publiquen en abierto los resultados de investigaciones financiadas con fondos públicos. No todas las revistas permiten el autoarchivo de los artículos publicados por lo que la política de copyright se ha convertido en un factor adicional a tener muy en cuenta en la publicación académica.]. Así, en el modelo *Golden Open Access* es el editor el que proporciona acceso al contenido, mientras que en el modelo *Red Open Access* son los autores los que proporcionan dicho acceso [@laakso2011]. 
+
+Algunas de las editoriales tradicionales están incorporando la opción *Golden Open Access*, permitiendo a los autores pagar una cuota por publicar en abierto en la propia revista, que continúa publicando también artículos sobre los que retiene el copyright. Esta vía genera algunas cuestiones éticas ya que el financiador sigue pagando la suscripción a la revista mediante el *big deal* y además paga la cuota de publicación del artículo individual en Acceso Abierto. 
+
+Otra cuestión relacionada con la proliferación de revistas Open Access es el crecimiento de los denominados *predatory journals*, revistas que surgen únicamente con objeto de lucrarse con las tasas de publicación y que no reunen el mínimo de calidad exigida en los procesos de revisión. La figura \ref{predatory} muestra el crecimiento en los últimos años de este tipo de publicaciones.
+
+```{r predatory, out.width='100%', fig.margin = TRUE, fig.fullwidth=FALSE, fig.cap="\\label{predatory} Journals and publishers setting sights on the unwary. Matthews, D. (2016).  Extraído de https://shortly.cc/SOA6"}
+
+knitr::include_graphics("images/predatory.jpg")
+
+```
+
+Ante este fenómeno han surgido directorios específicos^[e.g. https://doaj.org/] que tratan de asegurar el cumplimiento de unos mínimos requisitos de calidad por parte de las revistas.
+
+En este movimiento de acceso abierto surge la necesidad de nuevos modelos de copyright que garanticen el acceso a los contenidos pero retengan al mismo tiempo los derechos de atribución para los autores. Las licencias *Creative Commons*^[https://creativecommons.org] son las más utilizadas en este ámbito, permitiendo establecer:
+
+- Nivel de reconocimiento del autor
+- Posibilidad de uso comercial o no
+- Posibilidad de modificación del contenido o no
+
+Así mismo, dentro del movimiento de Acceso Abierto, es cada vez más frecuente el denominado *Open Data*, es decir, dar también acceso a los datos utilizados en las investigaciones de forma que otros investigadores puedan también utilizarlos y otros posibles ámbitos que se describen en la taxonomía de la Ciencia Abierta [@Pontika2015] que se utiliza en Foster^[https://www.fosteropenscience.eu]. 
+
+
+
+```{r openscience, out.width='85%', fig.margin = FALSE, fig.fullwidth=TRUE, fig.cap="\\label{openscience} Taxonomía del Movimiento Open Science. Fuente: Foster"}
+
+knitr::include_graphics("images/os_taxonomy.png.jpg")
+
+```
+
+### Ciencia Reproducible
+
+El término *ciencia reproducible* se refiere a la capacidad para replicar los resultados publicados en un determinado estudio por parte de investigadores independientes. 
+
+El concepto de ciencia reproducible no se refiere tanto a la capacidad para obtener conclusiones iguales o similares con nuevos estudios independientes a partir de nuevos datos, sino a la forma en que se validan los resultados de investigación, es decir, a la capacidad para asegurarse que los resultados publicados pueden verificarse por investigadores independientes. 
+
+El concepto de reproducibilidad es una condición previa para poder hacer validación posterior y se refiere a poder obtener de nuevo los resultados presentados en una publicación a partir de los datos en bruto originales, es decir, poder mostrar exactamente cómo se han obtenido los resultados publicados, tanto por parte de los autores como por otros investigadores independientes. 
+
+Se dice que un estudio es plenamente reproducible cuando satisface, al menos, los siguientes criterios:
+
+- Se reportan completamente todos los métodos utilizados.
+- Los datos y archivos utilizados en los análisis están (públicamente) disponibles.
+- Los procedimientos utilizados para analizar los datos en bruto están bien reportados y preservados.
+
+Las llamadas a la necesidad de una ciencia reproducible surgieron a principios de los 90 por parte de John Claerbout en su libro *Earth Sounding Analysis* [@Claerbout1992]. Esta llamada se produce en un contexto de preocupación por algunos ejemplos notorios de resultados erróneos o incluso falseados en investigaciones con alta reputación en distintas disciplinas, que pueden en parte estar provocados por la creciente presión para obtener resultados interesantes que publicar en revistas de impacto [@Nosek2012]. 
+
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faAngleDoubleRight{}} *Hoy en día, pocos resultados son reproducibles en sentido práctico. Verificarlos requeriría casi tanto esfuerzo como llevó crearlos originalmente. ¡Después de un tiempo, los autores son a menudo incapaces de reproducir sus propios resultados!*
+      
+\vspace{2mm}
+      
+---Claerbout, 1992 - 
+  
+```
+
+Por ejemplo, en 2010, cuando dos investigadores contrastaron los resultados de una prueba clínica sobre técnicas de curación del cáncer publicada por la Duke University, encontraron numerosos errores en los análisis provocados por problemas en la alineación de las columnas de las hojas de datos y, como resultado, tuvieron que retirarse cuatro trabajos ya publicados y se cancelaron otras tres pruebas en curso [@newyorktimes].
+
+
+Otro ejemplo famoso es el caso de un artículo publicado por dos economistas en Harvard [@bloomberg2013]. En este artículo, @Reinhart2013 indicaban que aquellos países con una deuda mayor al 90% de su PIB crecían a un ritmo menor que aquellos con menor deuda. Este resultado fue utilizado con frecuencia por distintos políticos para justificar políticas de recortes de gasto público. Sin embargo, cuando un estudiante de posgrado trató de reproducir su resultado encontró un error en la fórmula de Excel que se había utilizado en los cálculos provocando la exclusión de datos clave de Canada, Nueva Zelanda y Australia, que habían experimentado crecimientos sostenidos pese a que su endeudamiento era alto. Así, una vez corregido este error, el resultado resultó ser no significativo [@konczal].
+
+
+```{r error, out.width='100%' , fig.margin = TRUE,fig.cap = "El error en los cálculos de Reinhart y Rogoff. Fuente Konczal (2013)"}
+
+knitr::include_graphics("images/reinhart_rogoff_coding_error_0.png")
+
+```
+
+Como último ejemplo, en 2016, @Ziemann2016 encontraron que el 20% de los artículos publicados en revistas de genómica que tenían archivos complementarios contenían errores en los nombres de los genómas debido a las opciones de codificación de caracteres utilizadas en Microsoft Excel. 
+
+Así, el movimiento por la ciencia reproducible pretende contribuir a aumentar la credibilidad de la investigación académica, haciendo posible la identificación rápida de este tipo de errores, de forma que se garantice la calidad de los resultados publicados [@munafo2017]. En este sentido, también se reclama en ocasiones la *preproducibilidad*, es decir que el proceso de revisión de un artículo antes de su publicación asegure que se puedan contrastar todos los resultados [@Stark2018]. 
+
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faAngleDoubleRight{}} *Science should be "show me" not "trust me".*
+      
+\vspace{2mm}      
+
+--- Stark, 2018 - 
+  
+```
+
+Las políticas para asegurar la reproducibilidad surgen originalmente en ámbitos de ciencias de la salud, tratando de asegurarse de que los resultados reportados para pruebas clínicas puedan ser contrastados por terceros sin ambigüedades. Así, en 1996, el Consort^[Consorcio para la estandarización de la información sobre pruebas: http://www.consort-statement.org/. Es una Organización sin ánimo de lucro creada en el ámbito de las pruebas clínicas para asegurar la transparencia y la calidad de los informes sobre pruebas.] publica una primera guía que fija los requisitos que debe cumplir un informe sobre pruebas clínicas para considerarse que sus resultados pueden ser contrastados y solucionar los problemas detectados en informes sobre pruebas randomizadas y, en 2004, el Comité Internacional de Editores de Revistas Médicas^[http://www.icmje.org/] anunciaron que no publicarían ninguna prueba clínica que no hubiera sido registrada previamente y que solo admitirían el registro de aquellas pruebas que cumplieran con los siguientes requisitos:
+
+- Los resultados deben ser de acceso libre y estar públicamente accesibles.
+- Deben haber sido realizadas por una organización sin ánimo de lucro.
+- Se debe poder acceder a estos resultados electrónicamente.
+
+En este contexto, también la *US Food and Drug Administration*^[FDA: https://www.fda.gov/] en EEUU se suma a esta tendencia y ha implantado también el requisito de registro público para las pruebas médicas. 
+
+En 2009 se produce el primer avance en este sentido en la literatura científica, cuando el *Journal of Biostatistics* incorpora las primeras políticas sobre reproducibilidad en sus criterios de evaluación y asignan puntuaciones a los artículos recibidos en función de los estándares de reproducibilidad que han seguido [@Biostatis]. Así, los artículos reciben una puntuación de^[[Instructions for Authors, Journal of Biostatistics](https://academic.oup.com/biostatistics/pages/General_Instructions)]:
+
+- Nota *D*: los datos utilizados están disponibles públicamente
+- Nota *C*: el código utilizado por los autores en los análisis está disponible públicamente
+- Nota *R*: 
+    - tanto los datos como el código están disponibles públicamente.
+    - el Editor Asociado para la Reproducibilidad es capaz de reproducir los resultados.
+    - los datos y el código están disponibles en la página de la revista como material suplementario.
+
+@Sandve2013 presentan diez reglas simples para asegurar la reproducibilidad de una investigación:
+
+```{r rmark, out.width='85%', fig.margin = TRUE, fig.fullwidth=FALSE, fig.cap="\\label{rmark} Ejemplo de documentación dinámica con R Studio. El código de cálculo se almacena junto con el texto."}
+
+knitr::include_graphics("images/rmarkd.jpgg")
+
+```
+1. Para cada resultado, guardar el registro de cómo se ha obtenido exactamente.
+2. Evitar pasos manuales al manipular los datos (e.g. "corta-pega").
+3. Registrar las versiones exactas de todo el software utilizado para obtener los resultados.
+4. Utilizar métodos de control y seguimiento de versiones (e.g. Git y GitHub^[https://git-scm.com/ , https://github.com/]) para todos los archivos.
+5. Registrar todos los resultados intermedios, a ser posible en formatos estandarizados que puedan compartirse entre distintos sistemas operativos y software de tratamiento (e.g. archivos de texto plano como .csv o .txt).
+6. Para análisis que requieren semillas aleatorias, registrar cuáles han sido las semillas utilizadas.
+7. Almacenar siempre los datos en bruto originales utilizados en cada figura y resultados.
+8. Generar ouput de análisis jerarquizados, de forma que si se presentan resultados agregados, estén disponibles también todos los niveles de desagregación.
+9. Conectar el texto de interpretación de resultados con los propios análisis, por ejemplo, con la denominada *programación literaria*^[https://en.wikipedia.org/wiki/WEB] y la *documentación dinámica*.^[https://rmarkdown.rstudio.com/]
+10. Permitir el acceso público a los datos originales, los resultados y las órdenes utilizadas para generar estos resultados.
+
+
+### Ciencia en colaboración con otros
+
+Una última cuestión relacionada con la denominada Ciencia 2.0 son los aspectos de ciencia colaborativa facilitados por las herramientas TIC que se resumen en la tabla \ref{TICtools}:
+
+```{r}
+tabla <- data.frame(stringsAsFactors=FALSE,
+       Etapa = c("Búsqueda y acceso a la información",
+                  "Recogida y análisis de información",
+                  "Revisión, publicación y Gestión de Impacto"),
+     Herramientas = c("Gestores de referencias; Alertas personalizadas; Búsqueda social y recomendaciones", 
+                      "Recogida de datos; Plataformas de análisis de datos", 
+                      "Repositorios para preprints, Open Peer Review, 
+                      Nuevas métricas (Google Scholar, Altmetrics)"))
+
+names(tabla)<- c("Etapa", "Herramientas")
+knitr::kable(tabla, row.names = FALSE, format = "latex", booktabs = T, align = c('l', 'l'), caption = "\\label{TICtools} Herramientas colaborativas en las etapas del proceso de investigación")  %>% 
+      kable_styling(font_size = 8.5) %>%
+      column_spec(1, width = "10em") %>%
+      column_spec(2, width = "15em") %>%
+      footnote(general = c("Elaboración propia"),
+               general_title="Fuente:"           )
+
+```
+
+Así, en primer lugar, la forma tradicional en que se accede a la literatura ha cambiado, ya que las plataformas electrónicas proporcionan servicios de valor añadido que permiten a los investigadores acceder a información más actualizada. Así, los tradicionales gestores bibliográficos han evolucionado hacia algo más parecido a una Red social científica^[Destacan entre estos gestores-redes Mendeley: https://www.mendeley.com/ y Zotero: https://www.zotero.org/] proporcionando recomendaciones personalizadas en función de los intereses de cada uno. Además, las propias bases de datos científicas y Google Scholar proporcionan estos servicios de suscripción y alertas por palabras clave en los campos de estudio de cada uno^[https://www.fecyt.es/es/recurso/web-science, https://www.fecyt.es/es/recurso/scopus, https://scholar.google.es/]. Por último, han surgido redes sociales académicas, que permiten a los investigadores interactuar directamente y hacer y recibir recomendaciones personalizadas. Entre estas redes sociales, las más utilizadas son Research Gate^[https://www.researchgate.net/] y Academia.edu^[https://www.academia.edu/] (sobre todo en Estados Unidos), además de las generalistas como Twitter y LinkedIn.
+
+En segundo lugar, las herramientas TIC también han cambiado la forma de recogida y tratamiento de información para su análisis. Con los servicios online se pueden implementar y distribuir rápidamente cuestionarios mucho más versátiles que los tradicionales a través de servicios como SurveyMonkey, TypeForm o Qualtrics^[https://es.surveymonkey.com/; https://www.typeform.com/;https://www.qualtrics.com/es/ ], encontrar personas que las respondan a un coste pequeño como Amazon Mechanical Turk^[https://www.mturk.com/] pero además, han surgido plataformas colaborativas que permiten además reclutar panelistas para investigaciones académicas a un coste menor^[https://prolific.ac/, https://www.surveycircle.com/]. Con respecto al análisis de la información, también las herramientas online de código abierto permiten los análisis colaborativos, en grupo e interactivos^[http://jupyter.org/, https://ropensci.org/, https://plot.ly/]. 
+
+Por último, también están cambiando la forma de publicación. Además de la tendencia hacia el Acceso Abierto y los repositorios ya señalada, el propio sistema de revisión por pares ha sido puesto en cuestión y aparecen nuevas formas de evaluación y sistemas de filtros [@Tennant2018]. Han aparecido plataformas colaborativas para la revisión por pares previa^[https://publons.com/home/, https://www.peerwith.com/, https://www.peerageofscience.org/ , https://www.scienceopen.com/ , http://academickarma.org/ , https://www.rubriq.com/] y posterior^[http://www.papercritic.com/ , https://f1000.com/] a la publicación y también nuevas métricas para el impacto de las publicaciones incluyendo desde las estadísticas proporcionadas por Google Scholar hasta las denominadas *Altmetrics* que pretenden medir otros aspectos de calidad de un trabajo más allá de los tradicionales factores de impacto como son los índices de uso de las publicaciones^[http://www.projectcounter.org/code-of-practice-sections/general-information/] o datos de "conversación online" para las publicaciones^[https://www.altmetric.com/ , https://plumanalytics.com/]. Estas métricas alternativas tienen como ventaja que son rápidas y fáciles de comprender y muestran atención más allá de las citas, aunque también se cuestiona la validez de este impacto social frente al impacto académico ya que pueden medir más atención y "ruido" que calidad. 
+
+
+Como resumen de este apartado, en la figura \ref{ciencia20} se resumen algunos de los ya mencionados elementos de esta ciencia 2.0:
+
+```{r ciencia20,  fig.margin = FALSE, fig.cap="\\label{ciencia20} Resumen de Elementos en Ciencia 2.0. Elaboración propia"}
+
+knitr::include_graphics("images/ciencia20.pdf")
+
+```
+
+
+\clearpage
+
+## La disciplina de marketing \label{marcoconocimiento}
+
+Antes de hacer una breve revisión del estado del conocimiento en el ámbito del marketing, conviene hacer una breve reseña al propio término *marketing*, que permita avalar su empleo a lo largo de este Proyecto. En este sentido, podemos señalar que, si bien en los medios oficiales universitarios se emplean términos compuestos como "Investigación y Comercialización de Mercados" para denominar al área de conocimiento o "Dirección Comercial", e incluso "Mercadotecnia" para denominar materias en las memorias de los títulos, lo cierto es que entre la comunidad académica y, sin duda, la empresarial, la denominación "Marketing" está totalmente consolidada. El término se incluye además en Diccionario de la Real Academia de la Lengua Española como sinónimo de *mercadotecnia* desde la XXI edición.
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}} *Mercadotecnia: De mercado y -tecnia*: 
+      
+*1. f. Econ. Conjunto de principios y prácticas que buscan el aumento del comercio, especialmente de la demanda.*
+*2. f. Econ. Estudio de la mercadotecnia. marketing (voz ingl.) 1. m. mercadotecnia.*
+      
+\vspace{2mm}
+      
+---- RAE -- 
+  
+```
+
+A continuación, se va a presentar el marco de conocimiento del marketing, repasando el origen y la evolución de la disciplina (apartado \ref{evolucion}) y en el apartado \ref{informacion} se señalan algunas implicaciones para esta disciplina de los cambios en la sociedad de la información y se reflexiona sobre las tendencias futuras.
+
+### Origen y situación actual de la disciplina de Marketing \label{evolucion}
+
+
+\vspace{5mm} 
+
+**Origen y etapas en la disciplina de marketing**
+
+\vspace{2mm}
+
+Aunque el marketing concierne a actividades que han estado presentes desde el inicio de la actividad económica o incluso desde que existen intercambios, la mayor parte de autores sitúan el nacimiento de la disciplina como tal a comienzos del siglo XX. Así, @Bartels1988 identifica la génesis de la disciplina en el desarrollo del pensamiento del marketing en las universidades de Ohio State, Pennsylvania y Wisconsin, a principios del siglo XX, cuando comienzan a impartirse los primeros cursos de marketing. Así mismo, se cita como otro hito importante la publicación del libro de Ralph Butler *Marketing Methods* en 1918 [@Powers2015].
+
+@Kumar2015 hace una revisión de la evolución de la disciplina de marketing y sitúa el origen del marketing en la década de los 30 del siglo XX haciéndolo coincidir con el primer número de la revista *Journal of Marketing* en 1936. A partir de este momento, señala distintas características para cada década posterior, basándose en el trabajo de @Kerin1996 hasta 1996 y añadiendo su propia clasificación para el tiempo posterior. Esta evolución se resume en el gráfico \ref{kumargraf}. 
+
+```{r kumargraf,  fig.margin = TRUE, fig.cap="\\label{kumargraf} Etapas en la historia de marketing. Adaptación propia a partir de Kumar (2015)"}
+
+knitr::include_graphics("images/kumar2015b.pdf")
+
+```
+
+Podemos ver el detalle de esta revisión en la tabla \ref{Kumar2015}. Se comprueba cómo el enfoque de la disciplica ha cambiado enormemente durante este tiempo, desde unas primeras etapas en la que se cuestiona su naturaleza como disciplina autónoma de la economía o como ciencia, a etapas posteriores de definición conceptual y de ámbito de actuación a, por último, etapas más recientes en las que el interés está, no tanto en la propia disciplina, sino en lo que esta aporta a las organizaciones en un contexto fuertemente marcado por los cambios en el entorno tecnológico. 
+
+Así, @Kumar2015 concluye que la disciplina del marketing evoluciona hacia la integración completa con otras actividades de la empresa^[\textcolor{Red}{\faAngleDoubleRight{}}The emerging paradigm for marketing seems clear: it must be an integral part of the organization's decision-making framework - *Kumar, 2015* -]  lo que supone también un reto, ya que los estudios de marketing deben tener en cuenta no solo la función de marketing, sino su integración con otras funciones de negocio. 
+
+Durante esta evolución histórica podemos distinguir tres paradigmas principales [@El-Ansary2017]:
+
+- El paradigma tradicional (1910-finales de los 50): justificación de porqué y para qué existe el marketing 
+- El cambio de paradigma macro a micro (finales de los 50- finales de los 60): énfasis en la construcción de teoría, micromarketing y sistemas
+- La expansión genérica del paradigma (desde 1960 hasta la actualidad): ampliación del concepto de marketing
+
+Sin embargo, estas divisiones temporales no son las únicas que se han planteado. En la tabla \ref{evolucionmk} se relacionan varias de estas clasificaciones, añadiendo a las ya mencionadas las aportaciones de @Munuera1992 y @Vargo2004.
+
+```{r}
+decadas <- c("1936-1945", "1946-1955", "1956-1965", "1966-1975", "1976-1985", "1986-1995", "1996-2004", "2005-2012", "Emergente: 2013-")
+Temas <- c("Iluminando los principios y conceptos de marketing", "Mejorando las funciones de marketing y la productividad del sistema", "Midiendo los efectos del marketing mix", "Investigando los procesos de compra en las organizaciones", "Desarrollando la estrategia de marketing", "Identificando contingencias de marketing", "Asignación de recursos y rentabilidad del marketing", "Rendición de cuentas en marketing y centro en el cliente", "Marketing en el centro e influencia de nuevos medios")
+triggers <- c("Comprensión de principios de marketing con estudios de casos - Comprensión legislación - Investigación de mercados", "Medición de las funciones de marketing - Crecimiento de la disciplina - Busqueda de definición del Marketing", "Desarrollo de teoría - Transición estudios analíticos - Control de calidad estadístico", "Agendas para la disciplina- Mayor contacto con práctica del marketing", "Técnicas cuantitativas - Comprensión de la estructura de mercado", "Técnicas empíricas sofisticadas - Marcos conceptuales - Conocimiento interdisciplinar", "Tecnologías de base de datos - Datos y análisis a nivel de indiduo", "Avances tecnológicos - Inversión de marketing a nivel de cliente", "Cambios en los patrones de uso de medios - Centrado en eficiencia y eficacia del marketing - Consideración de los stakeholders")
+
+evolucion <- cbind(Temas, triggers)
+
+evol_data <- data.frame(evolucion)
+row.names(evol_data) <- decadas
+names(evol_data)<- c("Tema", "Aspectos principales")
+
+knitr::kable(evol_data, format = "latex",  longtable = T, booktabs = T, 
+             caption = "\\label{Kumar2015} Evolución histórica de la disciplina de marketing ")  %>% 
+      kable_styling(font_size = 7.5) %>%
+      landscape() %>%
+      column_spec(2:3, width = "25em") %>%
+      footnote(general = "Traducción y adaptación propia a partir de Kumar (2015)",
+            general_title = "Fuente: "
+           )
+
+```
+
+
+
+```{r}
+
+library(readr)
+evolucionmk <- read_delim("../data/evolucionmk.csv", 
+    ";", escape_double = FALSE, trim_ws = TRUE)
+evolucionmk<- evolucionmk[1:13,1:6]
+
+
+knitr::kable(evolucionmk, format = "latex",  longtable = T, booktabs = T, 
+             caption = "\\label{evolucionmk} Evolución histórica de la disciplina de marketing. Comparativa autores ")  %>% 
+      kable_styling(font_size = 7.5) %>%
+      column_spec(5:6, width = "11em") %>%
+      landscape() %>%
+      footnote(general = "Traducción y adaptación propia a partir de Bartels (1988), Munuera (1992), Vargo y Lusch (2004), Kumar (2015) y El-Ansary et al (2017) ",
+                  general_title = "Fuente: "
+           )
+
+```
+
+Desde otra perspectiva, resulta de interés la aportación de  @Sheth1999, que argumentan que la formación de las funciones y de la disciplina del marketing a lo largo de la historia, depende de diferentes realidades situacionales. Su enfoque se plasma en la tabla \ref{sisodia}: 
+
+```{r}
+
+Contexto <- c("Separación física entre compradores y vendedores", "Economía de la era industrial", 
+              "Mercados relativamente homogéneos, bien definidos","Aumento de la intensidad competitiva")
+
+Concepto <- c("Conceptos centrados en la localización", "Conceptos centrados en el tiempo",
+            "Conceptos centrados en el mercado", "Conceptos centrados en la competencia")
+
+sisodia <- data.frame(Contexto, Concepto)
+
+knitr::kable(sisodia, format = "latex",   booktabs = T, 
+             caption = "\\label{sisodia} Contextos clave en marketing y conceptos resultantes")  %>% 
+      kable_styling(font_size = 7.5) %>%
+      column_spec(1:2, width = "14em") %>%
+      footnote(general = "Seth y Sisodia (1999)",
+                  general_title = "Fuente: "
+           )
+
+```
+
+\vspace{5mm} 
+
+**La evolución de la definición del marketing - AMA 1960-AMA 2013**
+
+\vspace{2mm}
+
+La evolución de la definición de marketing es un buen reflejo de esta evolución histórica de la disciplina. Aunque hubo algunos intentos de definición previos^[\textcolor{Red}{\faAngleDoubleRight{}} En 1933, en el primer informe del comité de Definiciones de la National Association of Marketing Teachers, define el marketing como la *actividad empresarial de comprar y vender*. Quince años más tarde, la AMA, en un nuevo informe, lo define como, el *desempeño de actividades empresariales dirigidas hacia, e influenciando el flujo de bienes y servicios desde el productor al consumidor o usuario*, ampliando la propuesta anterior y contemplando, tanto el caso de los bienes como de los servicios, todas aquellas actividades relacionadas con la distribución y la comunicación.], en 1960 se plantea la primera definición formal de marketing por el Comité de Definiciones de la American Marketing Association (AMA) en 1960 que marcará un antes y un después en el debate sobre qué es y no es el marketing. 
+
+\noindent\rule{2cm}{0.4pt}
+> *El marketing es el resultado de la actividad empresarial, que dirige el flujo de bienes y servicios desde el productor hasta el consumidor final o usuario *
+
+\hfill{Committee of Definitions, AMA, 1960}
+\vspace{2mm}
+
+Los aspectos a destacar de esta definición son [@Munuera1992]:
+
+- Representa el paradigma predominante en la época: el marketing como gestión del flujo de productos y servicios (transacción), sin competencia en el diseño de los mismos.
+- El marketing no forma parte integrante de la toma de decisiones globales de la empresa, sino que aparece como resultado de esas decisiones.
+- El marketing se circunscribe al ámbito de lo puramente empresarial. No contempla la posibilidad de que resulte aplicable en otras organizaciones.
+- No contempla los procesos relativos a la comunicación.
+
+Por todo ello, esta definición generó un alto grado de desacuerdo abriendo una etapa de discusión, en torno a la cual se propusieron otras nuevas como la propuesta por @McCarthy1964^[\textcolor{Red}{\faAngleDoubleRight{}} El marketing es el resultado de la actividad de las empresas, que dirige el flujo de bienes y servicios desde el productor hasta el consumidor o usuario, con la pretensión de satisfacer a los consumidores y permitir alcanzar los objetivos de las empresas - McCarthy, 1964-]. De hecho, la mayoría de las teorías del comportamiento del consumidor surgen en esa época, analizando temas muy diversos, como el riesgo percibido [e.g. @Cox1964], la implicación del consumidor [e.g @Woods1960], la influencia de los grupos de referencia [@Hyman1960] o las actitudes [@Hansen1969]. Además, aparecen las primeras modelizaciones del proceso de compra de los consumidores [@Kollat1970] y comienza la publicación del Journal of Consumer Research.
+
+La década de los setenta, se caracteriza por el debate en torno a la ampliación del alcance del marketing en una doble dirección: por un lado, la extensión del área de actuación al campo de las ideas y de las organizaciones no lucrativas y por otro, el reconocimiento de las implicaciones y dimensiones sociales del marketing. La consolidación de esta nueva visión del marketing, centrada en el intercambio, llega con la publicación de un número especial del Journal of Marketing en 1971, dedicado a los cambios en las dimensiones del marketing. En ese ejemplar, [@Kotler1971] acuñan el término Marketing Social, definiéndolo como: 
+
+\noindent\rule{2cm}{0.4pt}
+>... *el diseño, la implantación y el control de programas pensados para influir en la aceptación de ideas sociales, e implicando consideraciones de planificación de producto, precio, comunicación, distribución e investigación de marketing*
+
+\hfill{Kotler y Zaltman, 1971}
+\vspace{2mm}
+
+Esta extensión al marketing social, junto con los trabajos anteriores y los apoyos recibidos de varios autores, lleva a @Kotler1972 a articular un concepto general del marketing. En su trabajo, *A Generic Concept of Marketing*, propone que la esencia del marketing es la idea de la transacción, definida como el intercambio de valores entre dos partes. 
+
+\noindent\rule{2cm}{0.4pt}
+>... el marketing está específicamente relacionado con la forma en que las transacciones son creadas, estimuladas, facilitadas y valoradas.
+
+\hfill{Kotler, 1972}
+\vspace{2mm}
+
+De acuerdo con @CruzRoche1990, esta definición se centra en el concepto de transacción, sin considerar el objetivo que persiguen las partes que intervienen en el mismo y permitiendo incluir también todas las transacciones intermedias en las que no interviene el consumidor final. Además, realiza una descripción del proceso a través de las variables clásicas: productos (creadas), promoción (estimuladas), distribución (facilitadas) y precio (valoradas). 
+
+Mientras tanto, @Luck1974 plantea un reto a la AMA para que cree una comisión especial que aclare los problemas de definición del marketing y, esta se plantea como objetivo prioritario de la asociación el desarrollo de una definición estándar y consistente de marketing. Pese a esto, durante los diez años siguientes no se emprende ninguna iniciativa al respecto. En ese lapso de tiempo, diferentes autores continúan aportando nuevas definiciones de marketing [@Ferrell1987]. Entre ellas destacamos la del @Kotler1980, que en la primera edición de su libro *Principles of Marketing*, define el Marketing como: 
+
+```{r Kotler1980, fig.margin = TRUE, out.width='75%'}
+
+knitr::include_graphics("images/kotler1980.jpg")
+
+```
+
+\noindent\rule{2cm}{0.4pt}
+
+>... la actividad humana, dirigida a satisfacer necesidades y deseos por medio de un proceso de intercambio.
+
+\hfill{Kotler, 1980}
+
+\vspace{2mm}
+
+Según @CruzRoche1990, en esta definición se sustituye la palabra transacción, más vinculada a la compraventa, por el concepto más amplio de intercambio; y en cierto sentido, se vuelve a la idea de satisfacción de necesidades, si bien ampliada también a los deseos, queriendo reflejar consumos que no responden a necesidades reales; y sin especificar si estas necesidades y deseos son de los consumidores, o también pueden ser de intermediarios y empresas productoras. Asimismo, el intercambio pasa de ser un fin en sí mismo, a un medio para satisfacer necesidades y deseos humanos. 
+
+Por otra parte, durante la década de los ochenta, el debate sobre el dominio del marketing continúa. Se intensifica el interés por el carácter científico del marketing [@Hunt1983; @Peter1983; @Deshpande1983; @Arndt1985]. Se reclama además la orientación estratégica del marketing, en la que se aboga por la integración del marketing y la planificación estratégica de la empresa [@Day1980; @Wiersema1983; @Day1983].
+
+Por fin, y tras el largo proceso de discusión entre los miembros del comité formado con el propósito de evaluar las definiciones previamente publicadas en libros de texto durante el periodo 1957-1984^[En @Ferrell1987 se recogen las veintisiete definiciones consultadas por el comité de la AMA para establecer la definición de 1985.] y en un intento por condensar y aunar los elementos conceptuales encontrados en ellas, la American Marketing Association, en 1985, propone una definición en los siguientes términos:
+
+\noindent\rule{2cm}{0.4pt}
+
+>... el marketing es el proceso de planificación y ejecución de la concepción, precio, comunicación y distribución de ideas, productos y servicios para crear intercambios que satisfagan a los individuos y a los objetivos de la organización.
+
+\hfill{AMA, 1985}
+
+\vspace{2mm}
+
+De esta definición destaca:
+
+- Aspectos Positivos
+  - se incluyen objetivos de los individuos y de la organización  
+  - se identifica la actividad de marketing como un proceso directivo (planificación y ejecución)
+  - se explicitan las cuatro actividades de marketing (concepción, precio, comunicación y distribución)
+  - se consideran las ideas además de los productos y servicios 
+  - se consideran todo tipo de organizaciones ya que se elimina la referencia a la empresa
+  
+- Limitaciones
+  - se enfoca desde el oferente pero no tiene en cuenta el punto de vista del consumidor
+  - no hay referencias a las consecuencias sociales de la actividad
+  - solo se tienen en cuenta dos partes
+  - delimita las actividades de marketing solamente a las 4Ps
+  - se limita a definir el marketing como una actividad, no como concepto o filosofía
+
+Pese a sus limitaciones, esta definición generó un relativo consenso inicial aunque otros autores aportaron definiciones divergentes como la de @Anderson1987 ^[\textcolor{Red}{\faAngleDoubleRight{}} Marketing es la utilización del *poder* para facilitar y consumar el intercambio de cosas de valor. - Anderson, 1987 -] que pone el foco en el poder o las de la escuela nórdica de servicios como la de @Gronroos1989 ^[\textcolor{Red}{\faAngleDoubleRight{}} El marketing es establecer, desarrollar y comercializar *relaciones a largo plazo* con el cliente, de forma que los objetivos de las partes involucradas sean alcanzados. Esto se consigue mediante intercambios mutuos y el mantenimiento de las promesas. - Gronroos, 1989- ] centradas en poner el foco en la relación más que en la transacción.
+
+Así, la AMA en su conferencia celebrada en Boston en 2004 propone una nueva definición de marketing como:
+
+\noindent\rule{2cm}{0.4pt}
+
+>... una función organizativa y un conjunto de procesos para crear, comunicar y entregar valor a los clientes y gestionar las relaciones con el consumidor de forma que beneficie a la organización y sus grupos implicados
+
+\hfill{AMA, 2004}
+
+\vspace{2mm}
+
+En esta definición, los cambios principales son:
+
+- El marketing es una función organizativa, es decir, toma una perspectiva más amplia que en la definición de 1985 en la que se considera un proceso.
+- Los procesos de marketing tienen como fin crear *valor para el cliente* independientemente de que se trate de bienes, servicios o ideas.
+- Los procesos *crean, comunican y entregan* pero no se hace referencia al ámbito de actuacción de las 4Ps
+- Se incorpora el concepto de relación como concepto central en lugar de la transacción
+- Los resultados deben aplicarse no solo a la propia organización sino a cualquier grupo implicado en sus actuaciones.
+
+Sin embargo, no está exenta de limitaciones [@Gundlach2009]:
+
+- El ámbito del marketing queda acotado de forma bastante estrecha y se limita a la función de marketing y los procesos implicados. Parece referirse más a la gestión de marketing que al concepto de marketing en general. 
+- Solamente se consideran los grupos implicados con la actividad de marketing pero no la sociedad en su conjunto.
+
+En 2008 se realiza una nueva propuesta que trata de superar estas dos limitaciones. Esta propuesta ha sido revisada y ratificada sin cambios en 2013 y es la definición actualmente vigente:
+
+\noindent\rule{2cm}{0.4pt}
+
+>... Marketing es la actividad, conjunto de instituciones y procesos para crear, comunicar, entregar e intercambiar ofertas de valor para consumidores, clientes, socios y la sociedad en su conjunto.
+
+\hfill{AMA, 2013}
+
+\vspace{2mm}
+
+El marketing pasa de ser un proceso a tener un enfoque mayor como *actividad, conjunto de instituciones y procesos*, se elimina la referencia a las relaciones sustituyéndose por la referencia a los socios y clientes y se sustituye la referencia a los grupos de interés por *la sociedad en su conjunto*. La definición parece haber generado mayor consenso [@Brunswick2014] y se encuentran más problemas en la aplicación de los conceptos que en la propia definición [@sheth2015], por lo que no se esperan grandes cambios en la revisión prevista para Agosto de 2018 en la asamblea AMA en Boston.
+
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faAngleDoubleRight{}}*...marketing is supposed to be about aligning company and customers interests...The norm, however is quite different. Marketing has become synonymous with hype, gimmickry, and the primacy of image over substance.*
+
+\vspace{2mm}
+--- Sheth y Sisodia (2015)-
+```
+
+La tabla \ref{definicion} resume las distintas definiciones AMA.
+
+```{r}
+
+library(readr)
+ano <- c("1960","1985","2004","2008,2013")
+definicion <- c("...el resultado de la actividad empresarial, que dirige el flujo de bienes y servicios desde el productor hasta el consumidor final o usuario","...el proceso de planificación y ejecución de la concepción, precio, comunicación y distribución de ideas, productos y servicios para crear intercambios que satisfagan a los individuos y a los objetivos de la organización","...una función organizativa y un conjunto de procesos para crear, comunicar y entregar valor a los clientes y gestionar las relaciones con el consumidor de forma que beneficie a la organización y sus grupos implicados","...la actividad, conjunto de instituciones y procesos para crear, comunicar, entregar e intercambiar ofertas de valor para consumidores, clientes, socios y la sociedad en su conjunto")
+
+definicion <- data.frame(ano, definicion)
+
+knitr::kable(definicion, format = "latex", col.names = c("Año", "Definición"),  longtable = T, booktabs = T, 
+             caption = "\\label{definicion} Definiciones AMA: El marketing es... ")  %>% 
+      kable_styling(font_size = 7.5) %>%
+      column_spec(2, width = "26em") %>%
+      footnote(general = "American Marketing Association",
+                  general_title = "Fuente: "
+           )
+
+```
+
+
+No todos los autores comparten sin embargo el consenso sobre esta definición. @El-Ansary2017 llaman la atención sobre la que denominan *crisis de identidad* del marketing y sitúan el origen de dicha crisis en la mencionada definición de @Kotler1972 de marketing y su concepto central de intercambio, lo que @El-Ansary2017 denominan la *expansión de las fronteras del marketing*. Esta referencia es la más reciente dentro de una línea en la literatura que llama la atención sobre los posibles problemas en la precisión de la naturaleza del marketing que surgieron al mismo tiempo que la ampliación del concepto [@Bartels1974]
+
+
+```{marginfigure, echo=TRUE}
+\textcolor{Red}{\faAngleDoubleRight{}}*...Literature has become increasingly esoteric, abstract and unintelligible to many business practitioners.*
+
+\vspace{2mm}
+
+--- Bartels (1974)-
+```
+
+```{marginfigure, echo=TRUE}
+
+\textcolor{Red}{\faAngleDoubleRight{}}*...What is the current state of a general theory of marketing?.... Based on the broadening/generic conception of the discipline there appears no limit to the organizational and individual phenomena that marketing encompasses ... This barely noticed and mostly ignored impediment to developing a general theory is a major consequence of The Identity Crisis in Marketing originally described by Bartels (1974). *
+
+\vspace{2mm}
+
+--- El-Ansary, Shaw y Lazer (2017)-
+```
+
+
+Desde que el proceso de intercambio, entendido como *la transferencia de algo tangible o intangible, actual o simbólico entre dos o más actores sociales* [@bagozzi1979toward], fue introducido en la conceptualización de marketing, siempre ha sido propuesto y mayoritariamente aceptado como la perspectiva más adecuada para estudiar las transacciones de marketing, tanto las de naturaleza económica como las de naturaleza no económica [e.g. @alderson1965dynamic; @Kotler1972; @Bagozzi1974; @bagozzi1979toward; @Hunt1983; @Ferrell1987; @Dwyer1987].
+
+Sin embargo, como señalaba @Hirschman1987 *...no se han abordado muchos estudios empíricos que hayan utilizado la teoría del intercambio como paradigma deductivo, o que hayan contrastado aspectos sobre los recursos involucrados en el intercambio* y la afirmación sigue siendo válida 30 años después. Algunos autores han puesto en duda que el intercambio sea el concepto central en el dominio del marketing [@Luck1969; @Luck1974; @Achrol1997; @Webster1998]. Como hemos visto, en 2004, la referencia al intercambio fue eliminada de la definición de marketing para poner el foco en la creación de valor y algunos autores dieron la bienvenida a este cambio [@sheth2007; @Vargo2004] que eliminaba, en su opinión, un sesgo hacia los bienes físicos que minusvaloraba el papel de los servicios en la disciplina. Sin embargo, la definición de 2008 de nuevo incorporaba la referencia al intercambio, manteniendo la importancia del valor. Así, incluso el propio Stephen Vargo recupera el concepto de intercambio en @Chandler2011, eso sí, entendiéndolo no como un hecho único en un determinado momento de tiempo sino como un proceso contínuo que enmarca dentro de su enfoque de lógica dominante de servicios. 
+
+En mi opinión, la definición AMA es suficientemente explícita definiendo el dominio del marketing, ya que la referencia a "consumidores, clientes y socios", además de la de "organizaciones" centra el ámbito de actuación del marketing en los intercambios empresariales y el concepto de intercambio puede entenderse en sentido amplio como se señala en @Chandler2011.
+
+Cabe preguntarse cuál ha sido el progreso global de la investigación en esta disciplina durante esta evolución. @Eisend2015 realiza un interesante metaanálisis sobre el tamaño de los efectos encontrados en la investigación de marketing desde 1918 hasta 2012, entendiendo que el grado de contribución de los estudios científicos es mayor cuando se encuentran efectos de tamaño sustancial. Sus resultados muestran que en este tiempo se ha generado un importante cuerpo de conocimiento, que es incluso mayor que el encontrado en otras disciplinas más básicas como la psicología.^[\textcolor{Red}{\faAngleDoubleRight{}} The estimate in this study shows that the field has developed a considerable body of marketing knowledge that is able to explain real-world phenomena. - Eisend, 2015 - ] Los efectos mayores se encuentran en el área de precios, seguida de la de comportamiento del consumidor. El área de nuevos productos muestra los efectos más débiles. Con respecto a la evolución temporal, la tasa de crecimiento del conocimiento se ralentiza, alcanzando un estado de madurez según @Eisend2015. ¿Qué podemos esperar en el futuro? En el siguiente apartado tratamos de dar respuesta a esta cuestión.
+
+### El futuro de la disciplina marketing \label{informacion}
+
+```{r mittal2018, out.width='100%', fig.margin = FALSE, fig.fullwidth=FALSE}
+
+knitr::include_graphics("images/mittal2018.jpg")
+
+```
+
+@Hofacker2018 señala ocho tendencias que muestran cómo el marketing está cambiando en el contexto de la revolución digital:
+
+1. Plataformas en vez de productos: la definición de una propuesta de valor y la gestión de una plataforma, a veces denominadas también *ecosistemas*, es más compleja que en el caso de los productos tradicionales ya que incluyen decisiones sobre la escalabilidad del sistema^[¿cómo se gestiona con 10.000 usuarios? ¿y con 10 millones?] y las externalidades en el uso^[¿nos interesa tener usuarios gratuitos o solo de pago?].
+2. Incremento de las relaciones directas: como hemos visto, las relaciones llevan más de 30 años siendo importantes en marketing [@Gronroos1989], pero tradicionalmente lo eran fundamentalmente en un contexto de relaciones B2B. Las redes sociales han hecho que incluso las empresas en el sector del gran consumo tengan relaciones directas e interactivas con sus consumidores.
+3. Centro en los datos: Como también señala @Eisend2015, el marketing es cada vez más empírico y analítico. El tratamiento de la información está cambiando la forma en la que se toman las decisiones, cambiando opiniones por algoritmos [@Miller2018].
+4. Fronteras de las empresas desdibujadas: los consumidores en ocasiones se parecen más a empleados, proporcionando soporte y recomendaciones a otros consumidores por lo que la gestión de estas relaciones también debe ser distinta.
+5. Las estrategias *pull* prevalecen sobre las *push* por lo que la comunicación se ha hecho todavía más importante y las promociones tradicionales pierden importancia. La comunicación se hace bidireccional, por lo que en muchos casos son los consumidores los que *tiran* de la comunicación iniciando el contacto con la empresa.
+6. Empoderamiento del consumidor: En la misma línea, los consumidores son conscientes de la importancia de las comunicaciones que hacen sobre los productos y utilizan este poder para expresar sus opiniones tanto positivas como negativas.
+7. Imperativos éticos: En este empoderamiento, el nivel de exigencia de compromiso social de las empresas es cada vez mayor y las empresas deben ser capaces de cumplir con esos estándares.
+8. Tecnología digital como producto: cada vez más propuestas de valor incluyen capacidades de gestión de información digital, desde los sistemas de navegación de los coches hasta los frigoríficos inteligentes y es necesario analizar qué papel cumplen en cada producto los atributos físicos del producto, los servicios y estas nuevas capacidades digitales.
+
+Así, en este contexto, el Marketing Science Institute [@MarketignS2018] ha establecido como prioridades de investigación para el periodo 2018-2020 las cinco áreas que se resumen en la Figura \ref{MSI} y se enumeran a continuación.
+
+
+1. Cultivando el valor del cliente:
+
+1.1. Caracterizar el viaje del cliente en el proceso de compra y las estrategias en ese proceso  
+1.2. La interfaz tecnología-cliente  
+1.3. Macrotendencias que influencian la toma de decisiones del consumidor  
+
+2. El paisaje cambiante de la tecnología de marketing y la publicidad    
+
+2.1. Definición del mensaje en la comunicación   
+2.2. Optimización de la estrategia de medios  
+2.3. Fijación del presupuesto publicitario  
+2.4. Medición de la eficacia publicitaria    
+
+3. El aumento de la promoción y distribución omnicanal  
+
+3.1. Gestión de la promoción a través de distintos canales  
+3.2. Gestión de la distribución y demanda a través de distintos canales  
+3.3. Estructura de canales  
+
+4. Capturando información para incrementar el crecimiento  
+
+4.1. Imagen global del cliente  
+4.2. Definición de métricas clave  
+4.3. Estableciendo causalidad  
+4.4. Inteligencia de marketing a partir de datos de cliente  
+
+5. Organizaciones ágiles de marketing  
+
+5.1. Organización interna  
+5.2. Organización externa  
+
+```{r MSI, out.width='85%', fig.margin = FALSE, fig.fullwidth=TRUE, fig.cap="\\label{MSI}Prioridades de investigación en el periodo 2018-2020. Marketing Science Institute. http://www.msi.org/research/2018-2020-research-priorities/"}
+
+knitr::include_graphics("images/RPmsi.jpg")
+
+```
+
+
+
+\vspace{2mm}
+
+Así, en el futuro de la práctica y la investigación en marketing, la clave siguen siendo los clientes pero en el conocimiento y la relación con estos clientes, la tecnología de interacción, los datos generados y las analíticas van a ser aspectos clave.
+
+En el mismo sentido, @kumar2018 plantea cómo algunos de estos cambios son impulsores que están haciendo que el marketing se convierta en un *marketing transformativo*, que en los próximos 20 años cambiará  profundamente la forma en la que las organizaciones se relacionan con sus mercados. El marco conceptual que refleja estos cambios futuros se muestra en la Figura \ref{kumar2018}.
+
+```{r kumar2018, out.width='85%', fig.margin = FALSE, fig.fullwidth=TRUE, fig.cap="\\label{kumar2018} Marco conceptual del Marketing Transformativo. (Kumar, 2018)"}
+
+knitr::include_graphics("images/kumar2018.jpeg")
+
+```

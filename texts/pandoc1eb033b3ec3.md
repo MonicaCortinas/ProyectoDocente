@@ -1,0 +1,1 @@
+\textcolor{Red}{\faAngleDoubleRight{}} *En el propio preámbulo de la LOU se establece que el propósito de la universidad es *"... la modernización de las universidades europeas con el fin de convertirlas en agentes activos para la transformación de Europa en una economía plenamente integrada en la sociedad del conocimiento."
